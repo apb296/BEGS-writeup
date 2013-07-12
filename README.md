@@ -1,4 +1,4 @@
 BEGS-writeup
 ============
 
-This repo holds the files for BEGS manuscript
+This repo holds the files for BEGS manuscript. The pdf files are ignored
