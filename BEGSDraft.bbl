@@ -1,0 +1,238 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  This bbl file is created by econ.bst ver.2.1
+%  The latest econ.bst is available at
+%  <http://shirotakeda.org/home/tex/econ-bst.html>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{xxx}
+
+\harvarditem[Aiyagari et~al.]{Aiyagari, Marcet, Sargent and
+  Sepp\"{a}l\"{a}}{2002}{Aiyagari2002}
+\textbf{Aiyagari, S.~Rao, Albert Marcet, Thomas~J. Sargent, and Juha
+  Sepp\"{a}l\"{a}.} 2002. ``{Optimal Taxation without State ‐ Contingent
+  Debt}.'' {\it Journal of Political Economy}, 110(6):   1220--1254, URL:
+  \url{http://www.jstor.org/stable/10.1086/343744}.
+
+\harvarditem[Aiyagari and McGrattan]{Aiyagari and
+  McGrattan}{1998}{Aiyagari1998}
+\textbf{Aiyagari, S.~Rao, and Ellen~R. McGrattan.} 1998. ``{The optimum
+  quantity of debt}.'' {\it Journal of Monetary Economics}, 42(May 1997):
+  447--469, URL:
+  \url{http://www.sciencedirect.com/science/article/pii/S0304393298000312}.
+
+\harvarditem[Albanesi and Armenter]{Albanesi and Armenter}{2012}{Albanesi2012}
+\textbf{Albanesi, S., and R.~Armenter.} 2012. ``{Intertemporal Distortions in
+  the Second Best}.'' {\it The Review of Economic Studies}, 79(4):
+  1271--1307, URL:
+  \url{http://restud.oxfordjournals.org/lookup/doi/10.1093/restud/rds014}, DOI:
+  \url{http://dx.doi.org/10.1093/restud/rds014}.
+
+\harvarditem[Autor et~al.]{Autor, Katz and Kearney}{2008}{Autor2008}
+\textbf{Autor, DH, LF~Katz, and MS~Kearney.} 2008. ``{Trends in US wage
+  inequality: Revising the revisionists}.'' {\it The Review of Economics and
+  Statistics}, 90(2):   300--323, URL:
+  \url{http://www.mitpressjournals.org/doi/abs/10.1162/rest.90.2.300}, DOI:
+  \url{http://dx.doi.org/10.1162/rest.90.2.300}.
+
+\harvarditem[Azzimonti et~al.]{Azzimonti, de~Francisco and
+  Krusell}{2008a}{Azzimonti2008}
+\textbf{Azzimonti, Marina, Eva de~Francisco, and Per Krusell.} 2008a.
+  ``{Aggregation and Aggregation}.'' {\it Journal of the European Economic
+  Association}, 6(2-3):   381--394, URL:
+  \url{http://doi.wiley.com/10.1162/JEEA.2008.6.2-3.381}, DOI:
+  \url{http://dx.doi.org/10.1162/JEEA.2008.6.2-3.381}.
+
+\harvarditem[Azzimonti et~al.]{Azzimonti, de~Francisco and
+  Krusell}{2008b}{Azzimonti2008a}
+\textbf{Azzimonti, Marina, Eva de~Francisco, and Per Krusell.} 2008b.
+  ``{Production subsidies and redistribution}.'' {\it Journal of Economic
+  Theory}, 142(1):   73--99, URL:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0022053107001020}, DOI:
+  \url{http://dx.doi.org/10.1016/j.jet.2007.03.009}.
+
+\harvarditem[Barro]{Barro}{1979}{Barro1979}
+\textbf{Barro, Robert~J.} 1979. ``{On the determination of the public debt}.''
+  {\it The Journal of Political Economy}, 87(5):   940--971, URL:
+  \url{http://www.jstor.org/stable/10.2307/1833077}.
+
+\harvarditem[Bassetto and Kocherlakota]{Bassetto and
+  Kocherlakota}{2004}{Bassetto2004}
+\textbf{Bassetto, Marco, and Narayana Kocherlakota.} 2004. ``{On the
+  irrelevance of government debt when taxes are distortionary}.'' {\it Journal
+  of Monetary Economics}, 51(2):   299--304, URL:
+  \url{http://linkinghub.elsevier.com/retrieve/pii/S0304393203001430}, DOI:
+  \url{http://dx.doi.org/10.1016/j.jmoneco.2002.12.001}.
+
+\harvarditem[Battaglini and Coate]{Battaglini and Coate}{2007}{Battaglini2007}
+\textbf{Battaglini, Marco, and Stephen Coate.} 2007. ``{Inefficiency in
+  Legislative Policymaking: A Dynamic Analysis}.'' {\it American Economic
+  Review}, 97(1):   118--149, URL:
+  \url{http://www.aeaweb.org/articles.php?doi=10.1257/aer.97.1.118}, DOI:
+  \url{http://dx.doi.org/10.1257/aer.97.1.118}.
+
+\harvarditem[Battaglini and Coate]{Battaglini and Coate}{2008}{Battaglini2008}
+\textbf{Battaglini, Marco, and Stephen Coate.} 2008. ``{A Dynamic Theory of
+  Public Spending, Taxation, and Debt}.'' {\it American Economic Review},
+  98(1):   201--236, URL:
+  \url{http://www.aeaweb.org/articles.php?doi=10.1257/aer.98.1.201}, DOI:
+  \url{http://dx.doi.org/10.1257/aer.98.1.201}.
+
+\harvarditem[Boldrin et~al.]{Boldrin, Christiano and Fisher}{2001}{Boldrin2001}
+\textbf{Boldrin, Michele, Lawrence~J. Christiano, and Jonas~DM Fisher.} 2001.
+  ``Habit Persistence, Asset Returns, and the Business Cycle.'' {\it American
+  Economic Review}, 91(1):   149--166, URL:
+  \url{http://ideas.repec.org/a/aea/aecrev/v91y2001i1p149-166.html}.
+
+\harvarditem[Bryant and Wallace]{Bryant and Wallace}{1984}{Bryant1984}
+\textbf{Bryant, John, and Neil Wallace.} 1984. ``{A Price Discrimination
+  Analysis of Monetary Policy}.'' {\it The Review of Economic Studies}, 51(2):
+  , p. 279, URL:
+  \url{http://restud.oxfordjournals.org/lookup/doi/10.2307/2297692}, DOI:
+  \url{http://dx.doi.org/10.2307/2297692}.
+
+\harvarditem[Chari et~al.]{Chari, Christiano and Kehoe}{1994}{Chari1994}
+\textbf{Chari, V~V, Lawrence~J Christiano, and Patrick~J Kehoe.} 1994.
+  ``{Optimal Fiscal Policy in a Business Cycle Model}.'' {\it Journal of
+  Political Economy}, 102(4):   617--652, URL:
+  \url{http://www.nber.org/papers/w4490 http://www.jstor.org/stable/2138759},
+  DOI: \url{http://dx.doi.org/10.2307/2138759}.
+
+\harvarditem[Constantinides and Duffie]{Constantinides and
+  Duffie}{1996}{Constantinides1996}
+\textbf{Constantinides, George, and Darrell Duffie.} 1996. ``{Asset pricing
+  with heterogeneous consumers}.'' {\it Journal of Political economy}, 104(2):
+   219--240, URL: \url{http://www.jstor.org/stable/10.2307/2138925}.
+
+\harvarditem[Correia]{Correia}{2010}{Correia2010}
+\textbf{Correia, Isabel.} 2010. ``{Consumption taxes and redistribution}.''
+  {\it American Economic Review}, 100(September):   1673--1694, URL:
+  \url{http://www.ingentaconnect.com/content/aea/aer/2010/00000100/00000004/art00014}.
+
+\harvarditem[Faraglia et~al.]{Faraglia, Marcet and Scott}{2012}{Faraglia2011}
+\textbf{Faraglia, Elisa, Albert Marcet, and Andrew Scott.} 2012. ``{Dealing
+  with Maturity : Optimal Fiscal Policy with Long Bonds}.''
+
+\harvarditem[Farhi]{Farhi}{2010}{Farhi2010}
+\textbf{Farhi, Emmanuel.} 2010. ``{Capital Taxation and Ownership When Markets
+  Are Incomplete}.'' {\it Journal of Political Economy}, 118(5):   908--948,
+  URL: \url{http://www.jstor.org/stable/10.1086/657996}.
+
+\harvarditem[Golosov and Tsyvinski]{Golosov and
+  Tsyvinski}{2007}{Golosov01052007}
+\textbf{Golosov, Mikhail, and Aleh Tsyvinski.} 2007. ``{Optimal Taxation with
+  Endogenous Insurance Markets}.'' {\it The Quarterly Journal of Economics},
+  122(2):   487--534, URL:
+  \url{http://qje.oxfordjournals.org/content/122/2/487.short}, DOI:
+  \url{http://dx.doi.org/10.1162/qjec.122.2.487}.
+
+\harvarditem[Golosov et~al.]{Golosov, Tsyvinski and
+  Werning}{2007}{golosov2007new}
+\textbf{Golosov, Mikhail, Aleh Tsyvinski, and Ivan Werning.} 2007. ``{New
+  dynamic public finance: a user's guide}.'' In  {\it NBER Macroeconomics
+  Annual 2006, Volume 21}. 21: MIT Press,   317--388, URL:
+  \url{http://www.nber.org/chapters/c11181.pdf}.
+
+\harvarditem[Guvenen et~al.]{Guvenen, Ozkan and Song}{2012}{NBERw18035}
+\textbf{Guvenen, Fatih, Serdar Ozkan, and Jae Song.} 2012. ``{The Nature of
+  Countercyclical Income Risk}.'' Working Paper 18035, National Bureau of
+  Economic Research.
+
+\harvarditem[Heathcote]{Heathcote}{2005}{Heathcote2005}
+\textbf{Heathcote, Jonathan.} 2005. ``{Fiscal Policy with Heterogeneous Agents
+  and Incomplete Markets}.'' {\it Review of Economic Studies}, 72(1):
+  161--188, URL:
+  \url{http://restud.oxfordjournals.org/lookup/doi/10.1111/0034-6527.00328},
+  DOI: \url{http://dx.doi.org/10.1111/0034-6527.00328}.
+
+\harvarditem[Judd et~al.]{Judd, Maliar and Maliar}{2011}{Judd2011}
+\textbf{Judd, Kenneth~L., Lilia Maliar, and Serguei Maliar.} 2011.
+  ``{Numerically stable and accurate stochastic simulation approaches for
+  solving dynamic economic models}.'' {\it Quantitative Economics}, 2(2):
+  173--210, URL: \url{http://doi.wiley.com/10.3982/QE14}, DOI:
+  \url{http://dx.doi.org/10.3982/QE14}.
+
+\harvarditem[Kocherlakota]{Kocherlakota}{2010}{kocherlakota2010new}
+\textbf{Kocherlakota, Narayana~R.} 2010.  {\it {The new dynamic public
+  finance}}.: Princeton University Press.
+
+\harvarditem[Kydland and Prescott]{Kydland and Prescott}{1980}{Kydland1980}
+\textbf{Kydland, Finn~E, and Edward~C Prescott.} 1980. ``{Dynamic optimal
+  taxation, rational expectations and optimal control}.'' {\it Journal of
+  Economic Dynamics and Control}, 2(0):   79--91, URL:
+  \url{http://www.sciencedirect.com/science/article/pii/0165188980900524}, DOI:
+  \url{http://dx.doi.org/http://dx.doi.org/10.1016/0165-1889(80)90052-4}.
+
+\harvarditem[{Lucas Jr.} and Stokey]{{Lucas Jr.} and
+  Stokey}{1983}{LucasJr.1983}
+\textbf{{Lucas Jr.}, Robert~E, and Nancy~L Stokey.} 1983. ``{Optimal fiscal and
+  monetary policy in an economy without capital}.'' {\it Journal of Monetary
+  Economics}, 12(1):   55--93, URL:
+  \url{http://www.sciencedirect.com/science/article/pii/0304393283900491}, DOI:
+  \url{http://dx.doi.org/http://dx.doi.org/10.1016/0304-3932(83)90049-1}.
+
+\harvarditem[Magill and Quinzii]{Magill and Quinzii}{1994}{Magill1994}
+\textbf{Magill, Michael, and Martine Quinzii.} 1994. ``{Infinite Horizon
+  Incomplete Markets}.'' {\it Econometrica}, 62(4):   853--880, URL:
+  \url{http://www.jstor.org/stable/2951735}, DOI:
+  \url{http://dx.doi.org/10.2307/2951735}.
+
+\harvarditem[Newcomb]{Newcomb}{1865}{newcomb1865critical}
+\textbf{Newcomb, Simon.} 1865.  {\it {A critical examination of our financial
+  policy during the Southern rebellion}}.
+
+\harvarditem[Ray]{Ray}{2002}{Ray2002}
+\textbf{Ray, Debraj.} 2002. ``{The Time Structure of Self-Enforcing
+  Agreements}.'' {\it Econometrica}, 70(2):   547--582, URL:
+  \url{http://onlinelibrary.wiley.com/doi/10.1111/1468-0262.00295/full}.
+
+\harvarditem[Reinhart and Rogoff]{Reinhart and Rogoff}{2010}{Reinhart2010}
+\textbf{Reinhart, Carmen~M, and Kenneth~S Rogoff.} 2010. ``{Growth in a Time of
+  Debt}.'' {\it American Economic Review}, 100(2):   573--578, URL:
+  \url{http://pubs.aeaweb.org/doi/abs/10.1257/aer.100.2.573}, DOI:
+  \url{http://dx.doi.org/10.1257/aer.100.2.573}.
+
+\harvarditem[Sargent]{Sargent}{1987}{sargent1987dynamic}
+\textbf{Sargent, Thomas~J.} 1987.  {\it {Dynamic macroeconomic theory}}.:
+  Harvard University Press.
+
+\harvarditem[Sargent and Smith]{Sargent and Smith}{1987}{Sargent1987}
+\textbf{Sargent, Thomas~J., and Bruce~D. Smith.} 1987. ``{Irrelevance of open
+  market operations in some economies with government currency being dominated
+  in rate of return}.'' {\it American Economic Review}, 77(1):   78--92, URL:
+  \url{http://ideas.repec.org/a/aea/aecrev/v77y1987i1p78-92.html}.
+
+\harvarditem[Shin]{Shin}{2006}{shin2006ramsey}
+\textbf{Shin, Yongseok.} 2006. ``{Ramsey meets Bewley: Optimal government
+  financing with incomplete markets}.'' {\it Unpublished manuscript, Washington
+  University in St. Louis}(August): .
+
+\harvarditem[Wallace]{Wallace}{1981}{Wallace1981}
+\textbf{Wallace, Neil.} 1981. ``{A Modigliani-Miller Theorem for Open-Market
+  Operations}.'' {\it The American Economic Review}, 71(3):   267--274, URL:
+  \url{http://www.jstor.org/stable/1802777}, DOI:
+  \url{http://dx.doi.org/10.2307/1802777}.
+
+\harvarditem[Werning]{Werning}{2007}{Wer07a}
+\textbf{Werning, Iv\'{a}n.} 2007. ``{Optimal Fiscal Policy with
+  Redistribution,}.'' {\it Quarterly Journal of Economics}, 122(August):
+  925--967, URL:
+  \url{http://qje.oxfordjournals.org/content/122/3/925.abstract}, DOI:
+  \url{http://dx.doi.org/10.1162/qjec.122.3.925}.
+
+\harvarditem[Werning]{Werning}{2012}{Werning2012}
+\textbf{Werning, Iv\'{a}n.} 2012. ``{Notes on Tax Smoothing with Heterogeneous
+  Agents}.''
+
+\harvarditem[Yared]{Yared}{2010}{Yared2010}
+\textbf{Yared, Pierre.} 2010. ``{Politicians, Taxes and Debt}.'' {\it Review of
+  Economic Studies}, 77(2):   806--840, URL:
+  \url{http://restud.oxfordjournals.org/lookup/doi/10.1111/j.1467-937X.2009.00584.x},
+  DOI: \url{http://dx.doi.org/10.1111/j.1467-937X.2009.00584.x}.
+
+\harvarditem[Yared]{Yared}{2013}{Yared2013}
+\textbf{Yared, Pierre.} 2013. ``{Public Debt Under Limited Private Credit}.''
+  {\it Journal of the European Economic Association}, 11(2):   229--245, URL:
+  \url{http://doi.wiley.com/10.1111/jeea.12010}, DOI:
+  \url{http://dx.doi.org/10.1111/jeea.12010}.
+
+\end{thebibliography}
