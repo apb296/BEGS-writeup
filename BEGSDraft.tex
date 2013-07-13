@@ -276,22 +276,25 @@ the tax rate, and transfers through their dependence on two components of the st
 
 Before analyzing and numerically solving  these Bellman equations, section \ref{Sec: quasilinear}
 studies a special case where much can be said analytically, namely,
-the  quasi-linear preferences  (they are linear in consumption) featured in a leading example of \citet{Aiyagari2002} (henceforth AMSS).  We characterize some important
- differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
- linear taxes of AMSS.   First, in our heterogeneous agent economy,  there exists a unique set  that contains the ergodic distribution of net  assets, one that is approached starting from  all initial
- distributions of net asset positions.  Second, to ameliorate   non-negativity constraints on the consumption of an  agent whose Pareto weight is low, the optimal tax-transfer-debt policy  distributes assets  toward that agent  until a point is eventually  reached after which  all fluctuations in government expenditures can be absorbed by adjusting transfers. The tax rate and  output are constant thereafter.  Third,   unlike the AMSS outcome,
- the tail allocation is not first-best and the tail of the distorting tax rate on labor income is constant but not zero.
- These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.
+the  quasi-linear preferences  (they are linear in consumption) featured in a leading example of \citet{Aiyagari2002} (henceforth AMSS).  \textcolor{blue}{We characterize some important differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
+linear taxes of AMSS. The key finding is that concerns for redistributions can impart a welfare cost of fluctuating transfers if asset distribution is sufficiently skewed. Most clear in a two agent setting, we show that disarming non-negativity constraints on the consumption of an agent whose Pareto weight is low, the optimal tax-transfer-debt policy distributes assets toward that agent until a point is eventually reached after which all fluctuations in government expenditures can be absorbed by adjusting transfers. The tax rate and output are constant thereafter. Thus,unlike the AMSS outcome,
+the tail allocation is not first-best and the tail of the distorting tax rate on labor income is constant but not zero. Further there exists bounds on the long run distribution of net assets that are inversely related to how redistributory the government is. These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.}
 
- The section \ref{Sec: quasilinear} quasi-linear preference specification  is useful for  isolating  key forces influencing
- limiting outcomes, but it acquires its analytical tractability by eliminating endogenous interest rate fluctuations.
-  Interest rate fluctuations can be  correlated with   fundamentals (i.e., government expenditures and  shocks to the distribution
- of skills).  Section \ref{sec: longrun anatyt} studies how preference specifications
-  featuring aversion to consumption risk lead to  endogenous fluctuations in  interest rates that, via their correlations with government
-   expenditures, transfers or fluctuations in the labor tax base (coming from endogenous responses to different types of shocks to skill distributions), influence the long run  distribution of net assets. Here a  key avenue is that interest rate risk induces risk in the government's earnings on its  holdings of risk-free bonds.  We show that there exists an ergodic set   in the space of marginal utility adjusted net asset positions and pairwise ratios of marginal utilities to which outcomes converge under an optimal policy.  Within that ergodic set, fluctuations of the state vector are
-    typically quite small relative to its variation along transient paths approaching that set. When the state space of the exogenous shocks is of dimension $2$, the ergodic set is a single point. In that special case, history dependence
-      of allocations, the tax rate, and transfers vanish after that point is attained.  The  endogenous correlation of interest rates with the fundamental shocks
-    that influence the government's  need for  revenues to finance transfers and government purchases is a key determinant of the ergodic set for the distribution of net asset positions.
+% We characterize some important
+%  differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
+%  linear taxes of AMSS.   First, in our heterogeneous agent economy,  there exists a unique set  that contains the ergodic distribution of net  assets, one that is approached starting from  all initial
+%  distributions of net asset positions.  Second, to ameliorate   non-negativity constraints on the consumption of an  agent whose Pareto weight is low, the optimal tax-transfer-debt policy  distributes assets  toward that agent  until a point is eventually  reached after which  all fluctuations in government expenditures can be absorbed by adjusting transfers. The tax rate and  output are constant thereafter.  Third,   unlike the AMSS outcome,
+%  the tail allocation is not first-best and the tail of the distorting tax rate on labor income is constant but not zero.
+%  These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.
+
+
+\textcolor{blue}{The section \ref{Sec: quasilinear} quasi-linear preference specification is useful for isolating key forces influencing
+limiting outcomes, but it acquires its analytical tractability by eliminating endogenous interest rate fluctuations.
+Interest rate fluctuations can be correlated with fundamentals (i.e., government expenditures and shocks to the distribution
+of skills). Section \ref{sec: longrun anatyt} studies how preference specifications
+featuring aversion to consumption risk simulataneously activates two forces : Like before,owing to \emph{affine taxes}transfers produce fluctuations in inequality,(this effect resembles binding non-negativity constraints in quasi-linear case) and secondly we have endogenous fluctuations in interest rates that induces risk in the government's earnings on its holdings of risk-free bonds, via their correlations with fundamentals., Both these avenues influence the long run distribution of net assets. Under the optimal policy,typically, there exists an ergodic set in the space of marginal utility adjusted net asset positions and pairwise ratios of marginal utilities to which balances this forces. Within that ergodic set, fluctuations of the state vector are typically quite small relative to its variation along transient paths approaching that set. The effects are most clear in a two agent economy with exogenous binary IID aggregate shocks where we can show that the ergodic set is a single point. In that special case, history dependence
+of allocations, the tax rate, and transfers vanish after that point is attained. The endogenous correlation of interest rates with fundamentals governing government
+expenditures, transfers or fluctuations in the labor tax base (coming from endogenous responses to different types of shocks to skill distributions) is a key determinant of the ergodic set for the distribution of net asset positions.}
 
  For a calibrated version of our economy, section \ref{Sec: numerical} studies both asymptotic and transient responses to shocks
  that    in different ways shape the endogenous correlation between interest rates and the government's revenue needs.  We allow correlated shocks
@@ -1095,15 +1098,24 @@ driven by the exogenous restriction that transfers are non-negative,  with a suf
 a heterogenous agent economy  like ours, such
 constraints are not present. Furthermore, if they were present, they might not bind.  That leads to substantially different  optimal policies.
 
-In the second part of this section, we  study  optimal policy when an optimal
-equilibrium is not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
-some states. We describe a force
- present in  economies  with heterogeneous %risk-neutral
- agents, namely, that a
+
+\textcolor{blue}{In the second part of this section, we study in detail how optimal policy trades off concerns for redistribution and distortionary costs associated with affine taxes. By paying attention to equilibriums that are not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
+some states we describe a force
+present in economies with heterogeneous %risk-neutral
+agents, namely, that a
 reduction in transfers can lead to an increase in inequality and a
 decrease in welfare. This type of welfare loss is not present in
-representative agent economies.
+representative agent economies. The next section describes how the government manipulates changes in net asset holdings to minimize these costs overtime}
 
+% In the second part of this section, we  study  optimal policy when an optimal
+% equilibrium is not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
+% some states. We describe a force
+%  present in  economies  with heterogeneous %risk-neutral
+%  agents, namely, that a
+% reduction in transfers can lead to an increase in inequality and a
+% decrease in welfare. This type of welfare loss is not present in
+% representative agent economies.
+% 
 \subsection{The optimal response to government expenditure shocks}\label{sec: quasi linear interior }
 
 \smallskip To contrast outcomes in our environment with those in AMSS's, we
