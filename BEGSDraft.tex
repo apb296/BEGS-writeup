@@ -276,9 +276,9 @@ the tax rate, and transfers through their dependence on two components of the st
 
 Before analyzing and numerically solving  these Bellman equations, section \ref{Sec: quasilinear}
 studies a special case where much can be said analytically, namely,
-the  quasi-linear preferences  (they are linear in consumption) featured in a leading example of \citet{Aiyagari2002} (henceforth AMSS).  \textcolor{blue}{We characterize some important differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
-linear taxes of AMSS. The key finding is that concerns for redistributions can impart a welfare cost of fluctuating transfers if asset distribution is sufficiently skewed. Most clear in a two agent setting, we show that disarming non-negativity constraints on the consumption of an agent whose Pareto weight is low, the optimal tax-transfer-debt policy distributes assets toward that agent until a point is eventually reached after which all fluctuations in government expenditures can be absorbed by adjusting transfers. The tax rate and output are constant thereafter. Thus,unlike the AMSS outcome,
-the tail allocation is not first-best and the tail of the distorting tax rate on labor income is constant but not zero. Further there exists bounds on the long run distribution of net assets that are inversely related to how redistributory the government is. These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.}
+the  quasi-linear preferences  (they are linear in consumption) featured in a leading example of \citet{Aiyagari2002} (henceforth AMSS). We describe important differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
+linear taxes of AMSS.  The key finding is that in presence of concerns for redistribution, the restriction to an affine tax-transfer policy imparts a  welfare cost to using transfers. We have analyzed this most fully within a  setting with two types of agents. Starting from a distribution of net assets that is sufficiently skewed, fluctuating transfers threaten to violate non-negativity constraints on consumption of the agent with low relative assets. That nonnegativity constraint forces the government to care about more than just the present value of transfers, a concern that impairs its ability to deliver efficient allocations. An optimal tax-transfer-debt policy then gradually redistributes assets toward  this agent until the distribution of net assets eventually reaches  a point that assures that this constraint never  again binds. After this, the tax rate and output are constant and all fluctuations in government expenditures can be financed by adjusting transfers. Thus, unlike the AMSS outcome,
+the tail allocation is not first-best and the tail of the distorting tax rate on labor income is not zero, though it is constant. Furthermore, there exist bounds on the long-run relative assets of agents with low productivity that are inversely related to how redistributive the government wants to be. These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.
 
 % We characterize some important
 %  differences that emerge in our heterogeneous agent economy with affine taxes vis a vis the representative agent economy with
@@ -288,13 +288,15 @@ the tail allocation is not first-best and the tail of the distorting tax rate on
 %  These outcomes reflect how very different `precautionary savings' motives operate in our economy versus the AMSS economy.
 
 
-\textcolor{blue}{The section \ref{Sec: quasilinear} quasi-linear preference specification is useful for isolating key forces influencing
-limiting outcomes, but it acquires its analytical tractability by eliminating endogenous interest rate fluctuations.
-Interest rate fluctuations can be correlated with fundamentals (i.e., government expenditures and shocks to the distribution
+The section \ref{Sec: quasilinear} quasi-linear preference specification is useful for isolating key forces that influence
+limiting outcomes, but it acquires its analytical tractability by eliminating endogenous interest rate fluctuations. With more general
+preferences, interest rate fluctuations can be correlated with fundamentals (i.e., government expenditures and shocks to the distribution
 of skills). Section \ref{sec: longrun anatyt} studies how preference specifications
-featuring aversion to consumption risk simulataneously activates two forces : Like before,owing to \emph{affine taxes}transfers produce fluctuations in inequality,(this effect resembles binding non-negativity constraints in quasi-linear case) and secondly we have endogenous fluctuations in interest rates that induces risk in the government's earnings on its holdings of risk-free bonds, via their correlations with fundamentals., Both these avenues influence the long run distribution of net assets. Under the optimal policy,typically, there exists an ergodic set in the space of marginal utility adjusted net asset positions and pairwise ratios of marginal utilities to which balances this forces. Within that ergodic set, fluctuations of the state vector are typically quite small relative to its variation along transient paths approaching that set. The effects are most clear in a two agent economy with exogenous binary IID aggregate shocks where we can show that the ergodic set is a single point. In that special case, history dependence
-of allocations, the tax rate, and transfers vanish after that point is attained. The endogenous correlation of interest rates with fundamentals governing government
-expenditures, transfers or fluctuations in the labor tax base (coming from endogenous responses to different types of shocks to skill distributions) is a key determinant of the ergodic set for the distribution of net asset positions.}
+featuring aversion to consumption risk simultaneously activate two forces.  First, a system of affine taxes and transfers produces fluctuations in inequality, an  effect that resembles those binding non-negativity constraints in the quasi-linear case.  Second, endogenous fluctuations in interest rates  induces risk in the government's earnings on its holdings of risk-free bonds. Both forces influence the long run distribution of net assets. Under an optimal government policy, there typically exists an ergodic set in the space of marginal utility adjusted net asset positions and pairwise ratios of marginal utilities where these forces on average balance each other in terms of their impact of the evolution of the endogenous
+state. For that reason, within that ergodic set, fluctuations of the state vector are typically quite small relative to its variation along transient paths approaching the set. We exhibit these outcomes most completely within an economy with two types of agents and  exogenous binary IID aggregate shocks.  Here  we can show that the ergodic set is a single point. In that special case, history dependence
+of allocations, the tax rate, and transfers all vanish after that point is attained. The endogenous correlations of interest rates with fundamentals
+that  drive government
+expenditures, transfers, and  fluctuations in the labor tax base (coming from endogenous responses to different types of shocks to skill distributions) are key determinants of the ergodic set for the distribution of net asset positions.
 
  For a calibrated version of our economy, section \ref{Sec: numerical} studies both asymptotic and transient responses to shocks
  that    in different ways shape the endogenous correlation between interest rates and the government's revenue needs.  We allow correlated shocks
@@ -825,7 +827,7 @@ of  agent-specific variables like past labor earnings.\footnote{It is easy to se
 \mathbb{E}_{0}\sum_{i=1}^{I}\sum_{t=0}^{\infty } \bigl[\Pi_{j=0}^t \beta(s_j)\bigr]\left\{\left( \alpha _{i}\pi _{i}+\eta
 _{i,i}\right) U^{i}\left( c_{i,t},\frac{y_{i,t}}{\theta _{i}}\right)
 -\sum_{j\neq i}\eta _{j,i}U^{j}\left( c_{j,t},\frac{y_{j,t}}{\theta _{i}}%
-\right)\right\} 
+\right)\right\}
 \end{equation*}%
 subject to (\ref{mechdes feas}). This problem is equivalent to a sequence of
 static problems for each realization of $g_{t}.$
@@ -989,7 +991,7 @@ maximization problem depends only on the $I-1$ variables $\tilde{b}_{i,t-1}.$
 The reduction of  the dimensionality from \ $I$ to $I-1$ is
  another consequence of theorem \ref{theorem: main}.
 
-Let $\mathbf{x}= \beta^{-1}\left( U_{c}^{2}\tilde{b}_{2},...,U_{c}^{I}\tilde{b}_{I}\right)$, $\mathbf{\rho }=\left( U_{c}^{2}/U_{c}^{1},...,U_{c}^{I}/U_{c}^{1}\right) $, and denote an allocation $a=\{c_i,l_i\}^{I}_{i=1}.$ 
+Let $\mathbf{x}= \beta^{-1}\left( U_{c}^{2}\tilde{b}_{2},...,U_{c}^{I}\tilde{b}_{I}\right)$, $\mathbf{\rho }=\left( U_{c}^{2}/U_{c}^{1},...,U_{c}^{I}/U_{c}^{1}\right) $, and denote an allocation $a=\{c_i,l_i\}^{I}_{i=1}.$
 In the spirit of \cite{Kydland1980} and \cite{Farhi2010}, we split the problem into a time-0 problem that takes $(\{\tilde{b}_{i,-1}\}^{I}_{i=2}, s_0)$ as given and   a time $t \geq 1$ continuation problem  that takes $x,\rho,s\_$ as given. We formulate
 two Bellman equations and two value functions, one that pertains to $t\geq 1$, another for $t=0$.
 
@@ -1099,13 +1101,13 @@ a heterogenous agent economy  like ours, such
 constraints are not present. Furthermore, if they were present, they might not bind.  That leads to substantially different  optimal policies.
 
 
-\textcolor{blue}{In the second part of this section, we study in detail how optimal policy trades off concerns for redistribution and distortionary costs associated with affine taxes. By paying attention to equilibriums that are not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
-some states we describe a force
+In the second part of this section, we study in detail how optimal policy trades off concerns for redistribution against the distortionary costs associated with affine taxes. By studying equilibria that are not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
+some states, we describe a force
 present in economies with heterogeneous %risk-neutral
 agents, namely, that a
 reduction in transfers can lead to an increase in inequality and a
 decrease in welfare. This type of welfare loss is not present in
-representative agent economies. The next section describes how the government manipulates changes in net asset holdings to minimize these costs overtime}
+representative agent economies. The next section describes how the government adjusts  changes in net asset holdings to minimize these costs intertemporally.
 
 % In the second part of this section, we  study  optimal policy when an optimal
 % equilibrium is not interior, meaning that constraint (\ref{c ge c_lowbar}) binds in
@@ -1115,7 +1117,7 @@ representative agent economies. The next section describes how the government ma
 % reduction in transfers can lead to an increase in inequality and a
 % decrease in welfare. This type of welfare loss is not present in
 % representative agent economies.
-% 
+%
 \subsection{The optimal response to government expenditure shocks}\label{sec: quasi linear interior }
 
 \smallskip To contrast outcomes in our environment with those in AMSS's, we
@@ -1296,8 +1298,8 @@ transfers. Distributional motives not present in those models, but present here,
 \begin{equation}
 T_{t}\geq 0\text{ for all }t.  \label{T ge 0}
 \end{equation}%
-The following proposition states that our economy converges to an allocation similar to that characterized  in proposition \ref{Prop: quasilinear} where constraint \eqref{T ge 0} was slack \footnote{In  some settings with heterogenous
-agents, for example, one with $\alpha_i >0$ for all $i$ and $\theta_1 = b_{1,-1} =0$, constraints (\ref{T ge 0}) is \emph{always} slack.}.
+The following proposition states that our economy converges to an allocation similar to that characterized  in proposition \ref{Prop: quasilinear} where constraint \eqref{T ge 0} was slack. \footnote{In some settings with heterogenous
+agents, for example, one with $\alpha_i >0$ for all $i$ and $\theta_1 = b_{1,-1} =0$, constraints (\ref{T ge 0}) is \emph{always} slack.}
 \smallskip
 
 \begin{proposition}\label{prop:AMSS_killer1}
@@ -1473,8 +1475,6 @@ _{2}$ are the government's claims against the productive $i=1$ agent,  a smaller
 claims is required to assure that this nonnegativity constraint is satisfied. In this way, the non-negativity constraint on
 $c_1(s)$  puts limits on $\bar{\mathcal{B}}_{2}(\alpha _{2})$.
 
-In summary, to ameliorate non-negativity constraints on the consumption of an  agent whose Pareto weight is low, the optimal tax-transfer-debt policy  distributes assets  toward that agent  until a point is eventually  reached after which  all fluctuations in government expenditures can be absorbed by adjusting transfers and keeping distortionary taxes constant. 
-
 %\textcolor{red}{XXXXXX Anmol and David -- I did some more editing of Anmol's good editing of June 18, 2013.}
 
  The quasi-linear setup also allows us to compare the forces for accumulating assets  in our model with those in
@@ -1618,7 +1618,7 @@ times of increased need for government revenues, as in
 %\textcolor{blue}{From anmol : I think we agreed on this terminology to have a parsimonius label for ``states'' when expenditure is high or productivity is low. Both these states are periods when the government requires additional revenues to either finance higher outflows  or make up for the lower tax base }
 
 Depending on  details of shock processes, these two forces can
-either reinforce each other (as happens in the Part 1 %\textcolor{red}{From Tom: can we label the part more precisely? Part 1?}
+either reinforce each other (as happens in the Part 1 and Part 2 %\textcolor{red}{From Tom: can we label the part more precisely? Part 1?}
  of  proposition \ref{prop: long run forces}) or work in the opposite direction (as in Part 3 of  proposition \ref{prop: long run forces}). In the latter case, whether the
 government ends up with assets or debt in the long run depends on the
 relative strengths of the two forces. In section \ref{Sec: numerical},  we
@@ -1669,14 +1669,13 @@ allocation by calibrating  shocks to match stylized facts about recent
 recessions.
 
 \smallskip We consider an economy with two types of agents%
-\footnote{%
+of equal measures with preferences\footnote{%
 We restrict our attention to the economy with two agents for computational
 tractability. We want to understand both short-run and long-run
 responses to shocks.  For some of our computations,  it is important to allow our
 dynamic systems to travel over a large subset of state space, including regions encountered infrequently.
 With more agents, it seems  possible to apply other methods,  for example those of  \cite{Judd2011}, to study dynamics of our economy within its invariant
 distribution. We hope to pursue such extensions in  future work.}
-of equal measures with preferences%
 \begin{equation*}
 U\left( c,l\right) =\psi \ln c+\left( 1-\psi \right) \ln \left( 1-l\right) .
 \end{equation*}%
@@ -1874,7 +1873,7 @@ replicate  procylical fluctuations in interest rates. For a particular initial c
 the planner can refrain from varying debt for a very  long time.\footnote{Like the finding in Proposition \ref{prop: long run forces} for large discount factor shocks (in a way that interest rates are procylical)  there exist
 regions where $x_t,\rho_t$ have low volatility and the  government is \emph{not} accumulating assets. But these
 regions  are typically unstable. The two forces highlighted before that guide accumulation of assets now work in opposite direction and the net effect depends
-on the relative strengths. In particular the sample paths from different initial conditions $\tilde{b}_{2,-1}$ (which would imply different choices for the initial $x_0,\rho_0)$ may display larger fluctuations in assets. However, at the calibrated initial conditions ($60\%$ debt-gdp ratio), the uncertainty associated with the mean path is very low for the first 5000 periods.} 
+on the relative strengths. In particular the sample paths from different initial conditions $\tilde{b}_{2,-1}$ (which would imply different choices for the initial $x_0,\rho_0)$ may display larger fluctuations in assets. However, at the calibrated initial conditions ($60\%$ debt-gdp ratio), the uncertainty associated with the mean path is very low for the first 5000 periods.}
 
 
 Convergence to the ergodic region is  very slow.  With persistent shocks and an initial 60\% debt-GDP\ ratio,  it takes about 3,000 years for
