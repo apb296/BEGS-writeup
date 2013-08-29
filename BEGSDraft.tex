@@ -3225,92 +3225,101 @@ in the steady state interest rates are positively correlated with TFP.
 \subsection{Linearization Algorithm}\label{apndx: numerical methods}
 This section will outline our numerical methods used to solve for and linearize around a complete markets steady state in the case of a 2 state iid process for the aggregate state.  We will specialize to the two agent case and for the remainder of this section it will be assumed that the Bellman equation is written in the form
 \begin{equation}
-	V(x,\rho) = \max_{c_i(s),l_i(s),x'(s),\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(x'(s),\rho'(s))\right)\label{eq.obj}
+	V(\mathbf x,\mathbf \rho) = \max_{c_i(s),l_i(s),\mathbf x'(s),\mathbf\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(\mathbf x'(s),\mathbf \rho'(s))\right)\label{eq.obj}
 \end{equation}
 \begin{subequations}
 \begin{align}
-	&U_{c,2}(s)c_2(s)+U_{l,2}(s)l_2(s) - \rho'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x'(s) = \frac{x U_{c,2}(s)}{\mathbb{E} U_{c,2}}\label{eq.imp_con}\\
-	&\sum_s P(s) U_{c,1}(s)(\rho(s) -\rho) = 0\\
-	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_2(s)}U_{l,2}(s)\\
-	& \pi_1 c_1(s)  +\pi_2 c_2(s) + g(s) = \pi_1\theta_1(s)l_1(s)+\pi_2\theta_2(s)l_2(s)\\
-	& U_{c,2}(s) = \rho'(s) U_{c,1}(s)\label{eq.rho_con}
-\end{align}\end{subequations}  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu(s)$, $\lambda$,$P(s)\phi(s)$,$P(s)\xi(s)$, and $P(s)\zeta(s)$.
+	&U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x_i'(s) = \frac{x_i U_{c,i}(s)}{\mathbb{E} U_{c,i}}\label{eq.imp_con}\\
+	&\sum_s P(s) U_{c,1}(s)(\rho_i(s) -\rho_i) = 0\\
+	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_i(s)}U_{l,i}(s)\\
+	& \sum_{j=0}^N\pi_j c_j(s)  + g(s) = \sum_{j=0}^{N} \pi_j\theta_j(s)l_j(s)\\
+	& U_{c,i}(s) = \rho'(s) U_{c,1}(s)\label{eq.rho_con}
+\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu'_i(s)$, $\lambda_i$,$P(s)\phi_i(s)$,$P(s)\xi(s)$, and $P(s)\zeta_i(s)$.
 \subsubsection{Steady State}  By taking first order conditions it is possible to numerically determine the location of a stationary steady state.  The first order conditions with respect to the choice variables are as follows (note we will be using the notation $\mathbb E z$ to represent $\sum_s P(s) z(s)$ for some variable $z$)
 \begin{subequations}
 \begin{description}
 	\item[$c_1(s)$:]
+	\begin{align}
+		&\pi_1\alpha_1U_{c,1}(s)+\sum_{i=2}^N\left(\mu'_i(s)\rho_i'(s)\right)\left[U_{cc,1}(s)c_1(s)+U_{c,1}(s)\right]\nonumber\\&\quad\quad+\lambda U_{cc,1}(s)\sum_{i=2}^N(\rho_i'(s)-\rho_i)-\pi_1\xi(s)+\sum_{i=2}^N\zeta_i(s)\rho'_i(s)U_{cc,1}(s) = 0\label{eq.foc_c1}
+	\end{align}
+	\item[$c_i(s)$ for $i\geq 2$:]
 	\begin{equation}
-		\pi_1\alpha_1U_{c,1}(s)+\mu(s)\rho'(s)\left[U_{cc,1}(s)c_1(s)+U_{c,1}(s)\right]+\lambda U_{cc,1}(s)(\rho'(s)-\rho)-\pi_1\xi(s)+\zeta(s)\rho'(s)U_{cc,1}(s) = 0\label{eq.foc_c1}
-	\end{equation}
-	\item[$c_2(s)$:]
-	\begin{equation}
-		\pi_2\alpha_2 U_{c,2}(s)-\mu(s)\left[U_{cc,2}(s)c_2(s)+ U_{c,2}(s)\right] +\frac{xU_{cc,2}(s)}{\mathbb E U_{c,2}}\left(\mu(s) - \frac{\mathbb E \mu U_{c,2}}{\mathbb E U_{c,2}}\right) - \pi_2\xi(s) -\zeta(s) U_{cc,2}(s) = 0
+		\pi_i\alpha_i U_{c,i}(s)-\mu'_i(s)\left[U_{cc,i}(s)c_i(s)+ U_{c,i}(s)\right] +\frac{xU_{cc,i}(s)}{\mathbb E U_{c,i}}\left(\mu'_i(s) - \frac{\mathbb E \mu'_i U_{c,i}}{\mathbb E U_{c,i}}\right) - \pi_i\xi(s) -\zeta_i(s) U_{cc,i}(s) = 0
 	\end{equation}
 	\item[$l_1(s)$:]
 	\begin{equation}
-		\pi_1\alpha_1 U_{l,1}(s)+\mu(s)\rho(s)\left[U_{ll,1}(s)l_1(s)+U_{l,1}(s)\right]-\frac{\rho'(s)}{\theta_1(s)}\phi(s)U_{ll,1}(s)+\pi_1\theta_1(s)\xi(s) = 0
+		\pi_1\alpha_1 U_{l,1}(s)+\sum_{i=2}^N\mu'_i(s)\rho_i(s)\left[U_{ll,1}(s)l_1(s)+U_{l,1}(s)\right]-\sum_{i=2}^N\frac{\rho_i'(s)\phi_i(s)}{\theta_1(s)}U_{ll,1}(s)+\pi_1\theta_1(s)\xi(s) = 0
 	\end{equation}
 	\item[$l_2(s)$:]
 	\begin{equation}
-		\pi_2 \alpha_2 U_{l,2}(s) -\mu(s)\left[ U_{ll,2}(s)l_2(s)+U_{l,2}(s)\right] + \frac{\phi(s)}{\theta_2(s)}U_{ll,2}(s) +\pi_2\theta_2(s)\xi(s) = 0
+		\pi_i \alpha_i U_{l,i}(s) -\mu'_i(s)\left[ U_{ll,i}(s)l_i(s)+U_{l,i}(s)\right] + \frac{\phi_i(s)}{\theta_i(s)}U_{ll,i}(s) +\pi_i\theta_i(s)\xi(s) = 0
 	\end{equation}
-	\item[$x'(s)$:]
+	\item[$\rho_i'(s)$:]
 	\begin{equation}
-		 V_x(x'(s),\rho'(s)) - \mu(s) = 0 \label{eq.foc_x}
+		\beta(s) V_{\rho_i}(\mathbf x'(s),\mathbf \rho_i'(s)) +\mu'_i(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right] + \lambda_i U_{c,1}(s) - \phi_i(s) \frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\zeta_i(s) = 0\label{eq.foc_rho}
 	\end{equation}
-	\item[$\rho'(s)$:]
+	\item[$x_i'(s)$:]
 	\begin{equation}
-		\beta(s) V_{\rho}(x'(s),\rho'(s)) +\mu(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right] + \lambda U_{c,1}(s) - \phi(s) \frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\zeta(s) = 0\label{eq.foc_rho}
+		 V_{x_i}(\mathbf x'(s),\mathbf \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}
 	\end{equation}
 \end{description} \end{subequations} Equations (\ref{eq.imp_con})-(\ref{eq.rho_con}) and (\ref{eq.foc_c1})-(\ref{eq.foc_rho}) then define the necessary conditions for an interior maximization of the planners problem for the state $(x,\rho)$.  In addition to these we have the two envelop conditions
 \begin{subequations}
 \begin{equation}
-	V_x(x,\rho)= \frac{\sum_sP(s) \mu(s) U_{c,2}(s)}{\mathbb E U_{c,2}(s)} = \frac{\mathbb E\mu U_{c,2}}{\mathbb E U_{c,2}}\label{eq.env_x}
+	V_{x_i}(\mathbf x,\mathbf \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x}
 \end{equation}and
 \begin{equation}
-	V_{\rho}(x,\rho) = -\lambda \mathbb E U_{c,1}\label{eq.env_rho}
-\end{equation}\end{subequations}  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_2(s),l_1(s),l_2(s),x,\rho,\mu(s),\lambda,\phi(s),\xi(s),\zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu(s) = \mu = V_x(x,\rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_2(s),l_1(s),l_2(s),x,\rho,\mu,\lambda,\phi(s),\xi(s),\zeta(s)\}$ that solves the following system of equations
+	V_{\rho_i}(\mathbf x,\mathbf \rho) = -\lambda_i \mathbb E U_{c,1}\label{eq.env_rho}
+\end{equation}\end{subequations}  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu'(s),\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu_i(s) = \mu_i = V_{x_i}(\mathbf x,\mathbf \rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu,\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$ that solves the following system of equations
 \begin{subequations}
 \begin{align}
-	U_{c,2}(s)c_2(s)+U_{l,2}(s)l_2(s) - \rho\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+\beta(s)x -\frac{x U_{c,2}(s)}{\mathbb E U_{c,2}}\label{eq.FSS_start}\\
-	\frac{U_{l,2}(s)}{\theta_2(s)} - \frac{\rho U_{l,1}(s)}{\theta_1(s)}=0\\
-	\pi_1 c_1(s)+\pi_2 c_2(s)+g(s) = \pi_1 \theta_1(s) l_1(s) + \pi_2\theta_2(s) l_2(s)=0\\
-	\rho U_{c,1}(s)-U_{c,2}(s) =0
-	\pi_1\alpha_1 U_{c,1}(s) + \mu\rho\left[ U_{cc,1}(s) c_1(s)+U_{c,1}(s)\right] -\pi_1\xi(s)  + \rho\eta(s)U_{cc,1}(s) = 0\\
-	\pi_2\alpha_2 U_{cc,2}(s) - \mu\left[ U_{cc,2}(s)c_2(s)+U_{c,2}(s)\right] - \pi_2\xi(s) -\eta(s) U_{cc,2}(s) = 0\\
-	\pi_1 \alpha_1 U_{l,1}(s) +\mu\rho\left[U_{ll,1}(s) l_1(s) + U_{l,1}(s)\right] - \frac\rho{\theta_1(s)}\phi(s) U_{ll,1}(s) + \pi_1\theta_1(s)\xi(s) = 0\\
-	\pi_2\alpha_2 U_{l,2}(s)  -\mu\left[U_{ll,2}(s)l_2(s) + U_{l,2}(s)\right] +\frac{\phi(s)}{\theta_2(s)} U_{ll,2}(s) + \pi_2\theta_2(s)\xi(s) = 0\\
-	\lambda\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\xi(s) = 0\label{eq.FSS_end}
-\end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_2(s),l_1(s),l_2(s),x,\rho,\mu,\lambda,\phi(s),\xi(s),\zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
-\subsubsection{Linearization}  In order to check local stability we developed a way of linearizing locally around the steady state.  Given the discussion above we will therefore be restricting ourselves to a 2 state iid process for the aggregate state.  The optimal policy function, which we will denote as $z(x,\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho}), $y$ is the state vector $(x,\rho)$, and $g$ is the mapping of next periods policies into the derivatives of the value function.  In other words
+	U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+\beta(s)x_i -\frac{x_i U_{c,i}(s)}{\mathbb E U_{c,i}}\label{eq.FSS_start}\\
+	\frac{U_{l,i}(s)}{\theta_i(s)} - \frac{\rho U_{l,1}(s)}{\theta_1(s)}=0\\
+	\sum_{i=1}^N\pi_i c_i(s)+g(s) = \sum_{i=1}^N\pi_i \theta_i(s) l_i(s)\\
+	\rho_i U_{c,1}(s)-U_{c,i}(s) =0
+	\pi_1\alpha_1 U_{c,1}(s) + \sum_{i=2}^N\mu_i\rho_i\left[ U_{cc,1}(s) c_1(s)+U_{c,1}(s)\right] -\pi_1\xi(s)  +\sum_{i=2}^N \rho_i\eta_i(s)U_{cc,1}(s) = 0\\
+	\pi_i\alpha_i U_{cc,i}(s) - \mu_i\left[ U_{cc,i}(s)c_i(s)+U_{c,i}(s)\right] - \pi_i\xi(s) -\eta_i(s) U_{cc,i}(s) = 0\\
+	\pi_1 \alpha_1 U_{l,1}(s) +\sum_{i=2}^N\mu_i\rho_i\left[U_{ll,1}(s) l_1(s) + U_{l,1}(s)\right] - \sum_{i=2}^N\frac{\rho_i\phi_i(s)}{\theta_1(s)} U_{ll,1}(s) + \pi_1\theta_1(s)\xi(s) = 0\\
+	\pi_i\alpha_i U_{l,i}(s)  -\mu_i\left[U_{ll,i}(s)l_i(s) + U_{l,i}(s)\right] +\frac{\phi_i(s)}{\theta_i(s)} U_{ll,i}(s) + \pi_i\theta_i(s)\xi(s) = 0\\
+	\lambda_i\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu_i\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi_i(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\eta_i(s) = 0\label{eq.FSS_end}
+\end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu,\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
+\subsubsection{Linearization}  In order to check local stability we developed a way of linearizing locally around the steady state.  Given the discussion above we will therefore be restricting ourselves to a 2 state iid process for the aggregate state.  Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\mathbf \mu,\mathbf \rho$ rather than $\mathbf x,\mathbf \rho$, and thus, we will proceed with the linearization procedure using $(\mathbf \mu,\mathbf \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
+\begin{equation}
+	\mu_i - \frac{\sum_s P(s) \mu_i'(s)U_{c,i}(s)}{\sum_s P(s) U_{c,i}(s)} = 0\label{eq.mu_mart}
+\end{equation}  The optimal policy function, which we will denote as $z(\mathbf \mu,\mathbf\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho})and \eqref{eq.mu_mart}, $y$ is the state vector $(\mathbf x,\mathbf \rho)$, and $g$ is the mapping of the policies into functions of future variables, namely $\mathbf x'(s)$ and $V_{\mathbf \rho}(\mathbf \mu'(s),\mathbf \rho(s))$.  In other words
 \[
-	g(z) = \left(\bmat V_x(x'(1),\rho'(1))\\ V_{\rho}(x'(1),\rho'(1)\\ V_x(x'(2),\rho'(2))\\ V_{\rho}(x'(2),\rho'(2))\emat\right)
-\]The optimal policy function is then a function $z(x,R)$ that satisfies the relationship $F(z(y),y,g(z(y))) = 0$.  Taking total derivatives around the steady stat $\ov y$ and $\ov z = z(\ov y)$
+	g(z) = \left(\bmat \mathbf x(\mathbf \mu'(1),\mathbf \rho'(1))\\ V_{\mathbf \rho}(\mathbf \mu'(1),\mathbf \rho'(1)\\ \mathbf x(\mathbf \mu'(2),\mathbf \rho'(2))\\ V_{\mathbf \rho}(\mathbf \mu'(2),\mathbf \rho'(2))\emat\right)
+\]  Finally $z(\mathbf \mu,\mathbf \rho)$ are the stacked variables $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho'(s),\mathbf \mu'(s),\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$.  The optimal policy function is then a function $z(y)$ that satisfies the relationship $F(z(y),y,g(z(y))) = 0$.  Taking total derivatives around the steady state $\ov y$ and $\ov z = z(\ov y)$
 \[
-	D_zF(\ov z,\ov y, g(\ov z))D_yz(\ov y)+D_yF(\ov z, \ov y, g(\ov z)) + D_v F(\ov z, \ov y, g(\ov z)) D g(\ov z) D_y z(\ov z) = 0
-\]  In order to linearize $z(y)$ around the steady state $\ov y$ we need to compute $D_y z(\ov y)$.  The problem is that $g$ depends on the planners value function which is difficult to compute.  The envelope conditions (\ref{eq.env_x})-(\ref{eq.env_rho}) tell us that $V_x$ and $V_{\rho}$ depend on the policies, i.e.
+	D_zF(\ov z,\ov y, g(\ov z))D_yz(\ov y)+D_yF(\ov z, \ov y, g(\ov z)) + D_g F(\ov z, \ov y, g(\ov z)) D g(\ov z) D_y z(\ov z) = 0
+\]  In order to linearize $z(y)$ around the steady state $\ov y$ we need to compute $D_y z(\ov y)$.   The envelope condition (\ref{eq.env_rho}) tell us that $V_{\mathbf \rho}$ can be computed from the optimal policies, i.e.
 \[
-	\left(\bmat V_x(x,\rho)\\ V_{\rho}(x,\rho)\emat\right) = v( z(x,\rho) ) =  \left(\bmat -\sum_{s'}\frac{\mu(s') P(s')U_{c,2}(s)}{\mathbb E\left[U_{c,2}\right]}\\ -\lambda \mathbb E\left[U_{c,1}\right]\emat\right)
-\]  If we let $\Phi_s$ be the matrix that maps $z(x,R)$ into $\left(\bmat x'(s)\\ R'(s)\emat\right)$ then we can write $g(x,R)$ as a function of $z$ and $v$ as follows
+	\left(\bmat \mathbf x(\mathbf \mu,\mathbf \rho)\\\ V_{\mathbf \rho}(\mathbf \mu,\mathbf \rho)\emat\right) = w( z(\mathbf \mu,\mathbf \rho) ) =  \left(\bmat \mathbf x\\ -\mathbf \lambda \mathbb E\left[U_{c,1}\right]\emat\right)
+\]  If we let $\Phi_s$ be the matrix that maps $z(\mathbf \mu,\mathbf \rho)$ into $\left(\bmat \mathbf \mu'(s)\\ \mathbf \rho'(s)\emat\right)$ then we can write $g(\mathbf \mu,\rho)$ using $z$ and $w$ as follows
 \[
-	g(z) = \left(\bmat v(z(\Phi_1 z))\\ v(z(\Phi_2 z))\emat\right)
+	g(z) = \left(\bmat w(z(\Phi_1 z))\\ w(z(\Phi_2 z))\emat\right)
 \]taking derivatives we quickly obtain that
 \begin{align*}
-	D_z g(\ov z) &= \left(\bmat D v(z(\Phi_1 \ov z)) & 0 \\ 0&  D v(z(\Phi_2 \ov z))\emat\right)\left(\bmat D_y z(\Phi_1 \ov z) & 0\\ 0& D_y z(\Phi_1\ov z)\emat\right) \underbrace{\left(\bmat \Phi_1\\ \Phi_2\emat\right)}_{\Phi}\\
-	&=\left(\bmat Dv(\ov z) &0\\0& D v(\ov z)\emat\right)\left(\bmat D_y z(\ov y) &0\\0&D_y z(\ov y)\emat\right)\Phi
+	D_z g(\ov z) &= \left(\bmat D w(z(\Phi_1 \ov z)) & 0 \\ 0&  D w(z(\Phi_2 \ov z))\emat\right)\left(\bmat D_y z(\Phi_1 \ov z) & 0\\ 0& D_y z(\Phi_1\ov z)\emat\right) \underbrace{\left(\bmat \Phi_1\\ \Phi_2\emat\right)}_{\Phi}\\
+	&=\left(\bmat Dw(\ov z) &0\\0& D w(\ov z)\emat\right)\left(\bmat D_y z(\ov y) &0\\0&D_y z(\ov y)\emat\right)\Phi\\
+	&=\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi
 \end{align*}  We can then go back to our original matrix equation to obtain
 \begin{align}
-	D_y z(\ov y) =& -D_z F(\ov z,\ov y, g(\ov z))^{-1}D_yF(\ov z,\ov y,g(\ov z))\nonumber\\
-	& - D_zF(\ov z,\ov y,g(\ov z))^{-1} D_v F(\ov z, \ov y, g(\ov z))\left(\bmat Dv(\ov z) &0\\0& D v(\ov z)\emat\right)\left(\bmat D_y z(\ov y) &0\\0&D_y z(\ov y)\emat\right)\Phi D_y z(\ov y) \label{eq.linearization}
-\end{align}  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
+	D_zF(\ov z,\ov y, \ov w)D_yz(\ov y)+D_yF(\ov z, \ov y, \ov w) + D_w F(\ov z, \ov y, \ov w)\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi D_y z(\ov z) = 0\label{eq.linearization}
+\end{align}  Where $\ov w = g(\ov z) = w(\ov z)$.  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
 \[
 	z \approx \ov z + D_y z(\ov y)(y-\ov y)
 \]Our procedure for computing the linearization proceeds as follows
 	\begin{enumerate}
 		\item Find the steady state by solving the system of equations (\ref{eq.FSS_start} - \ref{eq.FSS_end}).  Numerically, we have found that this is very robust to the parameters of the model.
-		\item  Compute $D_zF(\ov z,\ov y,g(\ov z))$, $D_zF(\ov z,\ov y,g(\ov z))$ and $D_vF(\ov z,\ov y,g(\ov z))$ by numerically differentiating $F$ (note, if greater precision is needed formulas for these derivative could in principle be derived by hand)
-		\item  Compute $DV$ around the steady state values of $c_1$,$c_2$, $\mu$ and $\lambda$.
-		\item  Solve the matrix equation (\ref{eq.linearization}).  This is done using the NAG non-linear equation solver.   The method is somewhat problematic as there exists a near zero that the non-linear solver often finds.  Thus the solution method involves guessing 100 random starting points and choosing the best solution.
+		\item  Compute $D_zF(\ov z,\ov y,g(\ov z))$, $D_zF(\ov z,\ov y,g(\ov z))$ and $D_vF(\ov z,\ov y,g(\ov z))$ by numerically differentiating $F$.  This is straightforward using auto-differentiation.
+		\item  Compute $Dw(\ov z)$ using auto-differentiation.
+		\item  Construct a matrix equation as follows.  Given policies $A = Dw(\ov z)D_yz(\ov y)$ (these are the linearized policies of $\mathbf x$ and $V_{\mathbf \rho}$ with respect to $(\mathbf \mu,\mathbf \rho)$), it is possible to solve for $D_yz(\ov y)$ from 
+		\[
+			  D_y z(\ov z) =-\left(D_zF(\ov z,\ov y, \ov w)+D_w F(\ov z, \ov y, \ov w)\left(\bmat A &0\\0&A\emat\right)\Phi\right)^{-1}D_yF(\ov z,\ov y,\ov w)
+		\]  We wish to find an $A$ such that 
+		\[
+			A = Dw(\ov z)   D_y z(\ov z) 
+		\]
 	\end{enumerate}
 Given the linearized policy rules it is then possible to evaluate the local stability of the steady state.  We find that in the absence of discount factor shocks the steady state is stable generically across the parameter space.
 
