@@ -1136,6 +1136,22 @@ _{t-1}U_{c,t}^{i}}\tilde{b}_{i,t-1}\ \text{for\ all\ }i>1,t.  \notag
 maximization problem depends only on the $I-1$ variables $\tilde{b}_{i,t-1}.$
 The reduction of  the dimensionality from \ $I$ to $I-1$ is
  another consequence of theorem \ref{theorem: main}.
+ 
+ Denote $I^i_t=U^i_{c,t}c_{i,t}+U^i_{l,t}$, by iterating on equation \ref{affine implementability b} we get
+ \begin{subequations}
+ 
+ \begin{equation}
+ \label{eq imp sum t=1}
+  \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} \mathbb{E}_{t-1} U^i_{c,t}}=\mathbb{E}_t\sum^{\infty}_{j=0}\left[\prod^{j}_{k=0}\beta_{t+k}\right]\left[\frac{I^i_{t+j}-I^1_{t+j}}{U^i_{c,t}}\right] \quad \forall t \geq 1
+ \end{equation}
+ \begin{equation}
+ \label{eq imp sum t=0}
+  \tilde{b}_{i,-1}=\mathbb{E}_{-1}\sum^{\infty}_{j=0}\left[\prod^{j}_{k=0}\beta_{t+k}\right]\left[\frac{I^i_{t+j}-I^1_{t+j}}{U^i_{c,t}}\right] 
+ \end{equation}
+ 
+\end{subequations}
+The left hand side of \eqref{eq imp sum t=1} is the post interest savings of agent $i$  and it imposes a ``measurablity'' constraint on the allocations such that the right hand side determined in $t-1$. 
+
 
  We can now write the problem recursively. Let $\bm{x}= \beta^{-1}\left( U_{c}^{2}\tilde{b}_{2},...,U_{c}^{I}\tilde{b}_{I}\right)$, $\bm{\rho }=\left( U_{c}^{2}/U_{c}^{1},...,U_{c}^{I}/U_{c}^{1}\right) $, and denote an allocation $a=\{c_i,l_i\}^{I}_{i=1}.$
 In the spirit of \cite{Kydland1980} and \cite{Farhi2010}, we split the problem into a time-0 problem that takes $(\{\tilde{b}_{i,-1}\}^{I}_{i=2}, s_0)$ as given and   a time $t \geq 1$ continuation problem  that takes $\bm x,\bm \rho,s\_$ as given. We formulate
@@ -1263,11 +1279,11 @@ Let $I_i(s)=[1-\tau(s)]l_i(s)-c_i(s)$ be the disposable income of agent $i$ in s
  subject to the constraints
  \begin{equation}
  \label{eq:ss-imp}
- 	Z_i(\tau(s),\bm \rho'(s),s) +\beta(s) x'_i(s) = \frac{x_i U^1_c(\tau(s),\bm \rho'(s),s)}{\mathbb{E} U^1_c(\tau,\rho)}\text{   for all  $s,i \geq 2$,}\\  
+ 	Z_i(\tau(s),\bm \rho'(s),s) +\beta(s) x'_i(s) = \frac{x_i U^i_c(\tau(s),\bm \rho'(s),s)}{\mathbb{E} U^i_c(\tau,\rho)}\text{   for all  $s,i \geq 2$,}\\  
  \end{equation}
 \begin{equation}
 \label{eq:bondcondtion} 
- 	\sum_s P(s)U^i_c(\tau(s),\bm \rho'(s),s)(\rho_i'(s)-\rho_i) = 0 \text{  for $i \geq 2.$} 
+ 	\sum_s P(s)U^1_c(\tau(s),\bm \rho'(s),s)(\rho_i'(s)-\rho_i) = 0 \text{  for $i \geq 2.$} 
 \end{equation}
  
  Constraint (\ref{eq:bondcondtion}) is obtained by rearranging constraint (\ref{eq:BM2_Bonds_cons}). It implies that $\rho(s)$ is a risk-adjusted martingale and we use this property later to discuss convergence. We next check if the first order necessary conditions are consistent with stationary policies for some ($\bm x, \bm \rho$) \footnote{Appendix \ref{apndx: numerical methods} discuses the associated second order conditions that ensure these policies are optimal}. 
@@ -1429,9 +1445,9 @@ easy to solve analytically.  For other types of preferences, existence of a root
 can be verified numerically. 
 
 \subsection{Stability}
-In this section we return to the general formulation of the problem from section \ref{Sec: characterization} to study convergence to the steady state. We first begin with testing for local convergence using a linear approximation of the policy rules at the steady state. Appendix \ref{apndx: numerical methods} describes a matrix equation, whose solution captures the coefficients of the linear approximation. 
+In this section we return to the general formulation of the problem from section \ref{Sec: characterization} to study convergence to the steady state. We first begin with describing a test for local convergence using a linear approximation of the policy rules at the steady state. In particular we look for solutions of the form $a(s^t)=\psi^{a}(s_t)[\bm{\mu}(s^{t-1})\quad  \bm{\rho}(s^{t-1})]'$ where $\psi^{a}(s)$  is a vector of dimension $2N-2$ for each $s$ and $a \in\{ c_i,l_i\}_i$ and a law of motion for $\{\mu(s^t),\rho(s^t)\}$ that satisfies the first order conditions and implementability constraints  discussed in section \ref{Sec: characterization}. \footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $N=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\bm{\mu},\bm{\rho})$ and not necessarily in  $(\bm{x},\bm{\rho})$. This comes from the fact that the set of feasible $(\bm{x},\bm{\rho})$ are restricted at time 0 and may not contain an open set around the steady state values. When we linearize using $(\bm{\mu},\bm{\rho})$ as state variables, the optimal policies for $\bm{x}(s^t),\bm{\rho}(s^t)$ converge to their  steady state levels for all pertubations in $(\bm{\mu},\bm{\rho})$.}   Appendix \ref{apndx: numerical methods} describes a matrix equation, whose solution captures the coefficients of the linear approximation. 
 
-Let $\hat{\Psi}_{t}= \left[\bmat x_{t} - x^{SS}\\ \rho_t - \rho^{SS}\emat\right]$ be the deviation from the steady state. The linear approximation solves for $B(s)$ such that
+Let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \rho_t - \rho^{SS}\emat\right]$ be the deviation from the steady state. From the  linear approximation one can ontain $B(s)$ such that
 \begin{equation}
  \hat{\Psi}(s_{t+1},\hat{\Psi}_t)=B(s_{t+1})\hat{\Psi}_t \label{eq.linear.lom}
 \end{equation}
@@ -1442,10 +1458,7 @@ If the (real part) of eigenvalues of $\mathbb{E}B(s)$ are less than 1,  system (
 In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in distribution and probability.
 \end{proposition}
 
-The eigenvalues (in particular the dominant one) are instructive for (if and )how long it takes for the linearized system to converge. In figure \ref{fig: Eigenvalues} we return to the two agent example analyzed before and plot the eigenvalue of $\hat{B}$ that has the largest absolute value  and the associated half lives as a function of two primitives$\alpha_1$ and $\sigma$. It is clear that system is generically stable but the values close to 1 imply very slow convergence. In terms of 
-
-
-The half-life is around 2800 years. We comeback to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt.
+The eigenvalues (in particular the dominant one) are instructive for (if and)how long it takes for the linearized system to converge. In figure \ref{fig: Eigenvalues} we return to the two agent example analyzed before and plot the eigenvalue of $\hat{B}$ that has the largest absolute value  and the associated half lives as a function of two primitives $\alpha_1$ (Pareto weight of agent 1) and risk aversion $\sigma$. It is clear that system is generically stable but the values close to 1 imply very slow convergence. The bottom panel shows that comparative statics with $\sigma$. For the same level of volatility of shocks, higher curvatures for the utility function increases the fluctuations in interest rates that are necessary for the system to converge faster to the steady state For resonable parameters the half-life is around 2800 years. We comeback to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt.
 
 
   \begin{figure}[htp]
@@ -1463,21 +1476,33 @@ Our first observation is that optimality conditions of problem (\ref{eq:BM2}) im
 %A related set of questions besides existence of steady state are its stability properties. The optimal policy induces two risk adjusted martingales : $\mu_{t}$ %and $\rho_{t}$ where $\mu_{t}=V_{x}(\bm x_t,\bm {\rho}_t)$ \footnote{Such martingales often show up in related economies with implementability %constraints coming from market incompleteness, see for example AMSS }and $\rho_t=\frac{U^2_{c,t}}{U^1_{c,t}}$. 
 
 The FOC for (\ref{eq:BM2}) with respect to $x(s)$ gives us% the $t \geq 1$, recursive problem $x'(s)$ gives us, 
-\begin{align}
-\mathbb{E} \frac{U^i_c(s)}{\mathbb{E}\bm{U}^i_c}\mu_i(s)=\mu_i\\
-\mathbb{E} \mu_i(s)=\mu_i-cov\left[\mu_i(s),U^i_c(s)\right]
- \end{align}
+\begin{subequations}
+ \begin{equation}
+\mathbb{E} \frac{U^i_c(s)}{\mathbb{E}\bm{U}^i_c}\mu_i(s)=\mu_i  
+ \end{equation}
+\begin{equation}
+\label{eq. martingale mu}
+ \mathbb{E} \mu_i(s)=\mu_i-cov\left[\mu_i(s),\frac{U^i_c(s)}{\mathbb{E}U^i_c(s)}\right]
+\end{equation}
+\end{subequations}
+
 
  Similarly, rearranging the bond pricing equation \eqref{eq:BM2_Bonds_cons} implies
-\begin{align}
-\mathbb{E} \frac{U^1_c(s)}{\mathbb{E}\bm{U}^1_c}\rho_i(s)=\rho_i\\
-\mathbb{E} \rho_i(s)=\rho_i-cov\left[\rho_i(s),U^1_c(s)\right]
- \end{align}
 
-The first margingale shows up in the representative agent incomplete market models and captures that idea that the planner want to smooth fluctuations in distortions from taxes over time. The second martingale is new. It shows that fluctuations in inequality also follow a risk-adjusted martinage process.
+ \begin{subequations}
+ \begin{equation}
+\mathbb{E} \frac{U^1_c(s)}{\mathbb{E}\bm{U}^1_c}\rho_i(s)=\rho_i
+ \end{equation}
+\begin{equation}
+\label{eq. martingale rho}
+\mathbb{E} \rho_i(s)=\rho_i-cov\left[\rho_i(s),\frac{U^1_c(s)}{\mathbb{E}U^1_c(s)}\right] 
+\end{equation}
+\end{subequations}
 
-\color{blue}{Anmol } WHAT DO WE NEED TO ARGUE THAT THERE IS A SUBMARTINGALE/SUPERMARTINGALE FORCES IN MU,RHO ? we need to show that if consumption is procyclical ,$\rho_i(s)$ and $\mu_i(s)$ are countercyclical  for a high enough $\mu_i,\rho_i$. Can this be simplified more ?
+The first margingale shows up in the representative agent incomplete market models and captures that idea that the planner want to smooth fluctuations in distortions from taxes over time. The second martingale is new. It shows that fluctuations in inequality also follow a risk-adjusted martinage process. 
 
+The sign of the covariance terms in equations  (\ref{eq. martingale mu}) and (\ref{eq. martingale rho})  imparts the drift to the variables towards the steady state. For instance, consider the economy with TFP shocks and a  government that starts off with asset distribution skewed towards the high productivity agent (w.l.o.g say $\theta_i(s)<\theta_1(s)$) such that it implies $\mu_{i,t}>\mu^{SS}_i$ and $\rho_{i,t}>\rho^{SS}_i$. With two states, determining the sign of the covariance terms is equivalent to ordering $\mu_i(s)$ and $\rho_i(s)$ relative to $c_i(s)$. Suppose consumption for each agent is procyclical or $c_i(s_l)<c_i(s_h)$. In order to converge to the steady state, it should be the case that both the covariances are positive or $\mu_i(s)$ and $\rho_i(s)$ are countercyclical for such initial conditions. The envelope theorem implies that $\mu_i(s)=V_{x_i}(\bm{x}(s),\bm{\rho}(s))$ which can be interpreted as the value of an extra  unit of asset for agent $i$ in state $s$. With countercyclical interest rates (and low initial assets), a dollar is more valuable to agent $i$ in low TFP states. Thus we can expect $\mu_i(s)$ to be countercyclical. Next for  $\rho_i(s)$ to be countercyclical as well, we need $\frac{U_c^1(s_l)-U_c^1(s_h)}{U_c^1(s_h)}< \frac{U_c^i(s_l)-U_c^i(s_h)}{U_c^1i(s_h)}$. This means for low levels of consumption,  the relative flucations in marginal utilities of agent $i$ should be larger than that of the agent $1$ who has a high present value of earnings. 
+Both these conditions are intuitive and verified in our numerical examples in section \ref{Sec: numerical}. Further the linear policies described above also preserve these orderings and as long as the steady state is unique, one can expect these to hold even for the region outside the neighborhood of steady state where these policies are approximated. 
 
 % As before, let  $I_i(s)=[1-\tau(s)]l_i(s)-c_i(s)$ be the disposable income of agent $i$ in state $s$. 
 % 
@@ -1567,13 +1592,13 @@ The first margingale shows up in the representative agent incomplete market mode
 The results on existence and convergence of steady state relied on a special binary-IID restriction. When there are more than two possible values for the shocks or when
 shocks are persistent, the time-invariant steady state  will no longer
 exist. Mathematically, this occurs because one asset and one risk-free rate
-of return cannot span all possible needs for government revenues \footnote{One can see this from the fact that system \ref{eqs.ss} is no longer square}. With
+of return cannot span all possible needs for government revenues. With
 richer shock structures, there exists an attraction region in the  $(x,\rho)$ space   to which the dynamic
 system  converges. Although $\left( x,\rho \right) $ are no longer
 constant in such region, their fluctuations tend to be markedly
 reduced relative to the transients that occur away from that region, and general properties of $x$ and $\rho$ are the same as those
 described in Proposition \ref{prop: long run forces}. Figure \ref{fig:moregeneralshocks} shows long sample paths for economies hit by more general TFP shocks. The top panel has IID shocks with 2 (bold) and 3(dotted) possible values and the bottom panel has persistent shocks with 2(bold) and 3 (dotted)possible values.
-\textcolor{blue}{David, can you put a line explaining how the shock processes for this plot were calibrated}
+%\textcolor{blue}{David, can you put a line explaining how the shock processes for this plot were calibrated}
 
 % 
 % 
@@ -1772,7 +1797,7 @@ features emerge from this figure. %First, as we discussed in Section \ref%
   \begin{figure}[htp]
  \centering
  \includegraphics[width=\textwidth]{Draft25Graphs/LongSimulations.eps}
- \caption{Debt benchmark (o), acyclical interest rates (+), countercyclical interest rates ($(diamond$) and no inequality shocks \scriptsize ($\square$\normalsize) }
+ \caption{Debt benchmark (o), acyclical interest rates (+), countercyclical interest rates ($\diamond$) and no inequality shocks \scriptsize ($\square$\normalsize) }
  %\caption{ Debt benchmark $\circle$, acyclical interest rates + , countercyclical interest rates $\diamond$ }% and no inequality shocks {\scriptsize $\square$ \normalsize}}
  \label{fig:LongSimulations}
  \end{figure}
@@ -3225,15 +3250,15 @@ in the steady state interest rates are positively correlated with TFP.
 \subsection{Linearization Algorithm}\label{apndx: numerical methods}
 This section will outline our numerical methods used to solve for and linearize around a complete markets steady state in the case of a 2 state iid process for the aggregate state.  We will specialize to the two agent case and for the remainder of this section it will be assumed that the Bellman equation is written in the form
 \begin{equation}
-	V(\mathbf x,\mathbf \rho) = \max_{c_i(s),l_i(s),\mathbf x'(s),\mathbf\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(\mathbf x'(s),\mathbf \rho'(s))\right)\label{eq.obj}
+	V(\bm x,\bm \rho) = \max_{c_i(s),l_i(s),\bm x'(s),\bm\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(\bm x'(s),\bm \rho'(s))\right)\label{eq.obj}
 \end{equation}
 \begin{subequations}
 \begin{align}
-	&U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x_i'(s) = \frac{x_i U_{c,i}(s)}{\mathbb{E} U_{c,i}}\label{eq.imp_con}\\
+	&U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x_i'(s) = \frac{x_i U_{c,i}(s)}{\mathbb{E} U_{c,i}}\label{eq.imp_con}\\
 	&\sum_s P(s) U_{c,1}(s)(\rho_i(s) -\rho_i) = 0\\
 	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_i(s)}U_{l,i}(s)\\
 	& \sum_{j=0}^N\pi_j c_j(s)  + g(s) = \sum_{j=0}^{N} \pi_j\theta_j(s)l_j(s)\\
-	& U_{c,i}(s) = \rho'(s) U_{c,1}(s)\label{eq.rho_con}
+	& U_{c,i}(s) = \rho_i'(s) U_{c,1}(s)\label{eq.rho_con}
 \end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu'_i(s)$, $\lambda_i$,$P(s)\phi_i(s)$,$P(s)\xi(s)$, and $P(s)\zeta_i(s)$.
 \subsubsection{Steady State}  By taking first order conditions it is possible to numerically determine the location of a stationary steady state.  The first order conditions with respect to the choice variables are as follows (note we will be using the notation $\mathbb E z$ to represent $\sum_s P(s) z(s)$ for some variable $z$)
 \begin{subequations}
@@ -3242,9 +3267,9 @@ This section will outline our numerical methods used to solve for and linearize 
 	\begin{align}
 		&\pi_1\alpha_1U_{c,1}(s)+\sum_{i=2}^N\left(\mu'_i(s)\rho_i'(s)\right)\left[U_{cc,1}(s)c_1(s)+U_{c,1}(s)\right]\nonumber\\&\quad\quad+\lambda U_{cc,1}(s)\sum_{i=2}^N(\rho_i'(s)-\rho_i)-\pi_1\xi(s)+\sum_{i=2}^N\zeta_i(s)\rho'_i(s)U_{cc,1}(s) = 0\label{eq.foc_c1}
 	\end{align}
-	\item[$c_i(s)$ for $i\geq 2$:]
+	\item[$c_i(s)$: ] for $i\geq 2$
 	\begin{equation}
-		\pi_i\alpha_i U_{c,i}(s)-\mu'_i(s)\left[U_{cc,i}(s)c_i(s)+ U_{c,i}(s)\right] +\frac{xU_{cc,i}(s)}{\mathbb E U_{c,i}}\left(\mu'_i(s) - \frac{\mathbb E \mu'_i U_{c,i}}{\mathbb E U_{c,i}}\right) - \pi_i\xi(s) -\zeta_i(s) U_{cc,i}(s) = 0
+		\pi_i\alpha_i U_{c,i}(s)-\mu'_i(s)\left[U_{cc,i}(s)c_i(s)+ U_{c,i}(s)\right] +\frac{x_iU_{cc,i}(s)}{\mathbb E U_{c,i}}\left(\mu'_i(s) - \frac{\mathbb E \mu'_i U_{c,i}}{\mathbb E U_{c,i}}\right) - \pi_i\xi(s) -\zeta_i(s) U_{cc,i}(s) = 0
 	\end{equation}
 	\item[$l_1(s)$:]
 	\begin{equation}
@@ -3256,20 +3281,20 @@ This section will outline our numerical methods used to solve for and linearize 
 	\end{equation}
 	\item[$\rho_i'(s)$:]
 	\begin{equation}
-		\beta(s) V_{\rho_i}(\mathbf x'(s),\mathbf \rho_i'(s)) +\mu'_i(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right] + \lambda_i U_{c,1}(s) - \phi_i(s) \frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\zeta_i(s) = 0\label{eq.foc_rho}
+		\beta(s) V_{\rho_i}(\bm x'(s),\bm \rho_i'(s)) +\mu'_i(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right] + \lambda_i U_{c,1}(s) - \phi_i(s) \frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\zeta_i(s) = 0\label{eq.foc_rho}
 	\end{equation}
 	\item[$x_i'(s)$:]
 	\begin{equation}
-		 V_{x_i}(\mathbf x'(s),\mathbf \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}
+		 V_{x_i}(\bm x'(s),\bm \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}
 	\end{equation}
 \end{description} \end{subequations} Equations (\ref{eq.imp_con})-(\ref{eq.rho_con}) and (\ref{eq.foc_c1})-(\ref{eq.foc_rho}) then define the necessary conditions for an interior maximization of the planners problem for the state $(x,\rho)$.  In addition to these we have the two envelop conditions
 \begin{subequations}
 \begin{equation}
-	V_{x_i}(\mathbf x,\mathbf \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x}
+	V_{x_i}(\bm x,\bm \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x}
 \end{equation}and
 \begin{equation}
-	V_{\rho_i}(\mathbf x,\mathbf \rho) = -\lambda_i \mathbb E U_{c,1}\label{eq.env_rho}
-\end{equation}\end{subequations}  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu'(s),\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu_i(s) = \mu_i = V_{x_i}(\mathbf x,\mathbf \rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu,\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$ that solves the following system of equations
+	V_{\rho_i}(\bm x,\bm \rho) = -\lambda_i \mathbb E U_{c,1}\label{eq.env_rho}
+\end{equation}\end{subequations}  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu'(s),\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu_i(s) = \mu_i = V_{x_i}(\bm x,\bm \rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$ that solves the following system of equations
 \begin{subequations}
 \begin{align}
 	U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+\beta(s)x_i -\frac{x_i U_{c,i}(s)}{\mathbb E U_{c,i}}\label{eq.FSS_start}\\
@@ -3281,20 +3306,20 @@ This section will outline our numerical methods used to solve for and linearize 
 	\pi_1 \alpha_1 U_{l,1}(s) +\sum_{i=2}^N\mu_i\rho_i\left[U_{ll,1}(s) l_1(s) + U_{l,1}(s)\right] - \sum_{i=2}^N\frac{\rho_i\phi_i(s)}{\theta_1(s)} U_{ll,1}(s) + \pi_1\theta_1(s)\xi(s) = 0\\
 	\pi_i\alpha_i U_{l,i}(s)  -\mu_i\left[U_{ll,i}(s)l_i(s) + U_{l,i}(s)\right] +\frac{\phi_i(s)}{\theta_i(s)} U_{ll,i}(s) + \pi_i\theta_i(s)\xi(s) = 0\\
 	\lambda_i\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu_i\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi_i(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\eta_i(s) = 0\label{eq.FSS_end}
-\end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho,\mathbf \mu,\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
-\subsubsection{Linearization}  In order to check local stability we developed a way of linearizing locally around the steady state.  Given the discussion above we will therefore be restricting ourselves to a 2 state iid process for the aggregate state.  Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\mathbf \mu,\mathbf \rho$ rather than $\mathbf x,\mathbf \rho$, and thus, we will proceed with the linearization procedure using $(\mathbf \mu,\mathbf \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
+\end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
+\subsubsection{Linearization}  In order to check local stability we linearize locally around the steady state.  Given the discussion above we will therefore be restricting ourselves to a 2 state iid process for the aggregate state.  Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\bm \mu,\bm \rho$ rather than $\bm x,\bm \rho$, and thus, we will proceed with the linearization procedure using $(\bm \mu,\bm \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
 \begin{equation}
 	\mu_i - \frac{\sum_s P(s) \mu_i'(s)U_{c,i}(s)}{\sum_s P(s) U_{c,i}(s)} = 0\label{eq.mu_mart}
-\end{equation}  The optimal policy function, which we will denote as $z(\mathbf \mu,\mathbf\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho})and \eqref{eq.mu_mart}, $y$ is the state vector $(\mathbf x,\mathbf \rho)$, and $g$ is the mapping of the policies into functions of future variables, namely $\mathbf x'(s)$ and $V_{\mathbf \rho}(\mathbf \mu'(s),\mathbf \rho(s))$.  In other words
+\end{equation}  The optimal policy function, which we will denote as $z(\bm \mu,\bm\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho})and \eqref{eq.mu_mart}, $y$ is the state vector $(\bm x,\bm \rho)$, and $g$ is the mapping of the policies into functions of future variables, namely $\bm x'(s)$ and $V_{\bm \rho}(\bm \mu'(s),\bm \rho(s))$.  In other words
 \[
-	g(z) = \left(\bmat \mathbf x(\mathbf \mu'(1),\mathbf \rho'(1))\\ V_{\mathbf \rho}(\mathbf \mu'(1),\mathbf \rho'(1)\\ \mathbf x(\mathbf \mu'(2),\mathbf \rho'(2))\\ V_{\mathbf \rho}(\mathbf \mu'(2),\mathbf \rho'(2))\emat\right)
-\]  Finally $z(\mathbf \mu,\mathbf \rho)$ are the stacked variables $\{c_1(s),c_i(s),l_1(s),l_i(s),\mathbf x,\mathbf \rho'(s),\mathbf \mu'(s),\mathbf \lambda,\mathbf \phi(s),\xi(s),\mathbf \zeta(s)\}$.  The optimal policy function is then a function $z(y)$ that satisfies the relationship $F(z(y),y,g(z(y))) = 0$.  Taking total derivatives around the steady state $\ov y$ and $\ov z = z(\ov y)$
+	g(z) = \left(\bmat \bm x(\bm \mu'(1),\bm \rho'(1))\\ V_{\bm \rho}(\bm \mu'(1),\bm \rho'(1)\\ \bm x(\bm \mu'(2),\bm \rho'(2))\\ V_{\bm \rho}(\bm \mu'(2),\bm \rho'(2))\emat\right)
+\]  Finally $z(\bm \mu,\bm \rho)$ are the stacked variables $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho'(s),\bm \mu'(s),\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$.  The optimal policy function is then a function $z(y)$ that satisfies the relationship $F(z(y),y,g(z(y))) = 0$.  Taking total derivatives around the steady state $\ov y$ and $\ov z = z(\ov y)$
 \[
 	D_zF(\ov z,\ov y, g(\ov z))D_yz(\ov y)+D_yF(\ov z, \ov y, g(\ov z)) + D_g F(\ov z, \ov y, g(\ov z)) D g(\ov z) D_y z(\ov z) = 0
-\]  In order to linearize $z(y)$ around the steady state $\ov y$ we need to compute $D_y z(\ov y)$.   The envelope condition (\ref{eq.env_rho}) tell us that $V_{\mathbf \rho}$ can be computed from the optimal policies, i.e.
+\]  In order to linearize $z(y)$ around the steady state $\ov y$ we need to compute $D_y z(\ov y)$.   The envelope condition (\ref{eq.env_rho}) tell us that $V_{\bm \rho}$ can be computed from the optimal policies, i.e.
 \[
-	\left(\bmat \mathbf x(\mathbf \mu,\mathbf \rho)\\\ V_{\mathbf \rho}(\mathbf \mu,\mathbf \rho)\emat\right) = w( z(\mathbf \mu,\mathbf \rho) ) =  \left(\bmat \mathbf x\\ -\mathbf \lambda \mathbb E\left[U_{c,1}\right]\emat\right)
-\]  If we let $\Phi_s$ be the matrix that maps $z(\mathbf \mu,\mathbf \rho)$ into $\left(\bmat \mathbf \mu'(s)\\ \mathbf \rho'(s)\emat\right)$ then we can write $g(\mathbf \mu,\rho)$ using $z$ and $w$ as follows
+	\left(\bmat \bm x(\bm \mu,\bm \rho)\\\ V_{\bm \rho}(\bm \mu,\bm \rho)\emat\right) = w( z(\bm \mu,\bm \rho) ) =  \left(\bmat \bm x\\ -\bm \lambda \mathbb E\left[U_{c,1}\right]\emat\right)
+\]  If we let $\Phi_s$ be the matrix that maps $z(\bm \mu,\bm \rho)$ into $\left(\bmat \bm \mu'(s)\\ \bm \rho'(s)\emat\right)$ then we can write $g(\bm \mu,\rho)$ using $z$ and $w$ as follows
 \[
 	g(z) = \left(\bmat w(z(\Phi_1 z))\\ w(z(\Phi_2 z))\emat\right)
 \]taking derivatives we quickly obtain that
@@ -3313,7 +3338,7 @@ This section will outline our numerical methods used to solve for and linearize 
 		\item Find the steady state by solving the system of equations (\ref{eq.FSS_start} - \ref{eq.FSS_end}).  Numerically, we have found that this is very robust to the parameters of the model.
 		\item  Compute $D_zF(\ov z,\ov y,g(\ov z))$, $D_zF(\ov z,\ov y,g(\ov z))$ and $D_vF(\ov z,\ov y,g(\ov z))$ by numerically differentiating $F$.  This is straightforward using auto-differentiation.
 		\item  Compute $Dw(\ov z)$ using auto-differentiation.
-		\item  Construct a matrix equation as follows.  Given policies $A = Dw(\ov z)D_yz(\ov y)$ (these are the linearized policies of $\mathbf x$ and $V_{\mathbf \rho}$ with respect to $(\mathbf \mu,\mathbf \rho)$), it is possible to solve for $D_yz(\ov y)$ from 
+		\item  Construct a matrix equation as follows.  Given policies $A = Dw(\ov z)D_yz(\ov y)$ (these are the linearized policies of $\bm x$ and $V_{\bm \rho}$ with respect to $(\bm \mu,\bm \rho)$), it is possible to solve for $D_yz(\ov y)$ from 
 		\[
 			  D_y z(\ov z) =-\left(D_zF(\ov z,\ov y, \ov w)+D_w F(\ov z, \ov y, \ov w)\left(\bmat A &0\\0&A\emat\right)\Phi\right)^{-1}D_yF(\ov z,\ov y,\ov w)
 		\]  We wish to find an $A$ such that 
@@ -3371,7 +3396,6 @@ This linearization can be used to construct the bordered hessian of the problem 
  \[\text{vec}(\Sigma_{\Psi,t})=\hat{B}\text{vec}( \Sigma_{\Psi,t-1})\]	
 % 
  The stability of this system is guaranteed if the (real part) of eigenvalues of $\hat{B}$ are less than 1.  
-\textcolor{blue}{David, can you write the argument for why convergence in distribution implies almost sure convergence }
  \end{proof}
 
 
