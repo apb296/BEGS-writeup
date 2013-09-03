@@ -263,7 +263,7 @@ A third set of results concerns higher frequency implications, in particular,  t
 What we have to say about this comes from a  version of our model calibrated to capture what we take to be
 key  stylized facts  that during recent recessions  (1) the left tail of the cross-section distribution of labor income falls by more than right tail and (2) interest rates fall. When we calibrate  to fit those targets, we find that in recessions accompanied by higher inequality, it is  optimal to increase taxes, transfers, and issue
 government debt. %If the  government starts with sufficiently high  initial debt, no noticable trend in debt repayment.
-These effects differ substantially both qualitatively and quantitatively from the counterparts in either a representative agent model or our model were a  recession is modeled to be a pure TFP shock that leaves the distribution of skills unchanged. Secondly recessions with low interest rates, thought not critical for short run, affects the transient dynamics and long run properties of optimal policy. Starting from a net asset position (government vis-a-vis the high skilled agent) that implies a 60\% debt - to - gdp ratio, the benchmark economy with procylical interest rates shows no discernable trend in net asset positions over a time as long as 5000 years. On the other hand, variants with countercyclical interest rates  (that effectively ignore discount factor shocks) repay this debt and starts accumulating assets, albeit it takes about 2500 years to do so
+These effects differ substantially both qualitatively and quantitatively from the counterparts in either a representative agent model or our model were a  recession is modeled to be a pure TFP shock that leaves the distribution of skills unchanged. Secondly recessions with low interest rates, thought not critical for short run, affects the transient dynamics and long run properties of optimal policy. Starting from a net asset position (government vis-a-vis the high skilled agent) that implies a 60\% debt - to - gdp ratio, the benchmark economy with procylical interest rates shows no discernable trend in net asset positions over a time as long as 5000 years. On the other hand, variants with countercyclical interest rates  (that effectively ignore discount factor shocks) repay this debt and starts accumulating assets, albeit it takes about 2500 years to do so.
 
 
 
@@ -1232,7 +1232,7 @@ time $0$ problem.
 
 
 \section{Ergodic distribution and policies in the long run } \label{sec: SteadyStates}
-In this section, we characterize the properties of the ergodic set to which state variables converge over time. We start with a case when aggregate shocks are iid and can take two values. We show that for this shock structure there generally exists a ``steady state'' $\left( \bm{x}^{SS},\bm{\rho} ^{SS}\right) $  such that if economy ever reaches this state, it stays there.  Taxes and transfers in this steady state depend only on the current realization of the shock and the fluctuations of taxes is small for commonly used preferences. We also characterize properties of the steady state, discuss conditions under which economy converges to it and the speed of convergence.   Section \ref{Sec: More General Shocks}  then extends the analysis to more general shocks and shows numerically that while the ``steady state'' generally does not exist, the properties of the ergodic set are very similar to those in the two shock iid case. Throughout this section we assume that preferences are separable in consumption and 
+In this section, we characterize the properties of the ergodic set to which state variables converge over time. We start with a case when aggregate shocks are iid and can take two values. We show that for this shock structure there generally exists a ``steady state'' $\left( \bm{x}^{SS},\bm{\rho} ^{SS}\right) $  such that if economy ever reaches this state, it stays there.  Taxes and transfers in this steady state depend only on the current realization of the shock and the fluctuations of taxes are small for commonly used preferences. We also characterize properties of the steady state, discuss conditions under which economy converges to it and the speed of convergence.   Section \ref{Sec: More General Shocks}  then extends the analysis to more general shocks and shows numerically that while the ``steady state'' generally does not exist, the properties of the ergodic set are very similar to those in the two shock iid case. Throughout this section we assume that preferences are separable in consumption and 
 labor.
 % 
 % 
@@ -1249,8 +1249,8 @@ for the $t\geq1$ recursive problem, i.e. $\Psi \left( s;\bm{x},%
 \,s,s\_.$ 
 \end{definition}
 Since in this steady state $\rho_i =U_{c}^{i}(s)/U_{c}^{1}(s)$ does
-not depend on the realization of shock $s,$ the ratio of marginal utilities
-of the two agents is constant. The continuation allocation depends only on  $s_{t}$ and not on the  history $s^{t-1}$.% These outcomes are reminiscent though not quite identical to those in a complete market economy (see Werning
+not depend on the realization of shock $s,$ the ratios of marginal utilities
+of the all agent is constant. The continuation allocation depends only on  $s_{t}$ and not on the  history $s^{t-1}$.% These outcomes are reminiscent though not quite identical to those in a complete market economy (see Werning
 %2007).\footnote{\textcolor{blue}{David, I have changed it a bit, do you think it reflects our understanding better. The earlier one sounded too cautionary}
 %The steady state allocation is optimal for a \emph{modified} complete market problem where the Planner has to additionally adhere to a specific ratio of pairwise consumption (or ``market weights'' as in Werning(2007). However we note that typically, there does not exist an initial distribution of  assets  and list of Pareto weights for which the optimal allocation with complete markets will \emph{coincide} with the aforementioned stationary allocation with incomplete markets.}
 
@@ -1286,9 +1286,9 @@ Let $I_i(s)=[1-\tau(s)]l_i(s)-c_i(s)$ be the disposable income of agent $i$ in s
  	\sum_s P(s)U^1_c(\tau(s),\bm \rho'(s),s)(\rho_i'(s)-\rho_i) = 0 \text{  for $i \geq 2.$} 
 \end{equation}
  
- Constraint (\ref{eq:bondcondtion}) is obtained by rearranging constraint (\ref{eq:BM2_Bonds_cons}). It implies that $\rho(s)$ is a risk-adjusted martingale and we use this property later to discuss convergence. We next check if the first order necessary conditions are consistent with stationary policies for some ($\bm x, \bm \rho$) \footnote{Appendix \ref{apndx: numerical methods} discuses the associated second order conditions that ensure these policies are optimal}. 
+ Constraint (\ref{eq:bondcondtion}) is obtained by rearranging constraint (\ref{eq:BM2_Bonds_cons}). It implies that $\rho(s)$ is a risk-adjusted martingale and we use this property later to discuss convergence. We next check if the first order necessary conditions are consistent with stationary policies for some ($\bm x, \bm \rho$).\footnote{Appendix \ref{apndx: numerical methods} discuses the associated second order conditions that ensure these policies are optimal} 
  \begin{lemma}\label{lemma-simplified-foc}
-Let $P(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints ( \ref{eq:ss-imp}) and (\ref{eq:bondcondtion}).  Imposing the restrictions $x'_i(s) = x_i$ and $\rho'_i(s) = \rho_i$ the steady state solves for $\{\mu_i,\lambda_i,x_i,\rho_i\}^{N}_{i=2}$ and $\{\tau(s)\}_s$ using the following equations
+Let $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}).  Imposing the restrictions $x'_i(s) = x_i$ and $\rho'_i(s) = \rho_i$ the steady state solves for $\{\mu_i,\lambda_i,x_i,\rho_i\}^{N}_{i=2}$ and $\{\tau(s)\}_s$ using the following equations
 
 
 \begin{subequations}
@@ -1325,12 +1325,14 @@ The behavior of the economy in the steady state is similar to the behavior of th
 
 \subsubsection{A two agent example}\label{sec: 2 agent example}
 
-\smallskip Consider an economy consisting of  two types of households with $%
+Lemma \ref{lem.1} provides a simple way to verify existence of a steady state for wide range of parameter values by checking that there exists a root for (\ref{sys-steadystate}). Since the system of equations (\ref{sys-steadystate}) is non-linear, this existence can generally be verified only numerically. In this section we provide a simple example with risk averse agents in which we can show existence of the root to (\ref{sys-steadystate}) analytically. The analytical characterization of the steady state will allow us to show two main forces that determine the steady state asset distribution. These forces will also help to understand the long run behavior of the calibrated economy that we study in section \ref{Sec: numerical}. 
+
+Consider an economy consisting of  two types of households with $%
 \theta _{1,t}>\theta _{2,t}=0$. One period utilities are $\ln c-\frac{1}{2}%
 l^{2}.$ The shock $s$  takes  two values, $s\in \left\{
 s_{L},s_{H}\right\} $ with probabilities $\Pr \left( s|s\_\right) $ that are
 independent of $s_{-}.$ We assume that $g\left( s\right) =g$ for all $s,$
-and $\theta _{1}\left( s_{H}\right) >\theta _{1}\left( s_{L}\right) .$ We allow the discount factor $\beta $ to depend on  $s.$
+and $\theta _{1}\left( s_{H}\right) >\theta _{1}\left( s_{L}\right) .$ We allow the discount factor $\beta(s)$ to depend on  $s.$
 
 \smallskip
 
@@ -1373,7 +1375,7 @@ after-tax and after-interest income  get closer
 together, allowing decreases in transfers to have smaller effects on inequality in
 marginal utilities. If the net asset position of a high skilled agent is
 sufficiently low, then a change in transfers has no effect on inequality and
-all  distortions from fluctuations in transfers are eliminated. \footnote{This convergence outcome has
+all  distortions from fluctuations in transfers are eliminated.\footnote{This convergence outcome has
  a similar flavor to "back-loading"\ results  of
  \cite{Ray2002} and \cite{Albanesi2012} that reflect the  optimality of structuring policies intertemporally eventually to disarm  distortions.}
 
@@ -1409,7 +1411,7 @@ times of increased need for government revenues, as in
  part 3 of  proposition \ref{prop: long run forces} and the steady state allocation features government holding debt.
 
 
- What matters for our second force is the comovement of the interest rate with fundamentals shocks. States with low average TFP (and therefore a lower base for labor taxes), high $g$, or a high spread of productivities that threatens to induce higher inequality (and therefore higher  transfers and thirst for more  government  revenues to finance them) are ``adverse'' from the point of view of current government finance. The government can cope with such adverse states in less distorting ways if finds itself holding positive (negative) assets if interest rates are  high (low). 
+ What matters for our second force is the comovement of the interest rate with fundamentals shocks. States with low average TFP (and therefore a lower base for labor taxes), high $g$, or a high spread of productivities that threatens to induce higher inequality (and therefore higher  transfers and thirst for more  government  revenues to finance them) are ``adverse'' from the point of view of current government finance. The government can cope with such adverse states in less distorting ways if finds itself holding positive (negative) assets if interest rates are  high (low). \footnote{The results of proposition \ref{prop: long run forces} can be substantially generalized to an economy with no heterogeneity. In a companion paper Bhandari et all (2013), we study a representative agent economy with a more general incomplete market structure and distorting taxes. We show that for a wide range of preferences a steady state exists and it is globally stable and that the sign of long run asset positition of the government is determined by the co-movement of returns on assets and shocks}.
 
  %These are states in which, if there were no asset market and the government ran a balanced budget, the government would need to have a higher proportional tax rate in order to finance higher government expenditure, a lower tax base or transfers to counteract higher inequality.
  
@@ -1419,7 +1421,7 @@ government ends up with assets or debt in the long run depends on the
 relative strengths of the two forces. 
  
 
- Besides discount factor shocks, the level of net assets in the steady state depends on other primitives too suchs as desire for redistribution. An interesting comparative static exercise is shutting off discount factor shocks and increasing  $\alpha_1$, the weight of the high-skilled agent. This implies that the planner taxes less the high skilled agent and redistributes less income to the low skilled agent. Since after-tax income of low skilled agent is lower, the fluctuation in transfers affects this agent more severe that the high skilled. To smooth this flucations the government needs to accumulate more claims on the high skilled, implying a positive relationship between the steady state level of government assets and Pareto weight on high skilled. Figure \ref{fig: SS comparative} plots how taxes and assets of the government vary as we change the Pareto weights on high type, $\alpha_1$.
+ Besides discount factor shocks, the level of net assets in the steady state depends on other primitives too such as desire for redistribution. An interesting comparative static exercise is shutting off discount factor shocks and increasing  $\alpha_1$, the weight of the high-skilled agent. This implies that the planner taxes less the high skilled agent and redistributes less income to the low skilled agent. Since after-tax income of low skilled agent is lower, the fluctuation in transfers affects this agent more severe that the high skilled. To smooth this flucations the government needs to accumulate more claims on the high skilled, implying a positive relationship between the steady state level of government assets and Pareto weight on high skilled. Figure \ref{fig: SS comparative} plots how taxes and assets of the government vary as we change the Pareto weights on high type, $\alpha_1$.
 
  
  %As $\alpha_1 \to 1$, we approaches to a representative agent economy studied in AMSS.  Exploiting equation (\ref{eq:foc.tau.simplified}) to obtain a mapping between $\mu$ and $\tau$,  the steady state $(x^{SS},\rho^{SS})$ is  isomorphic to $(\tau^{SS},\rho^{SS})$.  In addition we also have that
@@ -1437,39 +1439,42 @@ relative strengths of the two forces.
  \end{figure}
 
 
-Although we proved proposition \ref{prop: long run forces} for a particular
-specification of preferences and shocks, the same  messages continue to hold more
-generally.  The only place in the proof where we used the particular form of utility functions  was to prove an existence of a
-solution to a particular equation that with our log-quadratic specification is  a quadratic that is
-easy to solve analytically.  For other types of preferences, existence of a root for (\ref{sys-steadystate}) 
-can be verified numerically. 
-
 \subsection{Stability}
-In this section we return to the general formulation of the problem from section \ref{Sec: characterization} to study convergence to the steady state. We first begin with describing a test for local convergence using a linear approximation of the policy rules at the steady state. In particular we look for solutions of the form $a(s^t)=\psi^{a}(s_t)[\bm{\mu}(s^{t-1})\quad  \bm{\rho}(s^{t-1})]'$ where $\psi^{a}(s)$  is a vector of dimension $2N-2$ for each $s$ and $a \in\{ c_i,l_i\}_i$ and a law of motion for $\{\mu(s^t),\rho(s^t)\}$ that satisfies the first order conditions and implementability constraints  discussed in section \ref{Sec: characterization}. \footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $N=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\bm{\mu},\bm{\rho})$ and not necessarily in  $(\bm{x},\bm{\rho})$. This comes from the fact that the set of feasible $(\bm{x},\bm{\rho})$ are restricted at time 0 and may not contain an open set around the steady state values. When we linearize using $(\bm{\mu},\bm{\rho})$ as state variables, the optimal policies for $\bm{x}(s^t),\bm{\rho}(s^t)$ converge to their  steady state levels for all pertubations in $(\bm{\mu},\bm{\rho})$.}   Appendix \ref{apndx: numerical methods} describes a matrix equation, whose solution captures the coefficients of the linear approximation. 
+In this section we return to the general formulation of the problem from section \ref{Sec: characterization} to study convergence to the steady state. We first begin with describing a test for local convergence using a linear approximation of the policy rules at the steady state. Next, we apply this test to show local stability of the steady state for a wide range of parameters. One additional insight that emerges from these examples that converge to the steady state for the commonly used parameter values is very slow.
 
-Let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \rho_t - \rho^{SS}\emat\right]$ be the deviation from the steady state. From the  linear approximation one can ontain $B(s)$ such that
+To study converges we return to the maximization problem (23) and assume that it admits a steady state. As before, let assume that $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}). In Appendix \ref{apndx: numerical methods} we show that the solution in state $s^t$ can be written recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$. The solution can be linearized around the steady state using $(\bm{\mu},\bm{\rho})$ as state variables.\footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $N=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\bm{\mu},\bm{\rho})$ and not necessarily in  $(\bm{x},\bm{\rho})$. This comes from the fact that the set of feasible $(\bm{x},\bm{\rho})$ are restricted at time 0 and may not contain an open set around the steady state values. When we linearize using $(\bm{\mu},\bm{\rho})$ as state variables, the optimal policies for $\bm{x}(s^t),\bm{\rho}(s^t)$ converge to their  steady state levels for all pertubations in $(\bm{\mu},\bm{\rho})$.}
+
+Formally, let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \bm \rho_t - \bm \rho^{SS}\emat\right]$ be the deviation from the steady state. From the  linear approximation one can ontain $B(s)$ such that
 \begin{equation}
- \hat{\Psi}(s_{t+1},\hat{\Psi}_t)=B(s_{t+1})\hat{\Psi}_t \label{eq.linear.lom}
+ \hat{\Psi}(s_{t+1},\hat{\Psi}_t)=B(s_{t+1})\hat{\Psi}_t. \label{eq.linear.lom}
 \end{equation}
+This linearized system has coefficients that are functions of the shock. The next proposition describes a simple numerical test that allows to verify if this linear system converges to zero in probability.
 
 \begin{proposition}\label{prop: localstability}
-If the (real part) of eigenvalues of $\mathbb{E}B(s)$ are less than 1,  system (\ref{eq.linear.lom}) convergences to zero  in mean. Further for large $t$, the conditional variance of $\hat{\Psi}$ follows a deterministic process governed by 
+If the (real part) of eigenvalues of $\mathbb{E}B(s)$ are less than 1,  system (\ref{eq.linear.lom}) convergences to zero  in mean. Further for large $t$, the conditional variance of $\hat{\Psi}$, denoted by $\Sigma_{\Psi,t}$, follows a deterministic process governed by 
 \[\text{vec}(\Sigma_{\Psi,t})=\hat{B} \text{vec}(\Sigma_{\Psi,t-1})\]	
-In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in distribution and probability.
+In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in probability.
 \end{proposition}
 
-The eigenvalues (in particular the dominant one) are instructive for (if and)how long it takes for the linearized system to converge. In figure \ref{fig: Eigenvalues} we return to the two agent example analyzed before and plot the eigenvalue of $\hat{B}$ that has the largest absolute value  and the associated half lives as a function of two primitives $\alpha_1$ (Pareto weight of agent 1) and risk aversion $\sigma$. It is clear that system is generically stable but the values close to 1 imply very slow convergence. The bottom panel shows that comparative statics with $\sigma$. For the same level of volatility of shocks, higher curvatures for the utility function increases the fluctuations in interest rates that are necessary for the system to converge faster to the steady state For resonable parameters the half-life is around 2800 years. We comeback to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt.
+The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $-\frac{\log(0.5)}{(1-\|\iota\|)}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower the speed of convergence is.
+
+We used proposition \ref{prop: localstability} to verify local stability of a wide range of examples. The typical finding is that the steady state is generically stable and the speed of convergence is slow. In figure \ref{fig: Eigenvalues} we plot the comparative statics for the dominant eigenvalue and associated the half-life for a two agent economy with CES preferences with respect to the size of the shock and risk aversion.  We set the other parameter to match a Frisch elasticity of 0.5,  real interest rate of 2\%, marginal tax rates are around 20\% and a 90-10 percentile ratio of wage earnings to be 4. In the first 	exercise, we vary the size of the expenditure shock to generate output falls from 1\% to 10\% keeping risk aversion ($\sigma$) at one. In the bottom panel, we fix the size of shock such that it produces a 3\% output fall at $\sigma=1$ and vary $\sigma$ from 0.5 to 7. 
+We see that the dominant eigenvalue is everywhere less than one but very close to one, so that the steady state is stable but convergence is slow for resonable values of curvatures and shocks.  We comeback to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt.
+% 
+% 
+% In figure \ref{fig: Eigenvalues} we return to the two agent example with CES preferences and plot the eigenvalue of $\hat{B}$ that has the largest absolute value  and the associated half lives as a function of two primitives $\alpha_1$ (Pareto weight of agent 1) and risk aversion $\sigma$. It is clear that system is generically stable but the values close to 1 imply very slow convergence. The bottom panel shows that comparative statics with $\sigma$. For the same level of volatility of shocks, higher curvatures for the utility function increases the fluctuations in interest rates that are necessary for the system to converge faster to the steady state For resonable parameters the half-life is around 2800 years.
 
 
   \begin{figure}[htp]
  \centering
- \includegraphics[width=\textwidth]{Draft25Graphs/eigenvalues_alpha1.eps}
+ \includegraphics[width=\textwidth]{Draft25Graphs/eigenvalues.eps}
  \caption{Eigenvalues of $\hat{B}$ (left panel) and associated half-life (right panel) as a function of Agent 1's (high skilled) Pareto weight}
  \label{fig: Eigenvalues}
  \end{figure}
 
 
-
+\color{blue}[MG: I propose to cut the rest of this section. I think it is too loose and vague and does not add anything substantive to the points that we already made in this section. I think it is better to put it into BEGS2 where we can actually have tight results about it.]
+\color{black}
 
 Our first observation is that optimality conditions of problem (\ref{eq:BM2}) imply that the Language multiplier on the implementability constraint (\ref{eq:BM2_Imp_cons}) and the ratios of marginal utilities $\rho_{i,t}$ are risk-adjusted martingales. 
 
@@ -1501,7 +1506,8 @@ The FOC for (\ref{eq:BM2}) with respect to $x(s)$ gives us% the $t \geq 1$, recu
 
 The first margingale shows up in the representative agent incomplete market models and captures that idea that the planner want to smooth fluctuations in distortions from taxes over time. The second martingale is new. It shows that fluctuations in inequality also follow a risk-adjusted martinage process. 
 
-The sign of the covariance terms in equations  (\ref{eq. martingale mu}) and (\ref{eq. martingale rho})  imparts the drift to the variables towards the steady state. For instance, consider the economy with TFP shocks and a  government that starts off with asset distribution skewed towards the high productivity agent (w.l.o.g say $\theta_i(s)<\theta_1(s)$) such that it implies $\mu_{i,t}>\mu^{SS}_i$ and $\rho_{i,t}>\rho^{SS}_i$. With two states, determining the sign of the covariance terms is equivalent to ordering $\mu_i(s)$ and $\rho_i(s)$ relative to $c_i(s)$. Suppose consumption for each agent is procyclical or $c_i(s_l)<c_i(s_h)$. In order to converge to the steady state, it should be the case that both the covariances are positive or $\mu_i(s)$ and $\rho_i(s)$ are countercyclical for such initial conditions. The envelope theorem implies that $\mu_i(s)=V_{x_i}(\bm{x}(s),\bm{\rho}(s))$ which can be interpreted as the value of an extra  unit of asset for agent $i$ in state $s$. With countercyclical interest rates (and low initial assets), a dollar is more valuable to agent $i$ in low TFP states. Thus we can expect $\mu_i(s)$ to be countercyclical. Next for  $\rho_i(s)$ to be countercyclical as well, we need $\frac{U_c^1(s_l)-U_c^1(s_h)}{U_c^1(s_h)}< \frac{U_c^i(s_l)-U_c^i(s_h)}{U_c^1i(s_h)}$. This means for low levels of consumption,  the relative flucations in marginal utilities of agent $i$ should be larger than that of the agent $1$ who has a high present value of earnings. 
+The sign of the covariance terms in equations  (\ref{eq. martingale mu}) and (\ref{eq. martingale rho})  imparts the drift to the variables towards the steady state. For instance, consider the economy with TFP shocks and a  government that starts off with asset distribution skewed towards the high productivity agent (w.l.o.g say $\theta_i(s)<\theta_1(s)$) such that it implies $\mu_{i,t}>\mu^{SS}_i$ and $\rho_{i,t}>\rho^{SS}_i$. With two states, determining the sign of the covariance terms is equivalent to ordering $\mu_i(s)$ and $\rho_i(s)$ relative to $c_i(s)$. Suppose consumption for each agent is procyclical or $c_i(s_l)<c_i(s_h)$. In order to converge to the steady state, it should be the case that both the covariances are positive or $\mu_i(s)$ and $\rho_i(s)$ are countercyclical for such initial conditions. The envelope theorem implies that $\mu_i(s)=V_{x_i}(\bm{x}(s),\bm{\rho}(s))$ which can be interpreted as the value of an extra  unit of asset for agent $i$ in state $s$. With countercyclical 
+interest rates (and low initial assets), a dollar is more valuable to agent $i$ in low TFP states. Thus we can expect $\mu_i(s)$ to be countercyclical. Next for  $\rho_i(s)$ to be countercyclical as well, we need $\frac{U_c^1(s_l)-U_c^1(s_h)}{U_c^1(s_h)}< \frac{U_c^i(s_l)-U_c^i(s_h)}{U_c^1i(s_h)}$. This means for low levels of consumption,  the relative flucations in marginal utilities of agent $i$ should be larger than that of the agent $1$ who has a high present value of earnings. 
 Both these conditions are intuitive and verified in our numerical examples in section \ref{Sec: numerical}. Further the linear policies described above also preserve these orderings and as long as the steady state is unique, one can expect these to hold even for the region outside the neighborhood of steady state where these policies are approximated. 
 
 % As before, let  $I_i(s)=[1-\tau(s)]l_i(s)-c_i(s)$ be the disposable income of agent $i$ in state $s$. 
@@ -1597,7 +1603,7 @@ richer shock structures, there exists an attraction region in the  $(x,\rho)$ sp
 system  converges. Although $\left( x,\rho \right) $ are no longer
 constant in such region, their fluctuations tend to be markedly
 reduced relative to the transients that occur away from that region, and general properties of $x$ and $\rho$ are the same as those
-described in Proposition \ref{prop: long run forces}. Figure \ref{fig:moregeneralshocks} shows long sample paths for economies hit by more general TFP shocks. The top panel has IID shocks with 2 (bold) and 3(dotted) possible values and the bottom panel has persistent shocks with 2(bold) and 3 (dotted)possible values.
+described in Proposition \ref{prop: long run forces}. Figure \ref{fig:moregeneralshocks} shows long sample paths for economies hit by more general TFP shocks. The top panel has IID shocks with 2 (bold) and 3 (dotted) possible values and the bottom panel has persistent shocks with 2 (bold) and 3 (dotted)possible values.
 %\textcolor{blue}{David, can you put a line explaining how the shock processes for this plot were calibrated}
 
 % 
@@ -1605,7 +1611,7 @@ described in Proposition \ref{prop: long run forces}. Figure \ref{fig:moregenera
    \begin{figure}[htp]
   \centering
   \includegraphics[width=\textwidth]{Draft25Graphs/generalshocks_x.eps}
-  \caption{The figure depicts sample paths of marginal utility adjusted debt of the government i.e  $-x_t$. The top panel has IID shocks with 2 (bold) and 3(dotted) possible values and the bottom panel has persistent shocks with 2(bold) and 3 (dotted)possible values}
+  \caption{The figure depicts sample paths of marginal utility adjusted debt of the government i.e  $-x_t$. The top panel has IID shocks with 2 (bold) and 3 (dotted) possible values and the bottom panel has persistent shocks with 2 (bold) and 3 (dotted)possible values}
  \label{fig:moregeneralshocks}
   \end{figure}
 
@@ -1613,27 +1619,36 @@ described in Proposition \ref{prop: long run forces}. Figure \ref{fig:moregenera
 
 \smallskip
 
-Section \ref{sec: 2 agent example} showed that the long run policy
-response of the government depends on the nature of the shocks, in
-particular, whether interest rates are high or low in periods which are ``adverse'' (low TFP, high inequality or high expenditure) from the point of view of governments budget constraint.
+In section \ref{sec: SteadyStates} we used steady states to characterize the long run behavior of optimal allocations and forces that guide the asymptotic level of net assets. In this section, we use a calibrated version of the economy to a) revisit the magnitude of these forces and b) study optimal policy responses over business cycle frequencies when the economy is possibly far away from the steady state. We choose shocks to match stylized facts about recent
+recessions in US.
 
-%on the correlation between the interest rate and the government's revenue
-%requirements.
-%\textcolor{red}{From Tom: Here the concept of `government's revenue
-%requirements' makes an appearance. See my remark above. Let's clarify what it means.}
-In this section, we further investigate this issue.
-We focus on  optimal policy responses when the economy starts away
-from the long-run steady state. We discuss  quantitative and qualitative
-features of the response as well as the speed of convergence to the long-run
-allocation by calibrating  shocks to match stylized facts about recent
-recessions.
 
-\smallskip We consider an economy with two types of agents%
-of equal measures with preferences\footnote{%
+
+% Section \ref{sec: 2 agent example} showed that the long run policy
+% response of the government depends on the nature of the shocks, in
+% particular, whether interest rates are high or low in periods which are ``adverse'' (low TFP, high inequality or high expenditure) from the point of view of governments budget constraint. 
+% 
+
+
+
+
+% 
+% %on the correlation between the interest rate and the government's revenue
+% %requirements.
+% %\textcolor{red}{From Tom: Here the concept of `government's revenue
+% %requirements' makes an appearance. See my remark above. Let's clarify what it means.}
+% In this section, we further investigate this issue.
+% We focus on  optimal policy responses when the economy starts away
+% from the long-run steady state. We discuss  quantitative and qualitative
+% features of the response as well as the speed of convergence to the long-run
+% allocation by calibrating  shocks to match stylized facts about recent
+% recessions.
+
+\smallskip In particular we consider an economy with two types of agents of equal measures with preferences\footnote{%
 We restrict our attention to the economy with two agents for computational
 tractability. We want to understand both short-run and long-run
 responses to shocks.  For some of our computations,  it is important to allow our
-dynamic systems to travel over a large subset of state space, including regions encountered infrequently.
+dynamic systems to travel over a large subset of state space, including regions encountered infrequently in the invariant distribution.
 With more agents, it seems  possible to apply other methods,  for example those of  \cite{Judd2011}, to study dynamics of our economy within its invariant
 distribution. We hope to pursue such extensions in  future work.}
 \begin{equation*}
@@ -1681,31 +1696,34 @@ to match Frisch elasticity of labor supply equal to $0.5$. In our model, $%
 \bar{g}$ corresponds to non-transfer government expenditures, which
 in the U.S. varied from 7\%  and  11\% in the post WWII period  and were above 20\% during the war. We set
  $\bar{g}$ to 12\% of GDP. Finally, we set Pareto weights $\alpha $ to match the average
-marginal tax rate in the US\ of about 20\% as in \cite{Chari1994}. \footnote{We use federal government expenditures (excluding current transfers) since the labor tax rate of 20\% in  \cite{Chari1994} is calibrated to federal marginal taxes.}
+marginal tax rate in the US\ of about 20\% as in \cite{Chari1994}.\footnote{We use federal government expenditures (excluding current transfers) since the labor tax rate of 20\% in  \cite{Chari1994} is calibrated to federal marginal taxes.}
 
-\smallskip Next we turn to some business cycle targets. We calibrate $\left\{
+\smallskip Next we turn to the business cycle targets. We calibrate $\left\{
 e_{i,\theta },e_{\beta},\Pr \left( s|s_{-}\right) \right\} $ to match the
-following four facts about booms and recessions (using NBER dates, for the last 3 recessions ie 1991-92, 2001-02 and 2008-10) : the log of the  incomes individuals at  both the 10th and the 90th percentile falls  the recessions; 10th percentile income falls by
+following four facts about booms and recessions (using NBER dates, for the last 3 recessions i.e. 1991-92, 2001-02 and 2008-10): the log of the  incomes individuals at  both the 10th and the 90th percentile falls  the recessions; 10th percentile income falls by
 more than 90th percentile; an  inflation-adjusted interest rate on government
 debt is generally lower in recessions; and  booms last longer
 than recessions. We calibrate the average spread in labor productivity  to
 match the average 3\% loss in output seen in the last three recessions.%
-\footnote{%
-It has long been noticed that the standard RBC model predicts counterfactual
-negative correlation between real interest rates and output (e.g. \cite{Boldrin2001}). In the data HP filtered output is roughly uncorrelated with real
-interest rates, but this relationship turn positive if we look at peak vs
-troughs. We report the optimal responses for both economies with positive
-and zero correlation of interest rates and output and contrast with a
-response to a pure TFP\ shock.} The inequality shock is designed to match
+The inequality shock is designed to match
 the facts documented in \cite{NBERw18035} that the fall in earnings of
 the 10-percentile is about 2.5 times of 90-percentile.
  The discount factor shocks
 match the average boom-recession difference of about 1.96\% in the real
 risk-free interest rate (3 month T bill rate - inflation rate) seen in the
-last three recessions. We calibrate the transition matrix  to get match the
-average duration of booms vs recessions.
- For comparison, we also calibrate a drop in government expenditure to get a
-drop in output  similar to recessions induced by the productivity shocks
+last three recessions.\footnote{%
+It has long been noticed that the standard RBC model predicts counter-factual
+negative correlation between real interest rates and output (e.g. \cite{Boldrin2001}). In the data HP filtered output is roughly uncorrelated with real
+interest rates, but this relationship turn positive if we look at peak vs
+troughs. We report the optimal responses for both economies with positive
+and zero correlation of interest rates and output and contrast with a
+response to a pure TFP\ shock.}  We calibrate the transition matrix  to get match the
+average duration of booms and recessions.
+ For comparison, we also report the optimal responses to a drop in government expenditure that leads to an output drop similar magnitude.
+ 
+%  
+%  calibrate a drop in government expenditure to get a
+% drop in output  similar to recessions induced by the productivity shocks
 
 Note that because each of them is an
 exact function of $s_t$, government expenditures, the discount factor, and productivities are
@@ -1723,20 +1741,19 @@ beginning of 2010.
 {\small
 \begin{tabular}{|l|c|c|c|}
 \hline
-Parameter & Target &  &  \\ \hline
-$\psi$ & Frisch elasticity of labor supply & 0.6994 &  \\
-$\bar{\theta}_1 $ & Log 90-10 wage ratio (Autor et all) & 4.0552 &  \\
-$\bar{\theta}_2 $ & Normalize to 1 & 1 &  \\
-$\hat {\theta}_1$ & Business cycle fluctuations in the earnings of 90th
-percentile & 1.2 \% &  \\
-$\hat{\theta}_2$ & Business cycle fluctuations in the earnings of 10th
-percentile & 3\% &  \\
-$\beta$ & Average (annual) risk free interest rate & 0.98 &  \\
-$\hat{\beta}(s)$ & Business cycle fluctuations & .02 &  \\
-$\alpha_1$ & marginal tax rate in the economy with no shocks & 0.69 &  \\
-$g$ & average pre-transfer expenditure- output ratio & 12 \% &  \\
-$P(r|r)$ & Recession-Boom episodes & 0.63 &  \\
-$P(b|b)$ & Recession-Boom episodes & 0.84 &  \\ \hline
+Parameter & Value & Description &Target   \\ \hline
+$\psi$ & 0.6994 &Frisch elasticity of labor supply & 0.5   \\
+$\bar{\theta}_1 $ & 4& Log 90-10 wage ratio (Autor et all) & 4   \\
+$\bar{\theta}_2 $ & 1 &Normalize to 1 & 1  \\
+$\beta$ & 0.98  &Average (annual) risk free interest rate & 2\%   \\
+$\frac{\hat {\theta}_2}{\hat {\theta}_1}$ & 2.5 & Relative drop in wage income of 10th
+percentile as compared to 90th percentile & 2.5\\
+$\hat{\theta}_1$ & 1.2\% & Average output loss& 3\% \\
+$\hat{\beta}(s)$ & 1.96\%& Difference in real interest rates between booms and recession& 1.96\% \\
+$\alpha_1$ & 0.69 & Marginal tax rate in the economy with no shocks & 20\% \\
+$g$ & 12\%&Average pre-transfer expenditure- output ratio & 12 \% \\
+$P(r|r)$ & 0.63&Duration of recessions & 2.33 years \\
+$P(b|b)$ & 0.84 &Duration of booms &7 years \\ \hline
 \end{tabular}
 }
 \caption{Benchmark calibration}
@@ -1808,7 +1825,7 @@ features emerge from this figure. %First, as we discussed in Section \ref%
 In line with Section \ref{sec: SteadyStates}, all four economies the state $(x,\rho)$   converge to some long run
 ergodic set, so that government debt and the tax rate converge to associated sets. When there are no discount factor shocks
 (See lines with {$\diamond$, \scriptsize  $\square$ \normalsize}in figure \ref{fig:LongSimulations}) or small discount factor shocks that produce acyclical interest rates (line with + in figure \ref{fig:LongSimulations} )
-the government has accumulated assets in this ergodic set. As alluded to in section \ref{sec: 2 agent example} %XXXXXX, \textcolor{red}{Please nail down the
+the government has accumulated assets in this ergodic set. Consistent with \ref{prop: long run forces} %XXXXXX, \textcolor{red}{Please nail down the
  %section number.}
  the optimal policy adjusts  net asset
 positions to ameliorate the two key constraints impinging  on the government policy, namely,
@@ -1828,7 +1845,7 @@ In data, however, interest rates  generally decline in recessions. Procyclical i
 two forces outlined in the previous paragraph now oppose each other.  For  large enough interest rate fluctuations, this means that
 the
 government may want to accumulate debt. In Figure \ref{fig:LongSimulations}, the
-black line represents the benchmark with discount factor shocks rigged to
+line with (o) represents the benchmark with discount factor shocks rigged to
 replicate  procylical fluctuations in interest rates. For a particular initial condition for government debt,
 the planner can refrain from varying debt for a very  long time.\footnote{Like the finding in Proposition \ref{prop: long run forces} for large discount factor shocks (in a way that interest rates are procylical)  there exist
 regions where $x_t,\rho_t$ have low volatility and the  government is \emph{not} accumulating assets. But these
@@ -1839,7 +1856,7 @@ on the relative strengths. In particular the sample paths from different initial
 Convergence to the ergodic region is  very slow.  With persistent shocks and an initial 60\% debt-GDP\ ratio,  it takes about 3,000 years for
 the government to want to pay off all that debt
 and then start accumulating assets. With
-discount factor shocks, it takes even longer to repay the debt. It is still indebted after 5000 years. This confirms the comparative statics of the eigenvalues of linearized system in proposition \ref{prop: localstability}
+discount factor shocks, it takes even longer to repay the debt. It is still indebted after 5000 years. This confirms the comparative statics of the eigenvalues of linearized system in proposition \ref{prop: localstability}.
 
 Thus, the covariance of interest rates with fundamentals as emphasized in proposition \ref{prop: long run forces} substantially influences the ergodic distribution of government assets.
 %\textcolor{red}{From Tom: the previous sentence needs improvement -- please weigh in.}
@@ -1859,14 +1876,14 @@ different components in the government budget constraint across states. These re
 are summarized in Table \ref{tab:ShortRunPolicyResponses}. For each variable
 $z$ in the table we report in the form $\Delta z\equiv \left( z\left(
 s_l|x_0,\rho_0,s_0\right) -z\left( s_h|x_0,\rho_0,s_0\right) \right) /\bar{Y}
-$ where $\bar{Y}$ is average undistorted - GDP \footnote{%
+$ where $\bar{Y}$ is average undistorted GDP. \footnote{%
 Note that predetermined variables like repayment on existing debt drop out
 of the accounting and we have
 \begin{equation*}
 \Delta [g]+\Delta[T]+ \Delta [B]=\Delta[\tau \theta_1 l_1]+ \Delta[\tau
 \theta_2 l_2]
 \end{equation*}%
-}.
+.}
 
 %\smallskip Table ???\ reports standard deviation and persistence of all
 %variables in table ???-1.
@@ -1901,7 +1918,7 @@ policy in recessions.
 \textbf{Expenditure Shocks} & -7.5037 & 2.9137 & 2.8612 & -1.3759 & -0.3530 & -2.3443 &
 -1.1598 \\ \hline
 \end{tabular}%
-\caption{The tables summarizes the changes in the different components of the government budget as we transit from ``boom'' to a ``recession''.  All numbers are normalized by un-distorted GDP except $\protect\tau $
+\caption{The tables summarizes the changes in the different components of the government budget as we transit from ``boom'' to a ``recession''.  All numbers are normalized by un-distorted GDP except $\protect\tau $.
 }
 
 \label{tab:ShortRunPolicyResponses}
@@ -1919,30 +1936,11 @@ The bold lines in figures \ref{fig:DiscoutFactorComparison} and \ref{fig:Discout
 are periods with low output. We see that in a prolonged booms, the
 government accumulates assets and that it lowers the tax rate when there are no discount
 factor shocks.
-%
-% \FRAME{ftbpFU}{5.0652in}{2.853in}{0pt}{\Qcb{Optimal response in a benchmark
-% (solid line) and a model with no discount factor shocks (dotted line).}}{%
-% \Qlb{fig:DiscoutFactorComparison}}{discoutfactorcomparison.tif}{\special%
-% {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-% TRUE;display "USEDEF";valid_file "F";width 5.0652in;height 2.853in;depth
-% 0pt;original-width 12.5934in;original-height 7.0629in;cropleft "0";croptop
-% "1";cropright "1";cropbottom "0";filename
-% 'Draft25Graphs/DiscoutFactorComparison.tif';file-properties "XNPEU";}}
-%
-% \FRAME{ftbpFU}{4.9822in}{2.8565in}{0pt}{\Qcb{Optimal response in a benchmark
-% (solid line) and a model with interest rate fluctuations (dotted line).}}{%
-% \Qlb{fig:DiscoutFactorComparison2}}{discoutfactorcomparison2.tif}{\special%
-% {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-% TRUE;display "USEDEF";valid_file "F";width 4.9822in;height 2.8565in;depth
-% 0pt;original-width 12.3858in;original-height 7.0733in;cropleft "0";croptop
-% "1";cropright "1";cropbottom "0";filename
-% 'Draft25Graphs/DiscoutFactorComparison2.tif';file-properties "XNPEU";}}%
-%
 \smallskip
 
 \begin{figure}[htp]
 \includegraphics[width=\textwidth]{Draft25Graphs/DiscoutFactorComparison.png}
-\caption{This plots a typical sample path taxes, transfers,debt and interest rates. The bold lines are with  benchmark calibration and the dotted lines refer to the variant with countercyclical interest rates. The shaded regions are recessions.}
+\caption{This plots a typical sample path taxes, transfers, debt and interest rates. The bold lines are with  benchmark calibration and the dotted lines refer to the variant with countercyclical interest rates. The shaded regions are recessions.}
 \label{fig:DiscoutFactorComparison}
 \end{figure}
 
@@ -2130,7 +2128,7 @@ b_{2,t-1}-b_{1,t-1}\right)
  \end{equation}
  \begin{equation}
  \label{eq:borrowingconstexample-limits}
- b_{1,t}\geq0
+ b_{1,t}\geq0.
  \end{equation}
 \end{subequations}
 
@@ -2154,15 +2152,15 @@ _{1},b_{1,t}=\bar{b}_{1},b_{2,t}=\bar{b}_{2}$ to the relaxed problem that satisf
  \begin{subequations}
  \begin{equation}
   \label{eq:borrowingconstexample-foc-c2}
-U^2_c(\bar{c}_2)=\frac{2\bar{\mu}+\alpha_1}{\alpha_2}
+U^2_c(\bar{c}_2)=\frac{2\bar{\mu}+\alpha_1}{\alpha_2},
  \end{equation}
 \begin{equation}
 \label{eq:borrowingconstexample-foc-labor}
-\alpha_1 h'(\bar{l}_1)=\theta_1\alpha_1+\bar{\mu}[\theta_1-h''(\bar{l}_1)\bar{l}_1-h'(\bar{l}_1)]
+\alpha_1 h'(\bar{l}_1)=\theta_1\alpha_1+\bar{\mu}[\theta_1-h''(\bar{l}_1)\bar{l}_1-h'(\bar{l}_1)],
  \end{equation}
 \begin{equation}
 \label{eq:borrowingconstexample-foc-b_2}
-b_{2,-1}=\frac{2\bar{c}_2+ \bar{l}_1\left[h'(\bar{l}_1)-\theta_1 \right] }{\beta^{-1}-1}
+b_{2,-1}=\frac{2\bar{c}_2+ \bar{l}_1\left[h'(\bar{l}_1)-\theta_1 \right] }{\beta^{-1}-1}.
 \end{equation}
 
  \end{subequations}
@@ -2172,7 +2170,7 @@ Note that if a solution to the above set of equations exists, (\ref{eq:borrowing
 
 We first establish some comparative statics with respect to $\bar{\mu}$. It is easy to see that concavity of $U^2$ implies $\frac{\partial \bar{c}_2}{\partial \mu}<0$. Further equation (\ref{eq:borrowingconstexample-foc-labor}) can be rearranged to get
 
- \[\frac{h'(\bar{l}_1)}{\theta_1}=\frac{\alpha_1+\bar{\mu}}{\left[\alpha_1+\bar{\mu}+\bar{\mu}\left(\frac{h''(\bar{l}_1)\bar{l}_1}{h'(\bar{l}_1)}\right)\right]}\]
+ \[\frac{h'(\bar{l}_1)}{\theta_1}=\frac{\alpha_1+\bar{\mu}}{\left[\alpha_1+\bar{\mu}+\bar{\mu}\left(\frac{h''(\bar{l}_1)\bar{l}_1}{h'(\bar{l}_1)}\right)\right]}\].
 
  Using convexity of $h$ we have $\frac{\partial \bar{l}_1}{\partial \mu}<0$.
 
@@ -2181,7 +2179,7 @@ We first establish some comparative statics with respect to $\bar{\mu}$. It is e
 \end{proof}
 
 \begin{lemma}
- For $R_t=\beta^{-1}$, if $b_{2,-1}<b_{1,-1}$ then $\bar{\mu}>0$
+ For $R_t=\beta^{-1}$, if $b_{2,-1}<b_{1,-1}$ then $\bar{\mu}>0$.
 \end{lemma}
 \begin{proof}
  Suppose $\bar{\mu}\leq0$ when $b_{2,-1}<b_{1,-1}$.  At $\mu=0$, $h'(\bar{l}_1)=\theta_1$  and the RHS of (\ref{eq:borrowingconstexample-foc-b_2}) is positive.  At $\mu<0$ we have $h'(\bar{l}_1)>\theta_1$ . The observations above imply that the RHS of (\ref{eq:borrowingconstexample-foc-b_2}) is increasing in $\mu$ and this clearly violates equation (\ref{eq:borrowingconstexample-foc-b_2}).  Thus we have a contradiction.
@@ -2201,7 +2199,7 @@ observations above imply that
 \left. \frac{\partial }{\partial R_{1}}W\left( \left \{ R_{t}\right \}
 _{t}\right) \right \vert _{\left \{ R_{t}\right \} =\bm{\beta }^{-1}}=%
 \bar{\mu}\bar{b}_{2,t}-\xi_1\leq\bar{\mu}\left( \bar{b}_{2,-1}-\bar{b}%
-_{1,-1}\right) <0
+_{1,-1}\right) <0,
 \end{equation*}
 and therefore $R_{t}=\beta ^{-1}$ for all $t$ is not the optimal equilibrium
 sequence. Therefore, welfare in the economy with exogenous borrowing
@@ -2634,16 +2632,16 @@ Given $P(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints \eqref{eq
 	\item{$\rho_i(s):$}
 	\begin{align}
 		&U_{\rho_i}(\tau(s),\bm \rho'(s),s) +\sum_j\left(\frac{x_j u_{c,1\rho_i}(\tau(s),\bm \rho'(s),s)}{\mathbb{E} u_{c,1}(\tau,\bm \rho',s)}\left[\mu_j(s)-\frac{\mathbb{E}\mu_j(s) u_{c,1}(\tau,\bm \rho',s)}{\mathbb{E} u_{c,1}(\tau,\bm \rho',s)}\right] -\mu_j(s)Z_{j,\rho_i}(\tau(s),\bm \rho'(s),s)\right)\nonumber\\
-		&\quad+\sum_j\left[\lambda_j u_{c,j\rho_i}(\tau(s),\bm \rho'(s),s)(\rho_j'(s)-\rho_j)\right]+\lambda_iu_{c,i}(\tau(s),\bm \rho'(s),s)+\beta(s) V_{\rho_i}(\bm x'(s),\bm \rho'(s))=0
+		&\quad+\sum_j\left[\lambda_j u_{c,j\rho_i}(\tau(s),\bm \rho'(s),s)(\rho_j'(s)-\rho_j)\right]+\lambda_iu_{c,i}(\tau(s),\bm \rho'(s),s)+\beta(s) V_{\rho_i}(\bm x'(s),\bm \rho'(s))=0.
 	\end{align}
 \end{description}  Finally the envelope conditions are
 \begin{equation}
-	V_{x_i}(\bm x,\bm \rho) = \frac{\mathbb{E}\mu_i(s) u_{c,1}(\tau,\bm \rho',s)}{\mathbb{E} u_{c,1}(\tau,\bm \rho',s)}\label{eq.env_x1}
+	V_{x_i}(\bm x,\bm \rho) = \frac{\mathbb{E}\mu_i(s) u_{c,1}(\tau,\bm \rho',s)}{\mathbb{E} u_{c,1}(\tau,\bm \rho',s)}, \label{eq.env_x1}
 \end{equation} and 
 \begin{equation}
-	V_{\rho_i}(\bm x,\bm \rho) = -\lambda_i \mathbb{E} u_{c,i}(\tau,\bm \rho',s)
+	V_{\rho_i}(\bm x,\bm \rho) = -\lambda_i \mathbb{E} u_{c,i}(\tau,\bm \rho',s).
 \end{equation}  The equations for the steady state can then be obtained by imposing $x'_i(s) = x_i$ and $\rho'_i(s) = \rho_i$.  It is then readily noted that equations \eqref{eq.foc_x1} and \eqref{eq.env_x1} are satisfied when $\mu_i(s) = \mu_i = \beta V_{x_i}(\bm x,\bm \rho)$. Further equation (\ref{eq:bondcondtion}) drops out and the equation (\ref{eq:ss-imp}) simplifies to   
-\[	Z_i(\tau(s),\bm \rho,s) +\beta(s) x'_i = \frac{x_i U^1_c(\tau(s),\bm \rho,s)}{\mathbb{E} U^1_c(\tau,\rho)} \]
+\[	Z_i(\tau(s),\bm \rho,s) +\beta(s) x'_i = \frac{x_i U^1_c(\tau(s),\bm \rho,s)}{\mathbb{E} U^1_c(\tau,\rho)}. \]
 
 \subsection{Proof of Proposition \protect\ref{prop: long run forces}}
 
@@ -3248,7 +3246,7 @@ in the steady state interest rates are positively correlated with TFP.
 % 
 % \smallskip
 \subsection{Linearization Algorithm}\label{apndx: numerical methods}
-This section will outline our numerical methods used to solve for and linearize around a complete markets steady state in the case of a 2 state iid process for the aggregate state.  We will specialize to the two agent case and for the remainder of this section it will be assumed that the Bellman equation is written in the form
+This section will outline our numerical methods used to solve for and linearize around the steady state in the case of a 2 state iid process for the aggregate state.  
 \begin{equation}
 	V(\bm x,\bm \rho) = \max_{c_i(s),l_i(s),\bm x'(s),\bm\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(\bm x'(s),\bm \rho'(s))\right)\label{eq.obj}
 \end{equation}
@@ -3259,8 +3257,11 @@ This section will outline our numerical methods used to solve for and linearize 
 	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_i(s)}U_{l,i}(s)\\
 	& \sum_{j=0}^N\pi_j c_j(s)  + g(s) = \sum_{j=0}^{N} \pi_j\theta_j(s)l_j(s)\\
 	& U_{c,i}(s) = \rho_i'(s) U_{c,1}(s)\label{eq.rho_con}
-\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu'_i(s)$, $\lambda_i$,$P(s)\phi_i(s)$,$P(s)\xi(s)$, and $P(s)\zeta_i(s)$.
-\subsubsection{Steady State}  By taking first order conditions it is possible to numerically determine the location of a stationary steady state.  The first order conditions with respect to the choice variables are as follows (note we will be using the notation $\mathbb E z$ to represent $\sum_s P(s) z(s)$ for some variable $z$)
+\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu'_i(s)$, $\lambda_i$,$P(s)\phi_i(s)$,$\Pr(s)\xi(s)$, and $P(s)\zeta_i(s)$.
+%\subsubsection{Steady State}
+
+%By taking first order conditions it is possible to numerically determine the location of a stationary steady state.  
+The first order conditions with respect to the choice variables are as follows (note we will be using the notation $\mathbb E z$ to represent $\sum_s \Pr(s) z(s)$ for some variable $z$)
 \begin{subequations}
 \begin{description}
 	\item[$c_1(s)$:]
@@ -3285,34 +3286,37 @@ This section will outline our numerical methods used to solve for and linearize 
 	\end{equation}
 	\item[$x_i'(s)$:]
 	\begin{equation}
-		 V_{x_i}(\bm x'(s),\bm \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}
+		 V_{x_i}(\bm x'(s),\bm \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}.
 	\end{equation}
 \end{description} \end{subequations} Equations (\ref{eq.imp_con})-(\ref{eq.rho_con}) and (\ref{eq.foc_c1})-(\ref{eq.foc_rho}) then define the necessary conditions for an interior maximization of the planners problem for the state $(x,\rho)$.  In addition to these we have the two envelop conditions
 \begin{subequations}
 \begin{equation}
-	V_{x_i}(\bm x,\bm \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x}
+	V_{x_i}(\bm x,\bm \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x},
 \end{equation}and
 \begin{equation}
-	V_{\rho_i}(\bm x,\bm \rho) = -\lambda_i \mathbb E U_{c,1}\label{eq.env_rho}
-\end{equation}\end{subequations}  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu'(s),\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu_i(s) = \mu_i = V_{x_i}(\bm x,\bm \rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$ that solves the following system of equations
-\begin{subequations}
-\begin{align}
-	U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+\beta(s)x_i -\frac{x_i U_{c,i}(s)}{\mathbb E U_{c,i}}\label{eq.FSS_start}\\
-	\frac{U_{l,i}(s)}{\theta_i(s)} - \frac{\rho U_{l,1}(s)}{\theta_1(s)}=0\\
-	\sum_{i=1}^N\pi_i c_i(s)+g(s) = \sum_{i=1}^N\pi_i \theta_i(s) l_i(s)\\
-	\rho_i U_{c,1}(s)-U_{c,i}(s) =0
-	\pi_1\alpha_1 U_{c,1}(s) + \sum_{i=2}^N\mu_i\rho_i\left[ U_{cc,1}(s) c_1(s)+U_{c,1}(s)\right] -\pi_1\xi(s)  +\sum_{i=2}^N \rho_i\eta_i(s)U_{cc,1}(s) = 0\\
-	\pi_i\alpha_i U_{cc,i}(s) - \mu_i\left[ U_{cc,i}(s)c_i(s)+U_{c,i}(s)\right] - \pi_i\xi(s) -\eta_i(s) U_{cc,i}(s) = 0\\
-	\pi_1 \alpha_1 U_{l,1}(s) +\sum_{i=2}^N\mu_i\rho_i\left[U_{ll,1}(s) l_1(s) + U_{l,1}(s)\right] - \sum_{i=2}^N\frac{\rho_i\phi_i(s)}{\theta_1(s)} U_{ll,1}(s) + \pi_1\theta_1(s)\xi(s) = 0\\
-	\pi_i\alpha_i U_{l,i}(s)  -\mu_i\left[U_{ll,i}(s)l_i(s) + U_{l,i}(s)\right] +\frac{\phi_i(s)}{\theta_i(s)} U_{ll,i}(s) + \pi_i\theta_i(s)\xi(s) = 0\\
-	\lambda_i\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu_i\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi_i(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\eta_i(s) = 0\label{eq.FSS_end}
-\end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
-\subsubsection{Linearization}  In order to check local stability we linearize locally around the steady state.  Given the discussion above we will therefore be restricting ourselves to a 2 state iid process for the aggregate state.  Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\bm \mu,\bm \rho$ rather than $\bm x,\bm \rho$, and thus, we will proceed with the linearization procedure using $(\bm \mu,\bm \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
+	V_{\rho_i}(\bm x,\bm \rho) = -\lambda_i \mathbb E U_{c,1}\label{eq.env_rho}.
+ \end{equation}\end{subequations}  
+ 
+%  A steady state will then be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu'(s),\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$  that solve equations (\ref{eq.imp_con})-(\ref{eq.rho_con}), (\ref{eq.foc_c1})-(\ref{eq.foc_rho}), and (\ref{eq.env_x})-(\ref{eq.env_rho}).  It should be noted that taking $\mu_i(s) = \mu_i = V_{x_i}(\bm x,\bm \rho)$ will solve both equations (\ref{eq.foc_x}) and (\ref{eq.env_x}).  Thus a steady state will be a set of allocations and Lagrange multipliers $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$ that solves the following system of equations
+% \begin{subequations}
+% \begin{align}
+% 	U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+\beta(s)x_i -\frac{x_i U_{c,i}(s)}{\mathbb E U_{c,i}}\label{eq.FSS_start}\\
+% 	\frac{U_{l,i}(s)}{\theta_i(s)} - \frac{\rho U_{l,1}(s)}{\theta_1(s)}=0\\
+% 	\sum_{i=1}^N\pi_i c_i(s)+g(s) = \sum_{i=1}^N\pi_i \theta_i(s) l_i(s)\\
+% 	\rho_i U_{c,1}(s)-U_{c,i}(s) =0
+% 	\pi_1\alpha_1 U_{c,1}(s) + \sum_{i=2}^N\mu_i\rho_i\left[ U_{cc,1}(s) c_1(s)+U_{c,1}(s)\right] -\pi_1\xi(s)  +\sum_{i=2}^N \rho_i\eta_i(s)U_{cc,1}(s) = 0\\
+% 	\pi_i\alpha_i U_{cc,i}(s) - \mu_i\left[ U_{cc,i}(s)c_i(s)+U_{c,i}(s)\right] - \pi_i\xi(s) -\eta_i(s) U_{cc,i}(s) = 0\\
+% 	\pi_1 \alpha_1 U_{l,1}(s) +\sum_{i=2}^N\mu_i\rho_i\left[U_{ll,1}(s) l_1(s) + U_{l,1}(s)\right] - \sum_{i=2}^N\frac{\rho_i\phi_i(s)}{\theta_1(s)} U_{ll,1}(s) + \pi_1\theta_1(s)\xi(s) = 0\\
+% 	\pi_i\alpha_i U_{l,i}(s)  -\mu_i\left[U_{ll,i}(s)l_i(s) + U_{l,i}(s)\right] +\frac{\phi_i(s)}{\theta_i(s)} U_{ll,i}(s) + \pi_i\theta_i(s)\xi(s) = 0\\
+% 	\lambda_i\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu_i\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi_i(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\eta_i(s) = 0\label{eq.FSS_end}
+% \end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
+% \subsubsection{Linearization}  
+In order to check local stability we linearize locally around the steady state. Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\bm \mu,\bm \rho$ rather than $\bm x,\bm \rho$, and thus, we will proceed with the linearization procedure using $(\bm \mu,\bm \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
 \begin{equation}
-	\mu_i - \frac{\sum_s P(s) \mu_i'(s)U_{c,i}(s)}{\sum_s P(s) U_{c,i}(s)} = 0\label{eq.mu_mart}
+	\mu_i - \frac{\sum_s P(s) \mu_i'(s)U_{c,i}(s)}{\sum_s P(s) U_{c,i}(s)} = 0\label{eq.mu_mart}.
 \end{equation}  The optimal policy function, which we will denote as $z(\bm \mu,\bm\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho})and \eqref{eq.mu_mart}, $y$ is the state vector $(\bm x,\bm \rho)$, and $g$ is the mapping of the policies into functions of future variables, namely $\bm x'(s)$ and $V_{\bm \rho}(\bm \mu'(s),\bm \rho(s))$.  In other words
 \[
-	g(z) = \left(\bmat \bm x(\bm \mu'(1),\bm \rho'(1))\\ V_{\bm \rho}(\bm \mu'(1),\bm \rho'(1)\\ \bm x(\bm \mu'(2),\bm \rho'(2))\\ V_{\bm \rho}(\bm \mu'(2),\bm \rho'(2))\emat\right)
+	g(z) = \left(\bmat \bm x(\bm \mu'(1),\bm \rho'(1))\\ V_{\bm \rho}(\bm \mu'(1),\bm \rho'(1)\\ \bm x(\bm \mu'(2),\bm \rho'(2))\\ V_{\bm \rho}(\bm \mu'(2),\bm \rho'(2))\emat\right).
 \]  Finally $z(\bm \mu,\bm \rho)$ are the stacked variables $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho'(s),\bm \mu'(s),\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$.  The optimal policy function is then a function $z(y)$ that satisfies the relationship $F(z(y),y,g(z(y))) = 0$.  Taking total derivatives around the steady state $\ov y$ and $\ov z = z(\ov y)$
 \[
 	D_zF(\ov z,\ov y, g(\ov z))D_yz(\ov y)+D_yF(\ov z, \ov y, g(\ov z)) + D_g F(\ov z, \ov y, g(\ov z)) D g(\ov z) D_y z(\ov z) = 0
@@ -3330,12 +3334,12 @@ This section will outline our numerical methods used to solve for and linearize 
 \end{align*}  We can then go back to our original matrix equation to obtain
 \begin{align}
 	D_zF(\ov z,\ov y, \ov w)D_yz(\ov y)+D_yF(\ov z, \ov y, \ov w) + D_w F(\ov z, \ov y, \ov w)\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi D_y z(\ov z) = 0\label{eq.linearization}
-\end{align}  Where $\ov w = g(\ov z) = w(\ov z)$.  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
+\end{align}, where $\ov w = g(\ov z) = w(\ov z)$.  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
 \[
 	z \approx \ov z + D_y z(\ov y)(y-\ov y)
 \]Our procedure for computing the linearization proceeds as follows
 	\begin{enumerate}
-		\item Find the steady state by solving the system of equations (\ref{eq.FSS_start} - \ref{eq.FSS_end}).  Numerically, we have found that this is very robust to the parameters of the model.
+		\item Find the steady state by solving the system of equations (\ref{sys-steadystate}.  Numerically, we have found that this is very robust to the parameters of the model.
 		\item  Compute $D_zF(\ov z,\ov y,g(\ov z))$, $D_zF(\ov z,\ov y,g(\ov z))$ and $D_vF(\ov z,\ov y,g(\ov z))$ by numerically differentiating $F$.  This is straightforward using auto-differentiation.
 		\item  Compute $Dw(\ov z)$ using auto-differentiation.
 		\item  Construct a matrix equation as follows.  Given policies $A = Dw(\ov z)D_yz(\ov y)$ (these are the linearized policies of $\bm x$ and $V_{\bm \rho}$ with respect to $(\bm \mu,\bm \rho)$), it is possible to solve for $D_yz(\ov y)$ from 
@@ -3348,15 +3352,15 @@ This section will outline our numerical methods used to solve for and linearize 
 	\end{enumerate}
 Given the linearized policy rules it is then possible to evaluate the local stability of the steady state.  We find that in the absence of discount factor shocks the steady state is stable generically across the parameter space.
 
-This linearization can be used to construct the bordered hessian of the problem (\ref{eq:ss-obj}) at the steady state. We can then apply the second order tests to verify that the the first order necessary conditions are sufficient.
+This linearization can be used to construct the bordered hessian of the problem (\ref{eq:ss-obj}) at the steady state. We can then apply second order tests to verify that the the first order necessary conditions are sufficient.
 %The code for computing the Bellman equations, steady states and the linearized policies is available at https://github.com/dgevans/Golosov-Sargent.git
 \subsection{Proof for Proposition \ref{prop: localstability}}
  \begin{proof}
  
  The state at time $t$ can be written as
  	\[
- 		\hat{\Psi}_t = B_tB_{t-1}\cdots B_1*\hat{\Psi}_0
- 	\]where the $B_i$ are all random variables being $B(s)$ with probability $Pr(s)$. Taking expectations and applying independence we then obtain
+ 		\hat{\Psi}_t = B_tB_{t-1}\cdots B_1*\hat{\Psi}_0.
+ 	\]where the $B_i$ are all random variables being $B(s)$ with probability $\Pr(s)$. Taking expectations and applying independence we then obtain
 % 	
  	\begin{align}
  	\mathbb{E}_0[\hat{\Psi}_t] &= \mathbb{E}_0[B_tB_{t-1}\cdots B_1] \hat{\Psi}_0\\
@@ -3365,35 +3369,42 @@ This linearization can be used to construct the bordered hessian of the problem 
  	\end{align}
  	where $\overline B = \mathbb{E}B(s)$.  If eigenvalues of $\overline B$ are positive and strictly less than 1, at least, in expectation the linearized system converges that is
  	\begin{equation}
- 		 \hat{\Psi}_t = \mathbb{E}_0[\hat{\Psi}_t] = \overline {B}^t \hat{\Psi}_0\to\bm 0
+ 		 \bar{\hat{\Psi}}_t = \mathbb{E}_0[\hat{\Psi}_t] = \overline {B}^t \hat{\Psi}_0\to\bm 0.
  	\end{equation}It should be noted that the conditional expectation actually captures a significant portion of the linearized dynamics.  
 	The remaining question is does the distribution converge to $\bm 0$.  This can be done by analyzing the variance.  Let 
  	\[
- 		\Sigma_{\Psi,t} = \mathbb{E}_0\left[(\hat{\Psi}_t-\bar \hat{\Psi}_t)(\hat{\Psi}_t-\bar \hat{\Psi}_t)'\right]
- 	\]  Using the independence of $\hat{\Psi}_{t-1}$ and $B_t$, and the identities $\hat{\Psi}_t = B_t \hat{\Psi}_{t-1}$ and $\bar \hat{\Psi}_t = \bar B \bar \hat{\Psi}_{t-1}$ we quickly obtain
- 	\begin{align}
- 		\Sigma_{\Psi,t} &= \mathbb{E}_0\left[\hat{\Psi}_t\hat{\Psi}_t'-B_t \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'-\overline B \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'B_t'+\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\right]\nonumber\\
- 		&=\mathbb{E}_0[B_t \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'B_t']-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
- 		&=\mathbb{E}_0[\sum_s Pr(s) B(s) \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}' B(s)']-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
- 		&=\sum_s Pr(s) B(s)(\Sigma_{\Psi,t-1}+\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}')B(s)-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
- 		&=\sum_s Pr(s)\left[ B(s)\Sigma_{\Psi,t-1} B(s)' +(B(s)-\overline B)\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'(B(s)-\overline B)'\right]\nonumber\\
- 		&= \mathbb{E}[B\Sigma_{\Psi,t-1}B'] +\mathbb{E}[(B-\overline B)\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'(B-\overline B)']\label{eq:SigmaFull}
- 	\end{align}
- 	The first term is the transformation of the previous variance by $B$ and the second term is the additional variance introduced by  $B$.  Note, though, that this term depends on $\hat{\Psi}_{t-1}$ being away from $\bm 0$.  Thus, taking the limit as $t\rightarrow\infty$, we obtain
+ 		\Sigma_{\Psi,t} = \mathbb{E}_0\left[(\hat{\Psi}_t-\bar {\hat{\Psi}}_t)(\hat{\Psi}_t-\bar {\hat{\Psi}}_t)'\right]
+ 	\]  
+ 	
+ 	or 
+ 	\begin{equation}
+ 	 \Sigma_{\Psi,t}=\mathbb{E}_{0}\hat{\Psi}_t\hat{\Psi}_t'- \bar{\hat{\Psi}}_t \bar{\hat{\Psi}}_t '.
+ 	\end{equation}
+Note that  if eigenvalues of $\overline B$ are positive and strictly less that 1, $\bar{\hat{\Psi}}_t $ converges to 0.  Using the independence of $\hat{\Psi}_{t-1}$ and $B_t$, and the identities $\hat{\Psi}_t = B_t \hat{\Psi}_{t-1}$ and $\bar {\hat{\Psi}}_t = \bar B \bar \hat{\Psi}_{t-1}$ we quickly obtain that for large $t$
+ 	
+%  	\begin{align}
+%  		\Sigma_{\Psi,t} &= \mathbb{E}_0\left[\hat{\Psi}_t\hat{\Psi}_t'-B_t \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'-\overline B \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'B_t'+\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\right]\nonumber\\
+%  		&=\mathbb{E}_0[B_t \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'B_t']-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
+%  		&=\mathbb{E}_0[\sum_s \Pr(s) B(s) \hat{\Psi}_{t-1}\hat{\Psi}_{t-1}' B(s)']-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
+%  		&=\sum_s \Pr(s) B(s)(\Sigma_{\Psi,t-1}+\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}')B(s)-\overline B\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'\overline B'\nonumber\\
+%  		&=\sum_s \Pr(s)\left[ B(s)\Sigma_{\Psi,t-1} B(s)' +(B(s)-\overline B)\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'(B(s)-\overline B)'\right]\nonumber\\
+%  		&= \mathbb{E}[B\Sigma_{\Psi,t-1}B'] +\mathbb{E}[(B-\overline B)\hat{\Psi}_{t-1}\hat{\Psi}_{t-1}'(B-\overline B)']\label{eq:SigmaFull}
+%  	\end{align}
+% 	The first term is the transformation of the previous variance by $B$ and the second term is the additional variance introduced by  $B$.  Note, though, that this term depends on $\hat{\Psi}_{t-1}$ being away from $\bm 0$.  Thus, taking the limit as $t\rightarrow\infty$, we obtain
 	\begin{equation}
-		\Sigma_{\Psi,t} \approx \mathbb{E}[B \Sigma_{\Psi,t-1} B'] \label{eq:Sigma}
-	\end{equation}  Showing that $\hat{\Psi}_t \rightarrow \bm 0$ amounts to showing that $\Sigma_{\Psi,t}\rightarrow 0$ for any starting point $\Sigma_{\Psi}$ and following the process in equation (\ref{eq:Sigma}).  One can easily obtain a necessary condition for $\|\Sigma_{\Psi,t}\|\rightarrow 0$ under the process in equation (\ref{eq:Sigma}).
+		\Sigma_{\Psi,t} \approx \mathbb{E}[B \Sigma_{\Psi,t-1} B'.] \label{eq:Sigma}
+	\end{equation}  Showing that $\hat{\Psi}_t \rightarrow \bm 0$ in probability, amounts to showing that $\Sigma_{\Psi,t}\rightarrow 0$ for any starting point $\Sigma_{\Psi}$ and following the process in equation (\ref{eq:Sigma}).  One can obtain a necessary condition for $\|\Sigma_{\Psi,t}\|\rightarrow 0$ under the process in equation (\ref{eq:Sigma}).
 	That process can be rewritten as follows
 	\begin{align}
 		\Sigma_{\Psi,t} &= \mathbb{E}[B \Sigma_{\Psi,t-1} B']\\
-				    &=\sum_s Pr(s) B(s) \Sigma_{\Psi,t-1} B(s)'\\
-				   &=\sum_s Pr(s) (\overline B+(B(s)-\overline B))\Sigma_{\Psi,t-1}(\overline B+(B(s)-\overline B))'\\
-				  &=\overline B \Sigma_{\Psi,t-1}\overline B' +\sum_sPr(s) (B(s)-\overline B)\Sigma_{\Psi,t-1}(B(s)-\overline B)'\label{eq:sigma_trasnsition}
+				    &=\sum_s \Pr(s) B(s) \Sigma_{\Psi,t-1} B(s)'\\
+				   &=\sum_s \Pr(s) (\overline B+(B(s)-\overline B))\Sigma_{\Psi,t-1}(\overline B+(B(s)-\overline B))'\\
+				  &=\overline B \Sigma_{\Psi,t-1}\overline B' +\sum_s\Pr(s) (B(s)-\overline B)\Sigma_{\Psi,t-1}(B(s)-\overline B)'.\label{eq:sigma_trasnsition}
 	\end{align}
 % 	
  	This is a deterministic linear system in $\Sigma_{\Psi,t}$. Suppose we reshape $\Sigma_{\Psi,t}$  as a vector (denoted by $\text{vec}(\Sigma_{\Psi,t})$) and let $\hat{B}$ be a (square) matrix such that equation \ref{eq:sigma_trasnsition} is written as 
 % 	
- \[\text{vec}(\Sigma_{\Psi,t})=\hat{B}\text{vec}( \Sigma_{\Psi,t-1})\]	
+ \[\text{vec}(\Sigma_{\Psi,t})=\hat{B}\text{vec}( \Sigma_{\Psi,t-1}).\]	
 % 
  The stability of this system is guaranteed if the (real part) of eigenvalues of $\hat{B}$ are less than 1.  
  \end{proof}
