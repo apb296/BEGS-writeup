@@ -5,5 +5,9 @@
 *.bbl
 *.blg
 *.log
+*.out
+*.dvi
+*.bak
+*.prj
 
 
