@@ -139,7 +139,7 @@
 \input{sw20elba.sty}
 \input{tcilatex}
 \setpagewiselinenumbers
-\linenumbers
+%\linenumbers
 \begin{document}
 
 \author{\textbf{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}%
@@ -1055,7 +1055,7 @@ transfers be positive at all times  and along all  histories. The sequences of $
   \begin{figure}[htp]
  \centering
  \includegraphics[width=\textwidth]{Draft25Graphs/BEGS_AMSS.eps}
- \caption{Taxes in AMSS (solid line) and heterogeneous agent economy (dotted line) with quasi-linear preferences. \textcolor{red}{Anmol and David XXXXXX: can you please increase the font sizes for the labels and the axes?}}
+ \caption{Taxes in AMSS (solid line) and heterogeneous agent economy (dotted line) with quasi-linear preferences.}
  \label{fig: AMSS vs BEGS}
  \end{figure}
 
@@ -1327,7 +1327,7 @@ agents to trade (the second term).
 
 The behavior of the economy in the steady state is similar to the behavior of the complete market economy characterized by Werning (2007). Both taxes and transfers depend only on the current realization of shock $s_t$. Moreover, the arguments of Werning (2007) can be adapted  to show that taxes are constant when preferences have a CES form $c^{1-\sigma}/(1-\sigma) - l^{1+\gamma}/(1-\gamma) $ and fluctuations in tax rates are very small when preferences take forms consistent with the existence of  balanced growth. We return to this point after we discuss convergence properties.
 
-\subsubsection{A two agent example}\label{sec: 2 agent example}
+\subsubsection{A two-agent example}\label{sec: 2 agent example}
 
 Lemma \ref{lem.1} provides a simple way to verify existence of a steady state for wide range of parameter values by checking that there exists a root for (\ref{sys-steadystate}). Since the system of equations (\ref{sys-steadystate}) is non-linear, existence can generally be verified only numerically. In this section, we provide a simple example with risk averse agents in which we can show existence of the root of (\ref{sys-steadystate}) analytically. The analytical characterization of the steady state will allow us to show two main forces that determine the steady state asset distribution. These forces will also help to understand the long run behavior of the calibrated economy that we study in section \ref{Sec: numerical}.
 
@@ -1358,7 +1358,7 @@ In all cases, taxes $\tau(s)=\tau^{SS}$ are independent of the realized state.
 \end{proposition}
 
 
-In this two agent case, by normalizing assets of the unproductive agent (using theorem \ref{theorem: main}) we can interpret $x$ as the marginal utility adjusted assets of the government. Besides establishing existence, the proposition identifies the importance of cyclical properties of real interest rates in determining the sign of these assets and thus enables us to compare our results to representative agent economies like AMSS.
+In this two-agent case, by normalizing assets of the unproductive agent (using theorem \ref{theorem: main}) we can interpret $x$ as the marginal utility adjusted assets of the government. Besides establishing existence, the proposition identifies the importance of cyclical properties of real interest rates in determining the sign of these assets and thus enables us to compare our results to representative agent economies like AMSS.
 
 Proposition \ref{prop: long run forces}  shows  two main forces that determine the dynamics of taxes
 and assets: fluctuations in inequality and fluctuations in the interest rates. Let's start with part 2 of proposition \ref{prop: long run forces}, which turns off the second force. When  interest rates are fixed, the government can adjust two
@@ -1414,7 +1414,7 @@ times of increased need for government revenues, as in
  part 3 of  proposition \ref{prop: long run forces}, and the steady state allocation features the government's owning assets.
 
 
- What matters for our second force is the comovement of the interest rate with fundamentals shocks. States with low average TFP (and therefore a lower base for labor taxes), high $g$, or a high spread of productivities that threatens to induce higher inequality (and therefore higher  transfers and thirst for more  government  revenues to finance them) are ``adverse'' from the point of view of current government finance. The government can cope with such adverse states in less distorting ways if finds itself holding positive (negative) assets if interest rates are  high (low).\footnote{The results of proposition \ref{prop: long run forces} can be substantially generalized to an economy with no heterogeneity. In \citet{BEGS2}, we study a representative agent economy with a more general incomplete market structure and distorting taxes. We show that for a wide range of preferences, a steady state exists, that it is globally stable, and that the sign of long run asset position of the government is determined by 
+ What matters for our second force is the comovement of the interest rate with fundamentals shocks. States with low average TFP (and therefore a lower base for labor taxes), high $g$, or a high spread of productivities that threatens to induce higher inequality (and therefore higher  transfers and thirst for more  government  revenues to finance them) are ``adverse'' from the point of view of current government finance. The government can cope with such adverse states in less distorting ways if finds itself holding positive (negative) assets if interest rates are  high (low).\footnote{The results of proposition \ref{prop: long run forces} can be substantially generalized to an economy with no heterogeneity. In \citet{BEGS2}, we study a representative agent economy with a more general incomplete market structure and distorting taxes. We show that for a wide range of preferences, a steady state exists, that it is globally stable, and that the sign of long run asset position of the government is determined by
 the co-movement of returns on assets and shocks}.
 
  %These are states in which, if there were no asset market and the government ran a balanced budget, the government would need to have a higher proportional tax rate in order to finance higher government expenditure, a lower tax base or transfers to counteract higher inequality.
