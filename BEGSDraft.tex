@@ -1236,7 +1236,7 @@ time $0$ problem.
 
 
 \section{Ergodic distribution and policies in the long run } \label{sec: SteadyStates}
-In this section, we characterize the properties of the ergodic set to which state variables converge. We start with a case when aggregate shocks are iid and can take two values. We show that for this shock structure there generally exists a  pair $\left( \bm{x}^{SS},\bm{\rho} ^{SS}\right) $  such that if economy ever reaches this state, it stays there.  Tax rates and transfers in this steady state depend only on the current realization of the shock;  for commonly used preferences, fluctuations of tax rates are small. We also describe properties of the steady state as well conditions under which economy converges to it and the speed of convergence.   Section \ref{Sec: More General Shocks}  then extends the analysis to more general shocks and shows numerically that while a fixed non-random steady state generally does not exist, asymptotic outcomes inside the  ergodic set are very similar to those 
+In this section, we characterize the properties of the ergodic set to which state variables converge. We start with a case when aggregate shocks are iid and can take two values. We show that for this shock structure there generally exists a  pair $\left( \bm{x}^{SS},\bm{\rho} ^{SS}\right) $  such that if economy ever reaches this state, it stays there.  Tax rates and transfers in this steady state depend only on the current realization of the shock;  for commonly used preferences, fluctuations of tax rates are small. We also describe properties of the steady state as well conditions under which economy converges to it and the speed of convergence.   Section \ref{Sec: More General Shocks}  then extends the analysis to more general shocks and shows numerically that while a fixed non-random steady state generally does not exist, asymptotic outcomes inside the  ergodic set are very similar to those
 that prevail in the two shock iid case in which there is a fixed steady state. Throughout this section we assume that preferences are separable in consumption and
 labor.
 %
@@ -1291,7 +1291,7 @@ subject to the constraints
 
  Constraint (\ref{eq:bondcondtion}) is obtained by rearranging constraint (\ref{eq:BM2_Bonds_cons}). It implies that $\rho(s)$ is a risk-adjusted martingale, a property we  use later to discuss convergence. We next check if the first-order necessary conditions are consistent with stationary policies for some ($\bm x, \bm \rho$).\footnote{Appendix \ref{apndx: numerical methods} discuses the associated second order conditions that ensure these policies are optimal}
  \begin{lemma}\label{lemma-simplified-foc}
-Let $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}).  Imposing the restrictions $x'_i(s) = x_i$ and $\rho'_i(s) = \rho_i$, at a  steady state  $\{\mu_i,\lambda_i,x_i,\rho_i\}^{N}_{i=2}$ and $\{\tau(s)\}_s$ 
+Let $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}).  Imposing the restrictions $x'_i(s) = x_i$ and $\rho'_i(s) = \rho_i$, at a  steady state  $\{\mu_i,\lambda_i,x_i,\rho_i\}^{N}_{i=2}$ and $\{\tau(s)\}_s$
 are determined by  the following equations
 
 
@@ -1317,7 +1317,7 @@ Since the shock $s$ can take only two values, \eqref{sys-steadystate} is a squar
 
 
 
-Lemma \ref{lemma-simplified-foc} also highlights the tradeoffs that the planner faces.  Defining $\tilde{\lambda}=-\lambda \mathbb{E} U^i_c(\tau,\bm \rho)$ and taking expectations in equation (\ref{eq:foc.R.simplified}), we get 
+Lemma \ref{lemma-simplified-foc} also highlights the tradeoffs that the planner faces.  Defining $\tilde{\lambda}=-\lambda \mathbb{E} U^i_c(\tau,\bm \rho)$ and taking expectations in equation (\ref{eq:foc.R.simplified}), we get
 \begin{equation}
 \label{eq.ss.tradeoffs}
 \mathbb{E} U_{\rho_i}(\tau(s),\bm \rho,s)= \mathbb{E} \sum_j\mu_j(s)Z_{j,\rho_i}(\tau(s),\bm \rho,s) + (1-\mathbb{E}\beta(s))\tilde{\lambda_i}
@@ -1462,7 +1462,7 @@ In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, th
 
 The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $-\frac{\log(0.5)}{(1-\|\iota\|)}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower is the speed of convergence.
 
-We used proposition \ref{prop: localstability} to verify local stability of a wide range of examples. The typical finding is that the steady state is generically stable and that convergence is slow. In figure \ref{fig: Eigenvalues} we plot the comparative statics for the dominant eigenvalue and the associated  half-life for a two-agent economy with CES preferences. % with respect to the size of the shock and risk aversion. 
+We used proposition \ref{prop: localstability} to verify local stability of a wide range of examples. The typical finding is that the steady state is generically stable and that convergence is slow. In figure \ref{fig: Eigenvalues} we plot the comparative statics for the dominant eigenvalue and the associated  half-life for a two-agent economy with CES preferences. % with respect to the size of the shock and risk aversion.
 We set the other parameter to match a Frisch elasticity of 0.5,  a real interest rate of 2\%, marginal tax rates  around 20\%, and a 90-10 percentile ratio of wage earnings of 4. In the first 	exercise, we vary the size of the expenditure shock to generate output falls from 1\% to 10\% keeping risk aversion ($\sigma$) at one. In the bottom panel, we set the size of shock so that it produces a 3\% output fall at $\sigma=1$ and vary $\sigma$ from 0.5 to 7.
 We see that the dominant eigenvalue is everywhere less than one but very close to one, so that the steady state is stable but convergence is slow for reasonable values of curvatures and shocks.  We return to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt.
 %
@@ -1967,8 +1967,8 @@ The principal message of our paper  is that  without exogenous restrictions on t
  rates, transfers, and government issues or holdings of risk-free bonds. We find that a significant determinant of an optimal asymptotic government
  debt or government debt-GDP ratio is how interest rate risks are correlated with risks to fundamentals that threaten to widen or narrow
  inequality in after-tax and after-transfer incomes. To interpret those Reinhart-Rogoff facts country-by-country, we would
- want to know much more about the distributions of net assets across people across countries  and how they interact with 
- risks to interest rates and to fundamental sources of inequality.  
+ want to know much more about the distributions of net assets across people across countries  and how they interact with
+ risks to interest rates and to fundamental sources of inequality.
 
 \smallskip
 
@@ -2912,7 +2912,7 @@ Taking the limit as $\rho\rightarrow\infty$ we see that $C(\rho)\rightarrow
 \end{equation*}
 Thus, there exists $\overline \rho$ such that $1+\overline \rho[%
 l_1(\overline \rho,s_l)^2-1] = 0$. \footnote{This can be seen from the fact $\lim_{\rho\rightarrow \underline
-\rho^+} 1+\rho[l_1(\rho,s_l)^2 -1] > 0$ and $\lim_{\rho\rightarrow \infty } 1+\rho[l_1(\rho,s_l)^2 -1] > -\infty$, thus $\overline{\rho}$ exists in $(\underline{\rho},\infty)$ }. From equation (\ref{eq.inc_order}), we
+\rho^+} 1+\rho[l_1(\rho,s_l)^2 -1] > 0$ and $\lim_{\rho\rightarrow \infty } 1+\rho[l_1(\rho,s_l)^2 -1] > -\infty$, thus $\overline{\rho}$ exists in $(\underline{\rho},\infty)$ } From equation (\ref{eq.inc_order}), we
 know that
 \begin{equation*}
 0 = 1+\overline \rho[l_1(\overline \rho,s_l)^2-1] > 1+\overline \rho[%
