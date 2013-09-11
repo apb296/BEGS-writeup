@@ -139,8 +139,8 @@
 \sloppy
 \input{sw20elba.sty}
 \input{tcilatex}
-\setpagewiselinenumbers
-\linenumbers
+%\setpagewiselinenumbers
+%\linenumbers
 \begin{document}
 
 \author{\textbf{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}%
@@ -265,8 +265,7 @@ net assets. Properly recognizing the relevance  of net but not gross asset posit
 our first set of findings, this  can be accomplished by having the  government  effectively accumulate risk-free claims on high-skilled workers.
 But another, possibly countervailing or possibly reinforcing,  force  comes from the Ramsey planner's incentive to  use  interest rate fluctuations  to compensate for missing asset markets. If interest rates are high (low) when government revenue needs are high, the government has an incentive to accumulate assets (debt) vis-a-vis high-skilled worker. Thus, depending on  comovements of the interest rate with other fundamentals, these two forces  may either reinforce each other (for example, in response to  a pure TFP shock where the implied interest rates are countercyclical) or oppose each other (for example, when  interest rates are procylical because TFP shocks are negatively correlated with discount factor shocks).
 
-Optimal policy is particularly striking when agents have quasi-linear preferences and aggregate shocks affect only exogenous government expenditures. In this case, both  forces are absent and for any initial asset distribution economy is immediately in a steady state in which assets and taxes remain constant forever. This outcome provides a stark contrast with normative predictions from the representative agent models studied by \citet{Aiyagari2002}, in which  long-run dynamics are driven by exogenous restrictions on the ability of the government to set transfers optimally. \color{blue}This example also indicates that incorporating a redistributive motive can  substantially modify implications about  optimal responses to  aggregate shocks.
-\color{black}
+Optimal policy is particularly striking when agents have quasi-linear preferences and aggregate shocks affect only exogenous government expenditures. In this case, both  forces are absent and for any initial asset distribution economy is immediately in a steady state in which assets and taxes remain constant forever. This outcome provides a stark contrast with normative predictions from the representative agent models studied by \citet{Aiyagari2002}, in which  long-run dynamics are driven by exogenous restrictions on the ability of the government to set transfers optimally. This example also indicates that incorporating a redistributive motive can  substantially modify implications about  optimal responses to  aggregate shocks.
 
 A third set of results concerns higher frequencies, in particular,  optimal government policy in booms and recessions.
 What we have to say about this comes from a  version of our model calibrated to patterns observed
@@ -748,7 +747,7 @@ the government would want to increase  its borrowing
 and to repay agents later, which the borrowing constraints prevent. But the government can just reduce
 transfers today and increase them tomorrow. That would  achieve the  desired  allocation
 without violating the exogenous borrowing constraints.
-\color{blue}
+
 Welfare can  be strictly higher in an economy  with exogenous
 borrowing constraints  relative to an economy without borrowing constraints because  a government might want to
 push some agents against their borrowing limits. When agents' borrowing
@@ -761,7 +760,6 @@ redistribution, this can improve welfare. %In the next several paragraphs, we wi
 In appendix \ref{appndx: borrowing constraints example}, we construct an example without any
 shocks in which the government can achieve higher welfare by using borrowing
 constraints to improve its ability to redistribute.
-\color{black}
 
 % \subsection{Extension 2: More general taxes \label{Sec: extensions-NDPF}}
 % %\textcolor{red}{From Tom:I have edited this section }
@@ -1457,7 +1455,7 @@ relative strengths of the two forces.
 
 
  Besides discount factor shocks, the level of net assets in the steady state depends on other primitives such as preferences for redistribution. An interesting comparative static exercise involves shutting off discount factor shocks and increasing  $\alpha_1$, the Pareto weight attached to the high-skilled agent. This implies that the planner taxes  the high-skilled agent less and redistributes less income to the low-skilled agent. Since the after-tax income of a low-skilled agent is lower,  fluctuations in transfers affect the low-skilled agent more adversely than the high-skilled
- agent. To smooth those fluctuations, the government needs to accumulate more claims on the high skilled, implying a positive relationship between the steady state level of government assets and Pareto weight on high-skilled agents. Figure \ref{fig: SS comparative} plots how taxes and assets of the government vary as we change the Pareto weight  $\alpha_1$ on a high-skilled worker.
+ agent. To smooth those fluctuations, the government needs to accumulate more claims on the high skilled, implying a positive relationship between the steady state level of government assets and Pareto weight on high-skilled agents. Thus the planner substitutes the shortfall in revenues from taxes with higher earnings from his assets. Figure \ref{fig: SS comparative} plots how taxes and assets of the government vary as we change the Pareto weight  $\alpha_1$ on a high-skilled worker.
 
 
  %As $\alpha_1 \to 1$, we approaches to a representative agent economy studied in AMSS.  Exploiting equation (\ref{eq:foc.tau.simplified}) to obtain a mapping between $\mu$ and $\tau$,  the steady state $(x^{SS},\rho^{SS})$ is  isomorphic to $(\tau^{SS},\rho^{SS})$.  In addition we also have that
@@ -2159,10 +2157,8 @@ We will consider the candidate allocation where $c_{i,t} = c^{fb}_i$, $l_{i,t} =
 \] as desired.  
 \end{proof}
 
-This will improve upon the planners problem with natural borrowing constraints, as first best can only be achieved in this scenario when $b_{2,-1}-b_{1,-1} = \tilde b_2^{fb}$.
+This will improve upon the planners problem without exogenous borrowing constraints, as first best can only be achieved in this scenario when $b_{2,-1}-b_{1,-1} = \tilde b_2^{fb}$.
 
-
-\smallskip
 \subsection{\smallskip Proof of Proposition  \ref{prop: affine eqm nec and suff}}
 \label{appndx: affine eqm nec and stuff}
 \smallskip
@@ -2651,14 +2647,14 @@ In addition there are two envelope conditions given by
 \begin{align}
 V_x(x,\rho) = -\sum_{s^{\prime }}\frac{\mu(s^{\prime })\Pr(s^{\prime
 })\frac1{c_2(s^{\prime })}}{\mathbb{E}[\frac1{c_2}]} = -\frac{\mathbb{E}%
-[\mu\frac1{c_2}]}{\mathbb{E}[\frac1{c_2}]} \\ \label{eq.x_env}
+[\mu\frac1{c_2}]}{\mathbb{E}[\frac1{c_2}]} \\
 V_{\rho}(x,\rho) = -\lambda\mathbb{E}[\frac1{c_1}]  \label{eq.rho_env}
 \end{align}
 
 In the steady state, we need to solve for a collection of allocations, initial conditions and Lagrange multipliers $%
 \{c_1(s),c_2(s),l_1(s),x,\rho,\mu(s),\lambda,\xi(s),\phi(s)\}$ such that
 equations (\ref{eq.conStart})-(\ref{eq.rho_env}) are satisfied when $%
-\rho^{\prime }(s) = \rho$ and $x^{\prime }(s) = x$. It should be clear that if we replace $\mu(s) = \mu$, equation (\ref{eq.x'FOC})  and equation (\ref{eq.x_env})is
+\rho^{\prime }(s) = \rho$ and $x^{\prime }(s) = x$. It should be clear that if we replace $\mu(s) = \mu$, equation (\ref{eq.x'FOC})  and the envelope condition with respect to $x$ is
 always satisfied. Additionally under this assumption equation (\ref{eq.c2FOC}%
 ) simplifies significantly,since
 \begin{align*}
@@ -3201,11 +3197,11 @@ This section will outline our numerical methods used to solve for and linearize 
 \begin{subequations}
 \begin{align}
 	&U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x_i'(s) = \frac{x_i U_{c,i}(s)}{\mathbb{E} U_{c,i}}\label{eq.imp_con}\\
-	&\sum_s P(s) U_{c,1}(s)(\rho_i(s) -\rho_i) = 0\\
+	&\sum_s \Pr(s) U_{c,1}(s)(\rho_i(s) -\rho_i) = 0\\
 	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_i(s)}U_{l,i}(s)\\
 	& \sum_{j=0}^N\pi_j c_j(s)  + g(s) = \sum_{j=0}^{N} \pi_j\theta_j(s)l_j(s)\\
 	& U_{c,i}(s) = \rho_i'(s) U_{c,1}(s)\label{eq.rho_con}
-\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $P(s)\mu'_i(s)$, $\lambda_i$,$P(s)\phi_i(s)$,$\Pr(s)\xi(s)$, and $P(s)\zeta_i(s)$.
+\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $\Pr(s)\mu'_i(s)$, $\lambda_i$,$\Pr(s)\phi_i(s)$,$\Pr(s)\xi(s)$, and $P(s)\zeta_i(s)$.
 %\subsubsection{Steady State}
 
 %By taking first order conditions it is possible to numerically determine the location of a stationary steady state.
@@ -3236,7 +3232,7 @@ The first order conditions with respect to the choice variables are as follows (
 	\begin{equation}
 		 V_{x_i}(\bm x'(s),\bm \rho'(s)) - \mu_i'(s) = 0 \label{eq.foc_x}.
 	\end{equation}
-\end{description} \end{subequations} Equations (\ref{eq.imp_con})-(\ref{eq.rho_con}) and (\ref{eq.foc_c1})-(\ref{eq.foc_rho}) then define the necessary conditions for an interior maximization of the planners problem for the state $(x,\rho)$.  In addition to these we have the two envelop conditions
+\end{description} \end{subequations} Equations (\ref{eq.imp_con})-(\ref{eq.rho_con}) and (\ref{eq.foc_c1})-(\ref{eq.foc_rho}) then define the necessary conditions for an interior maximization of the planners problem for the state $(\bm x, \bm \rho)$.  In addition to these we have the two envelop conditions
 \begin{subequations}
 \begin{equation}
 	V_{x_i}(\bm x,\bm \rho)= \frac{\sum_sP(s) \mu'_i(s) U_{c,i}(s)}{\mathbb E U_{c,i}(s)} = \frac{\mathbb E\mu_i' U_{c,i}}{\mathbb E U_{c,i}}\label{eq.env_x},
@@ -3259,7 +3255,7 @@ The first order conditions with respect to the choice variables are as follows (
 % 	\lambda_i\left[U_{c,1}(s)-\beta(s)\mathbb E U_{c,1}\right] + \mu_i\left[ U_{c,1}(s)c_1(s) + U_{l,1}(s) l_1(s)\right] - \phi_i(s)\frac{U_{l,1}(s)}{\theta_1(s)} + U_{c,1}(s)\eta_i(s) = 0\label{eq.FSS_end}
 % \end{align}\end{subequations}  Taking $z$ to be the stacked vector $\{c_1(s),c_i(s),l_1(s),l_i(s),\bm x,\bm \rho,\bm \mu,\bm \lambda,\bm \phi(s),\xi(s),\bm \zeta(s)\}$, the equations (\ref{eq.FSS_start})-(\ref{eq.FSS_end}) then define a vector function $F_{SS}(X)$ for which the steady state must satisfy $F_{SS}(X_{SS}) = 0$.  An observant reader will have noted that the system $F_{SS}(X) = 0$ is only square when then number of aggregates states is 2.   In the case of where there are 2 aggregate states we have verified numerically ( using a non-linear equation solver ) that a steady state does exist for nearly all of the parameter space.  When the number of states is greater than two, there generically does not exist a steady state, however we find numerically that there exists an $\tilde X$ such that $F_{SS}(\tilde X) \approx 0$.  Our solutions to Bellman equation find that the economy will converge in the long run to a region a round this point.
 % \subsubsection{Linearization}
-In order to check local stability we linearize locally around the steady state. Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be $\bm \mu,\bm \rho$ rather than $\bm x,\bm \rho$, and thus, we will proceed with the linearization procedure using $(\bm \mu,\bm \rho)$ as the endogenous state vector.  The evolution of the state variable $\mu$ must follow the weighted martingale
+In order to check local stability we linearize locally around the steady state. Furthermore we find that the policy functions have better numerical properties when the state variables are chosen to be ($\bm \mu,\bm \rho$) rather than ($\bm x,\bm \rho$), and thus, we will proceed with the linearization procedure using $(\bm \mu,\bm \rho)$ as the endogenous state vector.  The evolution of the state variable $\bm  \mu$ must follow the weighted martingale
 \begin{equation}
 	\mu_i - \frac{\sum_s P(s) \mu_i'(s)U_{c,i}(s)}{\sum_s P(s) U_{c,i}(s)} = 0\label{eq.mu_mart}.
 \end{equation}  The optimal policy function, which we will denote as $z(\bm \mu,\bm\rho)$, must satisfy $F(z,y,g(z)) = 0$ where $F$ represents the system of equations (\ref{eq.imp_con})-(\ref{eq.foc_rho})and \eqref{eq.mu_mart}, $y$ is the state vector $(\bm x,\bm \rho)$, and $g$ is the mapping of the policies into functions of future variables, namely $\bm x'(s)$ and $V_{\bm \rho}(\bm \mu'(s),\bm \rho(s))$.  In other words
@@ -3281,13 +3277,13 @@ In order to check local stability we linearize locally around the steady state. 
 	&=\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi
 \end{align*}  We can then go back to our original matrix equation to obtain
 \begin{align}
-	D_zF(\ov z,\ov y, \ov w)D_yz(\ov y)+D_yF(\ov z, \ov y, \ov w) + D_w F(\ov z, \ov y, \ov w)\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi D_y z(\ov z) = 0\label{eq.linearization}
-\end{align}, where $\ov w = g(\ov z) = w(\ov z)$.  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
+	D_zF(\ov z,\ov y, \ov w)D_yz(\ov y)+D_yF(\ov z, \ov y, \ov w) + D_w F(\ov z, \ov y, \ov w)\left(\bmat Dw(\ov z)D_y z(\ov y) &0\\0& D w(\ov z)D_y z(\ov y)\emat\right)\Phi D_y z(\ov z) = 0\label{eq.linearization},
+\end{align} where $\ov w = g(\ov z) = w(\ov z)$.  This is now a non-linear matrix equation for $D_y z(\ov y)$,  where all the other terms can be computed using the steady state values $\ov z$ and $\ov y$ (note $g(\ov z)$ is known from the envelope conditions at the steady state).  Furthermore, $D_y z(\ov y)$ gives us the linearization of the policy rules since to first order
 \[
 	z \approx \ov z + D_y z(\ov y)(y-\ov y)
 \]Our procedure for computing the linearization proceeds as follows
 	\begin{enumerate}
-		\item Find the steady state by solving the system of equations (\ref{sys-steadystate}.  Numerically, we have found that this is very robust to the parameters of the model.
+		\item Find the steady state by solving the system of equations (\ref{sys-steadystate}).  Numerically, we have found that this is very robust to the parameters of the model.
 		\item  Compute $D_zF(\ov z,\ov y,g(\ov z))$, $D_zF(\ov z,\ov y,g(\ov z))$ and $D_vF(\ov z,\ov y,g(\ov z))$ by numerically differentiating $F$.  This is straightforward using auto-differentiation.
 		\item  Compute $Dw(\ov z)$ using auto-differentiation.
 		\item  Construct a matrix equation as follows.  Given policies $A = Dw(\ov z)D_yz(\ov y)$ (these are the linearized policies of $\bm x$ and $V_{\bm \rho}$ with respect to $(\bm \mu,\bm \rho)$), it is possible to solve for $D_yz(\ov y)$ from
