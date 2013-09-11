@@ -386,7 +386,7 @@ c_{i}(s^t),l_{i}(s^t)\right),  \label{utility lifetime}
 \end{equation}%
 where $\mathbb{E}_{t}$ is a mathematical expectations operator conditioned
 on time $t$ information and $\beta(s_t) \in \left( 0,1\right) $ is a state-dependent discount
-factor\footnote{We allow the discount factor to depend on the Markov state $s$ to generate flexible  comovements between real interest rates and fundamentals. }. We assume that $l_{i}\in \left[ 0,\bar{l}_{i}\right] $ for some $%
+factor\footnote{We let the discount factor at time $t$ to depend on the history of shocks $s^{t-1}$. This allows us to generate flexible  comovements between real interest rates and fundamentals which we exploit later in section \ref{sec: SteadyStates} and \ref{Sec: numerical}. }. We assume that $l_{i}\in \left[ 0,\bar{l}_{i}\right] $ for some $%
 \bar{l}_{i}<\infty .$ Results in section  \ref{sec:Ricardian101} require no
 additional assumptions on $U^{i}$ like  differentiability or convexity,\footnote{Consequently  our setup allows both extensive and intensive responses of labor.}  but results in later sections do.
 
@@ -1149,7 +1149,6 @@ The reduction of  the dimensionality from \ $I$ to $I-1$ is
 
  Denote $Z^i_t=U^i_{c,t}c_{i,t}+U^i_{l,t}l_{i,t}-\frac{U^i_{c,t}}{U^{1}_{c,t}}\left[U^1_{c,t}c_{1,t}+U^1_{l,t}l_{1,t}\right]$. We can summarize the observations so far by describing the sequential problem that the optimal policy solves,
  
- \color{blue}
  \begin{equation}
 \max_{c_{i,t},l_{i,t},\tilde{b}_{i,t}}\mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right),  \label{govmt objective sequential}
 \end{equation}
@@ -1159,11 +1158,11 @@ subject to
 
  \begin{equation}
  \label{eq imp sum t=1}
-  \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_t \quad \forall t \geq 1,
+  \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_{k} \quad \forall t \geq 1
  \end{equation}
  \begin{equation}
  \label{eq imp sum t=0}
-  \tilde{b}_{-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_t,
+  \tilde{b}_{-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=0}\left[\prod^{k-1}_{j=0}\beta_{j}\right]Z^i_{k}
  \end{equation}
 \begin{equation}
  \frac{\mathbb{E}_tU^i_{c,t+1}}{U^i_{c,t}}=\frac{\mathbb{E}_tU^j_{c,t+1}}{U^j_{c,t}}
@@ -1176,10 +1175,13 @@ _{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t),  \label{feasibility goods sequent
  \frac{U_{l,t}^{i}}{\theta _{i,t}U_{c,t}^{i}}=\frac{U_{l,t}^{1}}{\theta
 _{1,t}U_{c,t}^{1}}
 \end{equation}
+\begin{equation}
+\tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} } \text{ is bounded}
+ \end{equation}
 
 \end{subequations}
-%The left  side of \eqref{eq imp sum t=1} is the post interest savings of agent $i$  and it imposes a measurablity constraint on  allocations asserting  that the right side is determined at time $t-1$.
-\color{black}
+
+Constraint \eqref{eq imp sum t=1} imposes a measurablity restriction on  allocations asserting  that the right side is determined at time $t-1$.
 
 
 
@@ -1231,10 +1233,7 @@ _{1}(s)U_{c}^{1}(s)}\text{ for all }s,i\geq 2  \label{eq:BM2_Wages_cons}
 \underline{x}_i(s;\bm{x},\bm{\rho},s\_)\leq x_i(s)\leq \bar{x}_i(s;\bm{x},\bm{\rho},s\_)
 \end{equation}
 \end{subequations}
-Constraints (\ref{eq:BM2_Bonds_cons}) and (\ref{eq:BM2_rhoprime}) imply (\ref{FOC Euler}). The definition of $x_t$ and  constraints (\ref{eq:BM2_Imp_cons}) together imply equation (\ref{affine implementability b}) scaled by $U^i_c$.
-\color{blue}
-TALK ABOUT THE CONNECTION TO THE SEQUENTIAL PROBLEM, NATURAL DEBT LIMITS
-\color{black}
+Constraints (\ref{eq:BM2_Bonds_cons}) and (\ref{eq:BM2_rhoprime}) imply (\ref{FOC Euler}). The definition of $x_t$ and  constraints (\ref{eq:BM2_Imp_cons}) together imply equation (\ref{affine implementability b}) scaled by $U^i_c$. 
 %Period 0 maximization problem is the similar except constraint (\ref{eq:BM2_Bonds_cons}) is absent and we normalize the initial debt to be inclusive of accrued interest.
 Let $V_0\left(\{\tilde{b}_{i,-1}\}^{I}_{i=2},s_0\right)$ be the value to the planner at $t=0$, where $\tilde b_{i,-1}$ denotes initial debt inclusive
 of accrued interest.   It satisfies the Bellman equation
@@ -1474,11 +1473,9 @@ relative strengths of the two forces.
  \caption{ Stead state assets : $\tilde{b}_2(s)=\frac{\beta  x^{SS}}{U^2_c(s)}$ and taxes : $\tau^{SS}$ as a function of Agent 1's (high skilled) Pareto weight}
  \label{fig: SS comparative}
  \end{figure}
-
- For $I=2$, the sign of $x$ implies a particular ordering of net assets across the agents in the steady state. These implications of proposition \ref{prop: long run forces} generalize to settings with $I\geq3$ too. In general, one can verify that without discount factor shocks (as in  part 1 when interest rates are countercyclical), the steady state net asset levels are ordered inversely relative to productivities. By having the net asset positions negatively correlated with wage earnings, the planner can minimize the costs of fluctuating transfers. Further for similiar reasons as in the $I=2$ case,  with large enough spread in discount factors that makes interest rates procyclical, and the net asset positions are positively correlated with productivities.
+\subsubsection{Correlation of net assets and productivities}
+For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility adjusted net assets which we denoted by $x$. This implies a particular ordering of net assets across the agents in the steady state. These implications generalize to settings with $I\geq3$ too. In general, one can verify that without discount factor shocks (as in  part 1 of proposition \ref{prop: long run forces} when interest rates are countercyclical), the steady state net asset  levels (scaled by marginal utilities) are ordered inversely relative to productivities. By having the net asset positions negatively correlated with wage earnings, the planner can minimize the costs of fluctuating transfers. Further for similiar reasons as in the $I=2$ case,  with large enough spread in discount factors that makes interest rates procyclical, and the net asset positions are positively correlated with productivities.
  
- 
-
 \subsection{Stability}
 In this section, we return to the general section \ref{Sec: environment} formulation of the Ramsey problem  to study convergence to a steady state. We begin by describing a test for local convergence using a linear approximation of the policy rules at the steady state. We apply this test to show local stability of a steady state for a wide range of parameters. From these examples it emerges that slow convergence to the steady state occurs for  commonly used parameter values.
 
@@ -2124,7 +2121,6 @@ The principal message of our paper  is that  without exogenous restrictions on t
 \smallskip
 
 
-\begin{appendix}
 
 \section{Additional details for Section \ref{Sec: extensions}}
 \label{appndx: borrowing constraints example}
@@ -2166,7 +2162,7 @@ This will improve upon the planners problem with natural borrowing constraints, 
 
 
 \smallskip
-\section{\smallskip Proof of Proposition  \ref{prop: affine eqm nec and suff}}
+\subsection{\smallskip Proof of Proposition  \ref{prop: affine eqm nec and suff}}
 \label{appndx: affine eqm nec and stuff}
 \smallskip
 
@@ -2560,7 +2556,7 @@ Substitute this into (\ref{Tech appendix: gain from h}) to show that $%
 % \end{equation*}
 
 \smallskip
-\section{Additional details for Lemma \ref{lemma-simplified-foc}}
+\subsection{Additional details for Lemma \ref{lemma-simplified-foc}}
 Given $P(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints \eqref{eq:ss-imp} and \eqref{eq:bondcondtion}.  The first order conditions are then as follows
 \begin{description}
 	\item{$x'_i(s):$}
@@ -2595,7 +2591,7 @@ Imposing the steady state restrictions, equations (\ref{eq.foc_tau}) and (\ref{e
  \end{equation}
 \end{subequations}
 
-\section{Proof of Proposition \protect\ref{prop: long run forces}}
+\subsection{Proof of Proposition \protect\ref{prop: long run forces}}
 
 The Bellman equation for the optimal planners problem with log quadratic
 preferences and IID shocks can be written as
@@ -2654,17 +2650,16 @@ In addition there are two envelope conditions given by
 \begin{align}
 V_x(x,\rho) = -\sum_{s^{\prime }}\frac{\mu(s^{\prime })\Pr(s^{\prime
 })\frac1{c_2(s^{\prime })}}{\mathbb{E}[\frac1{c_2}]} = -\frac{\mathbb{E}%
-[\mu\frac1{c_2}]}{\mathbb{E}[\frac1{c_2}]} \\
+[\mu\frac1{c_2}]}{\mathbb{E}[\frac1{c_2}]} \\ \label{eq.x_env}
 V_{\rho}(x,\rho) = -\lambda\mathbb{E}[\frac1{c_1}]  \label{eq.rho_env}
 \end{align}
 
 In the steady state, we need to solve for a collection of allocations, initial conditions and Lagrange multipliers $%
 \{c_1(s),c_2(s),l_1(s),x,\rho,\mu(s),\lambda,\xi(s),\phi(s)\}$ such that
 equations (\ref{eq.conStart})-(\ref{eq.rho_env}) are satisfied when $%
-\rho^{\prime }(s) = \rho$ and $x^{\prime }(s) = x$. It should be clear that
-is that if we replace $\mu(s) = \mu$ then, equation (\ref{eq.x'FOC}) is
+\rho^{\prime }(s) = \rho$ and $x^{\prime }(s) = x$. It should be clear that if we replace $\mu(s) = \mu$, equation (\ref{eq.x'FOC})  and equation (\ref{eq.x_env})is
 always satisfied. Additionally under this assumption equation (\ref{eq.c2FOC}%
-) simplifies significantly.
+) simplifies significantly,since
 \begin{align*}
 \frac{x\Pr(s)}{c_2(s)^2\mathbb{E}[\frac1{c_2}]}\left[\mu(s)-\frac{\mathbb{E}%
 [\mu\frac1{c_2}]}{\mathbb{E}[\frac1{c_2}]}\right] = 0
@@ -2708,7 +2703,7 @@ obtain
 \right)\left(\frac1{c_2(s)}-\beta(s)\mathbb{E}\left[\frac1{c_2}\right]%
 \right) = \frac{\mu}{\rho}+\frac{\rho\alpha_2-\alpha_1}{\rho(1+\rho)}
 \end{equation*}
-The LHS depends on $s$ while the RHS does not, Hence the solution to
+Note that the LHS depends on $s$ while the RHS does not, hence the solution to
 this equation is
 \begin{equation}
 \lambda = - \frac{\mu x}{\mathbb{E}[\frac1{c_2}]}
@@ -3197,7 +3192,7 @@ in the steady state interest rates are positively correlated with TFP.
 % \smallskip \ \pagebreak
 %
 % \smallskip
-\section{Linearization Algorithm}\label{apndx: numerical methods}
+\subsection{Linearization Algorithm}\label{apndx: numerical methods}
 This section will outline our numerical methods used to solve for and linearize around the steady state in the case of a 2 state iid process for the aggregate state.
 \begin{equation}
 	V(\bm x,\bm \rho) = \max_{c_i(s),l_i(s),\bm x'(s),\bm\rho'(s)} \sum_s P(s)\left(\left[\sum_i\pi_i \alpha_i U(c_i(s),l_i(s))\right] + \beta(s) V(\bm x'(s),\bm \rho'(s))\right)\label{eq.obj}
@@ -3306,7 +3301,7 @@ Given the linearized policy rules it is then possible to evaluate the local stab
 
 This linearization can be used to construct the bordered hessian of the problem (\ref{eq:ss-obj}) at the steady state. We can then apply second order tests to verify that the first order necessary conditions are sufficient.
 %The code for computing the Bellman equations, steady states and the linearized policies is available at https://github.com/dgevans/Golosov-Sargent.git
-\section{Proof for Proposition \ref{prop: localstability}}
+\subsection{Proof for Proposition \ref{prop: localstability}}
  \begin{proof}
 
  The state at time $t$ can be written as
@@ -3360,8 +3355,6 @@ Note that  if eigenvalues of $\overline B$ are positive and strictly less that 1
 %
  The stability of this system is guaranteed if the (real part) of eigenvalues of $\hat{B}$ are less than 1.
  \end{proof}
-
-\end{appendix}
 
 \smallskip \ \pagebreak
 
