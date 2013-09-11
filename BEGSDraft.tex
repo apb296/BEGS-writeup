@@ -2129,19 +2129,40 @@ The principal message of our paper  is that  without exogenous restrictions on t
 \section{Additional details for Section \ref{Sec: extensions}}
 \label{appndx: borrowing constraints example}
 In this section we construct an example in which the government can achieve
-higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0 \beta_t=\beta$ and $I=2$. 
+higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0$, $\beta_t=\beta$ and $I=2$.  The the planners problem can then be written as the following sequence problem
+\begin{equation}
+	\max_{\{c_{i,t},l_{i,t},b_{i,t},R_t\}_t} \sum_{t=0}^\infty\beta^t\left[\alpha_1U(c_{1,t},l_{1,t}) +\alpha_2 U(c_{2,t},l_{2,t})\right]\label{eq.A_obj}
+\end{equation}subject to
+\begin{subequations}
+\begin{align}
+	c_{2,t}+\frac{U_{l2,t}l_{2,t}}{U_{c2,t}}-\left(c_{1,t}+\frac{U_{l1,t}l_{1,t}}{U_{c1,t}}\right) +\frac{1}{R_t}\left( b_{2,t}-b_{1,t}\right)  = b_{2,t-1}-b_{1,t-1}\label{eq.A_imp}\\
+	\frac{U_{l1,t}}{\theta_1U_{c1,t}} = \frac{U_{l2,t}}{\theta_2 U_{c2,t}}\label{eq.A_wage}\\
+	c_{1,t}+c_{2,t} \leq \theta_1 l_{1,t}+\theta_2 l_{2,t}\label{eq.A_feas}\\
+	\left(\frac{U_{ci,t}}{U_{ci,t+1}}-\beta R_t\right)(b_{i,t}-\underline b_i) = 0\label{eq.A_slack}\\
+	\frac{U_{ci,t}}{U_{ci,t+1}} \geq \beta R_t\label{eq.A_euler}\\
+	b_{i,t}\geq \underline b_i
+\end{align}
+\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
+\begin{equation}
+	Z^{fb}  = c_{2}^{fb}+\frac{U_{l2}^{fb}l_{2}^{fb}}{U_{c2}^{fb}}-\left(c_{1}^{fb}+\frac{U_{l1}^{fb}l_{1}^{fb}}{U_{c1}^{fb}}\right)
+\end{equation}and
+\begin{equation}
+	\tilde b_2^{fb} = \frac{Z^{fb}}{\frac1\beta -1}
+\end{equation}  We will assume that the exogenous borrowing constraints constraints satisfy $\underline b_2 = \underline b_1 + \tilde b_2^{fb}$.  We then have the following lemma
 
+\begin{lemma}  If $\tilde b_2^{fb}>(<)0$ and $b_{2,-1}-b_{1,-1} > (<) \tilde b_2^{fb}$ then the planner can implement the first best.
+\end{lemma}  
+\begin{proof}
+We will consider the candidate allocation where $c_{i,t} = c^{fb}_i$, $l_{i,t} = l^{fb}_i$, $b_{i,t} = \underline b_i$ and interest rates are given by $R_t = \frac 1{\beta}$ for $t\geq 1$.  It should be clear then that equations \eqref{eq.A_wage} and \eqref{eq.A_feas} are satisfied as a property of the first best allocation.  Equation \eqref{eq.A_slack} is trivially satisfied since the agents are at their borrowing constraints.  For $t\geq 1$ equations \eqref{eq.A_imp} and \eqref{eq.A_euler} are both satisfied by the choice of $R_t = \frac1\beta$ and the first best allocations.  It remains to check that equation \eqref{eq.A_imp} is satisfied at time $t=0$ for an interest rate $R_0 <\frac1\beta$.  At time zero the constraint is give by
+\begin{equation}
+	Z^{fb} + \frac 1{R_0} \tilde b^{fb}_2 = b_{2,-1}-b_{1,-1}
+\end{equation}  The assumption that $b_{2,-1}-b_{1,-1} > (<) \tilde b_2^{fb}$ if  $\tilde b_2^{fb}>(<)0$ then implies that 
+\[
+	R_ 0 = \frac{\tilde b^{fb}_2}{b_{2,-1}-b_{1,-1}- Z^{fb}} <\frac 1\beta
+\] as desired.  
+\end{proof}
 
-The outcome that welfare can be strictly higher with exogenous borrowing
-constraints depends on our assumption that agents do not face idiosyncratic risk. If agents were also subject to idiosyncratic shocks,
-exogenous borrowing constraints would have the additional effect of limiting
-agents' ability to self-insure against those shocks.\footnote{%
-See \cite{Aiyagari1998} and \cite{Heathcote2005} for details.}
-Nevertheless, the insight from the example carries through that even though exogenous
-borrowing constraints can hurt agents' to insure against idiosyncratic shocks, they
-can help a government smooth distortions with respect to aggregate shocks
-like government expenditure shocks.
-
+This will improve upon the planners problem with natural borrowing constraints, as first best can only be achieved in this scenario when $b_{2,-1}-b_{1,-1} = \tilde b_2^{fb}$.
 
 
 \smallskip
