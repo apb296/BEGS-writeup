@@ -1291,7 +1291,7 @@ of  all agents are constant. The continuation allocation depends only on  $s_{t}
 We  begin by noting that a competitive equilibrium fixes an allocation $\{c_i(s),l_i(s)\}_{i}$ given a choice for $\{\tau(s), \bm{\rho}(s)\}$ using equations (\ref{eq:BM2_Wages_cons}), (\ref{eq:BM2_Res_cons}) and (\ref{eq:BM2_rhoprime}).  Let us denote $U(\tau,\bm{\rho},s)$ as the value for the planner from the implied allocation using Pareto weights $\{\alpha_i\}_i$ ,
 \[U(\tau,\bm{\rho},s)=\sum_{i}\alpha_i U^i(s).\]
 
-AS before define $Z_i(\tau,\rho,s)$ as
+As before define $Z_i(\tau,\rho,s)$ as
 \[Z_i(\tau,\bm \rho,s)=U^i_c(s)c_i(s)-U^i_l(s)l_i(s)-\rho_i(s)\left[U^1_c(s)c_1(s)-U^1_l(s)l_1(s)\right].\]
 
 % Note that $\sum_{i=2}^{N}Z_i(\tau,\bm  \rho,s)$ is the marginal utility adjusted  primary deficit using the implied allocation.
@@ -1478,22 +1478,23 @@ For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility a
 \subsection{Stability}
 In this section, we return to the general section \ref{Sec: environment} formulation of the Ramsey problem  to study convergence to a steady state. We begin by describing a test for local convergence cast in terms of a linear approximation of optimal policies at a steady state. We apply this test to show local stability of a steady state for a wide range of parameters. From these examples it emerges that slow convergence to the steady state occurs for  commonly calibrated parameter values.
 
-To study convergence, we return to the maximization problem \eqref{eq:ss-obj} and assume that it admits a steady state. As before, let assume that $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}). In Appendix \ref{apndx: numerical methods} we show that the history-dependent optimal policies (they are sequences of functions of $s^t$) can be represented  recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$. A recursive representation of an optimal policy can be linearized around the steady state using $(\bm{\mu},\bm{\rho})$ as state variables.\footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $N=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\bm{\mu},\bm{\rho}
+To study convergence, we return to the maximization problem \eqref{eq:ss-obj} and assume that it admits a steady state. As before, let assume that $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}). In Appendix \ref{apndx: numerical methods} we show that the history-dependent optimal policies (they are sequences of functions of $s^t$) can be represented  recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$. A recursive representation of an optimal policy can be linearized around the steady state using $(\bm{\mu},\bm{\rho})$ as state variables.\footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $I=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\
+bm{\mu},\bm{\rho}
 )$ and not necessarily in  $(\bm{x},\bm{\rho})$. This comes from the fact that the set of feasible $(\bm{x},\bm{\rho})$ are restricted at time 0 and may not contain an open set around the steady state values. When we linearize using $(\bm{\mu},\bm{\rho})$ as state variables, the optimal policies for $\bm{x}(s^t),\bm{\rho}(s^t)$ converge to their  steady state levels for all perturbations in $(\bm{\mu},\bm{\rho})$.}
 
 Formally, let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \bm \rho_t - \bm \rho^{SS}\emat\right]$ be  deviations from a steady state. From a  linear approximation, one can obtain $B(s)$ such that
 \begin{equation}
- \hat{\Psi}(s_{t+1},\hat{\Psi}_t)=B(s_{t+1})\hat{\Psi}_t. \label{eq.linear.lom}
+ \hat{\Psi}_{t+1}=B(s_{t+1})\hat{\Psi}_t. \label{eq.linear.lom}
 \end{equation}
 This linearized system has coefficients that are functions of the shock. The next proposition describes a simple numerical test that allows us to determine whether  this linear system converges to zero in probability.
 
 \begin{proposition}\label{prop: localstability}
 If the (real part) of eigenvalues of $\mathbb{E}B(s)$ are less than 1,  system (\ref{eq.linear.lom}) converges to zero  in mean. Further for large $t$, the conditional variance of $\hat{\Psi}$, denoted by $\Sigma_{\Psi,t}$, follows a deterministic process governed by
 \[\text{vec}(\Sigma_{\Psi,t})=\hat{B} \text{vec}(\Sigma_{\Psi,t-1}),\]	
-where $\hat{B}$ is a square matrix of dimension $(2N-2)^2$. In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in probability.
+where $\hat{B}$ is a square matrix of dimension $(2I-2)^2$. In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in probability.
 \end{proposition}
 
-The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $\frac{\log(0.5)}{(\|\iota\|)}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower is the speed of convergence.
+The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $\frac{\log(0.5)}{\|\iota\|}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower is the speed of convergence.
 
 We used proposition \ref{prop: localstability} to verify local stability of a wide range of examples. The typical finding is that the steady state is generically stable and that convergence is slow. In figure \ref{fig: Eigenvalues} we plot the comparative statics for the dominant eigenvalue and the associated  half-life for a two-agent economy with CES preferences. % with respect to the size of the shock and risk aversion.
 We set the other parameter to match a Frisch elasticity of 0.5,  a real interest rate of 2\%, marginal tax rates  around 20\%, and a 90-10 percentile ratio of wage earnings of 4. In the first exercise, we vary the size of the expenditure shock keeping risk aversion $\sigma$ at one The $x$- axis plots the spread in expenditure normalized by the undistorted GDP and reported in percentages. In the bottom panel, we fix the size of shock such that it produces a 5\% fall in expenditure fall at risk aversion of one and vary $\sigma$ from 0.8 to 7. We see that the dominant eigenvalue is everywhere less than one but very close to one, so that the steady state is stable but convergence is slow for reasonable values of curvatures and shocks.  We return to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt. Both increasing the size of the shock or risk aversion increases the volatility of the interest rates, speeding up the transition towards the steady state.
@@ -1806,21 +1807,21 @@ for  optimal policy. In particular, we  study an economy  with the calibration d
 that successively turn off particular sources of variation.
 
 \begin{enumerate}
-\item \textbf{Acyclical Interest Rates}: In the first variant, we recalibrate
+\item \textbf{Acyclical interest rates}: In the first variant, we recalibrate
 the discount factor shocks to make the risk-free rate be uncorrelated with
 output.
 
-\item \textbf{Countercyclical Interest Rates}: Here we shut off  discount
+\item \textbf{Countercyclical interest rates}: Here we shut off  discount
 factor shocks by setting $\hat{\beta}\left( s\right) =0$ in \eqref{eqn:newstar}. Note that this makes  interest rates  countercyclical.
 
-\item \textbf{No Inequality}: This variant modifies the \textquotedblleft
+\item \textbf{No inequality}: This variant modifies the \textquotedblleft
 Benchmark\textquotedblright\ by setting $\hat{\beta}\left( s\right) =0$ and $%
 {\hat{\theta}}_{1}(s)={\hat{\theta}}_{2}(s)=3\%$ in \eqref{eqn:newstar}. This corresponds to a case
 in which the only source of business cycle fluctuations is a TFP shock that
 affects all agents equally. This case more closely matches the experiments
 in the RBC\ literature such as \cite{Chari1994}.
 
-\item \textbf{Government expenditure Shocks}: The last variant compares  optimal
+\item \textbf{Government expenditure shocks}: The last variant compares  optimal
 responses to shocks to government expenditures. In this experiment, we set
 $\hat{\theta}\left( s\right) =\hat{\beta}\left( s\right) =0$ and choose $%
 \hat{g}\left( s\right) $ to produce a drop in output of a similar magnitude
