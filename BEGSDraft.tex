@@ -1782,12 +1782,12 @@ $\psi$ & 0.6994 &Frisch elasticity of labor supply & 0.5   \\
 $\bar{\theta}_1 $ & 4& Log 90-10 wage ratio (Autor et all) & 4   \\
 $\bar{\theta}_2 $ & 1 &Normalize to 1 & 1  \\
 $\beta$ & 0.98  &Average (annual) risk free interest rate & 2\%   \\
+$\alpha_1$ & 0.69 & Marginal tax rate in the economy with no shocks & 20\% \\
+$g$ & 12\%&Average pre-transfer expenditure- output ratio & 12 \% \\
 $\frac{\hat {\theta}_2}{\hat {\theta}_1}$ & 2.5 & Relative drop in wage income of 10th
 percentile as compared to 90th percentile & 2.5\\
 $\hat{\theta}_1$ & 1.2\% & Average output loss& 3\% \\
 $\hat{\beta}(s)$ & 1.96\%& Difference in real interest rates between booms and recession& 1.96\% \\
-$\alpha_1$ & 0.69 & Marginal tax rate in the economy with no shocks & 20\% \\
-$g$ & 12\%&Average pre-transfer expenditure- output ratio & 12 \% \\
 $P(r|r)$ & 0.63&Duration of recessions & 2.33 years \\
 $P(b|b)$ & 0.84 &Duration of booms &7 years \\ \hline
 \end{tabular}
@@ -2126,7 +2126,7 @@ The principal message of our paper  is that  without exogenous restrictions on t
 \subsection{Additional details for Section \ref{Sec: extensions}}
 \label{appndx: borrowing constraints example}
 In this section we construct an example in which the government can achieve
-higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0$, $\beta_t=\beta$ and $I=2$.  The the planners problem can then be written as the following sequence problem
+higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0$, $\beta_t=\beta$ and $I=2$.  Further the utility function over consumption and labor supply $U(c,l)$ is separable in the arguments and satisfies the Inada conditions. The  planners problem can then be written as the following sequence problem
 \begin{equation}
 	\max_{\{c_{i,t},l_{i,t},b_{i,t},R_t\}_t} \sum_{t=0}^\infty\beta^t\left[\alpha_1U(c_{1,t},l_{1,t}) +\alpha_2 U(c_{2,t},l_{2,t})\right]\label{eq.A_obj}
 \end{equation}subject to
@@ -2139,7 +2139,9 @@ higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselve
 	\frac{U_{ci,t}}{U_{ci,t+1}} \geq \beta R_t\label{eq.A_euler}\\
 	b_{i,t}\geq \underline b_i
 \end{align}
-\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
+\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  We obtain equation \eqref{eq.A_imp} by eliminating transfers from the budget equations of the households and using the optimality for labor supply decision. Equations \eqref{eq.A_slack} and \eqref{eq.A_euler} capture the inter-temporal optimality conditions modified for possbily binding constraints. 
+
+Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
 \begin{equation}
 	Z^{fb}  = c_{2}^{fb}+\frac{U_{l2}^{fb}l_{2}^{fb}}{U_{c2}^{fb}}-\left(c_{1}^{fb}+\frac{U_{l1}^{fb}l_{1}^{fb}}{U_{c1}^{fb}}\right)
 \end{equation}and
