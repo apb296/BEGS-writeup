@@ -159,7 +159,7 @@ comments.}}}
 \begin{center}
 \textbf{Abstract}
 \end{center}
-A planner chooses  a policy to set a lump sum transfer plus a linear tax on labor income  in an economy with incomplete markets,  heterogeneous agents, and aggregate shocks. The planner's concerns about  redistribution impart a welfare cost to fluctuating transfers. The  distribution of  net asset holdings across agents affects optimal allocations, transfers, and tax rates, but the level of government debt does not. Two forces shape long-run outcomes: the planner's desire to minimize the welfare costs of fluctuating transfers, which calls for a negative correlation between the distribution of net  assets and agents' skills; and the planner's desire to use fluctuations in the real interest rate to adjust for missing state-contingent securities. In a model parameterized to match stylized facts about  US booms and recessions, it is  distributional concerns that mainly determine optimal policies over business cycle frequencies.  These features of optimal policy differ markedly from ones that emerge from  representative agent Ramsey models
+A planner sets a lump sum transfer and a linear tax on labor income  in an economy with incomplete markets,  heterogeneous agents, and aggregate shocks. The planner's concerns about  redistribution impart a welfare cost to fluctuating transfers. The  distribution of  net asset holdings across agents affects optimal allocations, transfers, and tax rates, but the level of government debt does not. Two forces shape long-run outcomes: the planner's desire to minimize the welfare costs of fluctuating transfers, which calls for a negative correlation between the distribution of net  assets and agents' skills; and the planner's desire to use fluctuations in the real interest rate to adjust for missing state-contingent securities. In a model parameterized to match stylized facts about  US booms and recessions, distributional concerns  mainly determine optimal policies over business cycle frequencies.  These features of optimal policy differ markedly from ones that emerge from  representative agent Ramsey models
 like \citet{Aiyagari2002}.
 
 \medskip
@@ -260,8 +260,8 @@ capital and with complete or incomplete asset markets and more general structure
 
 Our second set of results characterizes the long run behavior of taxes, transfers, and the distribution of assets. In a special case of our economy in which aggregate shocks are iid and take two values, we show that  there generally exists a steady state in which marginal utility-adjusted net asset positions are constant and taxes and transfers depend only on current realization of shocks. We also identify conditions under which this steady state is stable. In the steady state, the magnitude of fluctuations in taxes is low for many standard preferences and zero when preferences are CES. For more general shock processes, we show numerically that while a steady state does not exist, similar principles apply - there is an ergodic set to which net asset position converge; in that set, fluctuations of taxes and transfers are substantially diminished.
 
-We identify two forces that determine the properties of the ergodic set of net asset positions. The first force comes from a planner's desire to minimize the welfare cost of fluctuating transfers, which transmits to the Ramsey planner incentives to set taxes and transfers to generate a negative correlation between households' productivities and their
-net assets. Properly recognizing the relevance  of net but not gross asset positions stressed in
+Two forces  determine the properties of the ergodic set of net asset positions. The first force comes from a planner's desire to minimize the welfare cost of fluctuating transfers, which transmits to the Ramsey planner incentives to set taxes and transfers to generate a negative correlation between households' productivities and their
+net assets. In light of  the relevance  of net but not gross asset positions stressed in
 our first set of findings, this  can be accomplished by having the  government  effectively accumulate risk-free claims on high-skilled workers.
 But another, possibly countervailing or possibly reinforcing,  force  comes from the Ramsey planner's incentive to  use  interest rate fluctuations  to compensate for missing asset markets. If interest rates are high (low) when government revenue needs are high, the government has an incentive to accumulate assets (debt) vis-a-vis high-skilled worker. Thus, depending on  comovements of the interest rate with other fundamentals, these two forces  may either reinforce each other (for example, in response to  a pure TFP shock where the implied interest rates are countercyclical) or oppose each other (for example, when  interest rates are procylical because TFP shocks are negatively correlated with discount factor shocks).
 
@@ -276,12 +276,13 @@ These outcomes differ substantially both qualitatively and quantitatively from t
 
 
 
-Here is how we assemble these results.
+We assemble these results as follows.
 After section \ref{Sec: environment} describes preferences, technologies, endowments, and
 information flows, section
 \ref{sec:Ricardian101} sets the stage for our subsequent results. Theorem \ref{theorem: main}
 exploits the fact that the set of feasible allocations is invariant to changes in transfers and \emph{gross} asset positions to obtain  Ricardian equivalence and the importance of net assets.  Section \ref{Sec: quasilinear}
 analyzes outcomes when households' preferences are quasi linear. Sections \ref{Sec: characterization} characterizes  the planner's maximization problem and formulates a recursive version that features two Bellman equations. Section \ref{sec: SteadyStates} characterizes  long run allocations, while Section \ref{Sec: numerical} provides numerical simulations of  optimal policy responses to business cycle-like shocks.
+Section \ref{sec:conclude} offers concluding remarks linking our model to recent discussions of government debt-GDP ratios.
 
 
   \begin{figure}[htp]
@@ -874,10 +875,10 @@ foreigners, the higher are the distorting taxes that  the government  needs to
 impose.}
 
 \section{Quasi-linear preferences}\label{Sec: quasilinear}
-Before we use section \ref{Sec: characterization}  for general characterization of our problem, in this section we study a special case of our economy that allows us to get a long way analytically and to identify some forces that drive outcomes. In particular we assume that the only source of aggregate shocks is the fluctuation in $g_t$ and preferences are given by $U^{i}\left( c,l\right) =c-h_{i}(l)$ where $h_{i}$ is an increasing differentiable function with $h_{i}^{\prime
-}\left( 0\right) =0$ and $h_{i}^{\prime }\left( \bar{l}_{i}\right) =\infty $. These quasi-linear preferences have been extensively studied in the context of representative agent economies (see, e.g.,  AMSS, \cite{Farhi2010}, \cite{Battaglini2007,Battaglini2008}, \cite{Yared2010}, \cite{Faraglia2011}). We pursue two goals in this section. First, optimal policies in our heterogenous agent  economy in which transfers are chosen optimally
+Before we present a more general characterization in section \ref{Sec: characterization}, in this section we study a special case of our economy that allows us to get a long way analytically and to identify some forces that drive outcomes. Here we assume that the only source of aggregate shocks is  $g_t$ and that preferences are given by $U^{i}\left( c,l\right) =c-h_{i}(l)$ where $h_{i}$ is an increasing differentiable function with $h_{i}^{\prime
+}\left( 0\right) =0$ and $h_{i}^{\prime }\left( \bar{l}_{i}\right) =\infty $. Such quasi-linear preferences have been assumed in the context of representative agent economies (see, e.g.,  AMSS, \cite{Farhi2010}, \cite{Battaglini2007,Battaglini2008}, \cite{Yared2010}, \cite{Faraglia2011}). We demonstrate two important things in this section. First, optimal policies in our heterogenous agent  economy in which transfers are chosen optimally
  differ in interesting ways from those
- in an economy with representative agent that exogenously restrict  transfers. Second, this set up switches off two channels  present more generally, namely, that the marginal utilities of agents are differentially affected by changes in transfers and that in general the interest rate  is not constant. These two forces  play  important roles in determining the long run allocations in Section \ref{sec: SteadyStates}
+ in a representative agent economy  that exogenously restricts  transfers. Second, the special  set up under study switches off two forces  present more generally, namely, that the marginal utilities of agents are differentially affected by changes in transfers and that with other preference specifications the interest rate  is not constant. These two forces  play  important roles in determining the long run outcomes described in Section \ref{sec: SteadyStates}
 
 To simplify notation, we now assume that the initial debt is $%
 \left\{ \beta ^{-1}b_{i,-1}\right\} _{i}.$
@@ -893,7 +894,7 @@ We thank Guy Laroque for suggesting the idea for this proof.}
 
 \begin{proof}
 When preferences are quasilinear, the interest rate $R_{t}=\beta
-^{-1}$ for all $t$ and % the necessary condition for compatitive equilirbium
+^{-1}$ for all $t$ and % the necessary condition for competitive equilibrium
 %is
 $\left( 1-\tau _{t}\right) \theta _{i}=h_{i}^{\prime }(l_{i,t})$ for all $%
 t.$ For our purposes, it is more convenient to express the labor supply
@@ -1178,14 +1179,14 @@ _{1,t}U_{c,t}^{1}}
  \end{equation}
 
 \end{subequations}
-Constraint \eqref{eq imp sum t=1} is  a measurablity restriction on  allocations that requires that the right side is determined at time $t-1$. 
-This condition is inherited from the restriction that only risk-free bonds are traded.  
+Constraint \eqref{eq imp sum t=1} is  a measurablity restriction on  allocations that requires that the right side is determined at time $t-1$.
+This condition is inherited from the restriction that only risk-free bonds are traded.
 
 
-For both computational and expository purposes, it is convenient to represent the optimal policy problem recursively.  For the purpose of constructing a recursive representation, let $\bm{x}= \beta^{-1}\left( U_{c}^{2}\tilde{b}_{2},...,U_{c}^{I}\tilde{b}_{I}\right)$, $\bm{\rho }=\left( U_{c}^{2}/U_{c}^{1},...,U_{c}^{I}/U_{c}^{1}\right) $, and denote an allocation $a=\{c_i,l_i\}^{I}_{i=1}.$
+For both computational and educational purposes, it is convenient to represent the optimal policy problem recursively.  For the purpose of constructing a recursive representation, let $\bm{x}= \beta^{-1}\left( U_{c}^{2}\tilde{b}_{2},...,U_{c}^{I}\tilde{b}_{I}\right)$, $\bm{\rho }=\left( U_{c}^{2}/U_{c}^{1},...,U_{c}^{I}/U_{c}^{1}\right) $, and denote an allocation $a=\{c_i,l_i\}^{I}_{i=1}.$
 In the spirit of \cite{Kydland1980} and \cite{Farhi2010}, we split the Ramsey problem into a time-$0$ problem that takes $(\{\tilde{b}_{i,-1}\}^{I}_{i=2}, s_0)$ as given and   a time $t \geq 1$ continuation problem  that takes $\bm x,\bm \rho,s\_$ as given. We formulate
-two Bellman equations and two value functions, one that pertains to $t\geq 1$, another to $t=0$.  The time inconsistency of an optimal policy 
-manifests itself in there being distinct value functions and Bellman equations at $t =0$ and $t \geq 1$.  
+two Bellman equations and two value functions, one that pertains to $t\geq 1$, another to $t=0$.  The time inconsistency of an optimal policy
+manifests itself in there being distinct value functions and Bellman equations at $t =0$ and $t \geq 1$.
 
 \smallskip
 %\textcolor{blue}{Anmol: I have changed both the Bellman equations to incorporate $\beta$ shocks inline of David's suggestion}
@@ -1290,7 +1291,7 @@ of  all agents are constant. The continuation allocation depends only on  $s_{t}
 We  begin by noting that a competitive equilibrium fixes an allocation $\{c_i(s),l_i(s)\}_{i}$ given a choice for $\{\tau(s), \bm{\rho}(s)\}$ using equations (\ref{eq:BM2_Wages_cons}), (\ref{eq:BM2_Res_cons}) and (\ref{eq:BM2_rhoprime}).  Let us denote $U(\tau,\bm{\rho},s)$ as the value for the planner from the implied allocation using Pareto weights $\{\alpha_i\}_i$ ,
 \[U(\tau,\bm{\rho},s)=\sum_{i}\alpha_i U^i(s).\]
 
-AS before define $Z_i(\tau,\rho,s)$ as
+As before define $Z_i(\tau,\rho,s)$ as
 \[Z_i(\tau,\bm \rho,s)=U^i_c(s)c_i(s)-U^i_l(s)l_i(s)-\rho_i(s)\left[U^1_c(s)c_1(s)-U^1_l(s)l_1(s)\right].\]
 
 % Note that $\sum_{i=2}^{N}Z_i(\tau,\bm  \rho,s)$ is the marginal utility adjusted  primary deficit using the implied allocation.
@@ -1467,31 +1468,33 @@ relative strengths of the two forces.
   \begin{figure}[htp]
  \centering
  \includegraphics[width=\textwidth]{Draft25Graphs/SS_alpha1.eps}
- \caption{ Stead state assets : $\tilde{b}_2(s)=\frac{\beta  x^{SS}}{U^2_c(s)}$ and taxes : $\tau^{SS}$ as a function of Agent 1's (high skilled) Pareto weight}
+ \caption{ Steady state assets : $\tilde{b}_2(s)=\frac{\beta  x^{SS}}{U^2_c(s)}$ and taxes : $\tau^{SS}$ as a function of Agent 1's (high skilled) Pareto weight}
  \label{fig: SS comparative}
  \end{figure}
 \subsubsection{Correlation of net assets and productivities}
-For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility adjusted net assets which we denoted by $x$. This implies a particular ordering of net assets across the agents in the steady state. These implications generalize to settings with $I\geq3$ too. In general, one can verify that without discount factor shocks (as in  part 1 of proposition \ref{prop: long run forces} when interest rates are countercyclical), the steady state net asset  levels (scaled by marginal utilities) are ordered inversely relative to productivities. By having the net asset positions negatively correlated with wage earnings, the planner can minimize the costs of fluctuating transfers. Further for similiar reasons as in the $I=2$ case,  with large enough spread in discount factors that makes interest rates procyclical, and the net asset positions are positively correlated with productivities.
+For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility adjusted net assets that we denoted  $x$. This implies a particular ordering of net assets across the agents in the steady state. These implications generalize to settings with $I\geq3$. In general, one can verify that without discount factor shocks (as in  part 1 of proposition \ref{prop: long run forces} when interest rates are countercyclical), steady state net asset  levels (scaled by marginal utilities) are ordered inversely to productivities. By making  net asset positions be negatively correlated with labor earnings, the planner can minimize the costs of fluctuating transfers. Further for similar reasons as in the $I=2$ case,  with exogenous variations in discount factors large enough to make interest rates be procyclical,  the planner makes net asset positions be positively correlated with productivities.
+\textcolor{red}{Anmol and David XXXXXX: I edited this paragraph. I fear I either damaged or didn't understand the last sentence.}
 
 \subsection{Stability}
-In this section, we return to the general section \ref{Sec: environment} formulation of the Ramsey problem  to study convergence to a steady state. We begin by describing a test for local convergence using a linear approximation of the policy rules at the steady state. We apply this test to show local stability of a steady state for a wide range of parameters. From these examples it emerges that slow convergence to the steady state occurs for  commonly used parameter values.
+In this section, we return to the general section \ref{Sec: environment} formulation of the Ramsey problem  to study convergence to a steady state. We begin by describing a test for local convergence cast in terms of a linear approximation of optimal policies at a steady state. We apply this test to show local stability of a steady state for a wide range of parameters. From these examples it emerges that slow convergence to the steady state occurs for  commonly calibrated parameter values.
 
-To study convergence, we return to the maximization problem \eqref{eq:ss-obj} and assume that it admits a steady state. As before, let assume that $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}). In Appendix \ref{apndx: numerical methods} we show that the history-dependent optimal policies (they are sequences of functions of $s^t$) can be represented  recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$. A recursive representation of an optimal policy can be linearized around the steady state using $(\bm{\mu},\bm{\rho})$ as state variables.\footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $N=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\bm{\mu},\bm{\rho}
+To study convergence, we return to the maximization problem \eqref{eq:ss-obj} and assume that it admits a steady state. As before, let assume that $\Pr(s)\mu_i(s)$ and $\lambda_i$ be the multipliers on constraints (\ref{eq:ss-imp}) and (\ref{eq:bondcondtion}). In Appendix \ref{apndx: numerical methods} we show that the history-dependent optimal policies (they are sequences of functions of $s^t$) can be represented  recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$. A recursive representation of an optimal policy can be linearized around the steady state using $(\bm{\mu},\bm{\rho})$ as state variables.\footnote{One could  in principle look for a solution in state variables $\left(\bm{x}(s^{t-1}),\bm{\rho}(s^{t-1})\right)$. For $I=2$ with $\{\theta_i(s)\}$ different across agents, this would give identical policies and a map which is (locally) invertible between $\bm{x}$ and $\bm{\mu}$ for a given $\bm{\rho}$. However in other cases, it turns out there are unique linear policies in $(\
+bm{\mu},\bm{\rho}
 )$ and not necessarily in  $(\bm{x},\bm{\rho})$. This comes from the fact that the set of feasible $(\bm{x},\bm{\rho})$ are restricted at time 0 and may not contain an open set around the steady state values. When we linearize using $(\bm{\mu},\bm{\rho})$ as state variables, the optimal policies for $\bm{x}(s^t),\bm{\rho}(s^t)$ converge to their  steady state levels for all perturbations in $(\bm{\mu},\bm{\rho})$.}
 
 Formally, let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \bm \rho_t - \bm \rho^{SS}\emat\right]$ be  deviations from a steady state. From a  linear approximation, one can obtain $B(s)$ such that
 \begin{equation}
- \hat{\Psi}(s_{t+1},\hat{\Psi}_t)=B(s_{t+1})\hat{\Psi}_t. \label{eq.linear.lom}
+ \hat{\Psi}_{t+1}=B(s_{t+1})\hat{\Psi}_t. \label{eq.linear.lom}
 \end{equation}
 This linearized system has coefficients that are functions of the shock. The next proposition describes a simple numerical test that allows us to determine whether  this linear system converges to zero in probability.
 
 \begin{proposition}\label{prop: localstability}
 If the (real part) of eigenvalues of $\mathbb{E}B(s)$ are less than 1,  system (\ref{eq.linear.lom}) converges to zero  in mean. Further for large $t$, the conditional variance of $\hat{\Psi}$, denoted by $\Sigma_{\Psi,t}$, follows a deterministic process governed by
 \[\text{vec}(\Sigma_{\Psi,t})=\hat{B} \text{vec}(\Sigma_{\Psi,t-1}),\]	
-where $\hat{B}$ is a square matrix of dimension $(2N-2)^2$. In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in probability.
+where $\hat{B}$ is a square matrix of dimension $(2I-2)^2$. In addition,  if the (real part) of eigenvalues of $\hat{B}$ are less than 1, the system converges in probability.
 \end{proposition}
 
-The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $\frac{\log(0.5)}{(\|\iota\|)}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower is the speed of convergence.
+The eigenvalues (in particular the largest or the dominant one) are instructive not only for whether the system is locally stable but also how quickly the steady state is reached. In particular, the half-life of convergence to the steady state is given by $\frac{\log(0.5)}{\|\iota\|}$, where $\|\iota\|$ is the absolute value of the dominant eigenvalue.  Thus, the closer the dominant eigenvalue is to one, the slower is the speed of convergence.
 
 We used proposition \ref{prop: localstability} to verify local stability of a wide range of examples. The typical finding is that the steady state is generically stable and that convergence is slow. In figure \ref{fig: Eigenvalues} we plot the comparative statics for the dominant eigenvalue and the associated  half-life for a two-agent economy with CES preferences. % with respect to the size of the shock and risk aversion.
 We set the other parameter to match a Frisch elasticity of 0.5,  a real interest rate of 2\%, marginal tax rates  around 20\%, and a 90-10 percentile ratio of wage earnings of 4. In the first exercise, we vary the size of the expenditure shock keeping risk aversion $\sigma$ at one The $x$- axis plots the spread in expenditure normalized by the undistorted GDP and reported in percentages. In the bottom panel, we fix the size of shock such that it produces a 5\% fall in expenditure fall at risk aversion of one and vary $\sigma$ from 0.8 to 7. We see that the dominant eigenvalue is everywhere less than one but very close to one, so that the steady state is stable but convergence is slow for reasonable values of curvatures and shocks.  We return to this feature in section \ref{Sec: numerical} where we study low frequency components of government debt. Both increasing the size of the shock or risk aversion increases the volatility of the interest rates, speeding up the transition towards the steady state.
@@ -1779,12 +1782,12 @@ $\psi$ & 0.6994 &Frisch elasticity of labor supply & 0.5   \\
 $\bar{\theta}_1 $ & 4& Log 90-10 wage ratio (Autor et all) & 4   \\
 $\bar{\theta}_2 $ & 1 &Normalize to 1 & 1  \\
 $\beta$ & 0.98  &Average (annual) risk free interest rate & 2\%   \\
+$\alpha_1$ & 0.69 & Marginal tax rate in the economy with no shocks & 20\% \\
+$g$ & 12\%&Average pre-transfer expenditure- output ratio & 12 \% \\
 $\frac{\hat {\theta}_2}{\hat {\theta}_1}$ & 2.5 & Relative drop in wage income of 10th
 percentile as compared to 90th percentile & 2.5\\
 $\hat{\theta}_1$ & 1.2\% & Average output loss& 3\% \\
 $\hat{\beta}(s)$ & 1.96\%& Difference in real interest rates between booms and recession& 1.96\% \\
-$\alpha_1$ & 0.69 & Marginal tax rate in the economy with no shocks & 20\% \\
-$g$ & 12\%&Average pre-transfer expenditure- output ratio & 12 \% \\
 $P(r|r)$ & 0.63&Duration of recessions & 2.33 years \\
 $P(b|b)$ & 0.84 &Duration of booms &7 years \\ \hline
 \end{tabular}
@@ -1804,21 +1807,21 @@ for  optimal policy. In particular, we  study an economy  with the calibration d
 that successively turn off particular sources of variation.
 
 \begin{enumerate}
-\item \textbf{Acyclical Interest Rates}: In the first variant, we recalibrate
+\item \textbf{Acyclical interest rates}: In the first variant, we recalibrate
 the discount factor shocks to make the risk-free rate be uncorrelated with
 output.
 
-\item \textbf{Countercyclical Interest Rates}: Here we shut off  discount
+\item \textbf{Countercyclical interest rates}: Here we shut off  discount
 factor shocks by setting $\hat{\beta}\left( s\right) =0$ in \eqref{eqn:newstar}. Note that this makes  interest rates  countercyclical.
 
-\item \textbf{No Inequality}: This variant modifies the \textquotedblleft
+\item \textbf{No inequality}: This variant modifies the \textquotedblleft
 Benchmark\textquotedblright\ by setting $\hat{\beta}\left( s\right) =0$ and $%
 {\hat{\theta}}_{1}(s)={\hat{\theta}}_{2}(s)=3\%$ in \eqref{eqn:newstar}. This corresponds to a case
 in which the only source of business cycle fluctuations is a TFP shock that
 affects all agents equally. This case more closely matches the experiments
 in the RBC\ literature such as \cite{Chari1994}.
 
-\item \textbf{Government expenditure Shocks}: The last variant compares  optimal
+\item \textbf{Government expenditure shocks}: The last variant compares  optimal
 responses to shocks to government expenditures. In this experiment, we set
 $\hat{\theta}\left( s\right) =\hat{\beta}\left( s\right) =0$ and choose $%
 \hat{g}\left( s\right) $ to produce a drop in output of a similar magnitude
@@ -2123,7 +2126,7 @@ The principal message of our paper  is that  without exogenous restrictions on t
 \subsection{Additional details for Section \ref{Sec: extensions}}
 \label{appndx: borrowing constraints example}
 In this section we construct an example in which the government can achieve
-higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0$, $\beta_t=\beta$ and $I=2$.  The the planners problem can then be written as the following sequence problem
+higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselves to a deterministic economy with $g_t=0$, $\beta_t=\beta$ and $I=2$.  Further the utility function over consumption and labor supply $U(c,l)$ is separable in the arguments and satisfies the Inada conditions. The  planners problem can then be written as the following sequence problem
 \begin{equation}
 	\max_{\{c_{i,t},l_{i,t},b_{i,t},R_t\}_t} \sum_{t=0}^\infty\beta^t\left[\alpha_1U(c_{1,t},l_{1,t}) +\alpha_2 U(c_{2,t},l_{2,t})\right]\label{eq.A_obj}
 \end{equation}subject to
@@ -2136,13 +2139,15 @@ higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselve
 	\frac{U_{ci,t}}{U_{ci,t+1}} \geq \beta R_t\label{eq.A_euler}\\
 	b_{i,t}\geq \underline b_i
 \end{align}
-\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
+\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  We obtain equation \eqref{eq.A_imp} by eliminating transfers from the budget equations of the households and using the optimality for labor supply decision. Equations \eqref{eq.A_slack} and \eqref{eq.A_euler} capture the inter-temporal optimality conditions modified for possbily binding constraints. 
+
+Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
 \begin{equation}
 	Z^{fb}  = c_{2}^{fb}+\frac{U_{l2}^{fb}l_{2}^{fb}}{U_{c2}^{fb}}-\left(c_{1}^{fb}+\frac{U_{l1}^{fb}l_{1}^{fb}}{U_{c1}^{fb}}\right)
 \end{equation}and
 \begin{equation}
 	\tilde b_2^{fb} = \frac{Z^{fb}}{\frac1\beta -1}
-\end{equation}  We will assume that the exogenous borrowing constraints constraints satisfy $\underline b_2 = \underline b_1 + \tilde b_2^{fb}$.  We then have the following lemma
+\end{equation}  We will assume that the exogenous borrowing constraints satisfy $\underline b_2 = \underline b_1 + \tilde b_2^{fb}$.  We then have the following lemma
 
 \begin{lemma}  If $\tilde b_2^{fb}>(<)0$ and $b_{2,-1}-b_{1,-1} > (<) \tilde b_2^{fb}$ then the planner can implement the first best.
 \end{lemma}
