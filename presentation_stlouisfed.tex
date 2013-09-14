@@ -51,7 +51,7 @@
 \newtheorem{remark}{Remark}
 %\graphicspath{{graphs//}}
 
-\title {Taxes, Debts,  and Redistribution}
+\title {Taxes, Debts,  and Redistributions with Aggregate Shocks}
 \author{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}
 
 \date{\today}
@@ -66,7 +66,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{What do we do ?}
+\frametitle{What do we do?}
 We study optimal taxation under commitment with
 \begin{itemize}
  \item \textbf{Heterogeneous agents}
@@ -95,7 +95,7 @@ We study optimal taxation under commitment with
 \begin{enumerate}
  \item How costly are government debts?
  \item What are the long run properties of optimal government policies and equilibrium allocations?
-\item How should government policy respond to aggregate shocks?
+\item How should government policies respond to aggregate shocks?
 \end{enumerate}
 
 \end{frame}
@@ -108,7 +108,7 @@ We study optimal taxation under commitment with
  \begin{itemize}
  \item \textbf{Uncertainty}: Markov aggregate shocks $s_t$
   \item \textbf{Demography}: $I$ types of infinitely lived agents (of mass $\pi_i$)  plus a benevolent planner
-  \item \textbf{Technology}: Output is linear in labor supply. Agents differ in their productivities $\{\theta_i(s_t)\}_{i,t}$
+  \item \textbf{Technology}: Output $\sum_{i=1}^I \theta_i l_{i,t}$ is linear in labor supplies. Productivities $\{\theta_i(s_t)\}_{i,t}$ differ across $i$.
   \item \textbf{Preferences }(Households)
   \begin{equation*}
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \bar{\beta}_t  U^{i}\left(
@@ -164,7 +164,7 @@ _{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t)$
 \begin{definition}
 \textbf{Competitive equilibrium}: Given $\left( \left\{ b_{i,-1}\right\}
 _{i},B_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$
-all allocations are chosen optimally, markets clear \footnote{For most of the part we will assume ``natural'' debt limits on agents. }
+all allocations are chosen optimally, markets clear \footnote{Usually, we impose only  ``natural'' debt limits. }
 \end{definition}
 
 \begin{definition}
@@ -183,16 +183,25 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  \end{itemize}
 
  \end{frame}
+ 
+ \begin{frame}
+ \frametitle{Does AMSS Confirm Reinhart-Rogoff Fears?}
+ \begin{itemize}
+ \item Higher govt.\ debts are more  distorting, but $\ldots$
+ \item Because it is distortionary, asymptotically govt. doesn't issue debt
+ \end{itemize}
+ Things change in our environment
+ \end{frame}
 
  \begin{frame}
  \frametitle{Redistribution and optimal transfers}
  \begin{itemize}
   \item Representative agent models impose restrictions on transfers
   \begin{itemize}
- \item These are motivated only implicitly by concerns about  redistribution:  Poor people can't afford lump sum taxes
+ \item These are motivated only implicitly by concerns about  redistribution:  poor people can't afford lump sum taxes
   \item These constraints \emph{almost} always bind (e.g.,  Lucas Stokey, AMSS) and drive long run debt dynamics
   \end{itemize}
-\item We begin with explicit redistribution motives but leave transfers to be determined optimally
+\item We begin with explicit redistribution motives  and let the government set transfers optimally
  \end{itemize}
 
  \vspace{4mm}
@@ -203,30 +212,30 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  \frametitle{Main working parts}
 \begin{itemize}
  \item \textbf{Welfare Criterion}: Benevolent planner with explicit redistribution motives
- \item \textbf{Instruments}: Transfers and a tax on labor income 
+ \item \textbf{Instruments}: Transfers and a flat tax on labor income
  \item \textbf{Restrictions}:
  \begin{enumerate}
   \item The tax on labor income is linear in wage earnings
-  \item Transfers are unrestricted in sign and magnitude  but cannot be conditioned on identities
-  \item With incomplete markets there limitations to varying tax rates and transfers over times and across states
+  \item Transfers are unrestricted in sign and magnitude  but not  conditioned on agents' identities
+  \item Incomplete markets
  \end{enumerate}
 \item \textbf{Trade-offs}:
 \begin{enumerate}
-\item Dead weight losses are associated with varying labor taxes
-\item With  explicit redistribution motives come costs of fluctuating transfers. Withdrawing a unit of consumption good affects rich and poor people differently
+\item Varying labor taxes imposes dead weight losses 
+\item With  explicit redistribution motives come costs of fluctuating transfers. Withdrawing a unit of consumption affects rich and poor people differently
 \end{enumerate}
 \end{itemize}
 \end{frame}
 \begin{frame}
  \frametitle{Key forces}
- Optimal policy balance these trade-offs
+ Optimal policies balance these trade-offs
  \begin{itemize}
  \item Because transfers are unrestricted, the level of government debt is not distortionary.
- \item  What matters is govt. debt is distributed across agents
+ \item  What matters is how govt. debt is distributed across agents
  \item Higher correlations of wages and assets are more distortionary
  \item Since welfare costs depend on the distribution of assets, optimal policy is affected by and affects the distribution of net assets
 \begin{itemize}
-\item \textbf{Absence of agent specific transfers}: This prompts the govt. to engineer  a negative correlations between net assets and labor earnings
+\item \textbf{Absence of agent specific transfers}: This prompts the govt. to engineer  a negative correlation between net assets and labor earnings
 \item \textbf{Absence of state contingent securities}: This prompts the govt. to exploit endogenous fluctuations in the interest rate
 \end{itemize}
 
@@ -267,7 +276,7 @@ _{i},B_{-1}\right) $, let $\left \{ \left \{ c_{i,t},l_{i,t},b_{i,t}\right \} _{
 \hat{b}_{i,t}-\hat{b}_{1,t}=\tilde{b}_{i,t}\equiv b_{i,t}	-b_{1,t}\text{ for all }t\geq -1,i\geq 2,
 \end{equation*}%
 there exist  sequences $\left \{ \hat{T}_{t}\right \} _{t}$ and $%
-\left \{ \hat{B}_{t}\right \} _{t\geq -1}$ satisfying the market clearing such that $\left \{ \left \{ c_{i,t},l_{i,t},\hat{b}%
+\left \{ \hat{B}_{t}\right \} _{t\geq -1}$ satisfying market clearing such that $\left \{ \left \{ c_{i,t},l_{i,t},\hat{b}%
 _{i,t}\right \} _{i},\hat{B}_{t},R_{t}\right \} _{t}$ and $\left \{
 \tau _{t},\hat{T}_{t}\right \} _{t}$ constitute a competitive
 equilibrium given $\left( \left \{ \hat{b}_{i,-1}\right \} _{i},\hat{B}%
@@ -371,7 +380,7 @@ Split  into two parts
 
 \begin{enumerate}
 
-\item $\mathbf{t\geq1}$:Ex-ante continuation problem with state variables $(\bm{x},\bm{\rho},s\_)$  
+\item $\mathbf{t\geq1}$: Ex-ante continuation problem with state variables $(\bm{x},\bm{\rho},s\_)$
 \[\bm{x}= \beta^{-1}\left( U_{c,t-1}^{2}\tilde{b}_{2,t-1},...,U_{c,t-1}^{I}\tilde{b}_{I,t-1}\right)\]
 \[ \bm{\rho }=\left( U_{c,t-1}^{2}/U_{c,t-1}^{1},...,U_{c,t-1}^{I}/U_{c,t-1}^{1}\right) \]
 \item $\mathbf{t=0} $: Ex-post initial problem with state variables $(\bm{\tilde{b}_{-1}},s_{0})$
@@ -380,7 +389,7 @@ Split  into two parts
 \end{frame}
 
 \begin{frame}
- \frametitle{Ramsey Problem at  $t\geq1$}
+ \frametitle{Bellman Equation for  $t\geq1$}
  \scriptsize
  \begin{equation*}
 V(\bm{x},\bm{\rho },s\_)=\max_{c_{i}(s),l_{i}(s),x^{\prime}(s),\rho^{\prime}(s)}
@@ -420,7 +429,7 @@ _{1}(s)U_{c}^{1}(s)}\text{ for all }s,i\geq 2  \label{eq:BM2_Wages_cons}
 
 
 \begin{frame}
-\frametitle{Ramsey Problem at $t=0$}
+\frametitle{Bellman equation for $t=0$}
 \scriptsize
  \begin{equation*}
 V_0\left(\{\tilde{b}_{i,-1}\}^{I}_{i=2}, s_0\right) = \max_{c_{i,0},l_{i,0},x_0,\rho_0} {\sum_{i}\pi_i\alpha_i U^i(c_{i,0},l_{i,0}) + \beta(s_0) V\left(x_0,\rho_0,s_0\right)}
@@ -472,10 +481,10 @@ attains $t\geq1$ value function given state $\left(\bm{x},\bm{\rho },s\_\right) 
 \begin{frame}
 \frametitle{Existence}
 \begin{itemize}
- \item Quasi linear: An SS exists for a wide range of parameters and shocks.
- Further, the economy reaches a steady state in one period. Output and taxes and net assets are constant thereafter.
- \item For general preferences, a SS exists if shocks are IID and take two values. The economy converges to this SS starting from all initial conditions.
- \item Outside the binary - IID case, there exists an ergodic region in which $\left( \bm{x},\bm{\rho} \right) $ is no longer constant, but  fluctuations tend to be markedly reduced relative to the transient fluctuations that occur during an approach to  a SS
+ \item Quasi-linear preferences: An SS exists for a wide range of parameters and shocks.
+ Further, the economy reaches a steady state in one period. Output, tax rates,  and net assets are constant thereafter.
+ \item For general preferences, an SS exists if shocks are IID and take two values. The economy converges to this SS starting from any initial condition.
+ \item Beyond the binary - IID case, there exists an ergodic region in which $\left( \bm{x},\bm{\rho} \right) $ is no longer constant, but  fluctuations are markedly reduced relative to the transient fluctuations that occur during an approach to  a SS
 \end{itemize}
 \end{frame}
 
@@ -491,8 +500,8 @@ attains $t\geq1$ value function given state $\left(\bm{x},\bm{\rho },s\_\right) 
 
 Two main forces determine the dynamics of the tax rate, transfers,  and assets:
 \begin{itemize}
- \item \textbf{Fluctuations in inequality} as measured by spreads in marginal utilities
-\item  \textbf{Fluctuations in the interest rates  }
+ \item \textbf{Fluctuations in inequality}  measured by spreads in marginal utilities
+\item  \textbf{Fluctuations in interest rate}
 \end{itemize}
 For quasi linear preferences both forces are absent
 
@@ -566,14 +575,15 @@ together
 \begin{frame}
  \frametitle{Remarks on SS}
  \begin{itemize}
- \item  What matters for our second force is the comovement of the interest rate with fundamentals shocks. 
+ \item  What matters for our second force is the comovement of the interest rate with fundamental shocks.
 \item For 2 agents, determing the sign of $x$ implied an particular ordering of (scaled) net assets vis-a-vis productivities
+\textcolor{red}{Anmol XXXXX: this bullet point is a mess.  I don't understand it. Let's talk about it on skype.}
  \item For more than 2 agents, we have similar outcomes. In particular
   \begin{enumerate}
    \item The inequality distortions tend to drive a negative correlation between productivities and (scaled) net assets
-   \item However, if interest are sufficiently low in recession, the government may want to hold debt. By borrowing more from agents with higher productivity it can reduce welfare costs of lowering transfer in adverse times. 
+   \item However, if interest are sufficiently low in a recession, the government may want to hold debt. By borrowing more from agents with higher productivities, the govt.\ can reduce welfare costs of lowering transfer in adverse times.
    This force can flip the correlation between productivities and net assets to be positive
-  \end{enumerate}  
+  \end{enumerate}
 \end{itemize}
 
 
@@ -616,10 +626,10 @@ Take a 2-shock 2-type economy with preferences $U(c,l)=\psi \log(c)+(1-\psi)\log
 
  \item Pick  baseline parameters to match some low frequency moments
 
- \item Calibrate outcome fluctuations to match recent US recessions (i.e., 1991-92, 2001-02 and 2008-10):
+ \item Calibrate outcome fluctuations to match three US recessions (i.e., 1991-92, 2001-02 and 2008-10):
 
  \begin{enumerate}
-  \item The left tail of the cross-section distribution of labor income falls by more than right tail
+  \item The left tail of the cross-section distribution of labor income falls more than right tail
   \item Short term interest rates fall
   \item Booms last longer than recessions
  \end{enumerate}
@@ -662,7 +672,7 @@ Initial conditions chosen to make  debt to GDP ratio be 60\%
 
 \begin{frame}
  \frametitle{Results: Some variants }
- We study the following perturbations of the Benchmark calibration 
+ We study perturbations of the Benchmark calibration
  \begin{enumerate}
 \item Acyclical interest rates: Smaller spread in discount factor shocks
 \item Countercyclical interest rates: No discount factor shocks
@@ -700,16 +710,16 @@ Initial conditions chosen to make  debt to GDP ratio be 60\%
 
  \begin{frame}
   \frametitle{Short Run}
-  To understand the short run responses,
+  To understand the short run responses
   \begin{itemize}
-   \item   We set the exogenous state $s_0$ so  that we are at the outset of a recession
-   \item Solve the time 0 problem with identical initial conditions across
+   \item   We set the exogenous state $s_0$ to put as at the onset of a recession
+   \item We solve the time 0 problem with identical initial conditions across
 different settings. This pins down the initial state vector  $x_0,\rho_0$  that appears in our time $0$ Bellman equation
-\item We then use the policy rules to compute fluctuations of
+\item We  use  optimal policies to compute fluctuations of
 different components in the government budget constraint across states
   \end{itemize}
 For each variable
-$z$ in the table we report in the form $\Delta z\equiv \left( z\left(
+$z$ in the table we report  $\Delta z\equiv \left( z\left(
 s_l|x_0,\rho_0,s_0\right) -z\left( s_h|x_0,\rho_0,s_0\right) \right) /\bar{Y}
 $ where $\bar{Y}$ is average undistorted GDP in percentages
  \end{frame}
@@ -777,14 +787,14 @@ Suppose we are in the binary-IID world where steady states are deterministic.
 
 
 \begin{itemize}
-\item The optimal policy induces two \emph{risk adjusted} martingales 
+\item The optimal policy induces two \emph{risk adjusted} martingales
 \begin{enumerate}
 \item Multiplier on the implementability constraint : $\bm{\mu}_{t}$
 \item The ratio of marginal utilities: $\bm{\rho}_{t}$
 \end{enumerate}
  \item One can represent the optimal allocation recursively in terms of $\{\bm \mu(s^{t-1}),\bm \rho(s^{t-1})\}$ and $s_t$.
 \item Why $(\bm{\mu},\bm{\rho})$ instead of $(\bm{x},\bm{\rho})$?
-\item Linearize optimal policies for each $s_t$ around the degenerate steady state.
+\item Linearize optimal policies for each $s_t$ around the constant steady state.
 \item Study the eigenvalues of the conditional mean and variance dynamics (these are deterministic linear systems)
 \end{itemize}
 
@@ -793,7 +803,7 @@ Suppose we are in the binary-IID world where steady states are deterministic.
 
 \begin{frame}
 \frametitle{Speed of convergence  (II) }
-Let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \bm \rho_t - \bm \rho^{SS}\emat\right]$. Then 
+Let $\hat{\Psi}_{t}= \left[\bmat \bm{\mu}_{t} - \bm{\mu}^{SS}\\ \bm \rho_t - \bm \rho^{SS}\emat\right]$. Then
 \begin{equation*}
  \hat{\Psi}_{t+1}=B(s_{t+1})\hat{\Psi}_t
 \end{equation*}
@@ -812,9 +822,9 @@ where $\hat{B}$ is a square matrix of dimension $(2N-2)^2$. In addition,  if the
 
 \begin{frame}
 \frametitle{Speed of convergence: Size of shocks and risk aversion}
-  
+
   \begin{figure}[htp]
-  \tiny 
+  \tiny
  \centering
  \includegraphics[width=\textwidth]{Draft25Graphs/eigenvalues.eps}
  \caption{\tiny{The top (bottom) panel plots the dominant eigenvalue of $\hat{B}$ and the associated half life as we increase

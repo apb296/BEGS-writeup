@@ -3,10 +3,10 @@
 0
 0
 1
-presentation_Sept_2013_tom_tex.tex
+BEGSDraft.tex
 29
 3
-2
+0
 
 
 
@@ -15,13 +15,13 @@ presentation_Sept_2013_tom_tex.tex
 
 BEGSDraft.tex
 TeX
-1060859 7 -1 17500 -1 17498 222 222 1879 791 0 22 324 -1 -1 0 0 47 -1 -1 47 1 0 17498 -1   0
+403714043 7 -1 17498 -1 17496 222 222 1879 791 0 22 648 -1 -1 0 0 47 -1 -1 47 1 0 17496 -1   0
 BEGS.bib
 BibTeX
 1049586 1 29 10 29 22 37 37 1694 606 0 274 459 -1 -1 0 0 23 0 0 23 1 0 22 29   0
 presentation_Sept_2013_tom_tex.tex
 TeX
-403714043 0 -1 0 -1 0 148 148 1805 717 0 22 0 -1 -1 0 0 22 -1 -1 22 1 0 0 -1   0
+1060859 0 -1 5221 -1 5232 148 148 1805 717 0 766 513 -1 -1 0 0 22 -1 -1 22 1 0 5232 -1   0
 presentation_stlouisfed.tex
 TeX
 269496315 0 -1 0 -1 0 148 148 1805 717 0 22 0 -1 -1 0 0 22 -1 -1 22 1 0 0 -1   0
@@ -101,4 +101,8 @@ C:\Users\tsargent\Dropbox\LQ_HS\Maskin_ambiguity_book_mock_2.idx
 DATA
 273678578 0 0 1 0 1 0 0 1657 569 1 90 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
 
-*presentation_Sept_2013_tom_tex.tex
+*BEGSDraft.tex
+>
+*tcilatex
+*BEGS.bib
+<
