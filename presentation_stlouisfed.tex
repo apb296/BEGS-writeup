@@ -1,20 +1,5 @@
 \documentclass{beamer}
-%\usetheme{Madrid} % My favorite!
-%\usetheme{Boadilla} % Pretty neat, soft color.	
 \usetheme{default}
-%\usetheme{Warsaw}
-%\usetheme{Bergen} % This template has navigation on the left
-%\usetheme{Frankfurt} % Similar to the default
-%with an extra region at the top.
-%\usecolortheme{seahorse} % Simple and clean template
-%\usetheme{Darmstadt} % not so good
-% Uncomment the following line if you want %
-% page numbers and using Warsaw theme%
-% \setbeamertemplate{footline}[page number]
-%\setbeamercovered{transparent}
-%\setbeamercovered{invisible}
-% To remove the navigation symbols from
-% the bottom of slides%
 \setbeamertemplate{navigation symbols}{}
 %	
 \usepackage{subfig}
@@ -183,15 +168,15 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  \end{itemize}
 
  \end{frame}
-
- \begin{frame}
- \frametitle{Does AMSS Confirm Reinhart-Rogoff Fears?}
- \begin{itemize}
- \item Higher govt.\ debts are more  distorting, but $\ldots$
- \item Because it is distortionary, asymptotically govt. doesn't issue debt
- \end{itemize}
- Things change in our environment
- \end{frame}
+% 
+%  \begin{frame}
+%  \frametitle{Does AMSS Confirm Reinhart-Rogoff Fears?}
+%  \begin{itemize}
+%  \item Higher govt.\ debts are more  distorting, but $\ldots$
+%  \item Because it is distortionary, asymptotically govt. doesn't issue debt
+%  \end{itemize}
+%  Things change in our environment
+%  \end{frame}
 
  \begin{frame}
  \frametitle{Redistribution and optimal transfers}
@@ -227,19 +212,24 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
 \end{itemize}
 \end{frame}
 \begin{frame}
- \frametitle{Key forces}
- Optimal policies balance these trade-offs
+ \frametitle{Key forces }
  \begin{itemize}
- \item Because transfers are unrestricted, the level of government debt is not distortionary.
- \item  What matters is how govt. debt is distributed across agents
- \item Higher correlations of wages and assets are more distortionary
- \item Since welfare costs depend on the distribution of assets, optimal policy is affected by and affects the distribution of net assets
-\begin{itemize}
+  \item \textbf{Heterogeneity}
+  \begin{enumerate}
+  \item Two sources of heterogeneity: Productivities and asset holdings
+   \item Unrestricted transfers $\rightarrow$ \emph{Level }of government debt is irrelevant, what matters is its \emph{distribution} across agents
+  
+  For eg., productive agents holding a lot of government debt is more distortionary
+  \end{enumerate}
+  \item \textbf{Responses}
+
+  Since welfare costs depend on the distribution of assets, optimal policy is affected by and affects the distribution of net assets
+\begin{enumerate}
 \item \textbf{Absence of agent specific transfers}: This prompts the govt. to engineer  a negative correlation between net assets and labor earnings
 \item \textbf{Absence of state contingent securities}: This prompts the govt. to exploit endogenous fluctuations in the interest rate
-\end{itemize}
 
- \end{itemize}
+ \end{enumerate}
+\end{itemize}
 
 \end{frame}
 
@@ -258,46 +248,74 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
 % \end{frame}
 
 
-
-
-\begin{frame}
- \frametitle{Ricardian Equivalence}
- \begin{itemize}
-  \item \emph{Result}: A \textbf{large set} of transfers and asset profiles support the same competitive allocation
-  \item \emph{Logic}: Taking away a unit of all agents' assets and increasing transfers by a unit leaves budget sets unchanged
- \end{itemize}
-\begin{theorem}
-
-Given $\left( \left \{ b_{i,-1}\right \}
-_{i},B_{-1}\right) $, let $\left \{ \left \{ c_{i,t},l_{i,t},b_{i,t}\right \} _{i},B_{t},R_{t}\right \} _{t} $ and $\left \{ \tau _{t},T_{t}\right
-\} _{t}$ be a competitive equilibrium. For any bounded sequences $%
-\left \{ \hat{b}_{i,t}\right \} _{i,t\geq -1}$ that satisfy
-\begin{equation*}
-\hat{b}_{i,t}-\hat{b}_{1,t}=\tilde{b}_{i,t}\equiv b_{i,t}	-b_{1,t}\text{ for all }t\geq -1,i\geq 2,
-\end{equation*}%
-there exist  sequences $\left \{ \hat{T}_{t}\right \} _{t}$ and $%
-\left \{ \hat{B}_{t}\right \} _{t\geq -1}$ satisfying market clearing such that $\left \{ \left \{ c_{i,t},l_{i,t},\hat{b}%
-_{i,t}\right \} _{i},\hat{B}_{t},R_{t}\right \} _{t}$ and $\left \{
-\tau _{t},\hat{T}_{t}\right \} _{t}$ constitute a competitive
-equilibrium given $\left( \left \{ \hat{b}_{i,-1}\right \} _{i},\hat{B}%
-_{-1}\right) $.
-\end{theorem}
-
-
+ 
+ \begin{frame}
+  \frametitle{Ricardian Equivalence}
+  \begin{itemize}
+   \item \emph{Result}: A \textbf{large set} of transfers and asset profiles support the same competitive allocation
+   \item \emph{Logic}: Taking away a unit of all agents' assets and increasing transfers by a unit leaves budget sets unchanged
+  \end{itemize}
+  \textbf{Notation}: $\tilde{b}_{i,t}=b_{i,t}-b_{i,t}$ be the \textbf{relative assets} of Agent $i$
+ \begin{theorem}
+ Given $\left( \left \{ b_{i,-1}\right \} _{i},B_{-1}\right) $,let $\left \{ \left \{ \color{red}{c}_{i,t},l_{i,t},\color{black}b_{i,t}\right \} _{i},B_{t},\color{red}{R}_{t}\color{black}\right \} _{t} $ and $\left \{ \color{red}\tau _{t}\color{black},T_{t}\right\} _{t}$ be a competitive equilibrium. 
+ 
+ For any bounded sequences $\left \{ \hat{b}_{i,t}\right \} _{i,t\geq -1}$ that satisfy
+ \begin{equation*}
+ \hat{b}_{i,t}-\hat{b}_{1,t}=\tilde{b}_{i,t}\text{ for all }t\geq -1,i\geq 2,
+ \end{equation*}%
+ there exist  sequences $\left \{ \hat{T}_{t}\right \} _{t}$ and $%
+ \left \{ \hat{B}_{t}\right \} _{t\geq -1}$ such that $\left \{ \left \{ \color{red}{c}_{i,t},l_{i,t}\color{black},\hat{b}%
+ _{i,t}\right \} _{i},\hat{B}_{t},\color{red}{R}_{t}\color{black}\right \} _{t}$ and $\left \{
+ \color{red}{\tau}_{t}\color{black},\hat{T}_{t}\right \} _{t}$ constitute a competitive
+ equilibrium given $\left( \left \{ \hat{b}_{i,-1}\right \} _{i},\hat{B}%
+ _{-1}\right) $.
+ \end{theorem}
 \end{frame}
+
+
+
+% 
+% \begin{frame}
+%  \frametitle{Ricardian Equivalence}
+%  \begin{itemize}
+%   \item \emph{Result}: A \textbf{large set} of transfers and asset profiles support the same competitive allocation
+%   \item \emph{Logic}: Taking away a unit of all agents' assets and increasing transfers by a unit leaves budget sets unchanged
+%  \end{itemize}
+% \begin{theorem}
+% 
+% Given $\left( \left \{ b_{i,-1}\right \}
+% _{i},B_{-1}\right) $, let $\left \{ \left \{ c_{i,t},l_{i,t},b_{i,t}\right \} _{i},B_{t},R_{t}\right \} _{t} $ and $\left \{ \tau _{t},T_{t}\right
+% \} _{t}$ be a competitive equilibrium. For any bounded sequences $%
+% \left \{ \hat{b}_{i,t}\right \} _{i,t\geq -1}$ that satisfy
+% \begin{equation*}
+% \hat{b}_{i,t}-\hat{b}_{1,t}=\tilde{b}_{i,t}\equiv b_{i,t}	-b_{1,t}\text{ for all }t\geq -1,i\geq 2,
+% \end{equation*}%
+% there exist  sequences $\left \{ \hat{T}_{t}\right \} _{t}$ and $%
+% \left \{ \hat{B}_{t}\right \} _{t\geq -1}$ satisfying market clearing such that $\left \{ \left \{ c_{i,t},l_{i,t},\hat{b}%
+% _{i,t}\right \} _{i},\hat{B}_{t},R_{t}\right \} _{t}$ and $\left \{
+% \tau _{t},\hat{T}_{t}\right \} _{t}$ constitute a competitive
+% equilibrium given $\left( \left \{ \hat{b}_{i,-1}\right \} _{i},\hat{B}%
+% _{-1}\right) $.
+% \end{theorem}
+% 
+% 
+% \end{frame}
 
 \begin{frame}
  \frametitle{Ricardian Equivalence: Implications}
  \begin{itemize}
- \item No precautionary motive: WLOG  we can normalize government assets $B_t$ to zero
-  \item Exogenous borrowing constraints are not restrictive
+ \item Applies to all competitive allocations, not just the optimal one
+ \item Ceteris paribus, an economy with higher level of initial government debt  but same relative holdings has the same welfare
+ \item Exogenous borrowing constraints of the form $b_{it}>\underline{b}_i$are not restrictive
+
+ \emph{Logic}: If some borrowing constraints bind, the planner can reduce transfers sufficiently to  slacken   \emph{all}  of them
 \begin{theorem}
  For every  competitive
 equilibrium   in an economy without
 exogenous borrowing constraints there is a government tax policy such the same allocation and interest rate sequence is  part of a competitive equilibrium
 in an economy with exogenous borrowing constraints of the form $b_{i,t}>\underbar{b}_i$
 \end{theorem}
-  \end{itemize}
+\end{itemize}
 
   \color{red}\emph{Thus, Ricardian equivalence holds with distortionary taxes and ad hoc borrowing limits}
 
@@ -306,28 +324,28 @@ in an economy with exogenous borrowing constraints of the form $b_{i,t}>\underba
 
 \begin{frame}
  \frametitle{Optimal allocations: Primal approach}
-Focus on  interior equilibria. Take first-order necessary conditions for the  consumer's problem
- are%
-
+Focus on  interior equilibria.
  \begin{enumerate}
   \item Eliminate tax rate $\tau_t$:
-
+\small
 \begin{equation*}
 \left( 1-\tau _{t}\right) \theta _{i,t}U_{c,t}^{i}=-U_{l,t}^{i},
 \end{equation*}%
+\normalsize
 \item Eliminate risk free interest rate $R_t$:
+\small
 \begin{equation*}
 U_{c,t}^{i}=\beta_tR_{t}\mathbb{E}_{t}U_{c,t+1}^{i}.  \label{FOC Euler}
 \end{equation*}%
-\item Eliminate transfers $T_t$:
+\normalsize
+\item Eliminate transfers $T_t$: 
 {\small
 \begin{equation*}
 \left( c_{i,t}-c_{1,t}\right) +\tilde{b}_{i,t} =-\frac{U_{l,t}^{i}}{U_{c,t}^{i}}l_{i,t}+\frac{U^1_{l,t}}{U^1_{c,t}}l_{1,t} +\frac{U_{c,t-1}^{i}}{\beta_{t-1} \mathbb{E}%
 _{t-1}U_{c,t}^{i}}\tilde{b}_{i,t-1}\ \forall i\geq2,t.  \notag
 \end{equation*} }
-This yields ``implementability constraints''%
+This yields ``\textbf{implementability constraints}''%
  \end{enumerate}
-\textbf{Notation}: $\tilde{b}_{i,t}=b_{i,t}-b_{1,t}$, called  the ``net assets'' of agent $i$
 \end{frame}
 
 
@@ -341,26 +359,24 @@ This yields ``implementability constraints''%
 subject to
  %, by iterating on equation \eqref{affine implementability b} we get
  \begin{subequations}
-
+\begin{equation*}%\label{eqn:feasiblity}
+\sum_{i=1}^{I}\pi_{i}c_{i}(s^t)+g\left( s_{t}\right) =\sum_{i=1}^{I}\pi
+_{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t)  \label{feasibility goods sequential}\quad\text{(Feas)}
+\end{equation*}
+\begin{equation*}
+ \frac{U_{l,t}^{i}}{\theta _{i,t}U_{c,t}^{i}}=\frac{U_{l,t}^{1}}{\theta_{1,t}U_{c,t}^{1}}\quad\text{(Wages)}
+\end{equation*}
+\begin{equation*}
+ \frac{\mathbb{E}_{t-1}U^i_{c,t}}{\mathbb{E}_{t-1}U^j_{c,t}}=\frac{U^i_{c,t-1} }{U^j_{c,t-1}} \quad \text{(Bond)}
+\end{equation*}
  \begin{equation*}
  \label{eq imp sum t=1}
-  \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_{k} \quad \forall t \geq 1
+  \tilde{b}_{i,t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_{k} \quad \text{(Meas: $t\geq1$)}
  \end{equation*}
  \begin{equation*}
  \label{eq imp sum t=0}
-  \tilde{b}_{-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=0}\left[\prod^{k-1}_{j=0}\beta_{j}\right]Z^i_{k}
+  \tilde{b}_{i,-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=0}\left[\prod^{k-1}_{j=0}\beta_{j}\right]Z^i_{k} \quad \text{(Meas: $t=0$ )}
  \end{equation*}
-\begin{equation*}
- \frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t-1}}=\frac{\mathbb{E}_{t-1}U^j_{c,t}}{U^j_{c,t-1}}
-\end{equation*}
-\begin{equation*}%\label{eqn:feasiblity}
-\sum_{i=1}^{I}\pi_{i}c_{i}(s^t)+g\left( s_{t}\right) =\sum_{i=1}^{I}\pi
-_{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t),  \label{feasibility goods sequential}
-\end{equation*}
-\begin{equation*}
- \frac{U_{l,t}^{i}}{\theta _{i,t}U_{c,t}^{i}}=\frac{U_{l,t}^{1}}{\theta
-_{1,t}U_{c,t}^{1}}
-\end{equation*}
 \begin{equation*}
 \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} } \text{ is bounded}
  \end{equation*}
@@ -402,12 +418,12 @@ where the maximization is subject to
 \begin{subequations}
 \begin{equation*}
 U_{c}^{i}(s)\left[c_{i}(s)-c_{1}(s)\right] +U_{c}^{i}(s) \left( \frac{{U_{l}^{i}(s)}}{U^i_c(s)}%
-l_{i}(s)-\frac{U_{l}^{1}(s)}{U_{c}^{1}(s)}l_{1}(s)\right)+\beta(s) x_{i}^{\prime }(s)=\frac{xU_{c}^{i}(s)}{%
+l_{i}(s)-\frac{U_{l}^{1}(s)}{U_{c}^{1}(s)}l_{1}(s)\right)+\beta(s) x_{i}^{\prime }(s)=\frac{\color{red}x_i\color{black}U_{c}^{i}(s)}{%
  \mathbb{E}_{s\_}\bm{U}_{c}^{i}}\text{ for all }s,i\geq 2  \label{eq:BM2_Imp_cons}
 \end{equation*}%
 \begin{equation*}
 \frac{\mathbb{E}_{s\_}\bm{U}_{c}^{i}}{\mathbb{E}_{s\_}\bm{U}_{c}^{1}}%
-=\rho _{i}  \text{ for all }i\geq 2 \label{eq:BM2_Bonds_cons}
+= \color{red}\rho_i\color{black}\text{ for all }i\geq 2 \label{eq:BM2_Bonds_cons}
 \end{equation*}%
 \begin{equation*}
 \frac{U_{l}^{i}(s)}{\theta _{i}(s)U_{c}^{i}(s)}=\frac{U_{l}^{1}(s)}{\theta
@@ -481,22 +497,29 @@ attains $t\geq1$ value function given state $\left(\bm{x},\bm{\rho },s\_\right) 
 \begin{frame}
 \frametitle{Existence}
 \begin{itemize}
- \item Quasi-linear preferences: An SS exists for a wide range of parameters and shocks.
- Further, the economy reaches a steady state in one period. Output, tax rates,  and net assets are constant thereafter.
- \item For general preferences, an SS exists if shocks are IID and take two values. The economy converges to this SS starting from any initial condition.
- \item Beyond the binary - IID case, there exists an ergodic region in which $\left( \bm{x},\bm{\rho} \right) $ is no longer constant, but  fluctuations are markedly reduced relative to the transient fluctuations that occur during an approach to  a SS
-\end{itemize}
+ \item \textbf{Quasi-linear preferences:} 
+ \begin{enumerate}
+                                           \item SS exists for a wide range of parameters and shocks
+                                           \item The economy reaches a steady state in one period
+                                           \item Output, tax rates are constant thereafter and levels are independent of intial conditions 
+
+\end{enumerate}
+\emph{Dynamics of taxes are starkly different than AMSS}
+
+ \item \textbf{General preferences:}
+ \begin{enumerate}
+ \item \emph{IID shocks with two values:} SS exists and continuation allocation is independent of initial conditions
+ \item \emph{More general shocks:} There exists an ergodic region in which $\left( \bm{x},\bm{\rho} \right) $ is no longer constant, but  fluctuations are markedly reduced relative to the transient fluctuations that occur during an approach to  a SS
+ \end{enumerate}
+ \end{itemize}
+ 
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Intuition:  A two agent example}
 
-\begin{itemize}
- \item Consider I=2 with $\theta_1(s)>\theta_2=0$.
- \item The state variable $x$ is marginal utility scaled relative assets of an unproductive agent: $U^2_c(s)[b_{2}(s)-b_{1}(s)]$.
- \item One can normalize $b_{1}(s)=0$ so that $x$  can be interpreted as scaled assets held by the government
- \end{itemize}
+Consider I=2 with $\theta_1(s)>\theta_2=0$.
 
 Two main forces determine the dynamics of the tax rate, transfers,  and assets:
 \begin{itemize}
@@ -506,71 +529,125 @@ Two main forces determine the dynamics of the tax rate, transfers,  and assets:
 For quasi linear preferences both forces are absent
 
 \end{frame}
+
+\begin{frame}
+ \frametitle{3 Cases: Interest rates and relative assets}
+ \begin{itemize}
+
+ \item \textbf{Normalization:} By the Ricardian equivalence
+ \begin{enumerate}
+  \item Normalize $b_{2}(s)=0$
+  \item Government assets:  $B(s)=-b_{1}(s)$
+ \end{enumerate}
+ \item \textbf{Interpreting $x$:} The state variable $x=U^2_c\tilde{b}_2=U^2_c[b_2-b_1]$ 
+ \begin{enumerate}
+ \item Marginal utility scaled \textbf{debt} of the productive agent
+ \item Marginal utility scaled \textbf{assets} held by the government
+ \end{enumerate}
+  \item \textbf{Results: }
+\begin{tabular}{ l l c c }
+ \emph{Interest rates} & \emph{Discount factors} &  $x=U^2_c[b_2-b_1]$\\
+Countercyclical &$\beta(s_l)=\beta(s_h)$& $x>0$\\
+Acyclical &$\beta(s_l)>\beta(s_h)$& $x>0$\\
+Procyclical &$\beta(s_l)>>\beta(s_h)$& $x<0$\\
+  \end{tabular}
+  \end{itemize}
+  
+\end{frame}
+
+
+
+
 \begin{frame}
 \frametitle{ Inequality distortions}
-
-%\textcolor{blue}{Anmol XXXXX: may we please discuss this slide? It needs some clarification.}
-Start with a spread in discount factors set to equalize interest rates  across states,  i.e., $R(s_l)=R(s_h)$. Then SS  $x>0$
+Consider with case with acyclical interest rates
 
 \vspace{2mm}
 \MyArrow{} TFP ($\theta_1$): Adjust tax rate $\tau$ or transfers $T$, both are costly
 
 \vspace{2mm}
-Suppose $x=0$ or $b_{2}(s)=b_{1}(s)$,
+Suppose $x=0$ (or $b_{2}(s)=b_{1}(s)$)
+\begin{enumerate}
+ \item Present value of earnings of productive agent are higher
+ \item A reduction in transfers hurts the low productivity agent more
+\end{enumerate}
 
-\MyArrow{} Then reductions in transfers hurt the low productivity agent more
+Then 
 
-\vspace{2mm}
+ \MyArrowUp{} $x$ is same as increasing the \textbf{debt} of the productive agent
 
- \emph{A fall in transfers that increases inequality gives rise to a cost  not present in  representative agent economies. This gives the planner an incentive to reduce the costs of  inequality distortions by $\ldots$ }
-
- \MyArrowUp{} $x$
-
-\color{red} Reducing the relative asset holdings of the productive agent eventually drives the after-tax, after-interest incomes of both agents  closer
+\color{red} This drives the after-tax, after-interest incomes of both agents  closer
 together
-%
-%
-% \begin{itemize}
-%  \item The government can adjust two instruments in response  to an adverse  shock (i.e., a fall in $\theta_1$): it can either increase the  tax rate $\tau $ or it can decrease transfers $T.$ Both responses are distortionary
-%  \item When agents' asset holdings are identical, a decrease in transfers  disproportionately
-% affects a low-skilled agent, so his marginal utility falls by more than does the marginal utility of a high-skilled agent.
-% \item
-% \item
-% \item this makes the two agents' after-tax and after-interest income  become closer, allowing decreases in transfers to have smaller effects on inequality in
-% marginal utilities.
-%  \end{itemize}
+
+
 
 \end{frame}
+
+
+
+% \begin{frame}
+% \frametitle{ Inequality distortions}
+% 
+% %\textcolor{blue}{Anmol XXXXX: may we please discuss this slide? It needs some clarification.}
+% Start with a spread in discount factors set to equalize interest rates  across states,  i.e., $R(s_l)=R(s_h)$. Then SS  $x>0$
+% 
+% \vspace{2mm}
+% \MyArrow{} TFP ($\theta_1$): Adjust tax rate $\tau$ or transfers $T$, both are costly
+% 
+% \vspace{2mm}
+% Suppose $x=0$ or $b_{2}(s)=b_{1}(s)$,
+% 
+% \MyArrow{} Then reductions in transfers hurt the low productivity agent more
+% 
+% \vspace{2mm}
+% 
+%  \emph{A fall in transfers that increases inequality gives rise to a cost  not present in  representative agent economies. This gives the planner an incentive to reduce the costs of  inequality distortions by $\ldots$ }
+% 
+%  \MyArrowUp{} $x$
+% 
+% \color{red} Reducing the relative asset holdings of the productive agent eventually drives the after-tax, after-interest incomes of both agents  closer
+% together
+%
+%
+
+%\end{frame}
 
 \begin{frame}
 \frametitle{Interest rate fluctuations}
-\begin{enumerate}
- \item Suppose discount factors are constant (this would imply countercyclical interest rates for TFP shocks). We still have $x>0$. Consider again
- \begin{itemize}
-  \item \MyArrow{} TFP
+\begin{itemize}
 
-  If the  tax rate  $\tau $ is left unchanged, the government faces a shortfall of revenues. The optimal policy recommends
+ \item \textbf{Countercyclical interest rates: }
+ 
+ \MyArrow{} TFP
+  If the  tax rate  $\tau $ is left unchanged, the government faces a shortfall of revenues. Now,
 
- \vspace{3mm}
- \MyArrowUp{} $x$. This achieves that same thing as having the government accumulate assets\footnote{Normalizing $b_2(s)=0$ implies $B(s)=-b_{1}(s)=\tilde{b}_2(s)$}
-  \item The govt. can use higher interest income to offset some revenue losses from its tax on labor
+ \begin{enumerate}
+ \item Reminder: $x$ is marginal utility scaled \textbf{assets} of the government 
+\item The govt. can use higher interest income to offset some revenue losses from its tax on labor in recessions
   \item This force is present in representative agent economies with endogenous fluctuations in interest rates
- \end{itemize}
- \item If discount factor spreads are large enough to generate pro-cyclical interest rates, it can emerge that SS $x<0$
- \end{enumerate}
-
-
-\end{frame}
-\begin{frame}
- \frametitle{Comparative statics with Pareto weights}
-   \begin{figure}[htp]
- \centering
- \includegraphics[width=\textwidth]{Draft25Graphs/SS_alpha1.eps}
- \caption{Steady state govt. assets: $\tilde{b}_2(s)=\frac{\beta  x^{SS}}{U^2_c(s)}$ and taxes: $\tau^{SS}$ as a function of a (high skilled) agent 1's Pareto weight}
- \label{fig: SS comparative}
- \end{figure}
+\end{enumerate}
+ 
+ \vspace{2mm}
+ \MyArrowUp{} $x$. 
+ 
+ \item \textbf{Pro-cyclical interest rates:} If the interest rate is sufficiently low in a recession, the government may want to hold debt to free resources by lower interest payments. 
+ 
+ \MyArrow{} $x$
+  \end{itemize}
+ 
+ 
 
 \end{frame}
+% \begin{frame}
+%  \frametitle{Comparative statics with Pareto weights}
+%    \begin{figure}[htp]
+%  \centering
+%  \includegraphics[width=\textwidth]{Draft25Graphs/SS_alpha1.eps}
+%  \caption{Steady state govt. assets: $\tilde{b}_2(s)=\frac{\beta  x^{SS}}{U^2_c(s)}$ and taxes: $\tau^{SS}$ as a function of a (high skilled) agent 1's Pareto weight}
+%  \label{fig: SS comparative}
+%  \end{figure}
+% 
+% \end{frame}
 
 \begin{frame}
  \frametitle{Remarks on SS}
