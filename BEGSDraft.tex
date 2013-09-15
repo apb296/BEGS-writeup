@@ -145,7 +145,7 @@
 
 \author{\textbf{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}%
 }
-\title{\textbf{Taxation, debt, and redistribution%
+\title{\textbf{Taxes, debts,  and redistributions with aggregate shocks%
 \thanks{%
 We thank Mark Aguiar, Stefania Albanesi, Manuel Amador,  Andrew Atkeson, Marco Bassetto, V.V. Chari, Harold
 L. Cole, Guy Laroque, Francesco Lippi, Robert E. Lucas, Jr., Ali Shourideh, Pierre Yared and seminar
@@ -1157,11 +1157,11 @@ subject to
 
  \begin{equation}
  \label{eq imp sum t=1}
-  \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_{k} \quad \forall t \geq 1
+  \tilde{b}_{i,t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} }=\left(\frac{\mathbb{E}_{t-1}U^i_{c,t}}{U^i_{c,t}}\right)\mathbb{E}_t\sum^{\infty}_{k=t}\left[\prod^{k-1}_{j=t}\beta_{j}\right]Z^i_{k} \quad \forall t \geq 1
  \end{equation}
  \begin{equation}
  \label{eq imp sum t=0}
-  \tilde{b}_{-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=0}\left[\prod^{k-1}_{j=0}\beta_{j}\right]Z^i_{k}
+  \tilde{b}_{i,-1}=\mathbb{E}_{-1}\sum^{\infty}_{k=0}\left[\prod^{k-1}_{j=0}\beta_{j}\right]Z^i_{k}
  \end{equation}
 \begin{equation}
  \frac{\mathbb{E}_tU^i_{c,t+1}}{U^i_{c,t}}=\frac{\mathbb{E}_tU^j_{c,t+1}}{U^j_{c,t}}
@@ -1472,8 +1472,10 @@ relative strengths of the two forces.
  \label{fig: SS comparative}
  \end{figure}
 \subsubsection{Correlation of net assets and productivities}
-For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility adjusted net assets that we denoted  $x$. This implies a particular ordering of net assets across the agents in the steady state. These implications generalize to settings with $I\geq3$. In general, one can verify that without discount factor shocks (as in  part 1 of proposition \ref{prop: long run forces} when interest rates are countercyclical), steady state net asset  levels (scaled by marginal utilities) are ordered inversely to productivities. By making  net asset positions be negatively correlated with labor earnings, the planner can minimize the costs of fluctuating transfers. Further for similar reasons as in the $I=2$ case,  with exogenous variations in discount factors large enough to make interest rates be procyclical,  the planner makes net asset positions be positively correlated with productivities.
-\textcolor{red}{Anmol and David XXXXXX: I edited this paragraph. I fear I either damaged or didn't understand the last sentence.}
+For $I=2$, proposition \ref{prop: long run forces}  signs the marginal utility adjusted net assets that we denoted  $x$. This implies a particular ordering of net assets across the agents in the steady state. These implications generalize to settings with $I\geq3$. In general, one can verify that without discount factor shocks (as in  part 1 of proposition \ref{prop: long run forces} when interest rates are countercyclical), steady state net asset  levels (scaled by marginal utilities) are ordered inversely to productivities. By making  net asset positions be negatively correlated with labor earnings, the planner can minimize the costs of fluctuating transfers. Further for similar reasons as in the $I=2$ case,  with exogenous variations in discount factors large enough to make interest rates be procyclical,  the planner makes net asset positions be positively correlated with productivities. In a recession the government faces a short fall of tax revenues that it can make up from revenues of its assets. If 
+interest rates are sufficiently lower, issuing debt implies a lower interest liability and frees up some resources to make up the low tax revenues. Furthermore, by borrowing a larger amount from the more productive agents the government can reduce the welfare costs from lowering transfers in adverse times. This implies a positive correlation between assets and productivities.
+
+%\textcolor{red}{Anmol and David XXXXXX: I edited this paragraph. I fear I either damaged or didn't understand the last sentence.}
 
 \subsection{Stability}
 In this section, we return to the general section \ref{Sec: environment} formulation of the Ramsey problem  to study convergence to a steady state. We begin by describing a test for local convergence cast in terms of a linear approximation of optimal policies at a steady state. We apply this test to show local stability of a steady state for a wide range of parameters. From these examples it emerges that slow convergence to the steady state occurs for  commonly calibrated parameter values.
@@ -2139,7 +2141,7 @@ higher welfare in the economy with ad-hoc borrowing limits. We restrict ourselve
 	\frac{U_{ci,t}}{U_{ci,t+1}} \geq \beta R_t\label{eq.A_euler}\\
 	b_{i,t}\geq \underline b_i
 \end{align}
-\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  We obtain equation \eqref{eq.A_imp} by eliminating transfers from the budget equations of the households and using the optimality for labor supply decision. Equations \eqref{eq.A_slack} and \eqref{eq.A_euler} capture the inter-temporal optimality conditions modified for possbily binding constraints. 
+\end{subequations}  Where $\underline b_i$ is the exogenous borrowing constraint for agent i.  We obtain equation \eqref{eq.A_imp} by eliminating transfers from the budget equations of the households and using the optimality for labor supply decision. Equations \eqref{eq.A_slack} and \eqref{eq.A_euler} capture the inter-temporal optimality conditions modified for possbily binding constraints.
 
 Let $c^{fb}_i$ and $l^{fb}_i$ be the allocation that solves the first best problem, that is maximizing equation \eqref{eq.A_obj} subject to \eqref{eq.A_feas}, and define
 \begin{equation}
