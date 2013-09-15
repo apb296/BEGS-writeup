@@ -306,7 +306,7 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  \begin{itemize}
  \item Applies to all competitive allocations, not just the optimal one
  \item Ceteris paribus, an economy with higher level of initial government debt  but same relative holdings has the same welfare
- \item Exogenous borrowing constraints of the form $b_{it}>\underline{b}_i$are not restrictive
+ \item Exogenous borrowing constraints of the form $b_{it}>\underline{b}_i$ are not restrictive
 
  \emph{Logic}: If some borrowing constraints bind, the planner can reduce transfers sufficiently to  slacken   \emph{all}  of them
 \begin{theorem}
@@ -501,7 +501,7 @@ attains $t\geq1$ value function given state $\left(\bm{x},\bm{\rho },s\_\right) 
  \begin{enumerate}
                                            \item SS exists for a wide range of parameters and shocks
                                            \item The economy reaches a steady state in one period
-                                           \item Output, tax rates are constant thereafter and levels are independent of intial conditions 
+                                           \item Output, tax rates are constant thereafter and levels are independent of initial conditions 
 
 \end{enumerate}
 \emph{Dynamics of taxes are starkly different than AMSS}
@@ -539,12 +539,13 @@ For quasi linear preferences both forces are absent
   \item Normalize $b_{2}(s)=0$
   \item Government assets:  $B(s)=-b_{1}(s)$
  \end{enumerate}
- \item \textbf{Interpreting $x$:} The state variable $x=U^2_c\tilde{b}_2=U^2_c[b_2-b_1]$ 
+ \item \textbf{Interpretation:} The state variable $x=U^2_c\tilde{b}_2=U^2_c[b_2-b_1]$. Under the normalization, we can interpret $x$ as 
  \begin{enumerate}
  \item Marginal utility scaled \textbf{debt} of the productive agent
  \item Marginal utility scaled \textbf{assets} held by the government
  \end{enumerate}
   \item \textbf{Results: }
+  
 \begin{tabular}{ l l c c }
  \emph{Interest rates} & \emph{Discount factors} &  $x=U^2_c[b_2-b_1]$\\
 Countercyclical &$\beta(s_l)=\beta(s_h)$& $x>0$\\
@@ -563,7 +564,7 @@ Procyclical &$\beta(s_l)>>\beta(s_h)$& $x<0$\\
 Consider with case with acyclical interest rates
 
 \vspace{2mm}
-\MyArrow{} TFP ($\theta_1$): Adjust tax rate $\tau$ or transfers $T$, both are costly
+\MyArrow{} TFP: Adjust tax rate $\tau$ or transfers $T$, both are costly
 
 \vspace{2mm}
 Suppose $x=0$ (or $b_{2}(s)=b_{1}(s)$)
@@ -618,17 +619,15 @@ together
 
  \item \textbf{Countercyclical interest rates: }
  
- \MyArrow{} TFP
-  If the  tax rate  $\tau $ is left unchanged, the government faces a shortfall of revenues. Now,
+ \MyArrow{} TFP: If the  tax rate  $\tau $ is left unchanged, the government faces a shortfall of revenues.
 
  \begin{enumerate}
  \item Reminder: $x$ is marginal utility scaled \textbf{assets} of the government 
-\item The govt. can use higher interest income to offset some revenue losses from its tax on labor in recessions
+\item By holding positive assets the govt. can use higher interest income to offset some revenue losses from its tax on labor in recessions
   \item This force is present in representative agent economies with endogenous fluctuations in interest rates
 \end{enumerate}
  
- \vspace{2mm}
- \MyArrowUp{} $x$. 
+ \MyArrowUp{} $x$
  
  \item \textbf{Pro-cyclical interest rates:} If the interest rate is sufficiently low in a recession, the government may want to hold debt to free resources by lower interest payments. 
  
@@ -652,14 +651,21 @@ together
 \begin{frame}
  \frametitle{Remarks on SS}
  \begin{itemize}
- \item  What matters for our second force is the comovement of the interest rate with fundamental shocks.
-\item For 2 agents, $x=U^2_c[b_{2}-b_{1}]$, so  the sign of $x$ equals the sign of the difference between the financial wealths of agents with
- different productivity levels. 
+ \item Stability: 
+ \begin{enumerate}
+  \item \textbf{Countercyclical interest rates:} Both forces push in the same direction $rightarrow$ steady state is stable
+  \item \textbf{Procyclical interest rates:} Both forces push in opposite direction $rightarrow$ steady state is unstable
+ \end{enumerate}
  \item For more than 2 agents, we have similar mechanics. In particular
   \begin{enumerate}
    \item Inequality distortions call for a negative correlation between productivities and (scaled) net assets
-   \item However, if the interest rate is sufficiently low in a recession, the government may want to hold debt. By borrowing more from agents with higher productivities, the govt.\ can the reduce welfare costs of lowering transfer in adverse times.
-   This force can flip the sign of the correlation between productivities and net assets to be positive
+   \item Procyclical interest rates may flip the sign of the correlation between productivities and net assets to be positive.
+   
+   \begin{itemize}
+   \item Low interest rates in recession prompts the government to hold debt
+   \item By borrowing more from agents with higher productivities, the govt.\ can the reduce welfare costs of lowering transfer in adverse times
+   \end{itemize}
+   
   \end{enumerate}
 \end{itemize}
 
@@ -765,8 +771,8 @@ Initial conditions chosen to make  debt to GDP ratio be 60\%
 
   \begin{figure}[htp]
  \centering
- \includegraphics[width=\textwidth]{Draft25Graphs/LongSimulations.eps}
- \caption{Govt. debt for several economies: benchmark (o), acyclical interest rates (+), countercyclical interest rates ($\diamond$) and no inequality shocks \scriptsize ($\square$\normalsize) }
+ \includegraphics[width=\textwidth]{Draft25Graphs/LongSimulationsColor.eps}
+ \caption{Govt. debt for several economies: benchmark (o), acyclical interest rates (\color{blue}+\color{black}), countercyclical interest rates (\color{red}$\diamond$\color{black}) and no inequality shocks \scriptsize (\color{green}$\square$\color{green}\normalsize) }
  %\caption{ Debt benchmark $\circle$, acyclical interest rates + , countercyclical interest rates $\diamond$ }% and no inequality shocks {\scriptsize $\square$ \normalsize}}
  \label{fig:LongSimulations}
  \end{figure}
