@@ -1,2 +1,2 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.20pt}
 \beamer@sectionintoc {1}{More}{34}{1}{1}
