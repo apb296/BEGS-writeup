@@ -145,7 +145,7 @@
 \renewcommand{\thefigure}{\Roman{figure}}
 \begin{document}
 
-\author{\textbf{Anmol Bhandari}\\apb216@nyu.edu \and \textbf{David Evans} \\ \texttt{dgevans@nyu.edu} \and \textbf{Mikhail Golosov}\\\texttt{golosov@princeton.edu} \and \textbf{Thomas J. Sargent} \\ \texttt{thomas.sargent@nyu.edu}
+\author{\textbf{Anmol Bhandari}\\apb296@nyu.edu \and \textbf{David Evans} \\ \texttt{dgevans@nyu.edu} \and \textbf{Mikhail Golosov}\\\texttt{golosov@princeton.edu} \and \textbf{Thomas J. Sargent} \\ \texttt{thomas.sargent@nyu.edu}
 }
 \title{\textbf{Taxes, debts,  and redistributions with aggregate shocks%
 \thanks{%
@@ -901,7 +901,7 @@ l_{i}$ as a function of $\left( 1-\tau \right) .$ Call this function $%
 H_{i}\left( 1-\tau \right) $. Use the budget
 constraint (\ref{agent bc affine}) to obtain
 \begin{equation}
-c_{i,t}+b_{i,t}-\left( 1-\tau _{t}\right) H_{i}\left( 1-\tau _{t}\right)
+c_{i,t}+b_{i,t}-\left( 1-\tau _{t}\right) H_{i}\left( 1-\tau _{t}\right)\theta_i
 =T_{t}+\beta ^{-1}b_{i,t-1}.  \label{affine imp quasi}
 \end{equation}%
 The optimal allocation solves
@@ -929,7 +929,7 @@ expression  to get
 \begin{equation}
 \max_{\left\{ b_{i,t},\tau _{t},T_{t}\right\} _{i,t}}\mathbb{E}%
 _{0}\sum_{t=0}^{\infty }\sum_{i=1}^{I}\alpha _{i}\pi _{i}\beta ^{t}\left[
-T_{t}+\left( 1-\tau _{t}\right) H_{i}\left( 1-\tau _{t}\right) -h_{i}\left(
+T_{t}+\left( 1-\tau _{t}\right) H_{i}\left( 1-\tau _{t}\right)\theta_i -h_{i}\left(
 H_{i}\left( 1-\tau_t \right) \right) \right] +\beta
 ^{-1}\sum_{i=1}^{I}b_{i,-1}.  \label{quasilinear max}
 \end{equation}%
@@ -1281,7 +1281,7 @@ We  begin by noting that a competitive equilibrium fixes an allocation $\{c_i(s)
 \[U(\tau,\bm{\rho},s)=\sum_{i}\alpha_i U^i(s).\]
 
 As before define $Z_i(\tau,\rho,s)$ as
-\[Z_i(\tau,\bm \rho,s)=U^i_c(s)c_i(s)-U^i_l(s)l_i(s)-\rho_i(s)\left[U^1_c(s)c_1(s)-U^1_l(s)l_1(s)\right].\]
+\[Z_i(\tau,\bm \rho,s)=U^i_c(s)c_i(s)+U^i_l(s)l_i(s)-\rho_i(s)\left[U^1_c(s)c_1(s)+U^1_l(s)l_1(s)\right].\]
 
 % Note that $\sum_{i=2}^{N}Z_i(\tau,\bm  \rho,s)$ is the marginal utility adjusted  primary deficit using the implied allocation.
 %
@@ -3109,9 +3109,9 @@ This section will outline our numerical methods used to solve for and linearize 
 	&U_{c,i}(s)c_i(s)+U_{l,i}(s)l_i(s) - \rho_i'(s)\left[U_{c,1}(s)c_1(s)+U_{l,1}(s)l_1(s)\right]+ \beta(s)x_i'(s) = \frac{x_i U_{c,i}(s)}{\mathbb{E} U_{c,i}}\label{eq.imp_con}\\
 	&\sum_s \Pr(s) U_{c,1}(s)(\rho_i(s) -\rho_i) = 0\\
 	&\frac{\rho'(s)}{\theta_1(s)}U_{l,1}(s) = \frac{1}{\theta_i(s)}U_{l,i}(s)\\
-	& \sum_{j=0}^N\pi_j c_j(s)  + g(s) = \sum_{j=0}^{N} \pi_j\theta_j(s)l_j(s)\\
+	& \sum_{j=0}^I\pi_j c_j(s)  + g(s) = \sum_{j=0}^{I} \pi_j\theta_j(s)l_j(s)\\
 	& U_{c,i}(s) = \rho_i'(s) U_{c,1}(s)\label{eq.rho_con}
-\end{align}\end{subequations}  For $i=2,\ldots,N$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $\Pr(s)\mu'_i(s)$, $\lambda_i$,$\Pr(s)\phi_i(s)$,$\Pr(s)\xi(s)$, and $P(s)\zeta_i(s)$.
+\end{align}\end{subequations}  For $i=2,\ldots,I$.  Note that some of the constraints have been modified a little for ease of differentiation.  Associated with these constraints we have the Lagrange multipliers $\Pr(s)\mu'_i(s)$, $\lambda_i$,$\Pr(s)\phi_i(s)$,$\Pr(s)\xi(s)$, and $P(s)\zeta_i(s)$.
 %\subsubsection{Steady State}
 
 %By taking first order conditions it is possible to numerically determine the location of a stationary steady state.
@@ -3120,7 +3120,7 @@ The first order conditions with respect to the choice variables are as follows (
 \begin{description}
 	\item[$c_1(s)$:]
 	\begin{align}
-		&\pi_1\alpha_1U_{c,1}(s)+\sum_{i=2}^N\left(\mu'_i(s)\rho_i'(s)\right)\left[U_{cc,1}(s)c_1(s)+U_{c,1}(s)\right]\nonumber\\&\quad\quad+\lambda U_{cc,1}(s)\sum_{i=2}^N(\rho_i'(s)-\rho_i)-\pi_1\xi(s)+\sum_{i=2}^N\zeta_i(s)\rho'_i(s)U_{cc,1}(s) = 0\label{eq.foc_c1}
+		&\pi_1\alpha_1U_{c,1}(s)+\sum_{i=2}^I\left(\mu'_i(s)\rho_i'(s)\right)\left[U_{cc,1}(s)c_1(s)+U_{c,1}(s)\right]\nonumber\\&\quad\quad+\lambda U_{cc,1}(s)\sum_{i=2}^I(\rho_i'(s)-\rho_i)-\pi_1\xi(s)+\sum_{i=2}^N\zeta_i(s)\rho'_i(s)U_{cc,1}(s) = 0\label{eq.foc_c1}
 	\end{align}
 	\item[$c_i(s)$: ] for $i\geq 2$
 	\begin{equation}
@@ -3128,7 +3128,7 @@ The first order conditions with respect to the choice variables are as follows (
 	\end{equation}
 	\item[$l_1(s)$:]
 	\begin{equation}
-		\pi_1\alpha_1 U_{l,1}(s)+\sum_{i=2}^N\mu'_i(s)\rho_i(s)\left[U_{ll,1}(s)l_1(s)+U_{l,1}(s)\right]-\sum_{i=2}^N\frac{\rho_i'(s)\phi_i(s)}{\theta_1(s)}U_{ll,1}(s)+\pi_1\theta_1(s)\xi(s) = 0
+		\pi_1\alpha_1 U_{l,1}(s)+\sum_{i=2}^I\mu'_i(s)\rho_i(s)\left[U_{ll,1}(s)l_1(s)+U_{l,1}(s)\right]-\sum_{i=2}^N\frac{\rho_i'(s)\phi_i(s)}{\theta_1(s)}U_{ll,1}(s)+\pi_1\theta_1(s)\xi(s) = 0
 	\end{equation}
 	\item[$l_2(s)$:]
 	\begin{equation}
