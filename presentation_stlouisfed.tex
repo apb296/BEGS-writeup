@@ -93,7 +93,7 @@ We study optimal taxation under commitment with
  \begin{itemize}
  \item \textbf{Uncertainty}: Markov aggregate shocks $s_t$
   \item \textbf{Demography}: $I$ types of infinitely lived agents (of mass $\pi_i$)  plus a benevolent planner
-  \item \textbf{Technology}: Output $\sum_{i=1}^I \theta_i l_{i,t}$ is linear in labor supplies. Productivities $\{\theta_i(s_t)\}_{i,t}$ differ across $i$.
+  \item \textbf{Technology}: Output $\sum_{i=1}^I \theta_{i,t} l_{i,t}$ is linear in labor supplies. Productivities $\{\theta_i(s_t)\}_{i,t}$ differ across $i$.
   \item \textbf{Preferences }(Households)
   \begin{equation*}
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \bar{\beta}_t  U^{i}\left(
@@ -125,8 +125,8 @@ where $\bar{\beta}_t=\beta(s_{t-1}) \bar{\beta}_{t-1}$ , $\beta(s)\in (0,1)$ and
 \item[]
   \item \textbf{Market Clearing}
   \begin{itemize}
-   \item Goods: $\sum_{i=1}^{I}\pi_{i}c_{i}(s^t)+g\left( s_{t}\right) =\sum_{i=1}^{I}\pi
-_{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t)$
+   \item Goods: $\sum_{i=1}^{I}\pi_{i}c_{i,t}+g_t =\sum_{i=1}^{I}\pi
+_{i}\theta _{i,t} l_{i,t}$
 
    \item Assets: $\sum_{i=1}^{I}\pi _{i}b_{i,t}+B_{t}=0$
 
@@ -219,7 +219,7 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
   \item Two sources of heterogeneity: Productivities and asset holdings
    \item Unrestricted transfers $\rightarrow$ \emph{Level }of government debt is irrelevant, what matters is its \emph{distribution} across agents
 
-  E.G, productive agents holding a lot of government debt is more distortionary
+  E.G, productive agents holding a lot of government debt can be more distortionary
   \end{enumerate}
   \item \textbf{Responses}
 
@@ -255,7 +255,8 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
    \item \emph{Result}: A \textbf{large set} of transfers and asset profiles support the same competitive allocation
    \item \emph{Logic}: Taking away a unit of all agents' assets and increasing transfers by a unit leaves budget sets unchanged
   \end{itemize}
-  \textbf{Notation}: $\tilde{b}_{i,t}=b_{i,t}-b_{i,t}$ be the \textbf{relative assets} of Agent $i$
+  \textbf{Notation}: $\tilde{b}_{i,t}=b_{i,t}-b_{1,t}$ be the \textbf{relative assets} of Agent $i$
+  \small
  \begin{theorem}
  Given $\left( \left \{ b_{i,-1}\right \} _{i},B_{-1}\right) $,let $\left \{ \left \{ \color{red}{c}_{i,t},l_{i,t},\color{black}b_{i,t}\right \} _{i},B_{t},\color{red}{R}_{t}\color{black}\right \} _{t} $ and $\left \{ \color{red}\tau _{t}\color{black},T_{t}\right\} _{t}$ be a competitive equilibrium.
 
@@ -308,15 +309,16 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  \item Ceteris paribus, an economy with higher level of initial government debt  but same relative holdings has the same welfare
  \item Exogenous borrowing constraints of the form $b_{it}>\underline{b}_i$ are not restrictive
 
- \emph{Logic}: If some borrowing constraints bind, the planner can reduce transfers sufficiently to  slacken   \emph{all}  of them
+ \emph{Logic}: If some borrowing constraints bind, the planner can change transfers to  slacken   \emph{all}  of them
+ \small
 \begin{theorem}
- For every  competitive
-equilibrium   in an economy without
-exogenous borrowing constraints there is a government tax policy such the same allocation and interest rate sequence is  part of a competitive equilibrium
-in an economy with exogenous borrowing constraints of the form $b_{i,t}>\underbar{b}_i$
+Take a competitive
+equilibrium  in an economy without
+exogenous borrowing constraints and suppose we impose borrowing constraints of the form $b_{i,t}>\underbar{b}_i$, there is a government tax policy such the same allocation and interest rate sequence is  part of a competitive equilibrium
+in an economy with those exogenous borrowing constraints
 \end{theorem}
 \end{itemize}
-
+\normalsize
   \color{red}\emph{Thus, Ricardian equivalence holds with distortionary taxes and ad hoc borrowing limits}
 
 \end{frame}
@@ -352,16 +354,14 @@ This yields ``\textbf{implementability constraints}''%
 \begin{frame}
  \frametitle{Optimal allocations: Sequential formulation}
  \scriptsize
- Denote $Z^i_t=U^i_{c,t}c_{i,t}+U^i_{l,t}l_{i,t}-\frac{U^i_{c,t}}{U^{1}_{c,t}}\left[U^1_{c,t}c_{1,t}+U^1_{l,t}l_{1,t}\right]$. The optimal policy solves,
  \begin{equation*}
-\max_{c_{i,t},l_{i,t},\tilde{b}_{i,t}}\mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right),  \label{govmt objective sequential}
+\max_{\{c_{i,t},l_{i,t},\tilde{b}_{i,t}\}_{i,t}}\mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right),  \label{govmt objective sequential}
 \end{equation*}
 subject to
- %, by iterating on equation \eqref{affine implementability b} we get
  \begin{subequations}
 \begin{equation*}%\label{eqn:feasiblity}
-\sum_{i=1}^{I}\pi_{i}c_{i}(s^t)+g\left( s_{t}\right) =\sum_{i=1}^{I}\pi
-_{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t)  \label{feasibility goods sequential}\quad\text{(Feas)}
+\sum_{i=1}^{I}\pi_{i}c_{i,t}+g_t =\sum_{i=1}^{I}\pi
+_{i}\theta _{i,t} l_{i,t}  \label{feasibility goods sequential}\quad\text{(Feas)}
 \end{equation*}
 \begin{equation*}
  \frac{U_{l,t}^{i}}{\theta _{i,t}U_{c,t}^{i}}=\frac{U_{l,t}^{1}}{\theta_{1,t}U_{c,t}^{1}}\quad\text{(Wages)}
@@ -380,8 +380,8 @@ _{i}\theta _{i}\left( s_{t}\right) l_{i}(s^t)  \label{feasibility goods sequenti
 \begin{equation*}
 \tilde{b}_{t-1}\frac{U^i_{c,t-1}}{\beta_{t-1} } \text{ is bounded}
  \end{equation*}
-
 \end{subequations}
+where $Z^i_t=U^i_{c,t}c_{i,t}+U^i_{l,t}l_{i,t}-\frac{U^i_{c,t}}{U^{1}_{c,t}}\left[U^1_{c,t}c_{1,t}+U^1_{l,t}l_{1,t}\right]$. 
 
 \end{frame}
 
@@ -397,7 +397,7 @@ Split  into two parts
 \begin{enumerate}
 
 \item $\mathbf{t\geq1}$: Ex-ante continuation problem with state variables $(\bm{x},\bm{\rho},s\_)$
-\[\bm{x}= \beta^{-1}\left( U_{c,t-1}^{2}\tilde{b}_{2,t-1},...,U_{c,t-1}^{I}\tilde{b}_{I,t-1}\right)\]
+\[\bm{x}= \beta_{t-1}^{-1}\left( U_{c,t-1}^{2}\tilde{b}_{2,t-1},...,U_{c,t-1}^{I}\tilde{b}_{I,t-1}\right)\]
 \[ \bm{\rho }=\left( U_{c,t-1}^{2}/U_{c,t-1}^{1},...,U_{c,t-1}^{I}/U_{c,t-1}^{1}\right) \]
 \item $\mathbf{t=0} $: Ex-post initial problem with state variables $(\bm{\tilde{b}_{-1}},s_{0})$
 \end{enumerate}
@@ -474,7 +474,7 @@ _{1,0}U_{c}^{1,0}}\text{ for all } i\geq 2
 \end{frame}
 
 \begin{frame}
-\frametitle{Steady States (SS)}
+\frametitle{Long Run: Steady States (SS)}
 Let $\Psi \left( s;\bm{x},\bm{\rho },s\_\right) $ be an optimal  law of motion for the state variables
 for the $t\geq1$ recursive problem, i.e.,
 
@@ -750,17 +750,17 @@ $P(b|b)$ & 0.84 &Duration of booms &7 years \\ \hline
 \label{tab:Parameters}
 \end{table}
 }
-Initial conditions chosen to make  debt to GDP ratio be 60\%
+Initial conditions chosen to make  debt to GDP ratio be 60\% \footnote{We use the same normalization as before i.e, the low productive agent has zero assets}
  \end{frame}
 
 \begin{frame}
  \frametitle{Results: Some variants }
  We study perturbations of the Benchmark calibration
  \begin{enumerate}
-\item Acyclical interest rates: Smaller spread in discount factor shocks
-\item Countercyclical interest rates: No discount factor shocks
-\item No inequality: Equal fall in all agents' productivities (TFP shock) and no discount factor shocks
-\item Government expenditure shocks: A fall in $g$ that produces a comparable fall in output
+\item \textbf{Acyclical interest rates}: Smaller spread in discount factor shocks
+\item \textbf{Countercyclical interest rates}: No discount factor shocks
+\item \textbf{No inequality}: Equal fall in all agents' productivities (TFP shock) and no discount factor shocks
+%\item \textbf{Government expenditure shocks}: A fall in $g$ that produces a comparable fall in output
 \end{enumerate}
 
  \end{frame}
@@ -795,16 +795,12 @@ Initial conditions chosen to make  debt to GDP ratio be 60\%
   \frametitle{Short Run}
   To understand the short run responses
   \begin{itemize}
-   \item   We set the exogenous state $s_0$ to put as at the onset of a recession
-   \item We solve the time 0 problem with identical initial conditions across
+   %\item   Set the exogenous state $s_0$ to put as at the onset of a recession
+   \item Solve the time 0 problem with identical initial conditions across
 different settings. This pins down the initial state vector  $x_0,\rho_0$  that appears in our time $0$ Bellman equation
-\item We  use  optimal policies to compute fluctuations of
-different components in the government budget constraint across states
+\item Use  optimal policies to compute fluctuations of
+different components in the government budget constraint as we transition between booms to recessions
   \end{itemize}
-For each variable
-$z$ in the table we report  $\Delta z\equiv \left( z\left(
-s_l|x_0,\rho_0,s_0\right) -z\left( s_h|x_0,\rho_0,s_0\right) \right) /\bar{Y}
-$ where $\bar{Y}$ is average undistorted GDP in percentages
  \end{frame}
 
 
@@ -825,8 +821,8 @@ $ where $\bar{Y}$ is average undistorted GDP in percentages
 -0.2992 & -2.8677 & 0.3997 \\ \hline
 \textbf{No Inequality} & 0.0000 & -0.1380 &\color{red}{\textbf{ -0.5459}} & -0.5635 & -0.1204 &
 -2.6294 & 0.0622 \\ \hline
-\textbf{Expenditure Shocks} & -7.5037 & 2.9137 & 2.8612 & -1.3759 & -0.3530 & -2.3443 &
--1.1598 \\ \hline
+%\textbf{Expenditure Shocks} & -7.5037 & 2.9137 & 2.8612 & -1.3759 & -0.3530 & -2.3443 &
+%-1.1598 \\ \hline
 
 \end{tabular}%
 
@@ -836,12 +832,20 @@ $ where $\bar{Y}$ is average undistorted GDP in percentages
 \label{tab:ShortRunPolicyResponses}
 \end{table}
 }
-Note that predetermined variables like repayment on existing debt drop out
-of the accounting and we have
+\begin{enumerate}
+ \item For each variable
+$z$ in the table we report  $\Delta z\equiv \left( z\left(
+s_l|x_0,\rho_0,s_0\right) -z\left( s_h|x_0,\rho_0,s_0\right) \right) /\bar{Y}
+$ where $\bar{Y}$ is average undistorted GDP in percentages
+\item Predetermined variables like repayment on existing debt drop out
 \begin{equation*}
 \Delta [g]+\Delta[T]+ \Delta [B]=\Delta[\tau \theta_1 l_1]+ \Delta[\tau
 \theta_2 l_2]
 \end{equation*}%
+
+\end{enumerate}
+
+\small
 
  \end{frame}
 
@@ -855,7 +859,7 @@ need to know the  distribution of net assets
  \item welfare losses from fluctuating taxes
  \item welfare losses from fluctuating transfers
 \end{enumerate}
-\item Since welfare costs depend on the how debt is distributed, the planner has incentives to move  net assets over time
+%\item Since welfare costs depend on the how debt is distributed, the planner has incentives to move  net assets over time
 \item With incomplete markets, interest rate fluctuations are a  key determinant of  long-run correlations between productivities and net assets
 \item Ignoring heterogeneity produces misleading results about the size and direction of short run optimal policy responses
 \end{itemize}
