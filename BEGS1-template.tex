@@ -1,0 +1,259 @@
+\documentclass{beamer}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+%	
+\usepackage{subfig}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\tikzset{My Arrow Style/.style={single arrow, fill=red!50, anchor=base, align=center,text width=.5cm,rotate =270}}
+\newcommand{\MyArrow}[2][]{\tikz[baseline] \node [My Arrow Style,#1] {#2};}
+\tikzset{My 2Arrow Style/.style={single arrow, fill=red!50, anchor=base, align=center,text width=.5cm,rotate =90}}
+\newcommand{\MyArrowUp}[2][]{\tikz[baseline] \node [My 2Arrow Style,#1] {#2};}
+\newcommand{\bmat}{\begin{matrix}}
+\newcommand{\emat}{\end{matrix}}
+
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{proposition}{Proposition}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{exercise}{Exercise}
+\newtheorem{notation}{Notation}
+\newtheorem{remark}{Remark}
+%\graphicspath{{graphs//}}
+
+\title { Optimal Fiscal
+policies in some economies with incomplete asset markets}
+\author{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}
+
+\date{September 2013}
+% \today will show current date.
+% Alternatively, you can specify a date.
+%
+\begin{document}
+%
+\begin{frame}
+\titlepage
+
+\end{frame}
+
+\begin{frame}
+\frametitle{What do we do?}
+We study optimal taxation under commitment with
+\begin{itemize}
+ \item \textbf{Representative agent}
+
+ \item \textbf{Incomplete markets}
+
+ \quad \color{red}$\rightarrow$ \color{black} assets with more general payoff structures
+
+ \item \textbf{Linear tax schedules}
+
+ \quad \color{red}$\rightarrow$ \color{black}Government levies a proportional tax on labor earnings 
+
+ \item \textbf{Aggregate shocks}
+
+ \quad \color{red}$\rightarrow$ \color{black} To productivities, government expenditure etc.
+
+ \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{What are we after?}
+
+\begin{enumerate}
+\item Existing literature studies two extremes : economies with comple markets (LS) and economies with risk free bonds (AMSS)
+\item We trace out intermediate cases where the asset traded provides partial spanning
+ \item In particular study how the payoff structure affect long run properties of optimal government policies and equilibrium allocations?
+\end{enumerate}
+
+\end{frame}
+
+
+
+
+\begin{frame}
+ \frametitle{Environment}
+ \begin{itemize}
+ \item \textbf{Uncertainty}: Markov aggregate shocks $s_t$
+  \item \textbf{Demography}: infinitely lived representative agent plus a benevolent planner
+  \item \textbf{Technology}: Output  $\theta_{t} l_{t}$ is linear in labor supply
+  \item \textbf{Preferences }(Households)
+  \begin{equation*}
+\mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U^{i}\left(
+c_{i}(s^t),l_{i}(s^t)\right)  \label{utility lifetime}
+\end{equation*}%
+ \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+ \frametitle{Environment, II}
+ \begin{itemize}
+\item \textbf{Asset markets}: Private sector has complete markets; Government trades are retricted
+  \item \textbf{Linear Taxes}: Agent $i$'s tax bill
+\[- T_t + \tau_t \theta_{i,t}l_{i,t}\]
+
+\item[]
+  \item \textbf{Budget constraints}
+  \begin{itemize}
+   \item Agent $i$: $ c_{i,t}+b_{i,t}=\left( 1-\tau _{t}\right) \theta _{i,t}l_{i,t}+R_{t-1}b_{i,t-1}+T_{t}$
+\item Government: $g_{t}+B_{t}+T_t=\tau _{t}\sum_{i=1}^{I}\pi _{i}\theta_{i,t}l_{i,t}+R_{t-1}B_{t-1}$
+  \end{itemize}
+
+\item[]
+  \item \textbf{Market Clearing}
+  \begin{itemize}
+   \item Goods: $\sum_{i=1}^{I}\pi_{i}c_{i,t}+g_t =\sum_{i=1}^{I}\pi
+_{i}\theta _{i,t} l_{i,t}$
+
+   \item Assets: $\sum_{i=1}^{I}\pi _{i}b_{i,t}+B_{t}=0$
+\end{itemize}
+  \item[]
+
+\item \textbf{Initial conditions}: Distribution of assets $\{b_{i,-1}\}_i$ and $B_{-1}$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Ramsey Problem}
+
+\begin{definition}
+\textbf{Allocation, price system, government policy}: Standard
+
+\end{definition}
+
+\begin{definition}
+\textbf{Competitive equilibrium}: Given $\left( \left\{ b_{i,-1}\right\}
+_{i},B_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$
+all allocations are chosen optimally, markets clear \footnote{Usually, we impose only  ``natural'' debt limits. }
+\end{definition}
+
+\begin{definition}
+\textbf{Optimal competitive equilibrium}: A welfare-maximizing competitive
+equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
+\end{definition}
+
+ \end{frame}
+ 
+ 
+ \begin{frame}
+ \frametitle{Sequential problem}  
+  \end{frame}
+  
+  
+ 
+ \begin{frame}
+  \frametitle{Optimal payoff structures}
+Study comparative statics in LS
+1] quasi linear LS
+ 
+\begin{enumerate}
+ \item FOC
+ \item Theorem for quasi linear
+ \item Extentions for CES
+\end{enumerate}
+
+  \end{frame}
+  
+  \begin{frame}
+   \frametitle{Graphs }
+    a graph that explains the main parts of the theorem
+   
+   - payoff structures and taxes as a function of initial debt
+  \end{frame}
+
+  
+  
+\begin{frame}
+ \frametitle{Recursive AMSS}
+\end{frame}
+
+
+\begin{frame}
+ \frametitle{Steady states}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Existence }
+ 
+ - Impose SS on FOC of AMSS = FOC of LS
+
+ - apply the LS theorem
+
+ - mention that SS is just the selection of a particular initial condition for a LS economy
+ 
+\end{frame}
+
+\begin{frame}
+ \frametitle{Characterization}
+- Rexamine payoffs and sign of portfolio
+ \end{frame}
+
+ \begin{frame}
+  \frametitle{Intuition}
+  - future implementability constraints are relaxed
+ \end{frame}
+
+ \begin{frame}
+  \frametitle{Risk adjusted martingales}
+ \end{frame}
+ 
+ \begin{frame}
+  \frametitle{Convergence}
+  - theorem (1) quasilinear
+ 
+ - theorem (2) extensions to risk aversion
+ 
+ - remarks on more general shock structures
+ \end{frame}
+
+ 
+ \begin{frame}
+  \frametitle{how does it work}
+  undoing the risk adjustment
+ \end{frame}
+
+ 
+ 
+ \begin{frame}
+  \frametitle{Role of transfers}
+ \end{frame}
+
+ 
+  
+ \begin{frame}
+  \frametitle{numerical section}
+   for realistic calibrations
+  - speed of convergence
+  - nature of convergence when there are no steady states
+ \end{frame}
+ 
+ 
+ \begin{frame}
+  \frametitle{some simulations}
+  \end{frame}
+ 
+ \begin{frame}
+  \frametitle{conclusion}
+ \end{frame}
+
+ \end{document}
+ 
