@@ -51,7 +51,8 @@ policies in some economies with incomplete asset markets}
 \titlepage
 
 \end{frame}
-
+\section{Introduction}
+\subsection{}
 \begin{frame}
 \frametitle{What do we do?}
 We study optimal taxation under commitment with
@@ -86,7 +87,8 @@ We study optimal taxation under commitment with
 \end{frame}
 
 
-
+\section{Environment}
+\subsection{}
 
 \begin{frame}
  \frametitle{Environment}
@@ -182,8 +184,10 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 \]under the normalization $\frac{\EE_{t-1} p_t U_{c,t}}{U_{c,t-1}} = 1$
 \end{itemize}
 \end{frame} 
- 
 
+\section{Quasilinear}
+\subsection{}
+ 
 \begin{frame}
 	\frametitle{Quasilinear FOC}
 	The familiar first order conditions for the planner's problem where preferences are given by $U(c,l) = c - \frac{l^{1+\gamma}}{1+\gamma}$ are
@@ -240,7 +244,7 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 	\item  The first order conditions for the incomplete markets economy then simplify to
 	\begin{align*}
 		 1 = \mu+ \xi\\
-		-l_t^\gamma + \mu_t(1+\gamma)l_t^\gamma +\theta_t\xi = 0
+		-l_t^\gamma + \mu(1+\gamma)l_t^\gamma +\theta_t\xi = 0
 	\end{align*}
 	\item  Note these are the exact same first order conditions governing the complete markets solution.
 	\item  Thus an incomplete markets steady state allocation replicates a complete markets solution. 
@@ -250,57 +254,127 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 
 \begin{frame}
  \frametitle{Existence }
- 
- - Impose SS on FOC of AMSS = FOC of LS
+ \begin{itemize}
+	\item The space of possible asset payoff restrictions depends on the number of shocks $(\theta,g)$
+	\item The space of complete market allocations is is indexed by a one-dimensional object.
+	\item  In general there will not exist a steady state for arbitrary aggregate shock process, but in the case of a 2 state iid process the possible asset payoff restrictions can be indexed by $p_1$ the payoff in state 1 (after normalizing the price of the asset to $\frac1\beta$).
+	\item  Throughout the rest of this section we will assume the shock structure satisfies $g(s_1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(s_1)^\frac\gamma{1+\gamma}\EE g < 0$, since WLOG we have the ability to relabel states.
+\end{itemize}
+\end{frame}
 
- - apply the LS theorem
-
- - mention that SS is just the selection of a particular initial condition for a LS economy
- 
+\begin{frame}
+	\frametitle{Existence}
+	\begin{lemma}There exists $\alpha_1<\alpha_2$ such that a unique steady state exists if $p_1 < \alpha_1$  or $p_1 \geq \alpha_2$.  Moreover, the sign of government debt depends on the portfolio restriction.  If $p_{1} < \alpha_1$ then the steady state level of $b$ will be negative (government holds claims to consumption agents agents), and if $p_{1} \geq \alpha_2$ then the steady state level of $b$ will be positive (agents hold claims to consumption against government).  
+\end{lemma}
+\begin{itemize}
+	\item We now restrict ourselves to studying either pure TFP $\theta(s_1) >\theta(s_2)$ shocks or pure government expenditure shocks where $g(s_1) < g(s_2)$. 
+	\item  Here $s_1$ can be characterized as the good state of the world as it represents either high productivity or low government expenditure.
+	\item  In both cases the condition  $g(s_1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(s_1)^\frac\gamma{1+\gamma}\EE g < 0$ holds.
+\end{itemize}
 \end{frame}
 
 \begin{frame}
  \frametitle{Characterization}
-- Rexamine payoffs and sign of portfolio
+	In both the case of pure TFP and pure government expenditure shocks we can compute $\alpha_1$ and $\alpha_2$ directly
+	\begin{itemize}
+		\item In the case of government expenditure shocks
+		\[
+			\alpha_1 = 1 \text{  and }  \alpha_2 = (1-\beta)\frac{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g(s_1)}{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-\EE g} +\beta>1
+		\]
+		\item In the case of pure TFP shocks
+		\[
+			\alpha_1 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}}{\EE\theta^\frac{\gamma}{1+\gamma}}+\beta > 1
+		\]and
+		\[
+		\alpha_2 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}{\EE\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}+\beta>\alpha_1
+		\]
+	\end{itemize}
  \end{frame}
 
  \begin{frame}
   \frametitle{Intuition}
-  - future implementability constraints are relaxed
+	\begin{itemize}
+		\item  In both cases if the restricted asset payoff is sufficiently high enough in the good state of the world, then there will exist a steady state where the government holds debt.
+		\item With complete markets the government is choosing a payoff structure to reallocate resources across states in order to smooth distortionary taxes.
+		\item If the government holds debt and has access to complete markets, it will choose a payoff structure which pays out more in good states of the world, reallocating more debt to those states.
+		\item In incomplete markets the government will not be able to smooth tax distortions for arbitrary levels of debt, but in a 2-state i.i.d economy there will exist an asset level which allows to perfectly reallocate resources across states
+	\end{itemize}
  \end{frame}
 
  \begin{frame}
   \frametitle{Risk adjusted martingales}
+	\begin{itemize}
+		\item Our analysis above shows the existence of a steady state in a 2-state i.i.d. economy.  
+		\item In order to study long run properties of the optimal allocation in incomplete markets we need to determine weather these steady states are stable or unstable.
+		\item Recalling our FOC the lagrange multipliers in the optimal policy must satisfy
+		\[ 
+			\mu_t = \EE_t p_{t+1} \mu_{t+1}
+		\] $\mu_t$ follows a risk adjusted martingale.
+		\item If we take $\mu$ to be the state variable in the economy and $\mu'(\mu,s)$ to be the policy function for the evolution of $\mu$ this equation can be written as
+		\[ 
+			\mu = \sum_s \pi(s) p_s \mu'(\mu,s)
+		\] where $\pi(s)$ is the probability of state $s$ and $p_s$ is the exogenous restriction on the payoff structure.
+	\end{itemize}
+	
  \end{frame}
  
  \begin{frame}
   \frametitle{Convergence}
-  - theorem (1) quasilinear
- 
- - theorem (2) extensions to risk aversion
- 
- - remarks on more general shock structures
+	Using the risk adjust martingale nature for $\mu$ we can prove the following theorem about stability of the steady states.  We will also let $(b_{fb},\mu_{fb})$ be the debt level and associated Lagrange multiplier where the government can implement first best in with access to complete markets.
+	\begin{theorem}
+		Let $p_1$ be the exogenous restriction on the payoff in state 1 and $b^*$ represent the steady state level of debt then:
+		\begin{itemize}
+			\item  If $p_1\leq\min(\alpha_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
+			\item If $p_1 \geq \alpha_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
+			\item  If $1 < p_1 <\alpha_1$ then a steady state exists with $b^* < b_{fb}$ but it is unstable with $\mu_t >\EE_t \mu_{t+1}$ for $\mu < \mu_{fb}$.
+			\item  If $\alpha_1\leq p_1<\alpha_2$ then a steady state does not exist and $\mu_t > \EE_t\mu_{t+1}$
+		\end{itemize} 
+	\end{theorem} 
  \end{frame}
 
  
  \begin{frame}
-  \frametitle{how does it work}
-  undoing the risk adjustment
+  \frametitle{Outline of Proof}
+  \begin{itemize}
+	\item  The entire proof comes from unrolling the risk adjusted martingale for $\mu$
+	\[ 
+			\mu = \sum_s \pi(s) p_s \mu'(\mu,s)
+	\]
+	\item  If $p_1 >1$ and $\mu'(\mu,s_1) > (<) \mu'(\mu,s_2)$ we can conclude that $\EE\mu_{t+1} < (>)\mu_t$.
+	\item  Given that there exists a unique steady state we only need to determine the ordering of $\mu$ at one point on each side of the steady state in order to determine if $\mu$ is sub or super martingale.
+	\item The martingale convergence theorem then gives us convergence if the steady state is stable.
+	\item  Lower $\mu$ is associated with debt so if $p_1 > 1$ the government has a tendency to accumulate debt over time.
+\end{itemize}
  \end{frame}
 
- 
- 
- \begin{frame}
-  \frametitle{Role of transfers}
- \end{frame}
+\begin{frame}
+	\frametitle{Intuition and Generalizations}
+	\begin{itemize}
+		\item The intuition we gain from our 2-state example is that, given exogenous payoff restrictions on government debt, there exist debt positions that allow the government to better smooth tax distortions across states.
+		\item  Over time, the government adjusts it's debt position in order to best reallocate resources across states.
+		\item  For more general aggregate state processes there no longer exists a complete markets steady state.
+		\item  This requires us to develop computational tools to analyze the long-run dynamics.
+		\item  We find that with more general processes there exist regions with low volatility, because the government's debt position is reallocating resources across states and in the long run the government debt converges to these regions.
+	\end{itemize}
+\end{frame}
+
+\section{Risk Aversion}
+\subsection{}
 
  \begin{frame}
- 	\frametitle{Incomplet Markets Solution}
-	By choosing a new state variable $x_{t-1} = b_{t-1} U_{c,t-1}$ the measurability constraints can be written as a period by period constraint
+ 	\frametitle{Incomplete Markets Solution}
+	\begin{itemize}
+	\item By choosing a new state variable $x_{t-1} = b_{t-1} U_{c,t-1}$ the measurability constraints can be written as a period by period constraint
 	\[
 		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
-	\]  Which allows us to write the problem recursively as follows
-	V
+	\]
+	\item  This bares a striking resemblance to the period by period constraint for quasi-linear preferences
+	\[
+		\frac{b_{t-1} p_t}{\beta \EE_{t-1} p_t} = c_t + U_{l,t} l_t + b_t
+	\]
+	\item  In fact, when $p_t =1$ the $U_{c,t}$ terms in the risk averse budget constraint act as endogenous payoffs with higher returns in bad states of the world.
+	\item  From our quasi linear results our intuition would then be that there exists a steady state in the 2-state i.i.d. environment where the government holds assets.
+	\end{itemize}
 \end{frame}
   
  \begin{frame}
@@ -309,7 +383,11 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
   - speed of convergence
   - nature of convergence when there are no steady states
  \end{frame}
+  
  
+ \begin{frame}
+  \frametitle{Role of transfers}
+ \end{frame}
  
  \begin{frame}
   \frametitle{some simulations}
