@@ -100,8 +100,8 @@
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \bar{\beta}_t  U^{i}\left(
 c_{i}(s^t),l_{i}(s^t)\right)  \label{utility lifetime}
 \end{equation*}%
-where 
-$\bar{\beta}_t=\bigl[\Pi_{j=0}^{t-1} \beta(s_j) \bigr]$ %$\bar{\beta}_t=\beta(s_{t-1}) \bar{\beta}_{t-1}$ , $\beta(s)\in (0,1)$ and  $\beta(s_0)=1$
+where
+$\bar{\beta}_t=\bigl[\prod_{j=0}^{t-1} \beta(s_j) \bigr]$ %$\bar{\beta}_t=\beta(s_{t-1}) \bar{\beta}_{t-1}$ , $\beta(s)\in (0,1)$ and  $\beta(s_0)=1$
 \item \textbf{Preferences} (Planner): Given Pareto weights $\{\alpha_i\}$
 \begin{equation*}
 \mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right)  \label{govmt objective}
@@ -358,7 +358,7 @@ This yields ``\textbf{implementability constraints}''%
  \frametitle{Optimal allocations: Sequential formulation}
  \scriptsize
  \begin{equation*}
-\max_{\{c_{i,t},l_{i,t},\tilde{b}_{i,t}\}_{i,t}}\mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right),  \label{govmt objective sequential}
+\max_{\{c_{i,t},l_{i,t},\tilde{b}_{i,t}\}_{i,t}}\mathbb{E}_{0}\sum_{i=1}^{I}\pi _{i}\alpha _{i}\sum_{t=0}^{\infty }\bar{\beta}_t U_{t}^{i}\left( c_{i,t},l_{i,t}\right)  \label{govmt objective sequential}
 \end{equation*}
 subject to
  \begin{subequations}
@@ -524,7 +524,7 @@ attains $t\geq1$ value function given state $\left(\bm{x},\bm{\rho },s\_\right) 
 
 Consider I=2 with $\theta_1(s)>\theta_2=0$.
 
-Two main forces determine the dynamics of the tax rate, transfers,  and assets:
+Two main forces determine the dynamics of tax rate, transfers,  and assets:
 \begin{itemize}
  \item \textbf{Fluctuations in inequality}  measured by spreads in marginal utilities
 \item  \textbf{Fluctuations in interest rate}
@@ -572,7 +572,7 @@ Consider  case with acyclical interest rates
 \vspace{2mm}
 Suppose $x=0$ (or $b_{2}(s)=b_{1}(s)$)
 \begin{enumerate}
- \item Present value of earnings of productive agent are higher
+ \item Present value of earnings of productive agent is higher
  \item A reduction in transfers hurts the low productivity agent more
 \end{enumerate}
 
@@ -923,18 +923,18 @@ the spread between the expenditure levels (risk aversion).}}
  \end{figure}
  Back to \hyperlink{main}{\beamerbutton{main}}
  \end{frame}
- 
+
  \begin{frame}[label=borrowing constraints]
  \frametitle{Welfare and borrowing constraints}
  \begin{enumerate}
  \item Pick a competitive equilibrium \textbf{without borrowing constraints} (for some tax policies and initial conditions)
- \item For any time $t$ find the maximum amount by which any agent would violate his respective borrowing constraint $\underline{b}_{i}$
- 
+ \item For any time $t$, find the maximum amount by which any agent would violate his borrowing constraint $\underline{b}_{i}$
+
  \[\Delta_t=\max_{i}\{\underline{b}_{i}-b_{i,t}\}\]
- 
- \item By Ricardian equivalence, one can shift all agents assets by $\Delta_t$ and adjust transfers to keep the allocation unchanged. 
+
+ \item By Ricardian equivalence, one can shift all agents assets' by $\Delta_t$ and adjust transfers to keep the allocation unchanged.
   \item At this new policy, the original allocation and the adjusted asset profiles are both feasible and \emph{satisfy all borrowing constraints.}
- \item Since budget sets are smaller with borrowing constraints, this allocation is still optimal and markets clear with the same interest rate sequence.
+ \item Since budget sets are smaller \emph{with borrowing constraints}, the original allocation remains optimal and markets clear at the same interest rate sequence.
  \end{enumerate}
  Back to \hyperlink{back to borrowing constraints main}{\beamerbutton{back}}
 \end{frame}
