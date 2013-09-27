@@ -98,8 +98,8 @@ We study optimal taxation under commitment with
   \item \textbf{Technology}: Output  $\theta_{t} l_{t}$ is linear in labor supply
   \item \textbf{Preferences }(Households)
   \begin{equation*}
-\mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U^{i}\left(
-c_{i}(s^t),l_{i}(s^t)\right)  \label{utility lifetime}
+\mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U\left(
+c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{equation*}%
  \end{itemize}
 
@@ -110,26 +110,25 @@ c_{i}(s^t),l_{i}(s^t)\right)  \label{utility lifetime}
  \begin{itemize}
 \item \textbf{Asset markets}: Private sector has complete markets; Government trades are retricted
   \item \textbf{Linear Taxes}: Agent $i$'s tax bill
-\[- T_t + \tau_t \theta_{i,t}l_{i,t}\]
+\[- T_t + \tau_t \theta_{t}l_{t}\]
 
 \item[]
   \item \textbf{Budget constraints}
   \begin{itemize}
-   \item Agent $i$: $ c_{i,t}+b_{i,t}=\left( 1-\tau _{t}\right) \theta _{i,t}l_{i,t}+R_{t-1}b_{i,t-1}+T_{t}$
-\item Government: $g_{t}+B_{t}+T_t=\tau _{t}\sum_{i=1}^{I}\pi _{i}\theta_{i,t}l_{i,t}+R_{t-1}B_{t-1}$
+   \item Agents: $ c_{t}+b_{t}=\left( 1-\tau _{t}\right) \theta _{t}l_{t}+R_{t-1}b_{t-1}+T_{t}$
+\item Government: $g_{t}+B_{t}+T_t=\tau _{t}\theta_{t}l_{t}+R_{t-1}B_{t-1}$
   \end{itemize}
 
 \item[]
   \item \textbf{Market Clearing}
   \begin{itemize}
-   \item Goods: $\sum_{i=1}^{I}\pi_{i}c_{i,t}+g_t =\sum_{i=1}^{I}\pi
-_{i}\theta _{i,t} l_{i,t}$
+   \item Goods: $c_{t}+g_t = \theta _{t} l_{t}$
 
-   \item Assets: $\sum_{i=1}^{I}\pi _{i}b_{i,t}+B_{t}=0$
+   \item Assets: $b_{t}+B_{t}=0$
 \end{itemize}
   \item[]
 
-\item \textbf{Initial conditions}: Distribution of assets $\{b_{i,-1}\}_i$ and $B_{-1}$
+\item \textbf{Initial conditions}: Distribution of assets $b_{-1}$ and $B_{-1}$
 \end{itemize}
 
 \end{frame}
@@ -144,14 +143,13 @@ _{i}\theta _{i,t} l_{i,t}$
 \end{definition}
 
 \begin{definition}
-\textbf{Competitive equilibrium}: Given $\left( \left\{ b_{i,-1}\right\}
-_{i},B_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$
+\textbf{Competitive equilibrium}: Given $\left(b_{-1},B_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$
 all allocations are chosen optimally, markets clear \footnote{Usually, we impose only  ``natural'' debt limits. }
 \end{definition}
 
 \begin{definition}
 \textbf{Optimal competitive equilibrium}: A welfare-maximizing competitive
-equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
+equilibrium for a given $\left( b_{-1},B_{-1}\right) $
 \end{definition}
 
  \end{frame}
@@ -167,7 +165,7 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
 	b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)\\
 	c_t + g_t = \theta_t l_t
 \end{align*}
-Where $p_t$ is an iid random variable, representing an exogenous restriction on payoff structure of government assets.
+Where $p_t$ is an iid random variable, representing an exogenous restriction on payoff structure of government assets.  Note that this sequential problem is restricting $T_t = 0$ for all $t$.  This is necessary for our analytical results.  We will show later, numerically, that this assumption is not restrictive.
   \end{frame}
   
  \begin{frame}
@@ -348,6 +346,20 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
  \end{frame}
 
 \begin{frame}
+	\frametitle{$p_1 > 1$}
+	\begin{center}
+	\includegraphics[width=4in]{Images/port1.eps}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$p_1 < 1$}
+	\begin{center}
+	\includegraphics[width=4in]{Images/port2.eps}
+	\end{center}
+\end{frame}
+
+\begin{frame}
 	\frametitle{Intuition and Generalizations}
 	\begin{itemize}
 		\item The intuition we gain from our 2-state example is that, given exogenous payoff restrictions on government debt, there exist debt positions that allow the government to better smooth tax distortions across states.
@@ -376,25 +388,131 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 	\item  From our quasi linear results our intuition would then be that there exists a steady state in the 2-state i.i.d. environment where the government holds assets.
 	\end{itemize}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Existence}
+	Let $x_{fb}$ be the $x$ with which the government can institute first best from that period onwards.  Assume a CRRA utility specification $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.  Finally, let  $c^{fb}$ and $l^{fb}$ be consumption and leisure under first best.  We have the following proposition
+	\begin{proposition}  For a 2 state i.i.d. process let  $s_g$ and $s_b$ denoting the states with high and low consumption at first best.  If
+	\[
+		\frac{g(s_g)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_g)}} > \frac{g(s_b)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_b)}}
+	\]  Then there exists a multiplier $\mu$ and complete markets solutions $c^\mu,l^\mu$ such that 
+	\[
+	\underline x<\frac{U_{c_\mu}(s)c_\mu(s) + U_{l_\mu}(s) l_\mu(s)}{\frac{U_{c_\mu}(s)}{\beta\EE[U_{c_\mu}]}-1} = x^* <0
+	\]
+	\end{proposition} 
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Stability}
+	The previous slide tells us that if the incomplete markets economy at some point reaches  $x^* < 0$ it will forever remain there, and the allocations will be identical to a time 1 complete markets allocation.  Moreover this point is before the planner can implement first best with transfers.  The question remains, will the economy converge to this point.
+	\begin{proposition}  Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ be the solution to the incomplete markets problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1.
+	\end{proposition}  Thus, if the economy starts with less assets then the complete markets steady state it will converge to this point with probability 1.
+\end{frame}
+
+\begin{frame}
+	\frametitle{An Intuition}
+	\begin{itemize}
+		\item  What is the reason for the difference between the quasilinear and risk averse specification?
+		\item  Under the quasilinear assumption with a risk free bond the interest rate is always $1/\beta$, while the risk averse problem has higher interest rates in period of high government expenditure.
+		\item  Thus, while the government has greater expenses in high government expenditure states, the higher interest means that it has to invest less to cover future government expenditures.
+		\item  Once the government has accumulated enough assets, it is actually better off in periods of high government expenditure than low government expenditures (since it's claims to consumption of worth more).
+		\item  By holding assets the government is able to reallocate resources across states, something it was not able to do in the quasilinear case.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{2 State i.i.d. process with Risk Aversion}
+	\begin{center}
+	\includegraphics[width=4in]{Images/2stateiid.eps}
+	\end{center}
+\end{frame}
   
+\section{Numerical Results}
+\subsection{}
+
  \begin{frame}
-  \frametitle{numerical section}
-   for realistic calibrations
-  - speed of convergence
-  - nature of convergence when there are no steady states
+	\frametitle{A Recursive Approach: Time $t\geq 1$ }
+	The ability to write the period by period budget constraint as 
+	\[
+		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
+	\]Allows us to write the planner's problem recursively with a single state variable.  The time $t\geq 1$  Bellman equation is then
+	\[
+		V(x,s\_) = \max_{c(s),l(s),x'(s)} \sum_s \pi(s,s\_)\left(U(c(s),l(s)) + \beta V(x'(s),s)\right)
+	\]subject to $x'(s)\in [\underline x,\overline x]$
+	\begin{align*}
+		\frac{x p(s) U_c(s)}{\beta\EE pUc} \leq U_c(s)c(s)+U_l(s)l(s) + x'(s)\\
+		c(s) + g(s) = \theta(s)l(s)
+	\end{align*}  Note the inequality allows for positive transfers.  Moreover, $x$ is a time consistent state variable.
  \end{frame}
-  
- 
+
+\begin{frame}
+	\frametitle{A Recursive Approach: Time 0}
+	Given the initial debt level $b_0$, state $s_0$,  and the continuation value function $V(x,s\_)$ the planner's problem is then to solve the following
+	\[
+		\max_{c,l,x'} U(c,l) +\beta V(x',s0)
+	\]subject to the time zero implementability constraint
+	\[
+		U_{c}(c,l)c + U_l(c,l) l + x' \geq U_c(c,l) b_0
+	\]and the resource constraint
+	\[
+		c+ g(s_0) = \theta l
+	\]and
+	\[
+		x' \in [\underline x,\overline x]
+	\]
+\end{frame}
+
+\begin{frame}
+	\frametitle{$S>2$ states}
+	\begin{center}
+	\includegraphics[width=4in]{Images/5stateiid.eps}
+	\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{AMSS Calibration}
+	\begin{center}
+	\includegraphics[width=4in]{Images/AMSS.eps}
+	\end{center}
+\end{frame}
+
+
  \begin{frame}
-  \frametitle{Role of transfers}
+  \frametitle{The Role of Transfers}
+	\begin{itemize}
+		\item  Most of our theoretical results were derived under the assumption that the government did not have access to lump sum transfers.
+		\item  Even with lump sum transfers the cases where the steady state exists and is stable, if the initial debt of the government starts out above the steady state level the economy will converge with probability 1 to the steady state.
+		\item  If a steady state does not exist we need to use numerical methods to simulate long run paths of the system.
+		\item  We find that the existence of transfers plays little role in the optimal allocations, even in the few calibrations where the AMSS results conclude that the economy will converge to first best with probability 1.
+		\item  The intuition that the government we use it's asset position to smooth taxation distortions carries over even when the government has access to lump sum transfers.
+	\end{itemize}
  \end{frame}
- 
+
  \begin{frame}
-  \frametitle{some simulations}
-  \end{frame}
- 
+	\frametitle{AMSS calibration with and without transfers}
+	\begin{center}
+	\includegraphics[width=4in]{Images/transfer_example1.eps}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quasilinear Preferences and Risk Free Bond  with and without Transfers}
+	\begin{center}
+	\includegraphics[width=4in]{Images/transfer_example2.eps}
+	\end{center}
+\end{frame}
+
  \begin{frame}
-  \frametitle{conclusion}
+  \frametitle{Conclusion}
+\begin{itemize}
+	\item We find that the nature of market incompleteness has drastic implications for the long run debt position of the government in an optimal planning problem.
+	\item If the payoff structure of government assets has greater returns in good states of the world then bad, then the government will accumulate debt in the long run.
+	\item  With risk aversion, the payoff structure of the time-consistent savings variable is what determines the long run debt position of the government.
+	\item  Transfers play little role in determining the evolution of the system.  Rather the key motivating force is using debt position to reallocate recourses across states.
+	\item  \textbf{Future Research}:  How does the type of market incompleteness effect long run wealth distributions with heterogeneous agents
+\end{itemize}
  \end{frame}
 
  \end{document}
