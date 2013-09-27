@@ -18,6 +18,7 @@
 \newcommand{\MyArrowUp}[2][]{\tikz[baseline] \node [My 2Arrow Style,#1] {#2};}
 \newcommand{\bmat}{\begin{matrix}}
 \newcommand{\emat}{\end{matrix}}
+\newcommand{\EE}{\mathbb E}
 
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
@@ -156,23 +157,58 @@ equilibrium for a given $\left( \left\{ b_{i,-1}\right\} _{i},B_{-1}\right) $
  
  \begin{frame}
  \frametitle{Sequential problem}  
+\[
+	\max_{\{c_t,l_t,b_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
+\]subject to
+\begin{align*}
+	\frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }\\
+	b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)\\
+	c_t + g_t = \theta_t l_t
+\end{align*}
+Where $p_t$ is an iid random variable, representing an exogenous restriction on payoff structure of government assets.
   \end{frame}
   
-  
- 
  \begin{frame}
-  \frametitle{Optimal payoff structures}
-Study comparative statics in LS
-1] quasi linear LS
+\frametitle{Optimal payoff structures}
+\begin{itemize}
+\item The planner's problem with state contingent debt can be represented as the problem above without the $t\geq1$ measurability restrictions.
+\item  It can be thought of then as the planner choosing a payoff structure $p_t$, such that the measurability constraints for $t\geq 1$ are always satisfied.
+\item  The optimal allocation then defines the optimal payoff structure chosen to be
+\[
+	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
+\]where
+\[
+	b_{t-1} = \frac{\beta}{U_{c,t-1}}\EE_{t-1}\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
+\]under the normalization $\frac{\EE_{t-1} p_t U_{c,t}}{U_{c,t-1}} = 1$
+\end{itemize}
+\end{frame} 
  
-\begin{enumerate}
- \item FOC
- \item Theorem for quasi linear
- \item Extentions for CES
-\end{enumerate}
 
-  \end{frame}
-  
+\begin{frame}
+	\frametitle{Quasilinear FOC}
+	The familiar first order conditions for the planner's problem where preferences are given by $U(c,l) = c - \frac{l^{1+\gamma}}{1+\gamma}$ are
+	\begin{align*}
+		1 = \mu +\xi_t\\
+		-l_t^\gamma+\mu(1+\gamma)l_t^\gamma+\theta_t\xi_t = 0
+	\end{align*}Where $\mu$ is the Lagrange multiplier on the implimentability constraint and $\beta^t\xi_t$ is the multiplier of the resource constraint.   These equations give the tax rate $\tau$ as a function of $\mu$
+	\[
+		\tau(\mu) = \frac{\gamma\mu}{(1+\gamma)\mu-1}
+	\] and the period government surplus 
+	\[
+		S_t(\tau) = \theta_t^\frac\gamma{1+\gamma}(1+\tau)^\frac1\gamma\tau-g_t
+	\]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quasilinear Asset Structure}
+	Under the i.i.d. assumption, the optimal payoff structure chosen by the planner is given by the equation
+	\[
+		p = (1-\beta)\frac{St(\tau)}{\EE S(\tau)} + \beta
+	\]where $\tau$ is the optimal tax rate given government debt $b$. 
+	\begin{lemma}  Let $p_{\theta,g}(b)$ be the payoff chosen by the planner in aggregate state $(\theta,g)$ when government debt is given by $b$.  Then $p_{\theta,g}(b)$ will, generically, be a one-to-one function of $b$.  If $g\EE\theta^\frac{\gamma}{1+\gamma}-\theta^\frac{\gamma}{1+\gamma}\EE g > (<) 0$ then $p_{\theta,g}(b)$ will be an increasing (decreasing) function of $b$. 
+	\end{lemma}
+\end{frame}
+
   \begin{frame}
    \frametitle{Graphs }
     a graph that explains the main parts of the theorem
@@ -183,12 +219,33 @@ Study comparative statics in LS
   
   
 \begin{frame}
- \frametitle{Recursive AMSS}
+ 	\frametitle{Incomplete Markets Solution}
+	With quasilinear preferences the measurability constraints for the incomplete markets problem can be written as the period by period constraint
+	\[
+		\frac{p_t b_{t-1}}\beta = c_t - l_t^{1+\gamma} + b_t 
+	\]under the normalization of $\EE_{t-1} p_t = 1$  The first order conditions associated with this problem are
+	\begin{align*}
+		1 = \mu_t + \xi_t\\
+		-l_t^\gamma+\mu_t(1+\gamma)l_t^\gamma+\theta_t\xi_t = 0\\
+		\mu_t = \EE_t p_{t+1}\mu_{t+1}
+	\end{align*}  Where $\beta^t\mu_t$ is the multiplier on the period by period budget constraint and $\beta^t\xi_t$ is the multiplier on the resource constraint.
 \end{frame}
 
 
 \begin{frame}
  \frametitle{Steady states}
+\begin{itemize}
+	\item  We will restrict ourselves to an iid economy.
+	\item  If there existed a steady state then $\mu_t = \mu$ for all periods and $b_t = b$.
+	\item  The first order conditions for the incomplete markets economy then simplify to
+	\begin{align*}
+		 1 = \mu+ \xi\\
+		-l_t^\gamma + \mu_t(1+\gamma)l_t^\gamma +\theta_t\xi = 0
+	\end{align*}
+	\item  Note these are the exact same first order conditions governing the complete markets solution.
+	\item  Thus an incomplete markets steady state allocation replicates a complete markets solution. 
+	\item  Finding a steady state amounts to finding a complete markets optimal allocation who's optimal payoff structure matches $p_t$
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -237,7 +294,14 @@ Study comparative statics in LS
   \frametitle{Role of transfers}
  \end{frame}
 
- 
+ \begin{frame}
+ 	\frametitle{Incomplet Markets Solution}
+	By choosing a new state variable $x_{t-1} = b_{t-1} U_{c,t-1}$ the measurability constraints can be written as a period by period constraint
+	\[
+		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
+	\]  Which allows us to write the problem recursively as follows
+	V
+\end{frame}
   
  \begin{frame}
   \frametitle{numerical section}
