@@ -129,7 +129,10 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
 \begin{frame}
  \frametitle{Environment, II}
  \begin{itemize}
-\item \textbf{Asset markets}: Private sector has complete markets; Government trades are retricted
+\item \textbf{Asset markets}: Private sector has complete markets; Government trades are retricted:
+\begin{itemize}
+	\item  A unit of government debt is restricted to payoff $p_s$ in state $s$
+\end{itemize}
   \item \textbf{Linear Taxes}: Agent $i$'s tax bill
 \[- T_t + \tau_t \theta_{t}l_{t}\]
 
@@ -175,6 +178,18 @@ equilibrium for a given $\left( b_{-1},B_{-1}\right) $
 
  \end{frame}
  
+\begin{frame}
+\frametitle{Roadmap}
+	\begin{itemize}
+		\item  We will begin by characterizing the optimal payoff structure the government would choose if it did not have this exogenous restriction
+		\begin{itemize}
+			\item  This is done by directly solving for the optimal allocation with state contingent debt.
+		\end{itemize}
+		\item We wish to characterize the solution to the optimal planning problem when the payoff structure is not optimal.
+		\item  With general preferences the government asset returns have both exogenous components ($p_s$) and endogenous components (stochastic discount factor).
+		\item  We will initially restrict ourselves to the quasilinear case, in order to remove the endogenous component.
+	\end{itemize}
+\end{frame}
  
  \begin{frame}
  \frametitle{Sequential problem}  
@@ -226,8 +241,8 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 	\frametitle{Quasilinear Asset Structure}
 	Under the i.i.d. assumption, the optimal payoff structure chosen by the planner is given by the equation
 	\[
-		p = (1-\beta)\frac{St(\tau)}{\EE S(\tau)} + \beta
-	\]where $\tau$ is the optimal tax rate given government debt $b$. 
+		p = (1-\beta)\frac{S(\tau)}{\EE S(\tau)} + \beta
+	\]Note that the optimal payoff structure $p$ is time invariant and depends on the initial debt $b$ through the optimal tax rate $\tau$.
 	\begin{lemma}  Let $p_{\theta,g}(b)$ be the payoff chosen by the planner in aggregate state $(\theta,g)$ when government debt is given by $b$.  Then $p_{\theta,g}(b)$ will, generically, be a one-to-one function of $b$.  If $g\EE\theta^\frac{\gamma}{1+\gamma}-\theta^\frac{\gamma}{1+\gamma}\EE g > (<) 0$ then $p_{\theta,g}(b)$ will be an increasing (decreasing) function of $b$. 
 	\end{lemma}
 \end{frame}
@@ -239,10 +254,22 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
    - payoff structures and taxes as a function of initial debt
   \end{frame}
 
-  
+\begin{frame}
+	\frametitle{Incomplete Markets Solution}
+	\begin{itemize}
+		\item  We will now characterize the solution to the problem with the payoff restriction $p$ is not equal to the optimal payoff structure $p(b)$. 
+		\item  Under the assumption of a 2 state i.i.d process for the aggregate state we can show:
+		\begin{itemize}
+			\item  The existence of a steady state.
+			\item  Comparative statics associated with the steady state.
+			\item  Stability of the steady state
+		\end{itemize}
+		\item  Numerical results will show that the intuition associated with these steady states generalizes to more complex aggregate processes.
+	\end{itemize}
+\end{frame}  
   
 \begin{frame}
- 	\frametitle{Incomplete Markets Solution}
+ 	\frametitle{Incomplete Markets FOC}
 	With quasilinear preferences the measurability constraints for the incomplete markets problem can be written as the period by period constraint
 	\[
 		\frac{p_t b_{t-1}}\beta = c_t - l_t^{1+\gamma} + b_t 
@@ -385,19 +412,21 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 	\begin{itemize}
 		\item The intuition we gain from our 2-state example is that, given exogenous payoff restrictions on government debt, there exist debt positions that allow the government to better smooth tax distortions across states.
 		\item  Over time, the government adjusts it's debt position in order to best reallocate resources across states.
-		\item  For more general aggregate state processes there no longer exists a complete markets steady state.
-		\item  This requires us to develop computational tools to analyze the long-run dynamics.
-		\item  We find that with more general processes there exist regions with low volatility, because the government's debt position is reallocating resources across states and in the long run the government debt converges to these regions.
+		\item  We proceed by generalizing our analysis in two ways:  more general preferences and more general aggregate state processes.
+		\item  With risk aversion we are able to obtain similar results under the 2 state i.i.d assumption.
+		\item More general processes require us to develop computational tools to analyze the long run dynamics
+		%\item  For more general aggregate state processes there no longer exists a complete markets %steady state.
+		%\item  This requires us to develop computational tools to analyze the long-run dynamics.
+		%\item  We find that with more general processes there exist regions with low volatility, because the government's debt position is reallocating resources across states and in the long run the government debt converges to these regions.
 	\end{itemize}
 \end{frame}
 
 \section{Risk Aversion}
 \subsection{}
-
- \begin{frame}
- 	\frametitle{Incomplete Markets Solution}
+\begin{frame}
+	\frametitle{Incomplete Market's with Risk Aversion}
 	\begin{itemize}
-	\item By choosing a new state variable $x_{t-1} = b_{t-1} U_{c,t-1}$ the measurability constraints can be written as a period by period constraint
+	\item By choosing a new variable $x_{t-1} = b_{t-1} U_{c,t-1}$ the measurability constraints can be written as a period by period constraint
 	\[
 		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
 	\]
@@ -405,8 +434,20 @@ Where $p_t$ is an iid random variable, representing an exogenous restriction on 
 	\[
 		\frac{b_{t-1} p_t}{\beta \EE_{t-1} p_t} = c_t + U_{l,t} l_t + b_t
 	\]
-	\item  In fact, when $p_t =1$ the $U_{c,t}$ terms in the risk averse budget constraint act as endogenous payoffs with higher returns in bad states of the world.
-	\item  From our quasi linear results our intuition would then be that there exists a steady state in the 2-state i.i.d. environment where the government holds assets.
+	\item  The $p_tU_{c,t}$ terms in the risk averse budget constraint act as endogenous payoffs.
+	\end{itemize}
+\end{frame}
+ \begin{frame}
+ 	\frametitle{Steay State}
+	{\color{red} This slide needs work.  Do you think showing that $x$ indexes complete market solutions is a good idea}
+	\begin{itemize}
+		\item Our quasilinear analysis found that there existed steady states when the aggregate state followed a 2 -state i.i.d. process.
+		\item Marginal utility weighted debt $x_t b_t U_{c,t}$ indexes the the space of optimal allocations with state contingent debt
+		\item  We would therefore expect a steady states to exist for the variable $x$
+		\item  To clarify our analysis we will remove exogenous fluctuations in the payoff terms $p_t U_{c,t}$ by restricting $p_t =1$.
+		\begin{itemize}
+			\item  Note under this restriction the endogenous payoff terms will be larger in bad states of the world, and thus, the government will hold assets in the steady state
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
