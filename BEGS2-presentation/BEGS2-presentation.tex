@@ -299,7 +299,8 @@ Given initial assets $b$,  let $\mu(b)$ be the Lagrange multiplier on the  the i
 
 \end{frame}
 
-  \begin{frame}
+		
+\begin{frame}		
    \frametitle{Initial holdings influence optimal asset payoff structure}
 How does the optimal payoff structure vary with initial conditions
 \begin{enumerate}
@@ -339,7 +340,7 @@ How does the optimal payoff structure vary with initial conditions
    \frametitle{Optimal Payoff Structure: TFP shocks}
 	\begin{figure}
 		\begin{center}
-		\includegraphics[scale=.4]{Images/p_graph.eps}
+		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
 		\caption{This plots the optimal payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
 	\end{center}	 
 	\end{figure}
@@ -569,21 +570,17 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
 
 \begin{frame}
  \frametitle{Revisiting steady states with risk aversion}
-Let $\Psi \left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
-for the $t\geq1$ recursive problem, i.e.,
-
-
-\[\Psi \left( s;{x},%
-s\_\right) = x^{\prime }(s)\]
-
-attains $t\geq1$ value function given state $\left({x},s\_\right) $
+Let $x'\left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
+for the $t\geq1$ recursive problem. 
 
 \begin{definition}
- A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =\Psi \left( s;{x}^{*},s_{-}\right) $ for all $%
+ A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
 \,s,s\_$
 \end{definition}
+
+
 \vspace{3mm}
-\emph{A steady state is a node at which a continuation allocation and tax rate has no further history dependence. }
+\emph{Thus a steady state is a node at which a continuation allocation and tax rate has no further history dependence. }
 
  \end{frame}
 
@@ -677,7 +674,7 @@ attains $t\geq1$ value function given state $\left({x},s\_\right) $
 \begin{frame}
 	\frametitle{Stability}
 	\begin{enumerate}
-	 \item In this setup, since interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states. 
+	 \item In this setup, interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high tfp or low expenditure)
 	 \item The government holds claims against the private sector in the steady state. This is similar to the quasilinear case when $p_1$ was low.	 
 	 \item The incomplete markets Ramsey allocation converges to a Lucas Stokey allocation for all initial conditions	 	
 	\end{enumerate}
