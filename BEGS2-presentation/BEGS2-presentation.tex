@@ -509,7 +509,7 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2
 
 \item Split the Ramsey problem in two 
 \begin{enumerate}
- \item  $t=0$ Bellman equation in $W(b_{-1},s_0)$ \textcolor{red}{Anmol and David XXXXXX: I altered the notation}
+ \item  $t=0$ Bellman equation in $W(b_{-1},s_0)$ %\textcolor{red}{Anmol and David XXXXXX: I altered the notation}
  \item  $t\geq 1$ Bellman equation in $V(x,s\_)$
 \end{enumerate}
 
@@ -551,20 +551,20 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2
  \end{frame}
 \begin{frame}
 	\frametitle{Time 0 problem}
-	Given an initial  debt $b_0$, state $s_0$,  and continuation value function $V(x,s\_)$
-\textcolor{red}{Anmol and David XXXXX: I altered the below by adding the $W$ function; but there is a problem with the timing of
-the $b$ argument.  See earlier slide where $W$ is defined.}
+	Given an initial  debt $b_{-1}$, state $s_0$,  and continuation value function $V(x,s\_)$
+%\textcolor{red}{Anmol and David XXXXX: I altered the below by adding the $W$ function; but there is a problem with the timing of
+%the $b$ argument.  See earlier slide where $W$ is defined.}
 	\[
-		W(b_{-1},s_0) = \max_{c,l,x'} U(c,l) +\beta V(x',s0)
+		W(b_{-1},s_0) = \max_{c_{0},l_0,x_{0}} U(c,l) +\beta V(x_0,s0)
 	\]subject to  time zero implementability constraint
 	\[
-		U_{c}(c,l)c + U_l(c,l) l + x' \geq U_c(c,l) b_0
+		U_{c}(c_0,l_0)c + U_l(c_0,l_0) l_0 + x_0 = U_c(c_0,l_0) b_{-1}
 	\]and  resource constraint
 	\[
-		c+ g(s_0) = \theta l
+		c_0+ g(s_0) = \theta l_0
 	\]and
 	\[
-		x' \in [\underline x,\overline x]
+		x_0 \in [\underline x,\overline x]
 	\]
 \end{frame}
 
@@ -746,8 +746,7 @@ for the $t\geq1$ recursive problem.
   \frametitle{Concluding remarks }
 \begin{itemize}
 	\item With market incompleteness, the asset payoff structure  has big implications for the government's  long run debt
-	\item If the asset payoff structure offers greater returns in good states of the world then bad, then the Ramsey government  asymptotically accumulates debt \textcolor{red}{Anmol and David XXXXXX: does `accumulate debt' mean `run up debt' or `accumulate assets'?}
-	
+	\item If the asset payoff structure offers lower returns in adverse states of the world, the Ramsey government  asymptotically runs up a  debt against the private sector
 \item With risk aversion, cyclical properties of interest rates affects government debt asymptotically
 	\item  Access to nonnegative transfers play little role in determining the evolution of the system.  Rather the key  force is the government's ability to use its debt position to reallocate resources across states
 	\item  \textbf{Future Research}:  How does the type of market incompleteness effect long run wealth distributions with heterogeneous agents
