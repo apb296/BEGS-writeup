@@ -37,7 +37,7 @@
 \newtheorem{remark}{Remark}
 %\graphicspath{{graphs//}}
 
-\title { Optimal Fiscal policies in some economies with incomplete asset markets}
+\title {Optimal fiscal policy with incomplete asset markets}
 \author{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}
 
 \date{September 2013}
@@ -54,16 +54,16 @@
 \subsection{}
 \begin{frame}
 \frametitle{Optimal taxation under commitment and a representative agent}
- 
+
 \begin{itemize}
 
  \item \textbf{Incomplete markets}
 
- \quad \color{red}$\rightarrow$ \color{black} assets with various exogenous payoff patterns
+ \quad \color{red}$\rightarrow$ \color{black} assets with alternative exogenous payoff patterns
 
  \item \textbf{Linear tax schedules}
 
- \quad \color{red}$\rightarrow$ \color{black}A proportional tax on labor earnings (maybe plus {\em nonnegative} transfers)
+ \quad \color{red}$\rightarrow$ \color{black}Proportional tax on labor earnings (maybe  {\em nonnegative} transfers)
 
  \item \textbf{Aggregate shocks}
 
@@ -78,11 +78,11 @@
 \frametitle{Questions}
 
 \begin{enumerate}
-\item \textbf{Ramsey taxation}: Can the government use assets to smooth  costs of distorting tax
-\item \textbf{Optimal debt level}: Why do different governments issue different amounts of debt?
+\item \textbf{Tax rate}: Can government adjust assets to smooth  costs of distorting tax
+\item \textbf{Government debt}: Why do different governments issue different amounts of debt?
 \begin{itemize}
- \item [+] Lucas Stokey (1984): Initial conditions
- \item [+ ] AMSS (2002): Accumulate assets sufficient to finance activities using interest revenues
+ \item [+] Lucas Stokey (1984): Inherited from initial condition
+ \item [+ ] AMSS (2002): Govt. accumulates assets sufficient to finance activities using interest revenues
 \end{itemize}
 \item \textbf{Extreme assumptions:}  LS -- complete markets; AMSS --- a risk-free bond only
 \end{enumerate}
@@ -93,16 +93,16 @@
 \frametitle{Our analysis}
 
 \begin{enumerate}
-\item We study intermediate cases
+\item Cases intermediate between LS and AMSS
 \begin{itemize}
-\item [+] Government is restricted to trade a single asset only
+\item [+] We restrict government  to trade a single asset only
 \item [+] We exogenously restrict payoffs of this single asset
 
- $\Longrightarrow$ E.g: bonds that pay less during adverse times
+ $\Longrightarrow$ E.g., bonds that pay less during adverse times
 
  \end{itemize}
-\item Though asset markets are  incomplete but  {\color{black} \textbf{level of assets} } help smooth tax distortions {\color{black} \textbf{ across  states}}
-\item That differs from the usual role of debt in previous models of incomplete markets economies where{ \color{black} \textbf{changes in debt levels}} help smooth tax distortions {\color{black}  \textbf{ over  time}}
+\item Asset {\color{black} \textbf{levels} } can help smooth tax distortions {\color{black} \textbf{ across  states}}
+\item This differs from the usual role of debt in previous incomplete markets  economies where { \color{black} \textbf{changes}} in debt levels help smooth tax distortions {\color{black}  \textbf{ over  time}}
 \end{enumerate}
 
 \end{frame}
@@ -131,7 +131,7 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
  \begin{itemize}
 \item \textbf{Asset markets}: Private sector has complete markets; Government trades are restricted:
 \begin{itemize}
-	\item  A unit of government debt is restricted to payoff $p_s$ in state $s$
+	\item  A unit of government debt  pays off $p_s$ in state $s$
 \end{itemize}
   \item \textbf{Linear Taxes}: Agent $i$'s tax bill
 \[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0 \]
@@ -183,13 +183,13 @@ equilibrium for a given $\left( b_{-1},B_{-1}\right) $
 \frametitle{Roadmap}
 	\begin{enumerate}
 	
-		\item  Given initial assets, characterize the \textbf{optimal payoff structure}:
+		\item  Given initial assets, characterize the \textbf{optimal asset payoff structure}:
 		
 		$\Rightarrow$ What single asset would  government choose to issue?
 		
 %\begin{itemize}
  		 %\item
- 		 \emph{We reverse engineer payoffs from a Lucas Stokey complete market allocation}
+ 		 \emph{We reverse engineer payoffs from a Lucas-Stokey complete market allocation}
  %		 \end{itemize}
 
 			
@@ -250,9 +250,9 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
   \item \textbf{Primal approach}: To eliminate tax rates and prices, use  consumer's first order conditions
   \item \textbf{Implementability constraints}:  Derive by iterating the consumer's budget equation forward  at every history
 
-  $\Rightarrow$With incomplete market economies they impose a \emph{measurability restrictions} on allocations
+  $\Rightarrow$With incomplete market economies these impose a \emph{measurability restrictions} on allocations
 
-  \item  \textbf{Transfers: } We restrict $T_t = 0$ for all $t$. This is convenient for our analytical results.  We will show later, numerically, that this assumption is not restrictive.
+  \item  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
 
   \end{enumerate}
 
@@ -264,7 +264,7 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 \begin{enumerate}
  \item Compute a Lucas Stokey allocation given $b_{-1}$
 
- \emph{ This solves for the optimal allocation ignoring $t\geq1$ measurability restrictions.}
+ \emph{ Find an  optimal allocation ignoring $t\geq 1$ measurability restrictions.}
 
  \item Reverse engineer payoffs
 \[
@@ -307,13 +307,13 @@ How does the optimal payoff structure vary with initial conditions
 \item \textbf{Initial assets: }
 \begin{itemize}
 
- \item With positive initial assets: Want a payoff structure that pays more in ``adverse'' states
- \item With negative initial assets: Want payoff structure that pay less in ``adverse'' states
+ \item With positive initial assets: want a payoff structure that pays more in ``adverse'' states
+ \item With negative initial assets: want a payoff structure that pay less in ``adverse'' states
 \end{itemize}
 
- \item \textbf{Nature of shocks: } When do we approximate a ``risk-free'' bond?
+ \item \textbf{Nature of shocks: } when do we approximate a risk-free bond?
  \begin{itemize}
-  \item With i.i.d shocks to government expenditures: When initial assets approach  infinity
+  \item With i.i.d shocks to government expenditures: when initial assets approach  infinity
   \item With i.i.d  shocks to  TFP: When assets are sufficient to support the first best
  \end{itemize}
 
@@ -323,14 +323,14 @@ How does the optimal payoff structure vary with initial conditions
 
   \end{frame}
 
-  
+
   \begin{frame}
    \frametitle{Optimal Payoff Structure: Expenditure shocks}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph.eps}
-		\caption{This plots the optimal payoff structure as a function of initial government debt when government expenditures follow 2 shock i.i.d process}
-	\end{center}	 
+		\caption{Optimal asset payoff structure as a function of initial government debt when government expenditures follow 2 shock i.i.d process}
+	\end{center}	
 	\end{figure}
 
   \end{frame}
@@ -341,19 +341,19 @@ How does the optimal payoff structure vary with initial conditions
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
-		\caption{This plots the optimal payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
-	\end{center}	 
+		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
+	\end{center}	
 	\end{figure}
 
   \end{frame}
-  
+
 
 \begin{frame}
 	\frametitle{Incomplete markets:}
 	\begin{itemize}
 		\item  \textbf{Exogenous payoff structure:} Suppose $p\neq p^*(b_{-1})$
-		\item \textbf{Steady States: }\emph{Optimal policy approaches a level of assets (``steady
-		sate'') that eventually  makes the exogenous payoff structure optimal}
+		\item \textbf{Steady States: }\emph{Do government assets asymptotically approximate a  steady
+		state for which  the exogenous asset payoff structure is optimal?}
 		
 		\item \textbf{Characterization: } Given an asset payoff structure $p$, with  a 2 state i.i.d process for the aggregate state
 		\begin{itemize}
@@ -361,33 +361,33 @@ How does the optimal payoff structure vary with initial conditions
 			\item What is the level of government debt or   assets in a steady state?
 			\item For what levels of  \emph{initial government debt} does  convergence to a steady state occur?
  			\end{itemize}
-		\item  \textbf{Extensions: } To preferences exhibiting risk aversion and more complex aggregate processes
+		\item  \textbf{Extensions: } To richer  aggregate stochastic  process and  preferences exhibiting risk aversion
 	\end{itemize}
 \end{frame}
 
  \begin{frame}
-  \frametitle{Exogenous payoffs to steady states}
+  \frametitle{Link of steady state outcomes to exogenous asset payoffs}
   \begin{enumerate}
    \item Finding a steady state amounts to finding a complete markets optimal allocation whose optimal payoff structure matches $p_t$
-  \item We order  economies with different asset payoff structures as follows
+  \item We explore different asset payoff structures
   \begin{itemize}
    \item  Suppose $s=1$ is the ``good'' state (low expenditure or high TFP)
-   \item Index incomplete market economies by $p_1=p(s=1)$. \footnote{ One can obtain $p_2$ by using the normalization that $\mathbb{E}p(s)=1$. A risk free bond corresponds to $p_1=1$}
+   \item Index incomplete market economies by $p_1=p(s=1)$. \footnote{We get  $p_2$ by using the normalization that $\mathbb{E}p(s)=1$. A risk-free bond sets $p_1=1$}
     \end{itemize}
-  \item \textbf{3 Regions: }
+  \item \textbf{Outcomes in 3 Regions: }
   \begin{itemize}
-   \item Low $p_1$: Government holds assets in steady state
-   \item High $p_1$: Government  issues debt  in steady state
+   \item Low enough $p_1$: government holds assets in steady state
+   \item High enough $p_1$: government  issues debt  in steady state
    \item Intermediate $p_1$: steady states do not exist
   \end{itemize}
-Let $\alpha_1,\alpha_2$ be the two thresholds   that split the ``$p_1$ space''
+$\alpha_1,\alpha_2$ are two thresholds   that split the ``$p_1$ space''
   \end{enumerate}
 
  \end{frame}
 
 \begin{frame}
  \frametitle{Thresholds: $\alpha_1 <\alpha_2$}
-	For either a pure TFP shock or a pure government expenditure shock,  we compute % $\alpha_1$ and $\alpha_2$ directly
+	%For either a pure TFP shock or a pure government expenditure shock,  we compute % $\alpha_1$ and $\alpha_2$ directly
 	\begin{itemize}
 		\item With only government expenditure shocks
 		\[
@@ -408,10 +408,10 @@ Let $\alpha_1,\alpha_2$ be the two thresholds   that split the ``$p_1$ space''
   \frametitle{Convergence}
   \begin{itemize}
 		\item Our analysis verifies the existence of a steady state in a 2-state i.i.d. economy.
-		\item In order to study long run properties of the optimal allocation in incomplete markets we need to determine whether these steady states are stable 
+		\item In order to study long-run properties of an optimal allocation with incomplete markets we need to determine whether these steady states are stable
 		\item \textbf{Risk adjusted martingale:}
 		
-		Under an optimal policy, the Lagrange multiplier on the implementability $\mu_t$ constraint satisfies
+		Under an optimal policy, the Lagrange multiplier on the implementability  constraint $\mu_t$  satisfies
 		\[
 			\mu_t = \EE_t p_{t+1} \mu_{t+1}
 		\] or
@@ -420,7 +420,7 @@ Let $\alpha_1,\alpha_2$ be the two thresholds   that split the ``$p_1$ space''
 		\]
 			\emph{$\mu_t$ follows a risk adjusted martingale.}
 	
-		\item \textbf{Stability: } Is there a sufficiently big drift  $\mu_t$  away from a steady state?
+		\item \textbf{Stability: } Is the drift  $\mu_t$ big enough  away from a steady state?
 		\end{itemize}
 	
  \end{frame}
@@ -428,23 +428,23 @@ Let $\alpha_1,\alpha_2$ be the two thresholds   that split the ``$p_1$ space''
 
 
  \begin{frame}
-  \frametitle{Result: Characterizing Convergence}
+  \frametitle{Characterizing Convergence}
 
   \begin{itemize}
   \item Reminder:  $p_1$ is the payoff in the ``good'' state.
    \item As with existence, we can partition  the ``$p_1$ space'' into different regions
-   \item Let $b_{fb},\mu_{fb}$ be the debt level and associated Lagrange multiplier where the government can implement first best via  access to complete markets
+   \item Let $b_{fb},\mu_{fb}$ be the debt level and associated Lagrange multiplier where the government can implement first-best via  access to complete markets
   \end{itemize}
   \small
  	\begin{theorem}
-Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alpha_2$ such that
+Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2$ such that
 		\begin{enumerate}
-			\item  \textbf{Low $p_1$}: If $p_1\leq\min(\alpha_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
-			\item \textbf{High  $p_1$}:  If $p_1 \geq \alpha_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
+			\item  \textbf{Low $p_1$}: If $p_1\leq\min(\phi_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
+			\item \textbf{High  $p_1$}:  If $p_1 \geq \phi_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
 			\item \textbf{Intermediate $p_1$:}
 			\begin{itemize}
-			  \item  If $1 < p_1 <\alpha_1$ then a steady state exists with $b^* < b_{fb}$ but it is unstable with $\mu_t >\EE_t \mu_{t+1}$ for $\mu < \mu_{fb}$.
-			\item  If $\alpha_1\leq p_1<\alpha_2$ then a steady state does not exist and $\mu_t > \EE_t\mu_{t+1}$
+			  \item  If $1 < p_1 <\phi_1$ then a steady state exists with $b^* < b_{fb}$, but it is unstable with $\mu_t >\EE_t \mu_{t+1}$ for $\mu < \mu_{fb}$.
+			\item  If $\phi_1\leq p_1<\phi_2$ then a steady state does not exist and $\mu_t > \EE_t\mu_{t+1}$
 			\end{itemize}
 		
 		\end{enumerate}
@@ -488,15 +488,15 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
  \frametitle{Incomplete markets with risk aversion}
  \textbf{Quasilinear preferences: }
  \begin{enumerate}
-  \item With quasilinear preferences, we showed that $b_t\to b^*$ when the aggregate state followed a 2 -state i.i.d. process
-  \item The level  and sign of $b^*$ is a function of the \textbf{exogenous payoff structure}: $p(s)$
+  \item With quasilinear preferences, we showed that $b_t\to b^*$ when the aggregate state followed a 2-state i.i.d. process
+  \item The level  and sign of $b^*$ is a function of the \textbf{exogenous payoff structure} $p(s)$
  \end{enumerate}
 
  \textbf{Risk aversion:}
   \begin{itemize}
    \item Marginal utility adjusted assets: $x_t=u_{c,t}b_{t}$ encodes history dependence
-   \item Long run properties of $x_t$ depend on returns: $R_{t,t+1}=\frac{p(s_{t+1})}{q_t}$
-   \item To focus on the \textbf{endogenous component} of payoffs, set:  $p(s)=1$
+   \item Long-run properties of $x_t$ depend on returns $R_{t,t+1}=\frac{p(s_{t+1})}{q_t}$
+   \item To focus on the \textbf{endogenous component} of payoffs, set  $p(s)=1$
   \end{itemize}
   %\emph{To retain analytical tractability and clarify our analysis we will remove exogenous fluctuations in the payoff terms by restricting $p(s) =1$}
   \end{frame}
@@ -505,18 +505,18 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
 \frametitle{Roadmap, II}
 \begin{itemize}
 
-\item Show that $x_t=U_{c,t}b_{t}$ is sole state variable for optimal policies
+\item Show that $x_t=U_{c,t}b_{t}$ is sole state variable 
 
-\item Split the Ramsey problem into two Bellman equations
+\item Split the Ramsey problem in two 
 \begin{enumerate}
- \item $V(b_{-1},s_0)$: time $t=0$ Bellman equation
- \item $V(x,s\_)$:  time $t\geq 1$ Bellman equation
+ \item  $t=0$ Bellman equation in $W(b_{-1},s_0)$ \textcolor{red}{Anmol and David XXXXXX: I altered the notation}
+ \item  $t\geq 1$ Bellman equation in $V(x,s\_)$
 \end{enumerate}
 
-\item Analyze steady states: $x^*$ such that $x_t \to x^*$
+\item Analyze steady states $x^*$ such that $x_t \to x^*$
 
 \end{itemize}
-\textbf{Interpretation:}  $x^*$  corresponds to an initial condition when the optimal portfolio in a LS economy is a risk free bond
+\textbf{Interpretation:}  $x^*$  corresponds to an initial condition when the optimal portfolio in a LS economy is a risk-free bond
 
 \end{frame}
 
@@ -525,9 +525,9 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
 	\frametitle{A Recursive Formulation}
 	
 	\begin{enumerate}
-	 \item Under commitment, government actions at $t \geq 1$ are constrained by  anticipations about them at $s < t$ 
-	 \item This contributes additional state variables like marginal utility of consumption in addition to debt
-	 \item However scaling the budget equation by marginal utilities makes it recursive in product $x=U_c b$
+	 \item Commitment implies that government actions at $t \geq 1$ are constrained by  anticipations about them at $s < t$
+	 \item This contributes additional state variables like marginal utility of consumption
+	 \item Scaling the budget constraint by marginal utility makes it recursive in product $x=U_c b$
 	
 	\[
 		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
@@ -551,9 +551,11 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
  \end{frame}
 \begin{frame}
 	\frametitle{Time 0 problem}
-	Given an initial  debt $b_0$, state $s_0$,  and continuation value function $V(x,s\_)$ 
+	Given an initial  debt $b_0$, state $s_0$,  and continuation value function $V(x,s\_)$
+\textcolor{red}{Anmol and David XXXXX: I altered the below by adding the $W$ function; but there is a problem with the timing of
+the $b$ argument.  See earlier slide where $W$ is defined.}
 	\[
-		\max_{c,l,x'} U(c,l) +\beta V(x',s0)
+		W(b_{-1},s_0) = \max_{c,l,x'} U(c,l) +\beta V(x',s0)
 	\]subject to  time zero implementability constraint
 	\[
 		U_{c}(c,l)c + U_l(c,l) l + x' \geq U_c(c,l) b_0
@@ -571,7 +573,7 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \alpha_1 < \alp
 \begin{frame}
  \frametitle{Revisiting steady states with risk aversion}
 Let $x'\left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
-for the $t\geq1$ recursive problem. 
+for the $t\geq1$ recursive problem.
 
 \begin{definition}
  A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
@@ -580,7 +582,7 @@ for the $t\geq1$ recursive problem.
 
 
 \vspace{3mm}
-\emph{Thus a steady state is a node at which a continuation allocation and tax rate has no further history dependence. }
+\emph{Thus, a steady state is a node at which a continuation allocation and tax rate has no further history dependence. }
 
  \end{frame}
 
@@ -589,7 +591,7 @@ for the $t\geq1$ recursive problem.
 
  \begin{frame}
 	\frametitle{Existence}
-	Let $x_{fb}$ be a value of the state $x$ from which the government can institute first best from that period onwards.  Assume a CRRA utility specification $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.  Finally, let  $c^{fb}$ and $l^{fb}$ be consumption and leisure under first best. 
+	Let $x_{fb}$ be a value of the state $x$ from which the government can institute first best from that period onwards.  Assume a CRRA utility specification $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.  Finally, let  $c^{fb}$ and $l^{fb}$ be consumption and leisure under first best.
 	\begin{proposition}  For a 2 state i.i.d. process, let  $s_g$ and $s_b$ denoting the states with high and low consumption at first best.  Suppose that
 	\[
 		\frac{g(s_g)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_g)}} > \frac{g(s_b)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_b)}}
@@ -676,7 +678,7 @@ for the $t\geq1$ recursive problem.
 	\begin{enumerate}
 	 \item In this setup, interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high tfp or low expenditure)
 	 \item The government holds claims against the private sector in the steady state. This is similar to the quasilinear case when $p_1$ was low.	 
-	 \item The incomplete markets Ramsey allocation converges to a Lucas Stokey allocation for all initial conditions	 	
+	 \item The incomplete markets Ramsey allocation converges to a Lucas-Stokey allocation for all initial conditions	 	
 	\end{enumerate}
 
 
@@ -689,9 +691,9 @@ for the $t\geq1$ recursive problem.
 \begin{frame}
 	\frametitle{Quasilinear vs. risk aversion}
 	\begin{itemize}
-				\item  With  quasilinear preferences, with a risk-free bond, the interest rate is always $1/\beta$.  
+				\item  With  quasilinear preferences, with a risk-free bond, the interest rate is always $1/\beta$.
    \item With risk averse preferences, interest rates are higher in period of high government expenditure.
-		\item  Thus, while the government has greater expenses in high government expenditure states, the higher interest rate means the govt. has to accumulate less to cover future government expenditures.
+		\item  Thus, while the government has greater expenses in high government expenditure states, the higher interest rate means the government can  accumulate less and still  cover future government expenditures.
 		\item  After the government has accumulated enough assets, it is actually better off in periods of high government expenditure than in periods with low government expenditures (since its claims to consumption are worth more).
 		\item  By holding assets, the government is able to reallocate resources across states, something it is not able to do in the quasilinear case.
 	\end{itemize}
@@ -720,8 +722,8 @@ for the $t\geq1$ recursive problem.
   \frametitle{Transfers}
 	\begin{itemize}
 	\item  That the government can use its assets to smooth tax rate distortions carries over even when the government has access to lump sum transfers
-	\item Access to nonnegative transfers makes first best level of assets trivially a ``steady state''.    	
-\item  With lump sum transfers,  in cases where the steady state exists and is stable, if the initial debt of the government is above its steady state,  the economy  converges with probability 1 to the steady state.
+	\item Access to nonnegative transfers makes first-best level of assets trivially a ``steady state''.    	
+\item  With lump sum transfers,  in cases where the steady state exists and is stable, if the initial debt of the government exceeds its steady state,  the economy  converges with probability 1 to the steady state.
 		
 	\end{itemize}
  \end{frame}
@@ -741,13 +743,13 @@ for the $t\geq1$ recursive problem.
 \end{frame}
 
  \begin{frame}
-  \frametitle{Conclusion}
+  \frametitle{Concluding remarks }
 \begin{itemize}
-	\item With market incompleteness, the payoff structure of the government asset has big implications for the long run debt position of the government
-	\item If the asset payoff structure offers greater returns in good states of the world then bad, then the Ramsey government  accumulates debt in the long run.
+	\item With market incompleteness, the asset payoff structure  has big implications for the government's  long run debt
+	\item If the asset payoff structure offers greater returns in good states of the world then bad, then the Ramsey government  asymptotically accumulates debt \textcolor{red}{Anmol and David XXXXXX: does `accumulate debt' mean `run up debt' or `accumulate assets'?}
 	
-\item With risk aversion, cyclical properties of interest rates additionally determines the long run debt position of the government.
-	\item  Access to nonnegative transfers play little role in determining the evolution of the system.  Rather the key  force is the government's ability to use its debt position to reallocate resources across states.
+\item With risk aversion, cyclical properties of interest rates affects government debt asymptotically
+	\item  Access to nonnegative transfers play little role in determining the evolution of the system.  Rather the key  force is the government's ability to use its debt position to reallocate resources across states
 	\item  \textbf{Future Research}:  How does the type of market incompleteness effect long run wealth distributions with heterogeneous agents
 \end{itemize}
  \end{frame}
