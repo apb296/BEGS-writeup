@@ -97,7 +97,7 @@
 \item Cases intermediate between LS and AMSS
 \begin{itemize}
 \item [+] We restrict government  to trade a single asset only
-\item [+] We exogenously restrict asset payoffs 
+\item [+] We exogenously restrict asset payoffs
 
  $\Longrightarrow$ E.g., bonds that pay less during adverse times
 
@@ -122,7 +122,7 @@
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U\left(
 c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{equation*}%
-  \item \textbf{Technology}: Aggregate output  $y_t=\theta_{t} l_{t}$ 
+  \item \textbf{Technology}: Aggregate output  $y_t=\theta_{t} l_{t}$
    \end{itemize}
 
 \end{frame}
@@ -271,7 +271,7 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 \[
 	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
 \]
-\emph{In effect,  the Ramsey planner chooses an asset payoff structure $p_t$  so that   measurability constraints for $t\geq 1$ 
+\emph{In effect,  the Ramsey planner chooses an asset payoff structure $p_t$  so that   measurability constraints for $t\geq 1$
 do not bind}
 \item Since allocations are history independent
 \[p_t=p^*(s_t|s_{t-1})\]
@@ -281,7 +281,7 @@ do not bind}
 \begin{frame}
 \frametitle{Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$}
 Given initial assets $b$,  let $\mu(b)$ be the Lagrange multiplier on implementability constraint
-at $t = ????$ \textcolor{red}{David and Anmol XXXXXX: please answer ????}
+at $t =0$
 \begin{enumerate}
 
  \item \textbf{Multiplier $\to$ Tax rate:}
@@ -437,14 +437,14 @@ When do we approximate a risk-free bond?
   \end{itemize}
   \small
  	\begin{theorem}
-Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2$ such that
+Let $b^*$ denote the steady state level of debt.  Then for  same $  \alpha_1 < \alpha_2$
 		\begin{enumerate}
-			\item  \textbf{Low $p_1$}: If $p_1\leq\min(\phi_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
-			\item \textbf{High  $p_1$}:  If $p_1 \geq \phi_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
+			\item  \textbf{Low $p_1$}: If $p_1\leq\min(\alpha_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
+			\item \textbf{High  $p_1$}:  If $p_1 \geq \alpha_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
 			\item \textbf{Intermediate $p_1$:}
 			\begin{itemize}
-			  \item  If $1 < p_1 <\phi_1$ then a steady state exists with $b^* < b_{fb}$, but it is unstable with $\mu_t >\EE_t \mu_{t+1}$ for $\mu < \mu_{fb}$.
-			\item  If $\phi_1\leq p_1<\phi_2$ then a steady state does not exist and $\mu_t > \EE_t\mu_{t+1}$
+			  \item  If $1 < p_1 <\alpha_1$ then a steady state exists with $b^* < b_{fb}$, but it is unstable with $\mu_t >\EE_t \mu_{t+1}$ for $\mu < \mu_{fb}$.
+			\item  If $\alpha_1\leq p_1<\alpha_2$ then a steady state does not exist and $\mu_t > \EE_t\mu_{t+1}$
 			\end{itemize}
 		
 		\end{enumerate}
@@ -496,7 +496,7 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2
   \begin{itemize}
    \item Marginal utility adjusted assets $x_t=u_{c,t}b_{t}$ encode history dependence
    \item Long-run properties of $x_t$ depend on returns $R_{t,t+1}=\frac{p(s_{t+1})}{q_t}$
-   \item To focus on the \textbf{endogenous component} of payoffs, set  $p(s)=1 \forall s$ \textcolor{red}{XXXX Tom added $\forall s$}
+
   \end{itemize}
   %\emph{To retain analytical tractability and clarify our analysis we will remove exogenous fluctuations in the payoff terms by restricting $p(s) =1$}
   \end{frame}
@@ -514,6 +514,7 @@ Let $b^*$ denote the steady state level of debt.  Then $\exists  \phi_1 < \phi_2
 \end{enumerate}
 
 \item Analyze steady states $x^*$ such that $x_t \to x^*$
+(Proved only under the special case of a risk-free bond  $p(s)=1 \forall s$ -- this focus on \textit{endogenous} component of returns
 
 \end{itemize}
 \textbf{Interpretation:}  $x^*$  corresponds to an initial condition when the optimal portfolio in a LS economy is a risk-free bond
