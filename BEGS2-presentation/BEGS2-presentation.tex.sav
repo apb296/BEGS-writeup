@@ -133,9 +133,7 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
 \begin{frame}
  \frametitle{Environment, II}
  \begin{itemize}
-\item \textbf{Asset markets}: Private sector has complete markets; Government trades are restricted:
-\begin{itemize}
-	\item  A unit of government debt  pays off $p_s$ in state $s$ next period
+\item \textbf{Asset markets}: A unit of government debt  pays off $p_s$ in state $s$ next period
 \end{itemize}
   \item \textbf{Linear Taxes}: Agent $i$'s tax bill
 \[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0 \]
