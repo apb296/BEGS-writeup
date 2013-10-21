@@ -264,9 +264,16 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 
 	
 	\begin{itemize}
-	 \item In a binary IID world, we identify  $\mathbb{P}$'s for which $b_t$  under a Ramsey policy converges to $b^*$	
+	\item We first reverse engineer an optimal $\mathbb{P}^*(b)$ using a Lucas Stokey allocation
 	
-	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$ hovering around $b^*$
+	 \item In a binary IID world, we identify  $\mathbb{P}$'s for which $b_t$  under a Ramsey policy converges to $b^*$ which solves
+	 
+	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
+	
+	
+	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$ hovering around $b^*$ which has a property that 
+	\[\mathbb{P}\approx \mathbb{P}^*(b^*)\]
+	
 	\end{itemize}
 
 	
@@ -288,23 +295,23 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 % % \end{frame}
 % %
 %
-%   \begin{frame}
-% \frametitle{Optimal asset payoff matrix$\mathbb{P}^*$}
-% \begin{enumerate}
-%  \item Compute a Lucas-Stokey Ramsey allocation given $b_{-1}$
-%
-%  \emph{ Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
-%
-%  \item Reverse engineer payoff on single asset
-% \[
-% 	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
-% \]
-% \emph{In effect,  the Ramsey planner chooses an asset payoff structure $p_t$  so that   measurability constraints for $t\geq 1$
-% do not bind}
-% \item Since allocations are history independent
-% \[p_t=\mathbb{P}^*(s_t|s_{t-1})\]
-% \end{enumerate}
-% \end{frame}
+  \begin{frame}
+\frametitle{Optimal asset payoff matrix $\mathbb{P}^*$}
+\begin{enumerate}
+ \item Compute a Lucas-Stokey Ramsey allocation given $b_{-1}$
+
+ \emph{ Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
+
+ \item Reverse engineer the payoff on single asset
+\[
+	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
+\]
+\emph{In effect,  the Ramsey planner chooses an asset payoff structure $p_t$  so that   measurability constraints for $t\geq 1$
+do not bind}
+\item Since allocations are history independent
+\[p_t=\mathbb{P}^*(s_t|s_{t-1})\]
+\end{enumerate}
+\end{frame}
 %
 \begin{frame}
 \frametitle{Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$}
@@ -324,10 +331,6 @@ at $t =0$
 
 \[
  \mathbb{P}^*(s|s\_) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta
- \]
-and
-\[
- \beta^{-1} \mathbb{P}^*(s|s\_) = \frac{S(s,\tau)}{b} + 1
  \]
 
  \end{enumerate}
