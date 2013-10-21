@@ -252,7 +252,7 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
  
  \item In an economy with an arbitrary payoff matrix $\mathbb{P}$ when would  $b_t \to b^*$ ?
  
-	\[\mathbb{P}(b^*)=\mathbb{P}^*(b^*)\]
+	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
 	
  \end{itemize}
 \end{enumerate}
@@ -375,15 +375,6 @@ The optimal payoff matrix in general has the following properties,
 % 
 % 
 
-\begin{frame}
-   \frametitle{show $b\to b^*$ }
-	\begin{figure}
-		\begin{center}
-		\includegraphics[scale=.5]{Images/graph.eps}
-	\end{center}	
-	\end{figure}
-
-  \end{frame}
  
 % 
 \begin{frame}
@@ -408,12 +399,7 @@ The optimal payoff matrix in general has the following properties,
 
  \begin{frame}
   \frametitle{Existence}
- A steady state is obtained by inverting the optimal payoff structure i.e 
-\begin{equation}
-\label{eq-ss}
-b^*: \mathbb{P}(b^*)=\mathbb{P}^*(b^*)
-\end{equation}
-
+ 
  
  When shocks are i.i.d and take two values
  
@@ -425,7 +411,14 @@ b^*: \mathbb{P}(b^*)=\mathbb{P}^*(b^*)
  \item $\bm{p}$ is the payoff in the ``good'' state $s$
  \item A risk free bond is a security when $\bm{p}=1$
 \end{itemize}
-\item  The steady restriction (\ref{eq-ss}) solves one equation in one unknown.  
+
+\item A steady state is obtained by inverting the optimal payoff structure i.e 
+\begin{equation}
+\label{eq-ss}
+b^*: \bm{p}=\bm{p}^*(b^*)
+\end{equation}
+
+This restriction solves one equation in one unknown.  
 \end{enumerate}
 \end{frame}
 
@@ -448,7 +441,10 @@ We can decompose a class of economies with different payoff structuresinto 3 reg
   \end{itemize}
  
  \end{frame}
-% 
+
+ 
+ 
+ 
 \begin{frame}
  \frametitle{Thresholds: $\alpha_1 <\alpha_2$}
 	%For either a pure TFP shock or a pure government expenditure shock,  we compute % $\alpha_1$ and $\alpha_2$ directly
@@ -469,7 +465,7 @@ We can decompose a class of economies with different payoff structuresinto 3 reg
 
 
 \begin{frame}
-   \frametitle{show the existence region}
+   \frametitle{Existence: Regions in $\bm{p}$ space}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.5]{Images/graph.eps}
@@ -498,32 +494,24 @@ We can decompose a class of economies with different payoff structuresinto 3 reg
 		\item \textbf{Stability: }   Away from a steady state, is the drift  $\mu_t$ big enough?
 		\end{itemize}
 	
- \end{frame}
-
-% 
-% 
- \begin{frame}
+  
+  \end{frame}
+  
+  \begin{frame}
   \frametitle{Characterizing Convergence}
 
   \begin{itemize}
   \item Reminder:  $\bm{p}$ is the payoff in the ``good'' state.
    \item As with existence, we can partition  the ``$\bm{p}$ space'' into stable and unstable regions
-   
-  \end{itemize}
-  
-  
-  
-  \end{frame}
-  
-  \begin{frame}
-  \frametitle{}
-  
-  \small
+     \end{itemize}
+     
  	\begin{theorem}
-Let $b^*$ denote the steady state level of debt.  Then for  same $  \alpha_1 < \alpha_2$
+Let $b^*$ denote the steady state level of debt and $b_{fb}$ be the level of debt that can support the first best allocation with complete markets. 
+
+Then for  same $  \alpha_1 < \alpha_2$
 		\begin{enumerate}
-			\item  \textbf{Low $p_1$}: If $p_1\leq\min(\alpha_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
-			\item \textbf{High  $p_1$}:  If $p_1 \geq \alpha_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
+			\item  \textbf{Low $\bm{p}$}: If $\bm{p}\leq\min(\alpha_1,1)$ then the steady state is stable with $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
+			\item \textbf{High  $\bm{p}$}:  If $\bm{p} \geq \alpha_2$ then the steady state is stable with $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
 			
 			
 			\end{enumerate}
@@ -537,7 +525,7 @@ Let $b^*$ denote the steady state level of debt.  Then for  same $  \alpha_1 < \
 
  
 \begin{frame}
-   \frametitle{Show the stable region}
+   \frametitle{Stability regions}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.5]{Images/graph.eps}
@@ -549,14 +537,14 @@ Let $b^*$ denote the steady state level of debt.  Then for  same $  \alpha_1 < \
  
  \begin{frame}
 
-	\frametitle{$p_1 > 1$}
+	\frametitle{A sample path with  $\bm{p} > 1$}
 	\begin{center}
 	\includegraphics[width=4in]{Images/port1.eps}
 	\end{center}
 \end{frame}
 
 \begin{frame}
-	\frametitle{$p_1 < 1$}
+	\frametitle{A sample path with   $\bm{p} <1$}
 	\begin{center}
 	\includegraphics[width=4in]{Images/port2.eps}
 	\end{center}
@@ -700,22 +688,22 @@ for the $t\geq1$ recursive problem.
 	\begin{enumerate}
 	 \item For a class of economies with separable iso-elastic preferences
 	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$
-	 \item Shocks that take two values and are i.i.d
+	 \item Shocks that take two values and are i.i.d with $s_b$  being the ``adverse'' state (either low tfp or high expenditure)
 	\end{enumerate}
 
 	
-	Let $x_{fb}$ be a value of the state $x$ from which the government can implement first best from that period onwards.  
+	Let $x_{fb}$ be a value of the state $x$ from which the government can implement first best with complete markets
 	
 	
 	
 	
-	\begin{proposition}  Let $q^{fb}(s)$ be the shadow price of government debt in state $s$ and using the first best allocation. 
-	if 
+	\begin{proposition}  Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ using the first best allocation. 
+	If 
 	\[
-		\frac{1-q^{fb}(s_b)}{1-q^{fb}(s_g)} > \frac{g(s_b)}{g(s_g) }
+		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)>1 }
 	\] 
 	
-	Then there exists a steady state with $x^{fb}>x^*>0$
+	Then there exists a steady state with $x_{fb}>x^*>0$
 		\end{proposition}
 \end{frame}
 
@@ -778,10 +766,10 @@ for the $t\geq1$ recursive problem.
 %
 %  \begin{frame}
 % 	\frametitle{Existence}
-% 	Let $x_{fb}$ be the $x$ with which the government can institute first best from that period onwards.  Assume a CRRA utility specification $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.  Finally, let  $c^{fb}$ and $l^{fb}$ be consumption and leisure under first best.  We have the following proposition
+% 	Let $x_{fb}$ be the $x$ with which the government can institute first best from that period onwards.  Assume a CRRA utility specification $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.  Finally, let  $c_{fb}$ and $l_{fb}$ be consumption and leisure under first best.  We have the following proposition
 % 	\begin{proposition}  For a 2 state i.i.d. process let  $s_g$ and $s_b$ denoting the states with high and low consumption at first best.  If
 % 	\[
-% 		\frac{g(s_g)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_g)}} > \frac{g(s_b)}{1-\frac{\beta\EE[(c^{fb})^{-\sigma}]}{c^{fb}(s_b)}}
+% 		\frac{g(s_g)}{1-\frac{\beta\EE[(c_{fb})^{-\sigma}]}{c_{fb}(s_g)}} > \frac{g(s_b)}{1-\frac{\beta\EE[(c_{fb})^{-\sigma}]}{c_{fb}(s_b)}}
 % 	\]  Then there exists a multiplier $\mu$ and complete markets solutions $c^\mu,l^\mu$ such that
 % 	\[
 % 	\underline x<\frac{U_{c_\mu}(s)c_\mu(s) + U_{l_\mu}(s) l_\mu(s)}{\frac{U_{c_\mu}(s)}{\beta\EE[U_{c_\mu}]}-1} = x^* <0
@@ -794,7 +782,7 @@ for the $t\geq1$ recursive problem.
 	\frametitle{Stability}
 	\begin{enumerate}
 	 \item In this setup, interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high TFP or low expenditure)
-	 \item The government holds claims against the private sector in the steady state. This is similar to the quasilinear case when $p_1$ was low.	 
+	 \item The government holds claims against the private sector in the steady state. This is similar to the quasilinear case when $\bm{p}$ was low.	 
 	 \item The incomplete markets Ramsey allocation converges to a Lucas-Stokey  Ramsey allocation for all initial conditions	 	
 	\end{enumerate}
 
@@ -805,20 +793,20 @@ for the $t\geq1$ recursive problem.
 	\end{frame}
 	
 %
+% \begin{frame}
+% 	\frametitle{Quasilinear vs. risk aversion}
+% 	{\color{red} Redo this slide}
+% 	\begin{itemize}
+% 				\item  With  quasilinear preferences and a risk-free bond, the interest rate is always $1/\beta$.
+%    \item With risk averse preferences, interest rate is higher in periods of high government expenditure.
+% 		\item  Thus, while the government has greater expenses in high government expenditure states, the higher interest rate means that the government can  accumulate less and still  cover future government expenditures.
+% 		\item  After the government has accumulated enough assets, it is actually better off in periods of high government expenditure than in periods with low government expenditures (since its claims to consumption are worth more).
+% 		\item  By holding assets, the government is able to reallocate resources across states, something it is not able to do in the quasilinear case.
+% 	\end{itemize}
+% \end{frame}
+% 
 \begin{frame}
-	\frametitle{Quasilinear vs. risk aversion}
-	{\color{red} Redo this slide}
-	\begin{itemize}
-				\item  With  quasilinear preferences and a risk-free bond, the interest rate is always $1/\beta$.
-   \item With risk averse preferences, interest rate is higher in periods of high government expenditure.
-		\item  Thus, while the government has greater expenses in high government expenditure states, the higher interest rate means that the government can  accumulate less and still  cover future government expenditures.
-		\item  After the government has accumulated enough assets, it is actually better off in periods of high government expenditure than in periods with low government expenditures (since its claims to consumption are worth more).
-		\item  By holding assets, the government is able to reallocate resources across states, something it is not able to do in the quasilinear case.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{2 State i.i.d. process with Risk Aversion}
+	\frametitle{A sample path for 2 state i.i.d. process with risk aversion}
 	\begin{center}
 	\includegraphics[width=4in]{Images/2stateiid.eps}
 	\end{center}
@@ -828,7 +816,7 @@ for the $t\geq1$ recursive problem.
 \subsection{}
 
 \begin{frame}
-	\frametitle{$S>2$ states}
+	\frametitle{A sample path  for economy with $S>2$ states}
 	\begin{center}
 	\includegraphics[width=4in]{Images/5stateiid.eps}
 	\end{center}
@@ -838,10 +826,14 @@ for the $t\geq1$ recursive problem.
 
  \begin{frame}
   \frametitle{Transfers}
-	\begin{itemize}
-	\item  That the government can use its assets to smooth tax rate distortions carries over to when the government has access to lump sum transfers
+	\begin{itemize}	
 	\item Access to nonnegative transfers makes first-best level of assets trivially a ``steady state''.    	
-\item  With lump sum transfers,  in cases where the steady state exists and is stable, if the initial debt of the government exceeds its steady state,  the economy  converges with probability 1 to the steady state.
+\item  All results hold \textit{on one side} of steady state,
+\begin{theorem}
+
+With lump sum transfers,  in cases where the steady state exists and is stable,  if the initial debt of the government exceeds its steady state level ,  the economy  converges with probability 1 to the steady state.
+ 
+\end{theorem}
 		
 	\end{itemize}
  \end{frame}
