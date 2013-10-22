@@ -167,13 +167,6 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
 
 \end{frame}
 
-
-
-\begin{frame}{Household first-order conditions}
-
-\textcolor{red}{David XXXXXX: please put the FONCs here}
-\end{frame}
-
 \begin{frame}
  \frametitle{Ramsey Problem}
 
@@ -198,7 +191,15 @@ equilibrium for a given $\left( b_{-1},B_{-1},s_{-1}\right) $
   \frametitle{Ramsey problem}
 
   \begin{enumerate}
-  \item \textbf{Primal approach}: To eliminate tax rates and prices, use  household's first order conditions
+  \item \textbf{Primal approach}: To eliminate tax rates and prices, use  household's first order conditions:
+\begin{subequations}
+	\[
+		U_{c,t} q_t = \beta \EE_t U_{c,t+1}
+	\]
+	\[
+		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t}
+	\]
+\end{subequations}
   \item \textbf{Implementability constraints}:  Derive by iterating the household's budget equation forward  at every history
 
   $\Rightarrow$With incomplete market economies these impose  \emph{measurability restrictions} on Ramsey allocations
@@ -399,7 +400,6 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 
   \begin{frame}
    \frametitle{Optimal Payoff Structure: TFP shocks}
-   \textcolor{red}{David XXXXX: please change xlabel to ``Initial Government Debt''}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
@@ -412,7 +412,6 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 %
   \begin{frame}
    \frametitle{Optimal Payoff Structure: Expenditure shocks}
-   \textcolor{red}{David XXXXX: please change xlabel to ``Initial Government Debt''}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph.eps}
@@ -515,7 +514,6 @@ We can decompose a class of economies with different asset payoffs into 3 region
 
 \begin{frame}
    \frametitle{Existence regions in $\bm{p}$ space}
-   \textcolor{red}{David XXXXX: please change xlabel to ``Initial Government Debt''}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.5]{Images/graph_nostable.eps}
@@ -574,7 +572,6 @@ Let $b^*$ denote the steady state level of govt.  debt and $b_{fb}$ be the level
 
 \begin{frame}
    \frametitle{Stability regions}
-   \textcolor{red}{David XXXXX: please change xlabel to ``Initial Government Debt''}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.5]{Images/graph_stable.eps}
