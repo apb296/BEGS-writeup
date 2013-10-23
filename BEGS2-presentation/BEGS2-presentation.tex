@@ -208,7 +208,7 @@ equilibrium for a given $\left( b_{-1},B_{-1},s_{-1}\right) $
 
  \end{enumerate}
 
-  
+
 
 
   \end{frame}
@@ -219,8 +219,8 @@ equilibrium for a given $\left( b_{-1},B_{-1},s_{-1}\right) $
   \frametitle{Ramsey problem}
 
   \begin{enumerate}
-  
- 
+
+
 
   \item[4.]  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
 
@@ -277,7 +277,7 @@ c_t + g_t = \theta_t l_t
 \begin{equation*}
 b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)
  \end{equation*}
- 
+
  (c) \textbf{Measurability constraints}
  \begin{equation*}
  \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
@@ -296,7 +296,8 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 	 \item Payoffs $\mathbb{P}$
 	\end{itemize}
 	
-\item To focus on the exogenous $\mathbb{P}$ part of return, we first study quasi-linear  preferences  that pin down $q_t=\beta$
+\item To focus on the exogenous $\mathbb{P}$ part of return, we first study quasi-linear  preferences  that pin down $q_t=\beta \mathbb{E}_t 
+\mathbb{P}(s_{t+1}|s_t)$
 
 \item Turn on  risk aversion and fluctuating $q_t$ later
 	
@@ -317,7 +318,7 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 
  \item Under a Ramsey plan for an \textbf{arbitrary} payoff matrix $\mathbb{P}$,  when would  $b_t \to b^*$, where
 
-	\[\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(P) ?\]
+	\[\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(\mathbb{P}) ?\]
 	
 \end{itemize}
 \end{frame}
@@ -335,9 +336,10 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
 	
 	
-	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$'s hovering around $b^*$ satisfying
-	\[\mathbb{P}\approx \mathbb{P}^*(b^*)\]
-	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
+	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$'s 
+ hovering around $\tilde b$.    The optimal $\mathbb{P}^*$ associated with $\tilde b$ seems close to $\mathbb{P}$:
+	\[\mathbb{P}\approx \mathbb{P}^*(\tilde b)\]
+%	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
 	\end{itemize}
 
 	
@@ -657,9 +659,9 @@ Let $b^*$ denote the steady state level of govt.  debt and $b_{fb}$ be the level
    \item  With binary i.i.d shock shock process,  $x_t=u_{c,t}b_{t}$  converges
 
    \item Long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_{t+1}|s_t)}{q_t(s^t)}$.
-   Now $q_t$ varies in interesting ways \textcolor{red}{Anmol and David XXXXX: please note how I changed this bullet point and slide}
-   
-   
+   Now $q_t$ varies in interesting ways
+
+
   \end{itemize}
   %\emph{To retain analytical tractability and clarify our analysis we will remove exogenous fluctuations in the payoff terms by restricting $p(s) =1$}
   \end{frame}
