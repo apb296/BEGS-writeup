@@ -296,7 +296,7 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 	 \item Payoffs $\mathbb{P}$
 	\end{itemize}
 	
-\item To focus on the exogenous $\mathbb{P}$ part of return, we first study quasi-linear  preferences  that pin down $q_t=\beta \mathbb{E}_t 
+\item To focus on the exogenous $\mathbb{P}$ part of return, we first study quasi-linear  preferences  that pin down $q_t=\beta \mathbb{E}_t
 \mathbb{P}(s_{t+1}|s_t)$
 
 \item Turn on  risk aversion and fluctuating $q_t$ later
@@ -336,7 +336,7 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
 	
 	
-	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$'s 
+	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$'s
  hovering around $\tilde b$.    The optimal $\mathbb{P}^*$ associated with $\tilde b$ seems close to $\mathbb{P}$:
 	\[\mathbb{P}\approx \mathbb{P}^*(\tilde b)\]
 %	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
@@ -928,6 +928,22 @@ With nonnegative lump sum transfers,  in cases where a steady state exists and i
 	\includegraphics[width=4in]{Images/transfer_example2.eps}
 	\end{center}
 \end{frame}
+
+
+\begin{frame}{Battle field}
+\small
+\begin{tabular}[h]{| l | p{1.25in} | p{1.25in} |}
+	\hline
+	&$p = 1$& $p\neq 1$\\
+	\hline
+	Quasi-Linear& With transfers: AMSS.  Without transfers   with TFP shocks,  $\exists$ stable SS state at first best.  Without transfers with govt. expend shocks, no SS.& $\exists$   $\alpha_1$ and $\alpha_2$ such that SS exists if $p_1 < \alpha_1$ or $p_1 >\alpha_2$.  SS stable if $p_1 \leq 1$ or $p_1 >\alpha_2$.\\
+	\hline
+	Risk Aversion&$\exists$ SS in which the government holds assets.  Proof of convergence to SS if initial  government debt or smaller than SS assets.& Nothing proved.  Conjecture that $\exists$ SS.  Conjecture that $\exists$ a cutoff for $p_1$ determining whether eventually govt holds assets.\\
+	\hline
+\end{tabular}
+
+\end{frame}
+
 
 \begin{frame}
  Add a slide comparing stuff to Buera Nicolini, Angelotos
