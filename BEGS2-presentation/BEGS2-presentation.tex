@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage{rotating}
 \usepackage{graphicx}
+\usepackage{epstopdf}
 \usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{bm}
@@ -391,7 +392,7 @@ Given
 	\]
  \item \textbf{Tax rate $\to$ net of interest surplus:}
  \[
-		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1+\tau)^\frac1\gamma\tau-g(s)
+		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g(s)
 	\]
 \item \textbf{Surplus $\to$ optimal payoff structure:}
 
@@ -421,7 +422,6 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 
   \begin{frame}
    \frametitle{Optimal Payoff Structure: TFP shocks}
-   \textcolor{red}{David XXXXX: please relabel the y-axis simply "payoff"}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
@@ -434,7 +434,6 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 %
   \begin{frame}
    \frametitle{Optimal Payoff Structure: Expenditure shocks}
-   \textcolor{red}{David XXXXX: please relabel the y-axis simply "payoff"}
 	\begin{figure}
 		\begin{center}
 		\includegraphics[scale=.4]{Images/p_graph.eps}
@@ -587,7 +586,6 @@ Let $b^*$ denote the steady state level of govt.  debt and $b_{fb}$ be the level
 			\end{theorem}
 			
 			For the intermediate region where  $b^*$ either does not exist or is unstable, there is a tendency to run up debt
-\textcolor{red}{David XXXXXX: do you have graphs of simulations that illustrate this? Might we want to put one or two of these in the slides?}
 		
 		
 	
@@ -932,15 +930,33 @@ With nonnegative lump sum transfers,  in cases where a steady state exists and i
 
 \begin{frame}{Battle field}
 \small
+\textit{What are the long run levels of government holdings ?}
+
+\vspace{3mm}
+
+With shocks that are IID and take two values,
+
 \begin{tabular}[h]{| l | p{1.25in} | p{1.25in} |}
 	\hline
 	&$p = 1$& $p\neq 1$\\
 	\hline
-	Quasi-Linear& With transfers: AMSS.  Without transfers   with TFP shocks,  $\exists$ stable SS state at first best.  Without transfers with govt. expend shocks, no SS.& $\exists$   $\alpha_1$ and $\alpha_2$ such that SS exists if $p_1 < \alpha_1$ or $p_1 >\alpha_2$.  SS stable if $p_1 \leq 1$ or $p_1 >\alpha_2$.\\
+	Quasi-Linear& (AMSS)  
+	
+	With $T_t\geq 0$, hold assets at first best .&Partition the payoff space such that either 
+	
+	a) issue or 
+	b) run up debt eventually\\
 	\hline
-	Risk Aversion&$\exists$ SS in which the government holds assets.  Proof of convergence to SS if initial  government debt or smaller than SS assets.& Nothing proved.  Conjecture that $\exists$ SS.  Conjecture that $\exists$ a cutoff for $p_1$ determining whether eventually govt holds assets.\\
+	Risk Aversion& Conditions under which
+	
+	assets $<$ first best& \emph{Conjecture:} Similar results  as in quasi-linear case\\
 	\hline
 \end{tabular}
+
+
+\vspace{4mm}
+
+In future work we plan to study more general shocks processes
 
 \end{frame}
 
