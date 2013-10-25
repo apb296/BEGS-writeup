@@ -1,0 +1,83 @@
+\documentclass{beamer}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+%	
+\usepackage{subfig}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\tikzset{My Arrow Style/.style={single arrow, fill=red!50, anchor=base, align=center,text width=.5cm,rotate =270}}
+\newcommand{\MyArrow}[2][]{\tikz[baseline] \node [My Arrow Style,#1] {#2};}
+\tikzset{My 2Arrow Style/.style={single arrow, fill=red!50, anchor=base, align=center,text width=.5cm,rotate =90}}
+\newcommand{\MyArrowUp}[2][]{\tikz[baseline] \node [My 2Arrow Style,#1] {#2};}
+%\newcommand{at}{\begin{matrix}}
+%\newcommand{\emat}{\end{matrix}}
+\newcommand{\EE}{\mathbb E}
+
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{assumption}{Assumption}
+\newtheorem{axiom}{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{proposition}{Proposition}
+\newtheorem{summary}[theorem]{Summary}
+\newtheorem{exercise}{Exercise}
+\newtheorem{notation}{Notation}
+\newtheorem{remark}{Remark}
+%\graphicspath{{graphs//}}
+
+\title {Optimal Taxation Without State Contingent Debt}
+\author{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}
+
+\date{October 2013}
+% \today will show current date.
+% Alternatively, you can specify a date.
+%
+\begin{document}
+%
+
+
+
+
+\begin{frame}
+ \frametitle{Comparison to literature}
+ \begin{enumerate}
+  \item Angelotos(2002), Buera and Nicolini (2004)
+  
+\begin{itemize}
+ \item Begin with a complete market optimal Ramsey allocation
+ \item Ask if this can be spanned by \emph{some} colloection of non-contingent debt of different maturities ? 
+\end{itemize}
+\item This paper
+\begin{itemize}
+ \item Begin with an incomplete market optimal Ramsey allocation
+ \item Ask whether the long run allocation coincides with \emph{some} complete market allocation ?
+\end{itemize}
+
+\item In BEGS 1, we study the same problem with heterogeneous agents 
+\begin{itemize}
+ \item We find existence of ``steady states'' which have constant ratios of consumption and labor taxes 
+ \item But generically there does not exist initial assets and Pareto weights that could yield the stationary allocation
+\end{itemize}
+
+
+  
+ \end{enumerate}
+
+
+\end{frame}
+
+  \end{document}
+%  
