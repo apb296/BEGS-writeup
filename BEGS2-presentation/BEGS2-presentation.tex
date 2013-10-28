@@ -404,21 +404,22 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 \frametitle{Optimal asset payoff matrix $\mathbb{P}^*$}
 \begin{enumerate}
  \item  Given $b_{-1}$, compute a Lucas-Stokey Ramsey allocation
-
+\
 % \emph{Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
 
- \item Reverse engineer  payoff on single asset
-\[
-	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
-\]
-\begin{itemize}
-	\item  Under the normalization $q_t = \beta$ %of  ${\mathbb P}$
-\end{itemize}
-\item By construction, the optimal payoff  $p_t$   disarms the  $t\geq 1$
-measurability constraints
-\item Since a Lucas-Stokey Ramsey allocation is  history independent,
+ \item Notice that the measurability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
+ 
+ \item From this class we choose a solution for $p_t$ using the normalization that $\mathbb{E}_{t-1}U_{c,t}p_t=1$.
+\[ p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \]
+ \item By construction, $p_t$   disarms the  $t\geq 1$
+measurability constraints. 
+
+\item To construct the optimal payoff matrix
 \[p_t=\mathbb{P}^*(s_t|s_{t-1})\]
+
+
 \end{enumerate}
+
 \end{frame}
 %
 \begin{frame}
