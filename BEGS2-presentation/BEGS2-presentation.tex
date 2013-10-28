@@ -160,7 +160,7 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
   \item \textbf{Budget constraints} $q_t$ is price of  asset
 
   \begin{itemize}
-   \item Household: $ c_{t}+q_tb_{t}=\left( 1-\tau _{t}\right) \theta _{t}l_{t}+p_{t}b_{t-1}+T_{t}$ % \ T_t \geq 0$
+   \item Household: $ c_{t}+b_{t}=\left( 1-\tau _{t}\right) \theta _{t}l_{t}+\frac{p_{t}}{q_{t-1}}b_{t-1}+T_{t}$ % \ T_t \geq 0$
   \item Government: $g_{t}+q_tB_{t}+T_t=\tau _{t}\theta_{t}l_{t}+p_{t}B_{t-1} $% \ T_t \geq 0$
   \end{itemize}
 
@@ -205,7 +205,7 @@ equilibrium for a given $\left( b_{-1},B_{-1},s_{-1}\right) $
   \item \textbf{Primal approach}: To eliminate tax rates and prices, use  household's first order conditions:
 \begin{subequations}
 	\[
-		U_{c,t} q_t = \beta \EE_t U_{c,t+1}
+		U_{c,t} q_t = \beta \EE_t p_{t+1}U_{c,t+1}
 	\]
 	\[
 		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t}
@@ -247,7 +247,7 @@ equilibrium for a given $\left( b_{-1},B_{-1},s_{-1}\right) $
  \begin{frame}
  \frametitle{Ramsey problem (Lucas-Stokey)}
 \begin{equation*}
-\max_{\{c_t,l_t,b_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
+\max_{\{c_t,l_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
  \end{equation*}
  subject to
 
@@ -411,6 +411,9 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 \[
 	p_t = \frac{\beta}{U_{c,t}b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left(U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)
 \]
+\begin{itemize}
+	\item  Under the normalization of $q_t = \beta$
+\end{itemize}
 \item By construction, the optimal payoff  $p_t$   disarms the  $t\geq 1$
 measurability constraints
 \item Since a Lucas-Stokey Ramsey allocation is  history independent,
@@ -514,7 +517,7 @@ Properties of  optimal payoff matrix $\mathbb{P}$
   \begin{enumerate}
 
 \item $\mathbb{P}(s|s\_)$ is independent of $s\_$ (so $\mathbb{P}$ can be a vector)
-\item We can normalize $\mathbb{E}\mathbb{P}(s)=1$ and  then pin down payoffs with a scalar $\bm{p}$.
+\item Under the normalization of $q_t = \beta$ we have $\mathbb{E}\mathbb{P}(s)=1$.   Payoffs are then determined by a single scalar $\bm{p}$.
 \begin{itemize}
  \item $\bm{p}$ is the payoff in the ``good'' state $s$
  \item A risk-free bond is a security for which $\bm{p}=1$
@@ -576,7 +579,7 @@ We can decompose a set of economies with different asset payoffs into 3 regions 
    \frametitle{Existence regions in $\bm{p}$ space}
 	\begin{figure}
 		\begin{center}
-		\includegraphics[scale=.5]{Images/graph_nostable.eps}
+		\includegraphics[width=4.2in]{Images/graph_nostable.pdf}
 	\end{center}	
 	\end{figure}
 
@@ -634,7 +637,7 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
    \frametitle{Stability regions}
 	\begin{figure}
 		\begin{center}
-		\includegraphics[scale=.5]{Images/graph_stable.eps}
+		\includegraphics[width = 4.2in]{Images/graph_stable.pdf}
 	\end{center}	
 	\end{figure}
 
@@ -674,6 +677,21 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
 % 	\end{enumerate}
 % \end{frame}
 % %
+
+\begin{frame}
+	\frametitle{Intuition for Convergence}
+	\begin{itemize}
+	\item \textbf{Economic forces}
+	\begin{itemize}
+	\item Asset {\color{black} \textbf{levels} } can help smooth tax distortions {\color{black}\textbf{across  states}}
+	\item This differs from the  role of debt in previous incomplete markets  economies where {\color{black} \textbf{changes}} in debt levels help smooth tax distortions {\color{black}  \textbf{over  time}}
+	\end{itemize}
+	\item  When $\mathbb{P}$ is a risk free bond the marginal cost of debt follows martingale.
+	\item  If the payoff matrix of the asset differs across states, then level of government debt smooths tax distortions across states.
+	\item  When issuing debt the government takes takes this benefit into account, distorting the martingale, and leading to either the accumulation or decumulation of debt.
+	\end{itemize}
+\end{frame}
+
 \begin{frame}
  \frametitle{Outcomes with quasi-linear preferences}
  \textbf{Outcomes:}
