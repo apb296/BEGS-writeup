@@ -93,10 +93,10 @@ are optimal under uncertainty have an essential `insurance' aspect to them.
 \item Why might different governments want to issue different amounts of debt?
 \item Existing answers hinge on polar assumptions:
 \begin{itemize}
- \item [+] Complete markets, Lucas Stokey (1984): non history dependent debt quantities inherited from initial condition
- \item [+ ] A risk-free bond only, quasi-linear preferences, AMSS (2002): govt. accumulates {\em assets} sufficient to finance activities using interest revenues
+ \item [+]  Lucas Stokey (1984), complete markets: non history dependent debt quantities inherited from initial condition
+ \item [+ ]  AMSS (2002), a risk-free bond only, quasi-linear preferences: govt. accumulates {\em assets} sufficient to finance activities using interest revenues
 \end{itemize}
-\item Unknown: what if interest rates fluctuate?
+\item Unknown after AMSS (2002): what if interest rates fluctuate?
 \end{enumerate}
 \end{frame}
 
@@ -173,7 +173,7 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{itemize}
   \item[]
 
-\item \textbf{Initial conditions}: Assets $b_{-1}, B_{-1}$ and  $s_{-1}$
+\item \textbf{Initial conditions}: Assets $b_{-1}=-B_{-1}$ and  $s_{-1}$
 \end{itemize}
 
 \end{frame}
@@ -408,13 +408,13 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 % \emph{Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
 
  \item Notice that the measurability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
- 
+
  \item From this class we choose a solution for $p_t$ using the normalization that $\mathbb{E}_{t-1}U_{c,t}p_t=1$.
 \[ p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \]
  \item By construction, $p_t$   disarms the  $t\geq 1$
-measurability constraints. 
+measurability constraints.
 
-\item Using the fact that the Lucas Stokey solution is stationary, we can construct the optimal payoff matrix
+\item Using the fact that the Lucas-Stokey allocation is stationary, we can construct the optimal payoff matrix
 \[\mathbb{P}^*(s_t,s_{t-1}|b_{-1})=p_t\]
 
 
@@ -439,7 +439,7 @@ Given
 \item \textbf{Surplus $\to$ optimal payoff structure:}
 
 \[
- \mathbb{P}^*(s\_,s|b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta
+ \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta
  \]
 
  \end{enumerate}
@@ -1062,16 +1062,16 @@ In future work we plan to study more general shocks processes
   \item Angelotos (2002), Buera and Nicolini (2004)
 
 \begin{itemize}
- \item Begin with a complete market  Ramsey allocation
- \item Ask if this can be spanned by \emph{some} collection of non-contingents debt of different maturities?
+ \item Begins with a complete market  Ramsey allocation
+ \item Asks if this can be attained using only \emph{some} collection of non-contingents debt of different maturities?
 \end{itemize}
 \item This paper
 \begin{itemize}
- \item Begin with an incomplete markets Ramsey allocation
- \item Ask whether the long-run allocation coincides with \emph{some} complete market allocation?
+ \item Begins with an incomplete markets Ramsey allocation
+ \item Asks whether the long-run allocation coincides with \emph{some} complete market allocation?
 \end{itemize}
 
-\item In BEGS1, we study a related problem with heterogeneous agents
+\item BEGS1 studies a related problem with heterogeneous agents
 
 
 
