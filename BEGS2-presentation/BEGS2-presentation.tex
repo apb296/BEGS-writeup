@@ -90,10 +90,10 @@ are optimal under uncertainty have an essential `insurance' aspect to them.
 
 \begin{enumerate}
 \item Should a  government accumulate or decumulate assets?
-\item Why might different governments want to issue different amounts of debt?
+\item Why might different economic fundamentals lead governments to want different amounts of debt?
 \item Existing answers hinge on polar assumptions:
 \begin{itemize}
- \item [+]  Lucas Stokey (1984), complete markets: non history dependent debt quantities inherited from initial condition
+ \item [+]  Lucas Stokey (1984), complete markets: non history dependent debt quantities inherited from initial debt
  \item [+ ]  AMSS (2002), a risk-free bond only, quasi-linear preferences: govt. accumulates {\em assets} sufficient to finance activities using interest revenues
 \end{itemize}
 \item Unknown after AMSS (2002): what if interest rates fluctuate?
@@ -187,7 +187,7 @@ c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{definition}
 
 \begin{definition}
-\textbf{Competitive equilibrium}: Given $\left(b_{-1},B_{-1},s_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$,
+\textbf{Competitive equilibrium}: Given $\left(b_{-1}=-B_{-1},s_{-1}\right) $ and $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$,
 all allocations are individually rational, markets clear \footnote{Usually, we impose only  ``natural'' debt limits. }
 \end{definition}
 
@@ -409,9 +409,9 @@ Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
 
  \item Notice that the measurability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
 
- \item From this class we choose a solution for $p_t$ using the normalization that $\mathbb{E}_{t-1}U_{c,t}p_t=1$.
+ \item From this class we select a  $p_t$ that imposes the normalization  $\mathbb{E}_{t-1}U_{c,t}p_t=1$
 \[ p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \]
- \item By construction, $p_t$   disarms the  $t\geq 1$
+ \item By construction, $p_t$   disarms the time  $t\geq 1$
 measurability constraints.
 
 \item Using the fact that the Lucas-Stokey allocation is stationary, we can construct the optimal payoff matrix
@@ -518,9 +518,9 @@ Properties of  optimal payoff matrix $\mathbb{P}$
   \begin{enumerate}
 
 \item $\mathbb{P}(s\_,s)$ is independent of $s\_$ (so $\mathbb{P}$ can be a vector)
-\item Under the normalization of $q_t = \beta$ we have $\mathbb{E}\mathbb{P}(s)=1$.   Payoffs are then determined by a single scalar $\bm{p}$.
+\item Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$.   Payoffs are then determined by a  scalar $\bm{p}$.
 \begin{itemize}
- \item $\bm{p}$ is the payoff in the ``good'' state $s$
+ \item $\bm{p}$ is the asset's payoff in the ``good'' state $s$
  \item A risk-free bond is a security for which $\bm{p}=1$
 \end{itemize}
 
@@ -542,7 +542,7 @@ One equation in one unknown $b^*$
 The payoff $\bm{p}$ in good state
 $\in (0,\infty)$.
 
-We can decompose a set of economies with different asset payoffs into 3 regions via thresholds $\alpha_2\geq\alpha_1\geq1$
+We categorize a set of economies with different asset payoffs into 3 regions via thresholds $\alpha_2\geq\alpha_1\geq1$
 
 
 
@@ -687,13 +687,13 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
 	%\item Debt {\color{black} \textbf{levels} } can help smooth tax distortions {\color{black}\textbf{across  states}}
 	%\item This differs from the  role of debt economies with risk free debt where {\color{black} \textbf{changes}} in debt levels help smooth tax distortions {\color{black}  \textbf{over  time}}
 	%\end{itemize}
-	\item The optimal policy with incomplete markets smooths the welfare costs of distorting labor taxes by manipulating debt positions
-	\item With a risk free bond the marginal cost of raising funds $\mu_t$ follow a martingale. In such economies,  changes in debt levels help smooth tax distortions across time. 		
-	\item  If the payoff matrix of the asset differs across states, then level of government debt smooths tax distortions across states by generating state contingent revenues.
-	\item The steady state $b^*$ is a unique debt level that provides the exact ``state contingency'' to overcome the missing assets markets	
-	\item  When issuing debt the government takes takes this benefit into account, distorting the martingale, and leading to either the accumulation or decumulation of debt.	
-	\item Although this is achived by raising taxes, locally,  the welfare costs of taxes is second order dominated by the gains from coming closer to $b^*$ which are first order in terms of welfare.
-	\item This explains the long run convergence to $b^*$
+	\item The Ramsey policy with incomplete markets smooths the welfare costs of distorting labor taxes by manipulating debt positions
+	\item With a risk-free bond, the marginal cost of raising funds $\mu_t$ is  a martingale. Changes in debt levels help smooth tax distortions across time. 		
+	\item  If the payoff matrix of the asset differs across states, then  by generating state contingent revenues, the level of government debt smooths tax distortions across states.
+	\item The steady state $b^*$ is a unique debt level that provides enough ``state contingency'' completely to overcome  missing assets markets	
+	\item  When issuing debt, the government takes takes this benefit into account by distorting the martingale and either accumulating or decumulating debt.	
+	\item Although this is achieved by raising taxes, locally  the welfare costs of taxes are second order and dominated by the gains from coming closer to $b^*$, which are first order in terms of welfare.
+	%\item This explains the long run convergence to $b^*$
 	\end{itemize}
 \end{frame}
 
@@ -796,7 +796,7 @@ Seek steady states $x^*$ such that $x_t \to x^*$
 \begin{frame}{Progress report}
 
 \begin{enumerate}
- \item  Existence proved only under a special case of a risk-free bond  $\mathbb{P}(s|s\_)=1 \ \forall \ (s,s\_)$
+ \item  Existence proved only under  special case of a risk-free bond  $\mathbb{P}(s|s\_)=1 \ \forall \ (s,s\_)$
 
  This focuses attention  on \textit{endogenous} component of returns coming from $q_t(s^t)$
 
@@ -809,7 +809,7 @@ Seek steady states $x^*$ such that $x_t \to x^*$
 \begin{frame}
  \frametitle{Revisiting steady states with risk aversion}
 Let $x'\left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
-for the $t\geq1$ recursive problem.
+for the $t\geq1$ Bellman equation.
 
 \begin{definition}
  A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
@@ -818,7 +818,7 @@ for the $t\geq1$ recursive problem.
 
 
 \vspace{3mm}
-\emph{Thus, a steady state is a node at which  continuation allocation and tax rate have no further history dependence. }
+\emph{Thus, a steady state is a node at which the  continuation allocation and tax rate have no further history dependence. }
 
  \end{frame}
 
@@ -831,7 +831,7 @@ for the $t\geq1$ recursive problem.
 	\begin{enumerate}
 	 \item For a class of economies with separable iso-elastic preferences
 	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$
-	 \item Shocks that take two values and are i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high expenditure)
+	 \item Shocks that take two values and are i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
 	\end{enumerate}
 
 	
@@ -846,7 +846,7 @@ for the $t\geq1$ recursive problem.
 		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)}>1
 	\]
 	
-	Then there exists a steady state with $x_{fb}>x^*>0$
+	then there exists a steady state with $x_{fb}>x^*>0$
 		\end{proposition}
 \end{frame}
 
@@ -925,7 +925,7 @@ for the $t\geq1$ recursive problem.
 	\frametitle{Stability}
 	\begin{enumerate}
 	 \item Here interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high TFP or low expenditure)
-	 \item The government holds claims against the private sector in the steady state. Similar to the quasilinear case with  low  $\bm{p}$	
+	 \item  In a steady state, the government holds claims against the private sector. Resembles the quasilinear case with  low  $\bm{p}$	
 	 \item The incomplete markets Ramsey allocation converges to a Lucas-Stokey  Ramsey allocation for all initial conditions	 	
 	\end{enumerate}
 
@@ -1051,7 +1051,7 @@ With shocks that are IID and take two values
 
 \vspace{4mm}
 
-In future work we plan to study more general shocks processes
+We plan to study more general shocks processes
 
 \end{frame}
 
@@ -1062,13 +1062,13 @@ In future work we plan to study more general shocks processes
   \item Angelotos (2002), Buera and Nicolini (2004)
 
 \begin{itemize}
- \item Begins with a complete market  Ramsey allocation
- \item Asks if this can be attained using only \emph{some} collection of non-contingents debt of different maturities?
+ \item Begin with a complete market  Ramsey allocation
+ \item Ask if this can be attained with a limited  collection of non-contingent debts of different maturities
 \end{itemize}
 \item This paper
 \begin{itemize}
  \item Begins with an incomplete markets Ramsey allocation
- \item Asks whether the long-run allocation coincides with \emph{some} complete market allocation?
+ \item Asks whether the long-run allocation coincides with a complete markets Ramsey allocation for some initial govt debt 
 \end{itemize}
 
 \item BEGS1 studies a related problem with heterogeneous agents
