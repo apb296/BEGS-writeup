@@ -80,24 +80,27 @@
 
 
 
- Markov aggregate shocks $s_t\in \mathcal{S}$; $S \times S$ stochastic matrix $\Pi$; $g_t=g(s_t);\theta_t=\theta(s_t)$
-An infinitely lived representative agent plus a benevolent planner
+Government expenditures at time $t$, $g_t=g(s_t)$, and a productivity shock $\theta_t=\theta(s_t)$ are both functions of
+  a Markov  shock $s_t\in \mathcal{S}$ having  $S \times S$ transition matrix $\Pi$ and initial condition $s_{-1}$. 
+   %; $g_t=g(s_t);\theta_t=\theta(s_t)$
+An infinitely lived representative consumer has preferences over allocations  $\{c_t(s^t), l_t(s^t)\}_{t=0}^\infty$ of consumption and labor supply that are ordered
+by 
    \begin{equation*}
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U\left(
 c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{equation*}%
-  Technology: Output  $y_t=\theta_{t} l_{t}$
-
-A single possibly risky  asset $S \times S$ matrix $\mathbb{P}$ with time $t$ payoff being
-\[p_t=\mathbb{P}(s_{t}|s_{t-1})\]
-
-
-
-
-Agent $i$'s tax bill
-\[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0 \]
-
- $q_t$ is price of  asset.
+where $U$ satisfies XXXXXX.
+  Labor produces output via the linear technology
+  \begin{equation*}
+  y_t=\theta_{t} l_{t} \end{equation*}
+The representative consumer's tax bill
+ at time $t \geq 0$ is
+ \[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0 \]
+The government and the consumer trade a single  possibly risky  asset whose payoffs are described the
+the  $S \times S$ matrix $\mathbb{P}$ with the time $t$ payoff being
+\[p_t=\mathbb{P}(s_{t}|s_{t-1}).\] 
+We let $B_t$ denote the government's holdings of the asset and $b_t$ be the consumer's holdings.  
+Let $q_t= q_t(s^t; b_{-1})$ be the price of the single  asset at time $t$.  
  The household's time $t$ budget constraint is
 \[ c_{t}+b_{t}=\left( 1-\tau _{t}\right) \theta _{t}l_{t}+\frac{p_{t}}{q_{t-1}}b_{t-1}+T_{t}\] % \ T_t \geq 0$
  and the government's is
