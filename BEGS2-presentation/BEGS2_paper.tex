@@ -475,8 +475,8 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
   \item The level  and sign of $b^*$ depend on the \textbf{exogenous payoff structure} $\mathbb{P}$
   \item The limiting allocation corresponds to a complete market Ramsey allocation for initial govt. debt $b^*$
  \end{enumerate}
- 
- 
+
+
  \subsection{Turning on risk-aversion}
   \textbf{Modifications:}
   \begin{itemize}
@@ -489,9 +489,9 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
 
 
   \end{itemize}
-  
-  
-  
+
+
+
 \subsection{Roadmap, II}
 
 
@@ -543,6 +543,124 @@ Seek steady states $x^*$ such that $x_t \to x^*$
 	\[
 		x_0 \in [\underline x,\overline x]
 	\]
+
+
+\subsection{Progress report}
+
+\begin{enumerate}
+ \item  Existence proved only under  special case of a risk-free bond  $\mathbb{P}(s|s\_)=1 \ \forall \ (s,s\_)$
+
+ This focuses attention  on \textit{endogenous} component of returns coming from $q_t(s^t)$
+
+ \item   $x^*$  is an initial condition for which the optimal asset payoff  in a LS economy is a risk-free bond
+
+\end{enumerate}
+
+\subsection{Revisiting steady states with risk aversion}
+Let $x'\left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
+for the $t\geq1$ Bellman equation.
+
+\begin{definition}
+ A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
+\,s,s\_$
+\end{definition}
+
+
+\vspace{3mm}
+\emph{Thus, a steady state is a node at which the  continuation allocation and tax rate have no further history dependence. }
+
+ \subsection{Existence}
+	
+	\begin{enumerate}
+	 \item For a class of economies with separable iso-elastic preferences
+	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$
+	 \item Shocks that take two values and are i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
+	\end{enumerate}
+
+	
+	Let $x_{fb}$ be a value of the state $x$ from which a government can implement first=best with complete markets
+	
+	
+	
+	
+	\begin{proposition}  Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ using the first best allocation.
+	If
+	\[
+		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)}>1
+	\]
+	
+	then there exists a steady state with $x_{fb}>x^*>0$
+		\end{proposition}
+
+\subsection{Stability}
+	\begin{enumerate}
+	 \item Here interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high TFP or low expenditure)
+	 \item  In a steady state, the government holds claims against the private sector. Resembles the quasilinear case with  low  $\bm{p}$	
+	 \item The incomplete markets Ramsey allocation converges to a Lucas-Stokey  Ramsey allocation for all initial conditions	 	
+	\end{enumerate}
+
+
+	\begin{proposition}  Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions
+	
+	\end{proposition}
+
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/2stateiid.eps}
+\caption{A sample path for 2 state i.i.d. process with risk aversion}
+	\end{center}
+\end{figure}
+
+
+	\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/5stateiid.eps}
+\caption{A sample path  for economy with $S>2$ states}
+	\end{center}
+\end{figure}
+
+
+\subsection{Transfers}
+	\begin{itemize}	
+	\item Access to nonnegative transfers makes first-best level of assets trivially a ``steady state''  	
+\item  All results hold \textit{on one side} of steady state
+\begin{theorem}
+
+With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level,  the economy  converges with probability 1 to the steady state.
+
+\end{theorem}
+		
+	\end{itemize}
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/transfer_example2.eps}
+\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers}
+	\end{center}
+\end{figure}
+
+\subsection{Comparison to literature}
+ \begin{enumerate}
+  \item Angeletos (2002), Buera and Nicolini (2004)
+
+\begin{itemize}
+ \item Begin with a complete market  Ramsey allocation
+ \item Ask if this can be attained with a limited  collection of non-contingent debts of different maturities
+\end{itemize}
+\item This paper
+\begin{itemize}
+ \item Begins with an incomplete markets Ramsey allocation
+ \item Asks whether the long-run allocation coincides with a complete markets Ramsey allocation for some initial govt debt
+\end{itemize}
+
+\item BEGS1 studies a related problem with heterogeneous agents
+
+
+
+
+ \end{enumerate}
+
 
 
 \end{document}
