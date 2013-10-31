@@ -135,8 +135,8 @@ equilibrium with distorting taxes.
 \section{Two Ramsey problems}
 
 Following Lucas and Stokey XXXXX and AMSS XXXXX, use use a  
-``primal approach.''   To encode a  government policy and  and price system as a restriction on an allocation, 
-we  first obtain   the representative household's first order conditions:
+we solve Ramsey
+  \item \textbf{Primal approach}: To eliminate tax rates and prices, use  household's first order conditions:
 \begin{subequations}
 	\[
 		U_{c,t} q_t = \beta \EE_t p_{t+1}U_{c,t+1}
@@ -145,49 +145,46 @@ we  first obtain   the representative household's first order conditions:
 		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t}
 	\]
 \end{subequations}
-We substitute these into the household's budget constraint to get a difference equation that we  solve forward   at every history for every $t \geq 0$.
-We divide the consequent \textit{implementability constraints} on a Ramsey allocation in two: (1) the time $t=0$ version is identical
-with the {\em single} implementability constraint imposed by Lucas and Stokey XXXXX; (2) the time $t \geq 1$ implementability constraints
-constitute versions of the AMSS XXXX 
- \emph{measurability restrictions} on Ramsey allocations.   These augment and 
- contribute the only difference vis a vis Lucas-Stokey's Ramsey problem.
-%
-%\item[4.]  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
-% \end{enumerate}
+  \item \textbf{Implementability constraints}:  Derive by iterating the household's budget equation forward  at every history
 
+  $\Rightarrow$ for $t \geq 1$, these impose  \emph{measurability restrictions} on Ramsey allocations
 
+\item The $t\geq 1$ \textbf{measurability constraints} contribute the only difference from Lucas-Stokey's Ramsey problem.
 
+\item[4.]  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
+ \end{enumerate}
 
+%\bibliography{CRbib}
 
-%
-%The primal approach version of
-%\begin{equation*}
-%\max_{\{c_t,l_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
+\subsection{Ramsey problem (Lucas-Stokey)}
+
+\begin{equation*}
+\max_{\{c_t,l_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
+ \end{equation*}
+ subject to
+
+ \vspace{3mm}
+
+ (a) \textbf{Feasibility}
+\begin{subequations}
+\begin{equation*}
+c_t + g_t = \theta_t l_t
+ \end{equation*}
+
+(b) \textbf{Implementability constraint}
+
+% \begin{equation*}
+% \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
 % \end{equation*}
-% subject to
-%
-% \vspace{3mm}
-%
-% (a) \textbf{Feasibility}
-%\begin{subequations}
-%\begin{equation*}
-%c_t + g_t = \theta_t l_t
-% \end{equation*}
-%
-%(b) \textbf{Implementability constraint}
-%
-%% \begin{equation*}
-%% \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
-%% \end{equation*}
-%\begin{equation*}
-%b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)
-% \end{equation*}
-%\end{subequations}
+\begin{equation*}
+b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)
+ \end{equation*}
+\end{subequations}
 
-The primal approach version of our Ramsey problem is:
-\begin{equation}\label{}
+\subsection{Ramsey problem (BEGS)}
+\begin{equation*}
 \max_{\{c_t,l_t,b_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
- \end{equation}
+ \end{equation*}
 
  \vspace{3mm}
 
