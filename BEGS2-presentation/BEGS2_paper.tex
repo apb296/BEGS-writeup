@@ -4,7 +4,7 @@
 \usepackage{amsmath,amssymb,amsthm,enumerate,graphicx}
 \usepackage{ifthen,latexsym,syntonly}
 \usepackage{setspace}
-%\usepackage[showrefs]{refcheck}  %use this to show equation and section labels
+\usepackage[showrefs]{refcheck}  %use this to show equation and section labels
 \usepackage{color}
 \usepackage[round,comma,authoryear]{natbib}   % for natbib
 \usepackage{subfigure}
@@ -79,7 +79,7 @@
 
 
 
-We analyze economies that share the following features.  
+We analyze economies that share the following features.
 Government expenditures at time $t$, $g_t=g(s_t)$, and a productivity shock $\theta_t=\theta(s_t)$ are both functions of
   a Markov  shock $s_t\in \mathcal{S}$ having  $S \times S$ transition matrix $\Pi$ and initial condition $s_{-1}$.
    %; $g_t=g(s_t);\theta_t=\theta(s_t)$
@@ -97,7 +97,7 @@ The representative consumer's tax bill
  at time $t \geq 0$ is
  \[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0, \]
  where $\tau_t(s^t, b_{-1})$ is a flat rate tax on labor income and $T_t$ is a nonnegative transfer.
- Often, we'll set $T_t =0$.  
+ Often, we'll set $T_t =0$.
 The government and consumer trade a single  possibly risky  asset whose  time $t$ payoff $p_t$ is described by an $S \times S$ matrix $\mathbb{P}$:
 \[p_t=\mathbb{P}(s_{t}|s_{t-1}).\]
 Let $B_t$ denote the government's holdings of the asset and $b_t$ be the consumer's holdings.
@@ -117,13 +117,13 @@ Equibrium objects including $\{c_t, l_t, \tau_t\}_{t=0}^\infty$ will come in the
 Borrowing from a standard boilerplate, we use the following:
 
 \begin{definition}
-An allocation is XXXXX. A price system is XXXXX.  A budget-feasible government policy is $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$ XXXXX
+An \textbf{allocation} is XXXXX. A \textbf{price system} is XXXXX.  A \textbf{budget-feasible government policy} is XXXXX $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$ XXXXX
 \end{definition}
 
 \begin{definition}
 Given  $\left(b_{-1}=-B_{-1},s_{-1}\right) $ and a government policy,  a \textbf{competitive equilibrium
-with distorting taxes} is a price system, a budget-feasible government policy, and an allocation such that 
-the allocation is individually rational and the bond  market clears. 
+with distorting taxes} is a price system, a budget-feasible government policy, and an allocation such that
+the allocation is individually rational and the bond  market clears.
 \end{definition}
 
 \begin{definition}
@@ -134,8 +134,10 @@ equilibrium with distorting taxes.
 
 \section{Two Ramsey problems}
 
-Following Lucas and Stokey XXXXX and AMSS XXXXX, use use a  
-``primal approach.''   To encode a  government policy and  and price system as a restriction on an allocation, 
+Following \citet{LucasJr.1983}
+and
+\citet{Aiyagari2002}, we use use a
+``primal approach.''   To encode a  government policy and  and price system as a restriction on an allocation,
 we  first obtain   the representative household's first order conditions:
 \begin{subequations}
 	\[
@@ -147,9 +149,9 @@ we  first obtain   the representative household's first order conditions:
 \end{subequations}
 We substitute these into the household's budget constraint to get a difference equation that we  solve forward   at every history for every $t \geq 0$.
 We divide the consequent \textit{implementability constraints} on a Ramsey allocation in two: (1) the time $t=0$ version is identical
-with the {\em single} implementability constraint imposed by Lucas and Stokey XXXXX; (2) the time $t \geq 1$ implementability constraints
-constitute versions of the AMSS XXXX 
- \emph{measurability restrictions} on Ramsey allocations.   These augment and 
+with the {\em single} implementability constraint imposed by \citet{LucasJr.1983}; (2) the time $t \geq 1$ implementability constraints
+constitute versions of the \citet{Aiyagari2002}
+ \emph{measurability restrictions} on Ramsey allocations.   These
  contribute the only difference vis a vis Lucas-Stokey's Ramsey problem.
 %
 %\item[4.]  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
@@ -184,128 +186,125 @@ constitute versions of the AMSS XXXX
 % \end{equation*}
 %\end{subequations}
 
-The primal approach version of our Ramsey problem is:
-\begin{equation}\label{}
+
+\begin{problem}\label{prob:RamseyBEGS}
+The  Ramsey problem is to choose sequences  functions
+$\{c_t(s^t),l_t(s^t), b_t(s^t)\}_{t=0}^\infty$ that attain:
+\begin{equation}\label{eqn:Ramseyobj}
 \max_{\{c_t,l_t,b_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
  \end{equation}
-
- \vspace{3mm}
-
- (a) \textbf{Feasibility}
+subject to
+% \vspace{3mm}
+%
+% (a) \textbf{Feasibility}
 \begin{subequations}
-\begin{equation*}
-c_t + g_t = \theta_t l_t
- \end{equation*}
+\begin{equation}\label{eqn:feas}
+c_t + g_t = \theta_t l_t, \ t \geq 0
+ \end{equation}
 
-(b) \textbf{Lucas-Stokey implementability constraint}
-\begin{equation*}
+%(b) \textbf{Lucas-Stokey implementability constraint}
+\begin{equation}\label{eqn:LSimplement}
 b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)
- \end{equation*}
+ \end{equation}
 
- (c) \textbf{Measurability constraints}
- \begin{equation*}
+ %(c) \textbf{Measurability constraints}
+ \begin{equation}\label{eqn:AMSSimplement}
  \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
- \end{equation*}
+ \end{equation}
 \end{subequations}
+\end{problem}
 
-\subsection{Roadmap, analytic strategy}
+\begin{remark} Equation \eqref{eqn:feas} imposes feasibility, while equation  \eqref{eqn:LSimplement} is the single implementability constraint
+present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional implementability constraints that comprise implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
+single asset. The measurability constraints \eqref{eqn:AMSSimplement}  are cast
+in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}.
+\end{remark}
 
-	\begin{itemize}
-	\item Ramsey allocation -- especially asymptotic properties --   varies with   \textbf{asset returns} that reflect
-	\begin{itemize}
-	 \item Prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$
-	 \item Payoffs $\mathbb{P}$
-	\end{itemize}
+\begin{problem}\label{prob:RamseyLS}
+Lucas and Stokey's Ramsey problem is to choose an allocation $\{c_t(s^t),l_t(s^t)\}_{t=0}^\infty$ that attains the maximum of
+\begin{equation}\label{eqn:RamseyobjLS}
+\max_{\{c_t,l_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
+ \end{equation}
+ subject to the single implementability constraint \eqref{eqn:LSimplement} and feasibility \eqref{eqn:feas} for all $t, s^t$.
+\end{problem}
+
+\subsection{Case for studying special preferences}
+Asymptotic properties of a Ramsey allocation vary  with   asset returns that reflect
+	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
+It is enlightening first to focus on the exogenous $\mathbb{P}$ part of returns. We do that by studying an economy with  quasi-linear  preferences  that pin down $q_t=\beta \mathbb{E}_t
+\mathbb{P}(s_{t+1}|s_t)$.  After that, we shall study preferences that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
 	
-\item To focus on the exogenous $\mathbb{P}$ part of returns, we first study quasi-linear  preferences  that pin down $q_t=\beta \mathbb{E}_t
-\mathbb{P}(s_{t+1}|s_t)$
-
-\item Activate  risk aversion and fluctuating $q_t$ later
-	
-\end{itemize}
-
-\subsection{Analysis with quasi-linear preferences}
 
 
-Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$
+\section{An economy with quasi-linear preferences}
 
- To characterize \textbf{long-run}  debt and  taxes,  we construct and then invert  mapping $\mathbb{P}^*(b)$
+Throughout this section, we assume that $U$ is quasilinear:
+\begin{equation}\label{eqn:UQL}
+U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}.\end{equation}
 
-\begin{itemize}
- \item Given \textbf{arbitrary} initial govt. assets $b_{-1}$, what is  an \textbf{optimal} asset payoff matrix $\mathbb{P}^* =\mathbb{P}^*(b_{-1})$?
-
- \item Under a Ramsey plan for an \textbf{arbitrary} payoff matrix $\mathbb{P}$,  when would  $b_t \to b^*$, where
-
-	\[\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(\mathbb{P}) ?\]
-	
-\end{itemize}
-
-
-	\begin{itemize}
-	\item We first reverse engineer an optimal $\mathbb{P}^*(b_{-1})$ from a Lucas-Stokey  Ramsey allocation
-	
-	 \item In a binary IID world, we identify a big set of  $\mathbb{P}$'s that imply that $b_t$  under a Ramsey plan converges to $b^*$ that solves
-	
-	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
-	
-	
-	\item For more general shock structures, we numerically verify  an ergodic set of $b_t$'s
- hovering around $\tilde b$.    The optimal $\mathbb{P}^*$ associated with $\tilde b$ seems close to $\mathbb{P}$:
-	\[\mathbb{P}\approx \mathbb{P}^*(\tilde b)\]
-%	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
-	\end{itemize}
-
-
-\subsection{Optimal asset payoff matrix $\mathbb{P}^*$}
+We use an indirect but enlightening approach to characterize the asymptotic behavior of government  debt and the tax rate.
+Heuristically, we use a three-step strategy.
 \begin{enumerate}
- \item  Given $b_{-1}$, compute a Lucas-Stokey Ramsey allocation
-\
-% \emph{Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
+\item (Construction of an operator)
+We pose the following problem:
+\begin{problem}\label{prob:PPoperator}
+ Given arbitrary initial government debt $b_{-1}$, what is an optimal asset payoff matrix?
+\end{problem}
+Problem \ref{prob:PPoperator} induces an operator mapping initial government debt $b_{-1}$ into an optimal payoff matrix $\mathbb{P^*}$ for the single asset:
+\begin{equation}\label{eqn:PPoperator}
+\mathbb{P}^* =\mathbb{P}^*(b_{-1}) .\end{equation}
+\item (Apply inverse of the operator)
+For an arbitrary payoff matrix $\mathbb{P}$,  let
+\begin{equation}\label{eqn:invPoperator}\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(\mathbb{P}) .\end{equation}
+For initial government debt $b_{-1} = b^*$, a Ramsey plan for the incomplete markets economy has $b_t = b^*$ for all $t \geq 0$.
 
- \item Notice that the measurability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
-
- \item From this class we select a  $p_t$ that imposes the normalization  $\mathbb{E}_{t-1}U_{c,t}p_t=1$
-\[ p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \]
- \item By construction, $p_t$   disarms the time  $t\geq 1$
-measurability constraints.
-
-\item Using the fact that the Lucas-Stokey allocation is stationary, we can construct the optimal payoff matrix
-\[\mathbb{P}^*(s_t,s_{t-1}|b_{-1})=p_t\]
-
-
+ \item  Starting from an arbitrary initial government $b_{-1}$ and an arbitrary payoff matrix $\mathbb{P}$,  establish that under a Ramsey plan $b_t \to b^*$
 \end{enumerate}
 
-\subsection{Quasilinear preferences $U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}$}
-Given
- initial assets $b_{-1}$,  let $\mu(b_{-1})$ be the Lagrange multiplier on the Lucas-Stokey implementability constraint
+In particular, where $S=2$ and shocks $s_t$ are IID,  we identify a large set of  $\mathbb{P}$'s for which government debt $b_t$  under a Ramsey plan converges to $b^*$ that solves \eqref{eqn:invPoperator}.
+%	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
+ For more general shock processes, we numerically find  an ergodic set of $b_t$'s
+ hovering around a debt level $\tilde b$;    The optimal $\mathbb{P}^*$ associated with $\tilde b$ approximates $\mathbb{P}$:
+	\[\mathbb{P}\approx \mathbb{P}^*(\tilde b)\]
+%	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
+	
+
+\subsection{Constructing an optimal payoff matrix $\mathbb{P}^*$}
 \begin{enumerate}
+ \item  Given $b_{-1}$, solve problem \ref{prob:RamseyLS} to compute a  Lucas-Stokey Ramsey allocation.
 
- \item \textbf{Multiplier $\to$ Tax rate:}
- \[
-		\tau(\mu) = \frac{\gamma\mu}{(1+\gamma)\mu-1}
+% \emph{Find an  optimal allocation ignoring $t\geq 1$ measurability constraints.}
+ \item Note that \citeauthor{Aiyagari2002}-like measurability constraints \eqref{eqn:AMSSimplement} are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
+From the equivalence class of $p_t$'s that satisfy \eqref{eqn:AMSSimplement} at the Lucas-Stokey Ramsey allocation, select a  $p_t$ that imposes the normalization  $\mathbb{E}_{t-1}U_{c,t}p_t=1$ and satisfies
+\begin{equation}\label{eqn:pdisarm} p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \end{equation}
+ \item By construction, $p_t$   disarms the time  $t\geq 1$
+measurability constraints.
+\item Using the fact that the Lucas-Stokey Ramsey allocation is stationary \textcolor{red}{Tom XXXXX: bring this out in a remark above and label it},  construct the optimal payoff matrix as
+\[\mathbb{P}^*(s_t,s_{t-1}|b_{-1})=p_t\]
+\end{enumerate}
+
+In more detail, given
+ initial government debt $b_{-1}$,  let $\mu(b_{-1})$ be the Lagrange multiplier on the Lucas-Stokey implementability constraint \eqref{eqn:LSimplement}
+ at the Lucas-Stokey Ramsey allocation.  The tax rate in the Ramsey allocation is
+$
+		\tau(\mu) = \frac{\gamma\mu}{(1+\gamma)\mu-1},
+	$
+ which implies a  net-of-interest government surplus $S(s,\tau)$ that satisfies
+\[		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g(s)
 	\]
- \item \textbf{Tax rate $\to$ net of interest surplus:}
- \[
-		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g(s)
-	\]
-\item \textbf{Surplus $\to$ optimal payoff structure:}
+The `disarm-the-measurability-constraints' equation \eqref{eqn:pdisarm} then implies that the optimal payoff matrix is
+\begin{equation}\label{eqn:optPP}
+ \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta.
+ \end{equation}
+\textcolor{blue}{Anmol and David XXXXXX: let's add some snazzy interpretation of the previous nice equation.}
 
-\[
- \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta
- \]
-
- \end{enumerate}
-
- \subsection{Initial holdings influence optimal asset payoff structure}
-Denote state $s$ as ``adverse''  if it has ``high'' govt. expenditures or ``low '' TFP; formally, $s$ is ``adverse'' if
+To appreciate how  initial government debt level influences the optimal asset payoff structure via formula \eqref{eqn:optPP}, call a
+ state $s$ ``adverse''  if it implies either ``high'' government expenditures or ``low '' TFP; formally, say that  $s$ is ``adverse'' if
 \[   g(s)\EE_{s\_}\theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE_{s\_} g >0\]
+Then \eqref{eqn:optPP} implies that
+ when initial government assets are positive, $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are
+ negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states
 
-Properties of  optimal payoff matrix $\mathbb{P}$
-
-\begin{itemize}
- \item With positive initial govt. assets: want an asset  that pays {\em more} in ``adverse'' states
- \item With negative initial govt. assets: want an asset  that pays {\em less} in ``adverse'' states
-\end{itemize}
 
 \begin{figure}
 		\begin{center}
@@ -322,45 +321,35 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 	\end{center}	
 	\end{figure}
 
-
-\subsection{Inverting the $\mathbb{P}^*$ mapping}
-	\begin{enumerate}
-		\item  \textbf{Exogenous payoff structure:} Suppose $\mathbb{P}\neq \mathbb{P}^*(b_{-1})$
-		
-		\item \textbf{Steady States: } A steady state is a government debt   $b^*$ such that
-		\[b_{t}=b^* \text{ implies } b_{t+\tau}=b^*\quad \forall \tau >0\]
-	
-			
-		\item \textbf{Characterization: } Given an asset payoff structure $\mathbb{P}$
-		\begin{itemize}
-			\item Does a steady state exist? Is it unique?
-			\item Value of $b^*$?
-			\item For what   \emph{initial government debts} $b_{-1}$ does  $b_t$ converge to $b^*$?
- 			\end{itemize}
-	\end{enumerate}
+%
+%\subsection{Inverting the $\mathbb{P}^*$ mapping}
+%	\begin{enumerate}
+%		\item  \textbf{Exogenous payoff structure:} Suppose $\mathbb{P}\neq \mathbb{P}^*(b_{-1})$
+%		
+%		\item \textbf{Steady States: } A steady state is a government debt   $b^*$ such that
+%		\[b_{t}=b^* \text{ implies } b_{t+\tau}=b^*\quad \forall \tau >0\]
+%	
+%			
+%		\item \textbf{Characterization: } Given an asset payoff structure $\mathbb{P}$
+%		\begin{itemize}
+%			\item Does a steady state exist? Is it unique?
+%			\item Value of $b^*$?
+%			\item For what   \emph{initial government debts} $b_{-1}$ does  $b_t$ converge to $b^*$?
+% 			\end{itemize}
+%	\end{enumerate}
 
 \subsection{Existence and $\mathbb{P}^{* -1}$}
 
-
- When shocks are i.i.d and take two values
-
-  \begin{enumerate}
-
-\item $\mathbb{P}(s\_,s)$ is independent of $s\_$ (so $\mathbb{P}$ can be a vector)
-\item Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$.   Payoffs are then determined by a  scalar $\bm{p}$.
-\begin{itemize}
- \item $\bm{p}$ is the asset's payoff in the ``good'' state $s$
- \item A risk-free bond is a security for which $\bm{p}=1$
-\end{itemize}
-
-\item A steady state is obtained by inverting the optimal payoff mapping $p^*$
+We temporarily assume that $s_t$ is i.i.d and  $S=2$.  
+In this case, $\mathbb{P}(s\_,s)$ is independent of $s\_$, so that $\mathbb{P}$ can be taken to be  a vector.
+ Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$.
+We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$. Again under the same normalization, a risk-free bond is a security for which $\bm{p}=1$.
+We can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
 \begin{equation*}
 \label{eq-ss}
-b^* \ \textrm{satisfies} \  \bm{p}=\bm{p}^*(b^*) \ \textrm{or} \ p^{* -1}(p) = b^*
+b^* \ \textrm{satisfies} \  \bm{p}=\bm{p}^*(b^*) \ \textrm{or} \ p^{* -1}(p) = b^*.
 \end{equation*}
 
-One equation in one unknown $b^*$
-\end{enumerate}
 
 \subsection{Existence regions in $\bm{p}$ space}
 
@@ -670,6 +659,6 @@ With nonnegative lump sum transfers,  in cases where a steady state exists and i
 
  \end{enumerate}
 
-
+\bibliography{BEGS}
 
 \end{document}
