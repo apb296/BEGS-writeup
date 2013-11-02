@@ -150,8 +150,8 @@ we  first obtain   the representative household's first order conditions:
 We substitute these into the household's budget constraint to get a difference equation that we  solve forward   at every history for every $t \geq 0$.
 That yields \textit{implementability constraints} on a Ramsey allocation that fall into two categories: (1) the time $t=0$ version is identical
 with the {\em single} implementability constraint imposed by \citet{LucasJr.1983}; (2) the time $t \geq 1$ implementability constraints
-are counterparts  of the additional 
- \emph{measurability restrictions} that \citet{Aiyagari2002} impose on  a Ramsey allocation.   
+are counterparts  of the additional
+ \emph{measurability restrictions} that \citet{Aiyagari2002} impose on  a Ramsey allocation.
 %
 %\item[4.]  \textbf{Transfers: } We temporarily restrict transfers $T_t = 0$  $\forall t$. This is convenient for our analytical results.  We eventually show  that this assumption is not restrictive.
 % \end{enumerate}
@@ -184,11 +184,14 @@ are counterparts  of the additional
 %b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_t\right)
 % \end{equation*}
 %\end{subequations}
+We first state our Ramsey problem, then Lucas and Stokey's.
+
+
 
 
 \begin{problem}\label{prob:RamseyBEGS}
 The  Ramsey problem is to choose an allocation and an appropriately measurable government debt sequence $\{b_t\}_{t=0}^\infty$ %sequences  functions
-%$\{c_t(s^t),l_t(s^t), b_t(s^t)\}_{t=0}^\infty$ 
+%$\{c_t(s^t),l_t(s^t), b_t(s^t)\}_{t=0}^\infty$
 that attain:
 \begin{equation}\label{eqn:Ramseyobj}
 \max_{\{c_t,l_t,b_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
@@ -214,14 +217,8 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
 \end{subequations}
 \end{problem}
 
-\begin{remark} Equation \eqref{eqn:feas} imposes feasibility, while equation  \eqref{eqn:LSimplement} is the single implementability constraint
-present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional implementability constraints that comprise implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
-single asset. The measurability constraints \eqref{eqn:AMSSimplement}  are cast
-in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}.
-\end{remark}
-
 \begin{problem}\label{prob:RamseyLS}
-Lucas and Stokey's Ramsey problem is to choose an allocation %$\{c_t(s^t),l_t(s^t)\}_{t=0}^\infty$ 
+Lucas and Stokey's Ramsey problem is to choose an allocation %$\{c_t(s^t),l_t(s^t)\}_{t=0}^\infty$
 that attains % the maximum of
 \begin{equation}\label{eqn:RamseyobjLS}
 \max_{\{c_t,l_t\}} \EE_0\sum_{t=0}^\infty \beta^t U(c_t,l_t)
@@ -229,20 +226,27 @@ that attains % the maximum of
  subject to the single implementability constraint \eqref{eqn:LSimplement} and feasibility \eqref{eqn:feas} for all $t, s^t$.
 \end{problem}
 
+\begin{remark} Equation \eqref{eqn:feas} imposes feasibility, while equation  \eqref{eqn:LSimplement} is the single implementability constraint
+present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional implementability constraints that comprise implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
+single asset. The measurability constraints \eqref{eqn:AMSSimplement}  are cast
+in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}.
+\end{remark}
+
+
 \begin{remark}\label{rem:LSdebt}
 State-contingent, but not history-dependent,  values of consumption, labor supply, and continuation government debt $\check b(s)$  solve the \citet{LucasJr.1983} Ramsey problem \ref{prob:RamseyLS}.  As intermediated by the Lagrange multiplier on the implementability constraint \eqref{eqn:LSimplement},
 consumption, labor supply, and $\check b(s)$ are  functions of initial government debt $b_{-1}$ and the current state $s$, but not past
- $s$'s.  
+ $s$'s.
 \end{remark}
 
-\subsection{Reason for studying special preferences}
+\subsection{Interest in quasi-linear $U$}
 Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
 	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
-It is useful first to focus on the exogenous $\mathbb{P}$ part of returns. We do that by studying an economy with  quasi-linear  utility function:
+To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by studying an economy with  quasi-linear  utility function:
   \begin{equation}\label{eqn:UQL}
 U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}.\end{equation}
 This utility function pins down $q_t=\beta \mathbb{E}_t
-\mathbb{P}(s_{t+1}|s_t)$.  After studying quasi-linear preferences, we shall study preferences that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
+\mathbb{P}(s_{t+1}|s_t)$.  After studying the consequences of quasi-linear utility, we shall Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
 	
 
 
@@ -272,7 +276,7 @@ In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of
 %	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
 	
 
-We execute this three step process by executing the following calculations.
+We execute this three step process as follows.
 (1)
   Given $b_{-1}$, solve problem \ref{prob:RamseyLS} to compute a  Lucas-Stokey Ramsey allocation.
 (2) Note that \citeauthor{Aiyagari2002}-like measurability constraints \eqref{eqn:AMSSimplement} are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
@@ -302,23 +306,7 @@ To appreciate how  initial government debt level influences the optimal asset pa
 \[   g(s)\EE_{s\_}\theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE_{s\_} g >0\]
 Then \eqref{eqn:optPP} implies that
  when initial government assets are positive, $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are
- negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states
-
-
-\begin{figure}
-		\begin{center}
-		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
-	\end{center}	
-	\end{figure}
-
-
-\begin{figure}
-		\begin{center}
-		\includegraphics[scale=.4]{Images/p_graph.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when government expenditures follow 2 shock i.i.d process}
-	\end{center}	
-	\end{figure}
+ negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states.  A ``good'' state is the opposite of an ``adverse'' state.
 
 %
 %\subsection{Inverting the $\mathbb{P}^*$ mapping}
@@ -337,195 +325,139 @@ Then \eqref{eqn:optPP} implies that
 % 			\end{itemize}
 %	\end{enumerate}
 
-\subsection{Existence and $\mathbb{P}^{* -1}$}
+\subsection{Analysis of $S=2$ iid shocks} % $\mathbb{P}^{* -1}$}
 
 We temporarily assume that $s_t$ is i.i.d and  $S=2$.
 In this case, $\mathbb{P}(s\_,s)$ is independent of $s\_$, so that $\mathbb{P}$ can be taken to be  a vector.
- Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$.
-We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$. Again under the same normalization, a risk-free bond is a security for which $\bm{p}=1$.
-We can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
-\begin{equation*}
+ Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$
+ and a risk-free bond is a security for which $\bm{p}=1$.
+We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$. 
+Define a scalar $b^*$ by %by can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
+\begin{equation}
 \label{eq-ss}
-b^* \ \textrm{satisfies} \  \bm{p}=\bm{p}^*(b^*) \ \textrm{or} \ p^{* -1}(p) = b^*.
-\end{equation*}
+ b^* =  {\mathbb P}^{* -1}(\bm{p}) 
+\end{equation}
+so that $b^*$ satisfies $p={\mathbb P}^*(b^*)$.
+\textcolor{red}{Anmol and David XXXXXX: I have changed and slightly abused notation. Let's talk about it.}
 
 
-\subsection{Existence regions in $\bm{p}$ space}
-
-The payoff $\bm{p}$ in good state
-$\in (0,\infty)$.
-
-We categorize a set of economies with different asset payoffs into 3 regions via thresholds $\alpha_2\geq\alpha_1\geq1$
-
-
-
+\begin{proposition}\label{prop:ssexistence}
+Suppose that $s$ shocks affect either $g$ or $\theta$.  Then there exist $0 \geq \alpha_2\geq\alpha_1\geq1$
+such that
   \begin{itemize}
-   \item Low enough $\bm{p}(\leq \alpha_1$): government holds assets in steady state
-   \item High enough $\bm{p} (\geq \alpha_2$): government  issues debt  in steady state
-   \item Intermediate $\bm{p} (\alpha_1>\bm{p}>\alpha_2$): steady state does not exist
+   \item[a.] If $\bm{p}\leq \alpha_1$, then $b^* < 0$ % government holds assets in steady state
+   \item[b.] If $\bm{p} \geq \alpha_2$, then $b^* > 0$ %government  issues debt  in steady state
+   \item[c.] If $\alpha_1>\bm{p}>\alpha_2$, then $b^*$ solving \eqref{eq-ss}  does not exist
   \end{itemize}
-
-\subsection{Thresholds: $\alpha_1 <\alpha_2$}
-	%For either a pure TFP shock or a pure government expenditure shock,  we compute % $\alpha_1$ and $\alpha_2$ directly
-	\begin{itemize}
-		\item With only government expenditure shocks
+  
+\end{proposition}
+\begin{proof}
+\textcolor{red}{David XXXXX: please fill in and refine.}
+ With only government expenditure shocks, we compute
 		\[
 			\alpha_1 = 1 \text{  and }  \alpha_2 = (1-\beta)\frac{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g(s_1)}{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-\EE g} +\beta>1
 		\]
-		\item With only TFP shocks
+		With only TFP shocks, we compute
 		\[
 			\alpha_1 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}}{\EE\theta^\frac{\gamma}{1+\gamma}}+\beta > 1
 		\]and
 		\[
 		\alpha_2 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}{\EE\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}+\beta>\alpha_1
 		\]
-	\end{itemize}
+	\end{proof}
 
-	\begin{figure}
-		\begin{center}
-		\includegraphics[width=4.2in]{Images/graph_nostable.pdf}
-\caption{Existence regions in $\bm{p}$ space}
-	\end{center}	
-	\end{figure}
-
-\subsection{Convergence}
-  \begin{itemize}
-		\item Our analysis verifies existence of a steady state in a 2-state i.i.d. economy.
-		\item To study long-run properties of a Ramsey allocation, we want to know whether steady state is stable
-		\item \textbf{Risk-adjusted martingale:}
-		
-		The Lagrange multiplier $\mu_t$ on the implementability  constraint   satisfies
-		\[
-			\mu_t = \EE_t p_{t+1} \mu_{t+1}
-		\] or
-		\[
-		\EE_t  \mu_{t+1}	= \mu_t -Cov_t (p_{t+1}, \mu_{t+1})
-		\]
-			%\emph{$\mu_t$ follows a risk adjusted martingale.}
 	
-		\item \textbf{Stability criterion: }   Away from a steady state, is the drift  of $\mu_t$ big enough?
-		\end{itemize}
-	
-\subsection{Characterizing convergence under quasi-linearity, iid, and $S=2$}
-
-  \begin{itemize}
-  \item Reminder:  $\bm{p}$ is the payoff in the ``good'' state.
-   \item We partition  the ``$\bm{p}$ space'' into stable and unstable regions
-     \end{itemize}
 
  	\begin{theorem}
-Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  supports the first-best allocation with complete markets.  Then % for  same $  \alpha_1 < \alpha_2$
-		\begin{enumerate}
-			\item  \textbf{Low $\bm{p}$}: If $\bm{p}\leq\min(\alpha_1,1)$ then  $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
-			\item \textbf{High  $\bm{p}$}:  If $\bm{p} \geq \alpha_2$ then   $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
-			
-			
-			\end{enumerate}
-			\end{theorem}
-			
-			For the intermediate region where  $b^*$ either does not exist or is unstable, there is a tendency to run up debt
+Let % $b^*$ denote steady state govt.  debt and 
+$b_{fb}$ denote the level of  government  debt that  supports the first-best allocation with complete markets.
+  \textcolor{red}{Anmol and David XXXXXX: I want to clarify what the previous phrase means.}
+  Then % for  same $  \alpha_1 < \alpha_2$
+		\begin{itemize}
+			\item[a.]  If $\bm{p}\leq\min(\alpha_1,1)$, then  $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
+			\item[b.] If $\bm{p} \geq \alpha_2$, then   $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
+            \item[c.] If $\alpha_2 < \bm{p} < \min	(\alpha_1,1)$,   $b^*$ either does not exist or is unstable.
+									\end{itemize}			\end{theorem}
+  For $\bm{p}$ in region (c.),
+the government tends to run up debt over time. 
 
-
-{Stability regions}
-	\begin{figure}
-		\begin{center}
-		\includegraphics[width = 4.2in]{Images/graph_stable.pdf}
-\caption{Stability regions}
-	\end{center}	
-	\end{figure}	
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/port1.eps}
-    \caption{A sample path with  $\bm{p} > 1$}
-	\end{center}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/port2.eps}
-\caption{A sample path with   $\bm{p} <1$}
-	\end{center}	
-\end{figure}
-
-\subsection{Intuition for Convergence}
-	\small
-	\begin{itemize}
-	%\begin{itemize}
-	%\item Debt {\color{black} \textbf{levels} } can help smooth tax distortions {\color{black}\textbf{across  states}}
-	%\item This differs from the  role of debt economies with risk free debt where {\color{black} \textbf{changes}} in debt levels help smooth tax distortions {\color{black}  \textbf{over  time}}
-	%\end{itemize}
-	\item The Ramsey policy with incomplete markets smooths the welfare costs of distorting labor taxes by manipulating debt positions
-	\item With a risk-free bond, the marginal cost of raising funds $\mu_t$ is  a martingale. Changes in debt levels help smooth tax distortions across time. 		
-	\item  If the payoff matrix of the asset differs across states, then  by generating state contingent revenues, the level of government debt smooths tax distortions across states.
-	\item The steady state $b^*$ is a unique debt level that provides enough ``state contingency'' completely to overcome  missing assets markets	
-	\item  When issuing debt, the government takes takes this benefit into account by distorting the martingale and either accumulating or decumulating debt.	
-	\item Although this is achieved by raising taxes, locally  the welfare costs of taxes are second order and dominated by the gains from coming closer to $b^*$, which are first order in terms of welfare.
-	%\item This explains the long run convergence to $b^*$
-	\end{itemize}
-
-
-\subsection{Outcomes with quasi-linear preferences}
- \textbf{Outcomes:}
- \begin{enumerate}
-  \item  Often $b_t\to b^*$ when the aggregate state follows a 2-state i.i.d. process
-  \item The level  and sign of $b^*$ depend on the \textbf{exogenous payoff structure} $\mathbb{P}$
-  \item The limiting allocation corresponds to a complete market Ramsey allocation for initial govt. debt $b^*$
- \end{enumerate}
-
-
- \subsection{Turning on risk-aversion}
-  \textbf{Modifications:}
-  \begin{itemize}
-  \item Another source of return fluctuations -- the risk-free interest rate
-   \item Marginal utility adjusted debt  encodes history dependence
-   \item  With binary i.i.d shock shock process,  $x_t=u_{c,t}b_{t}$  converges
-
-   \item Long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_t,s_{t+1})}{q_t(s^t)}$.
-   Now $q_t$ varies in interesting ways
-
-
-  \end{itemize}
+\begin{proof}
+\textcolor{red}{David XXXXX: please add and refine}
+Sketch of argument:
+				The Lagrange multiplier $\mu_t$ on the implementability  constraint \eqref{eqn:AMSSimplement}   satisfies
+		$
+			\mu_t = \EE_t p_{t+1} \mu_{t+1}
+		$ or
+		$
+		\EE_t  \mu_{t+1}	= \mu_t -Cov_t (p_{t+1}, \mu_{t+1})
+		$ and so is a risk adjusted martingale.
+To establish stability of $b^*$ we require that the drift  of $\mu_t$ is big enough
+	away from a steady state.
+	\end{proof}
 
 
 
-\subsection{Roadmap, II}
+
+\subsection{Economic forces driving convergence}
+In summary, when the aggregate state follows a 2-state i.i.d. process, government debt  $b_t$ often converges to $b^*$, while
+the tail of the allocation equals  Ramsey allocation for an economy with complete markets and initial government  debt $b^*$.
+  The level  and sign of $b^*$ depend on the asset payoff structure, which we have  expressed in terms of a  scalar
+  $\bm{p}$ that concisely captures what in more general settings we represented with the asset payoff matrix $\mathbb{P}$.
+  
+ 
+	  Facing incomplete markets, the  Ramsey planner recognizes that   the government's debt {\em level} combines with  the 
+ payoff structure on its debt instrument to affect  the welfare costs associated with varying the distorting labor tax rate across states.  When the
+  instrument is a risk-free bond, the government's marginal cost of raising funds $\mu_t$ is  a martingale. In this situation,
+    {\em changes} in debt levels  help smooth tax distortions across time. 		
+	However, if the  payoff on the debt instrument varies across states, then  by affecting its state-contingent revenues, the {\em level} of government debt can help smooth tax distortions across states.
+	For our two state, iid shock process,  the steady state debt level $b^*$, when it exists, is the unique amount of government debt
+that provides just enough ``state contingency'' completely to fill the void left by  missing assets markets.	
+	When it is away from $b^*$ and  considers issuing or accumulating debt starting,  the Ramsey planner tells the government to take takes into account
+the prospective benefits that will eventually accrue from being closer to $b^*$;  that puts a risk-adjustment into the martingale governing $\mu$ and leads the
+ government either to accumulate or decumulate debt.	
+	 Although accumulating government assets requires  raising distorting  taxes, locally  the welfare costs of higher taxes are second-order and
+so are  dominated by the welfare gains from approaching  $b^*$, which are first-order.
+	\textcolor{red}{Anmol and David XXXXX: please carefully read and possibly edit my editing of your ``intuition''. (But please remember the
+Lucas tee shirt.}
 
 
- Two subproblems
-\begin{enumerate}
- \item  $t=0$ Bellman equation in value function $W(b_{-1},s_0)$ %\textcolor{red}{Anmol and David XXXXXX: I altered the notation}
- \item  $t\geq 1$ Bellman equation in value function $V(x,s\_)$
-\end{enumerate}
 
-Seek steady states $x^*$ such that $x_t \to x^*$
+\section{Turning on risk-aversion}
+  
+  We now depart from quasi-linearity of $U(c,l)$ and thus activate an additional source of return fluctuations, namely,
+  fluctuations in the risk-free and other interest rates.  To obtain a recursive representation of a Ramsey plan,
+  we employ the endogenous state variable 
+  \[x_t=u_{c,t}b_{t} ,\]
+  and study how long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_t,s_{t+1})}{q_t(s^t)}$.
+   Activating risk aversion in $c$ makes $q_t$ vary in interesting ways.
+  
+  Commitment to a Ramsey plan implies that government actions at $t \geq 1$ are constrained by the household's anticipations about them at $s < t$
+	 Following \citet{Kydland1980}, we  use the  marginal utility of consumption that the
+Ramsey planner promises to the household to account for that `forward looking' restriction on the Ramsey planner.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
+ of consumption makes Ramsey problem  recursive in  $x=U_c b$.  In particular, implementability constraints \eqref{eqn:AMSSimplement}
+ can be represented as
+		\begin{equation}
+		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t, \ t \geq 1
+	\end{equation}
+\textcolor{red}{Team XXXXX: check the above carefully.}
 
-\subsection{A Recursive Formulation}
-	
-	\begin{enumerate}
-	 \item Commitment implies that government actions at $t \geq 1$ are constrained by the public's anticipations about them at $s < t$
-	 \item This contributes additional state variables like marginal utility of consumption
-	 \item Scaling the budget constraint by marginal utility makes Ramsey problem  recursive in  $x=U_c b$
-	
-	\[
-		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
-	\]
-	
-	%\item The planner's problem recursively with a single state variable.
-	\end{enumerate}
-	
-	
-	\subsection{Bellman equation for $t\geq1$ (\textit{ex ante})}
-	\[
+
+\begin{problem}\label{prob:RamseyBellman}
+Before the realization of the time $t$ Markov shock $s_t$, let   $V(x, s_{-1})$ be the {\em expected} continuation value of the Ramsey plan at $t \geq 1$  given promised marginal utility government debt inherited
+from the past $x = U_c,t b_t $ and time $t-1$ Markov state $s_{-1}$.
+After the realization of time time $0$ Markov shock $s_0$, let $W(b_{-1},s_0)$ be the value of the Ramsey plan when initial
+government debt is $b_{-1}$. % These value functions satisfy  two
+%Bellman equations. 
+An (\textit{ex ante})} Bellman equation for $t\geq1$  is
+	\begin{equation}
 		V(x,s\_) = \max_{c(s),l(s),x'(s)} \sum_s \Pi(s,s\_)\Bigl(U(c(s),l(s)) + \beta V(x'(s),s)\Bigr)
-	\]subject to $x'(s)\in [\underline x,\overline x]$
-	\begin{align*}
-		\frac{x \mathbb{P}(s) U_c(s)}{\beta\EE_{s\_} \mathbb{P}Uc} =U_c(s)c(s)+U_l(s)l(s) + x'(s)\\
-		c(s) + g(s) = \theta(s)l(s)
-	\end{align*}
-	
- \subsection{Time $0$ Bellman equation (\textit{ex post})}
-	Given an initial  debt $b_{-1}$, state $s_0$,  and continuation value function $V(x,s\_)$
+	\end{equation}
+subject to $x'(s)\in [\underline x,\overline x]$ and
+	\begin{align}
+		\frac{x \mathbb{P}(s) U_c(s)}{\beta\EE_{s\_} \mathbb{P}Uc} =U_c(s)c(s)+U_l(s)l(s) + x'(s) \label{timetBellimplement}\\
+		c(s) + g(s) = \theta(s)l(s) \label{timetfeas}
+	\end{align}
+	Given an initial  debt $b_{-1}$,time $0$ Markov state $s_0$,  and continuation value function $V(x,s\_)$, an (\textit{ex post}) time $0$ Bellman equation
 %\textcolor{red}{Anmol and David XXXXX: I altered the below by adding the $W$ function; but there is a problem with the timing of
 %the $b$ argument.  See earlier slide where $W$ is defined.}
 	\[
@@ -533,14 +465,14 @@ Seek steady states $x^*$ such that $x_t \to x^*$
 	\]subject to  time zero implementability constraint
 	\[
 		U_{c}(c_0,l_0)c + U_l(c_0,l_0) l_0 + x_0 = U_c(c_0,l_0) b_{-1}
-	\]and  resource constraint
+	\]and  the resource constraint
 	\[
 		c_0+ g(s_0) = \theta(s_0) l_0
 	\]and
 	\[
 		x_0 \in [\underline x,\overline x]
 	\]
-
+\end{problem}
 
 \subsection{Progress report}
 
@@ -602,20 +534,6 @@ for the $t\geq1$ Bellman equation.
 	\end{proposition}
 
 
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/2stateiid.eps}
-\caption{A sample path for 2 state i.i.d. process with risk aversion}
-	\end{center}
-\end{figure}
-
-
-	\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/5stateiid.eps}
-\caption{A sample path  for economy with $S>2$ states}
-	\end{center}
-\end{figure}
 
 
 \subsection{Transfers}
@@ -629,13 +547,6 @@ With nonnegative lump sum transfers,  in cases where a steady state exists and i
 \end{theorem}
 		
 	\end{itemize}
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/transfer_example2.eps}
-\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers}
-	\end{center}
-\end{figure}
 
 \subsection{Comparison to literature}
  \begin{enumerate}
@@ -653,6 +564,80 @@ With nonnegative lump sum transfers,  in cases where a steady state exists and i
 
 \item BEGS1 studies a related problem with heterogeneous agents
 
+
+\section{Figures}
+
+\begin{figure}
+		\begin{center}
+		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
+		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
+	\end{center}	
+	\end{figure}
+
+
+\begin{figure}
+		\begin{center}
+		\includegraphics[scale=.4]{Images/p_graph.eps}
+		\caption{Optimal asset payoff structure as a function of initial government debt when government expenditures follow 2 shock i.i.d process}
+	\end{center}	
+	\end{figure}
+
+
+\begin{figure}
+		\begin{center}
+		\includegraphics[width=4.2in]{Images/graph_nostable.pdf}
+\caption{Existence regions in $\bm{p}$ space}
+	\end{center}	
+	\end{figure}
+
+
+
+	\begin{figure}
+		\begin{center}
+		\includegraphics[width = 4.2in]{Images/graph_stable.pdf}
+\caption{Stability regions}
+	\end{center}	
+	\end{figure}	
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/port1.eps}
+    \caption{A sample path with  $\bm{p} > 1$}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/port2.eps}
+\caption{A sample path with   $\bm{p} <1$}
+	\end{center}	
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/2stateiid.eps}
+\caption{A sample path for 2 state i.i.d. process with risk aversion}
+	\end{center}
+\end{figure}
+
+
+	\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/5stateiid.eps}
+\caption{A sample path  for economy with $S>2$ states}
+	\end{center}
+\end{figure}
+
+
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=4in]{Images/transfer_example2.eps}
+\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers}
+	\end{center}
+\end{figure}
 
 
 

@@ -1,0 +1,71 @@
+
+
+\subsection{Convergence}
+  \begin{itemize}
+		\item Our analysis verifies existence of a steady state in a 2-state i.i.d. economy.
+		\item To study long-run properties of a Ramsey allocation, we want to know whether steady state is stable
+		\item \textbf{Risk-adjusted martingale:}
+		
+		The Lagrange multiplier $\mu_t$ on the implementability  constraint   satisfies
+		\[
+			\mu_t = \EE_t p_{t+1} \mu_{t+1}
+		\] or
+		\[
+		\EE_t  \mu_{t+1}	= \mu_t -Cov_t (p_{t+1}, \mu_{t+1})
+		\]
+			%\emph{$\mu_t$ follows a risk adjusted martingale.}
+	
+		\item \textbf{Stability criterion: }   Away from a steady state, is the drift  of $\mu_t$ big enough?
+		\end{itemize}
+	
+\subsection{Characterizing convergence under quasi-linearity, iid, and $S=2$}
+
+  \begin{itemize}
+  \item Reminder:  $\bm{p}$ is the payoff in the ``good'' state.
+   \item We partition  the ``$\bm{p}$ space'' into stable and unstable regions
+     \end{itemize}
+
+
+
+
+\subsection{Outcomes with quasi-linear preferences}
+ \textbf{Outcomes:}
+ \begin{enumerate}
+  \item  Often $b_t\to b^*$ when the aggregate state follows a 2-state i.i.d. process
+  \item The level  and sign of $b^*$ depend on the \textbf{exogenous payoff structure} $\mathbb{P}$
+  \item The limiting allocation corresponds to a complete market Ramsey allocation for initial govt. debt $b^*$
+ \end{enumerate}
+ 
+  \item Marginal utility adjusted debt  encodes history dependence
+   \item  With binary i.i.d shock shock process,  $x_t=u_{c,t}b_{t}$  converges
+
+   \item Long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_t,s_{t+1})}{q_t(s^t)}$.
+   Now $q_t$ varies in interesting ways
+   
+   \subsection{Roadmap, II}
+
+
+ Two subproblems
+\begin{enumerate}
+ \item  $t=0$ Bellman equation in value function $W(b_{-1},s_0)$ %\textcolor{red}{Anmol and David XXXXXX: I altered the notation}
+ \item  $t\geq 1$ Bellman equation in value function $V(x,s\_)$
+\end{enumerate}
+
+Seek steady states $x^*$ such that $x_t \to x^*$
+
+\subsection{A Recursive Formulation}
+	
+	\begin{enumerate}
+	 \item Commitment implies that government actions at $t \geq 1$ are constrained by the public's anticipations about them at $s < t$
+	 \item This contributes additional state variables like marginal utility of consumption
+	 \item Scaling the budget constraint by marginal utility makes Ramsey problem  recursive in  $x=U_c b$
+	
+	\[
+		\frac{x_{t-1} p_t U_{c,t}}{\beta \EE_{t-1} p_t U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t
+	\]
+	
+	%\item The planner's problem recursively with a single state variable.
+	\end{enumerate}
+
+
+  \end{itemize}
