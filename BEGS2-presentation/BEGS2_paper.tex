@@ -136,8 +136,8 @@ equilibrium with distorting taxes.
 
 Following \citet{LucasJr.1983}
 and
-\citet{Aiyagari2002}, we use use a
-``primal approach.''   To encode a  government policy and  and price system as a restriction on an allocation,
+\citet{Aiyagari2002}, we use a
+``primal approach.''   To encode a  government policy and price system as a restriction on an allocation,
 we  first obtain   the representative household's first order conditions:
 \begin{subequations}
 	\[
@@ -239,12 +239,13 @@ consumption, labor supply, and $\check b(s)$ are  functions of initial governmen
  $s$'s.
 \end{remark}
 
-\subsection{Interest in quasi-linear $U$}
+\subsection{Motivation for  quasi-linear $U$\label{sec:excusequasilinear}}
 Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
 	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
 To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by studying an economy with  quasi-linear  utility function:
   \begin{equation}\label{eqn:UQL}
-U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}.\end{equation}
+U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}.\end{equation}Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
+	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
 This utility function pins down $q_t=\beta \mathbb{E}_t
 \mathbb{P}(s_{t+1}|s_t)$.  After studying the consequences of quasi-linear utility, we shall Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
 	
@@ -276,7 +277,7 @@ In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of
 %	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
 	
 
-We execute this three step process as follows.
+Here is how we execute these three steps.
 (1)
   Given $b_{-1}$, solve problem \ref{prob:RamseyLS} to compute a  Lucas-Stokey Ramsey allocation.
 (2) Note that \citeauthor{Aiyagari2002}-like measurability constraints \eqref{eqn:AMSSimplement} are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
@@ -331,11 +332,11 @@ We temporarily assume that $s_t$ is i.i.d and  $S=2$.
 In this case, $\mathbb{P}(s\_,s)$ is independent of $s\_$, so that $\mathbb{P}$ can be taken to be  a vector.
  Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$
  and a risk-free bond is a security for which $\bm{p}=1$.
-We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$. 
+We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$.
 Define a scalar $b^*$ by %by can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
 \begin{equation}
 \label{eq-ss}
- b^* =  {\mathbb P}^{* -1}(\bm{p}) 
+ b^* =  {\mathbb P}^{* -1}(\bm{p})
 \end{equation}
 so that $b^*$ satisfies $p={\mathbb P}^*(b^*)$.
 \textcolor{red}{Anmol and David XXXXXX: I have changed and slightly abused notation. Let's talk about it.}
@@ -349,7 +350,7 @@ such that
    \item[b.] If $\bm{p} \geq \alpha_2$, then $b^* > 0$ %government  issues debt  in steady state
    \item[c.] If $\alpha_1>\bm{p}>\alpha_2$, then $b^*$ solving \eqref{eq-ss}  does not exist
   \end{itemize}
-  
+
 \end{proposition}
 \begin{proof}
 \textcolor{red}{David XXXXX: please fill in and refine.}
@@ -369,7 +370,7 @@ such that
 	
 
  	\begin{theorem}
-Let % $b^*$ denote steady state govt.  debt and 
+Let % $b^*$ denote steady state govt.  debt and
 $b_{fb}$ denote the level of  government  debt that  supports the first-best allocation with complete markets.
   \textcolor{red}{Anmol and David XXXXXX: I want to clarify what the previous phrase means.}
   Then % for  same $  \alpha_1 < \alpha_2$
@@ -379,7 +380,7 @@ $b_{fb}$ denote the level of  government  debt that  supports the first-best all
             \item[c.] If $\alpha_2 < \bm{p} < \min	(\alpha_1,1)$,   $b^*$ either does not exist or is unstable.
 									\end{itemize}			\end{theorem}
   For $\bm{p}$ in region (c.),
-the government tends to run up debt over time. 
+the government tends to run up debt over time.
 
 \begin{proof}
 \textcolor{red}{David XXXXX: please add and refine}
@@ -403,9 +404,9 @@ In summary, when the aggregate state follows a 2-state i.i.d. process, governmen
 the tail of the allocation equals  Ramsey allocation for an economy with complete markets and initial government  debt $b^*$.
   The level  and sign of $b^*$ depend on the asset payoff structure, which we have  expressed in terms of a  scalar
   $\bm{p}$ that concisely captures what in more general settings we represented with the asset payoff matrix $\mathbb{P}$.
-  
- 
-	  Facing incomplete markets, the  Ramsey planner recognizes that   the government's debt {\em level} combines with  the 
+
+
+	  Facing incomplete markets, the  Ramsey planner recognizes that   the government's debt {\em level} combines with  the
  payoff structure on its debt instrument to affect  the welfare costs associated with varying the distorting labor tax rate across states.  When the
   instrument is a risk-free bond, the government's marginal cost of raising funds $\mu_t$ is  a martingale. In this situation,
     {\em changes} in debt levels  help smooth tax distortions across time. 		
@@ -423,14 +424,14 @@ Lucas tee shirt.}
 
 
 \section{Turning on risk-aversion}
-  
+
   We now depart from quasi-linearity of $U(c,l)$ and thus activate an additional source of return fluctuations, namely,
   fluctuations in the risk-free and other interest rates.  To obtain a recursive representation of a Ramsey plan,
-  we employ the endogenous state variable 
+  we employ the endogenous state variable
   \[x_t=u_{c,t}b_{t} ,\]
   and study how long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_t,s_{t+1})}{q_t(s^t)}$.
    Activating risk aversion in $c$ makes $q_t$ vary in interesting ways.
-  
+
   Commitment to a Ramsey plan implies that government actions at $t \geq 1$ are constrained by the household's anticipations about them at $s < t$
 	 Following \citet{Kydland1980}, we  use the  marginal utility of consumption that the
 Ramsey planner promises to the household to account for that `forward looking' restriction on the Ramsey planner.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
@@ -445,11 +446,11 @@ Ramsey planner promises to the household to account for that `forward looking' r
 \begin{problem}\label{prob:RamseyBellman}
 Before the realization of the time $t$ Markov shock $s_t$, let   $V(x, s_{-1})$ be the {\em expected} continuation value of the Ramsey plan at $t \geq 1$  given promised marginal utility government debt inherited
 from the past $x = U_c,t b_t $ and time $t-1$ Markov state $s_{-1}$.
-After the realization of time time $0$ Markov shock $s_0$, let $W(b_{-1},s_0)$ be the value of the Ramsey plan when initial
+After the realization of time $0$ Markov shock $s_0$, let $W(b_{-1},s_0)$ be the value of the Ramsey plan when initial
 government debt is $b_{-1}$. % These value functions satisfy  two
-%Bellman equations. 
-An (\textit{ex ante})} Bellman equation for $t\geq1$  is
-	\begin{equation}
+%Bellman equations.
+The (\textit{ex ante}) Bellman equation for $t\geq1$  is
+	\begin{equation}\label{eqn:Bellman1}
 		V(x,s\_) = \max_{c(s),l(s),x'(s)} \sum_s \Pi(s,s\_)\Bigl(U(c(s),l(s)) + \beta V(x'(s),s)\Bigr)
 	\end{equation}
 subject to $x'(s)\in [\underline x,\overline x]$ and
@@ -457,12 +458,13 @@ subject to $x'(s)\in [\underline x,\overline x]$ and
 		\frac{x \mathbb{P}(s) U_c(s)}{\beta\EE_{s\_} \mathbb{P}Uc} =U_c(s)c(s)+U_l(s)l(s) + x'(s) \label{timetBellimplement}\\
 		c(s) + g(s) = \theta(s)l(s) \label{timetfeas}
 	\end{align}
-	Given an initial  debt $b_{-1}$,time $0$ Markov state $s_0$,  and continuation value function $V(x,s\_)$, an (\textit{ex post}) time $0$ Bellman equation
+Equation \eqref{timetBellimplement} is the implementability constraint and \eqref{timetfeas} is feasibility.
+	Given an initial  debt $b_{-1}$,time $0$ Markov state $s_0$,  and continuation value function $V(x,s\_)$, the (\textit{ex post}) time $0$ Bellman equation is
 %\textcolor{red}{Anmol and David XXXXX: I altered the below by adding the $W$ function; but there is a problem with the timing of
 %the $b$ argument.  See earlier slide where $W$ is defined.}
-	\[
+	\begin{equation}\label{eqn:Bellman0}
 		W(b_{-1},s_0) = \max_{c_{0},l_0,x_{0}} U(c,l) +\beta V(x_0,s0)
-	\]subject to  time zero implementability constraint
+	\end{equation} subject to  time zero implementability constraint
 	\[
 		U_{c}(c_0,l_0)c + U_l(c_0,l_0) l_0 + x_0 = U_c(c_0,l_0) b_{-1}
 	\]and  the resource constraint
@@ -474,59 +476,45 @@ subject to $x'(s)\in [\underline x,\overline x]$ and
 	\]
 \end{problem}
 
-\subsection{Progress report}
 
-\begin{enumerate}
- \item  Existence proved only under  special case of a risk-free bond  $\mathbb{P}(s|s\_)=1 \ \forall \ (s,s\_)$
+\subsection{What we've done}
 
- This focuses attention  on \textit{endogenous} component of returns coming from $q_t(s^t)$
+\textcolor{red}{Tom XXXXXX: write a subsection describing what Anmol and David have done so far with this setup, computationally
+and analytically}
 
- \item   $x^*$  is an initial condition for which the optimal asset payoff  in a LS economy is a risk-free bond
+\subsection{Motivation to focus on risk-free bond economy\label{sec:riskfreeonly}}
 
-\end{enumerate}
-
-\subsection{Revisiting steady states with risk aversion}
-Let $x'\left( s;{x},s\_\right) $ be an optimal  law of motion for the state variable
-for the $t\geq1$ Bellman equation.
-
-\begin{definition}
- A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
-\,s,s\_$
-\end{definition}
+As mentioned in section \ref{sec:excusequasilinear},  properties of a Ramsey plan for our incomplete markets economy vary sensitively  with   asset returns that reflect
+	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.  By studying
+quasi-linear preferences, we eliminated fluctuations in returns coming from prices.  Here we turn the table and by studying an economy
+with a risk-free bond, we eliminate fluctuations in returns coming from the exogenous asset payoff matrix $\mathbb{P}$.
+Thus, we set $\mathbb{P}(s|s\_)=1 \ \forall \ (s,s\_)$.  
 
 
-\vspace{3mm}
-\emph{Thus, a steady state is a node at which the  continuation allocation and tax rate have no further history dependence. }
 
- \subsection{Existence}
-	
-	\begin{enumerate}
-	 \item For a class of economies with separable iso-elastic preferences
-	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$
-	 \item Shocks that take two values and are i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
-	\end{enumerate}
+Let $x'\left( s;{x},s\_\right) $ be the decision rule for $x'$ that attains the right side of the $t\geq1$ Bellman equation
+\eqref{eqn:Bellman1}.  A steady state  ${x}^{*} $  satisfies ${ x}^{*}  =x' \left( s;{x}^{*},s_{-}\right) $ for all $%
+\,s,s\_$. 
+A steady state is a node at which the  continuation allocation and tax rate have no further history dependence. 
 
-	
-	Let $x_{fb}$ be a value of the state $x$ from which a government can implement first=best with complete markets
-	
-	
-	
-	
-	\begin{proposition}  Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ using the first best allocation.
+\begin{proposition}\label{prop:existenceU}  
+Assume that $U$ is  separable and iso-elastic:	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.
+Assume that 
+	 the Markov state $s$ take two values is  i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
+and $s_g$ begin the good state.
+		Let $x_{fb}$ be a value of the state $x$ from which a government can implement first=best with complete markets.
+\textcolor{red}{David XXXXXX: I'd like to clarify what the previous statement means. Let's talk.}
+	 Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ at the first best allocation.
 	If
 	\[
 		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)}>1
 	\]
-	
-	then there exists a steady state with $x_{fb}>x^*>0$
+		then there exists a steady state with $x_{fb}>x^*>0$
 		\end{proposition}
 
-\subsection{Stability}
-	\begin{enumerate}
-	 \item Here interest rates are aligned with marginal utility of consumption;  they are low  in ``good'' states (high TFP or low expenditure)
-	 \item  In a steady state, the government holds claims against the private sector. Resembles the quasilinear case with  low  $\bm{p}$	
-	 \item The incomplete markets Ramsey allocation converges to a Lucas-Stokey  Ramsey allocation for all initial conditions	 	
-	\end{enumerate}
+\begin{proof}
+\textcolor{red}{David fill in}
+\end{proof}
 
 
 	\begin{proposition}  Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions
@@ -534,23 +522,52 @@ for the $t\geq1$ Bellman equation.
 	\end{proposition}
 
 
+\begin{proof}
+\textcolor{red}{David fill in}
+\end{proof}
+
+\begin{remark}
+In this economy,  fluctuations in the risk-free  interest rate come from fluctuations in  marginal utility of consumption. The interest rate
+ is low  in ``good'' states (i.e., when  TFP is high or government expenditures are low).
+ In a steady state, the government holds claims against the private sector, an outcome that resembles those in economies
+ with  quasi-linear utility and  low  $\bm{p}$.  For all admissible  initial  levels of government debt, an incomplete markets Ramsey allocation converges to a particular Lucas-Stokey  Ramsey allocation. \textcolor{red}{Team xXXXXX: say a little more about the particular LS allocation and its initial debt level}   	
 
 
-\subsection{Transfers}
-	\begin{itemize}	
-	\item Access to nonnegative transfers makes first-best level of assets trivially a ``steady state''  	
-\item  All results hold \textit{on one side} of steady state
-\begin{theorem}
+\end{remark}
 
-With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level,  the economy  converges with probability 1 to the steady state.
+\textcolor{red}{Team XXXXXX: let's add some modest self-promotion here telling just how much the results immediately above add in terms of 
+filling in loose ends from AMSS -- things they just weren't able to answer.}
 
-\end{theorem}
-		
-	\end{itemize}
 
-\subsection{Comparison to literature}
+\section{To do}
+
+\begin{enumerate}
+\item Add above at appropriate place that until now $T_t \equiv 0$.  
+\item  Edit  section about turning on nonnegative transfers.  
+\item Tom to write introduction and concluding sections.
+\item Fill in some notation about what objects are indexed by, e.g., $s^t$.
+\item Fill in proofs.
+\item Check flow and order.
+\item Add a short appendix on how Bellman equations were solved numerically. Pat selves on back for doing so and display
+some policy functions -- think of one or two things to do with those policy functions.
+\item Think of a couple of experiments that show off the policy function calculations.
+\end{enumerate}
+
+
+\subsection{Allowing nonnegative transfers}
+\textcolor{red}{Team XXXXX: Beware -- please wear hard hat in this construction area.  Add BS about AMSS and what transfers did for them. Write front end of this section -- good low-skill job for Tom.}
+	 Access to nonnegative transfers makes first-best level of assets trivially a ``steady state.''  	
+With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level,  the economy  converges with probability 1 to the steady state. Thus, counterpart to previous  results continue to hold  when
+initial government debt exceeds its steady state value.  When initial government debt is less than a steady-state value, then
+\textcolor{red}{say something that is known or what is unknown.}
+
+
+\section{Comparison to literature}
+\textcolor{red}{Team -- please keep your hands off this section. Tom to use parts of it in the ``womanly'' sections (the introduction and
+concluding section).}
+
  \begin{enumerate}
-  \item Angeletos (2002), Buera and Nicolini (2004)
+  \item \citet{Angeletos}, \citet{Buera_Nicolini}
 
 \begin{itemize}
  \item Begin with a complete market  Ramsey allocation
