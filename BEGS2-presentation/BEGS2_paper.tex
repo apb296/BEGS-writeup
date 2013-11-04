@@ -5,14 +5,20 @@
 \usepackage{ifthen,latexsym,syntonly}
 \usepackage{setspace}
 \usepackage[showrefs]{refcheck}  %use this to show equation and section labels
-\usepackage{color}
 \usepackage[round,comma,authoryear]{natbib}   % for natbib
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{epstopdf}
 \usepackage{bm}
+\usepackage{soul}
 
+%commands to allow for easy editing
+\usepackage[usenames,dvipsnames]{color}
 
+%command to insert editing comments or track changes
+\newcommand{\dge}[1]{\textcolor{blue}{$^{\textrm{dge}}${#1}}}
+\newcommand{\apb}[1]{\textcolor{green}{$^{\textrm{apb}}${#1}}}
+\newcommand{\tsj}[1]{\textcolor{red}{$^{\textrm{tsj}}${#1}}}
 
 \bibliographystyle{mynat}
 
@@ -89,7 +95,7 @@ by
 \mathbb{E}_{0}\sum_{t=0}^{\infty } \beta^t  U\left(
 c(s^t),l(s^t)\right)  \label{utility lifetime}
 \end{equation*}%
-where $U$ satisfies XXXXXX.
+where $U$ satisfies \dge{(Not sure what we want to do here.  In all of our results we specialize to either CRRA or quasi-linear.)}.
   Labor produces output via the linear technology
   \begin{equation*}
   y_t=\theta_{t} l_{t} \end{equation*}
@@ -117,7 +123,7 @@ Equibrium objects including $\{c_t, l_t, \tau_t\}_{t=0}^\infty$ will come in the
 Borrowing from a standard boilerplate, we use the following:
 
 \begin{definition}
-An \textbf{allocation} is XXXXX. A \textbf{price system} is XXXXX.  A \textbf{budget-feasible government policy} is XXXXX $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$ XXXXX
+An \textbf{allocation} is \dge{a sequence $\{c_t,l_t\}_{t=0}^\infty$ for consumption and labor}. A \textbf{price system} is a \dge{sequence of asset prices $\{q_t\}_{t=0}^\infty$}.  A \textbf{budget-feasible government policy} is \dge{a sequence of taxes, transfers and government asset holdings $\left\{ \tau _{t},T_{t},B_t\right\} _{t=0}^{\infty }$}
 \end{definition}
 
 \begin{definition}
@@ -241,10 +247,10 @@ consumption, labor supply, and $\check b(s)$ are  functions of initial governmen
 
 \subsection{Motivation for  quasi-linear $U$\label{sec:excusequasilinear}}
 Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
-	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
+	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.  \dge{This is readily observed in equation \eqref{eqn:AMSSimplement}, where $U_{c,t}$ and $p_t$ enter in the same way.} 
 To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by studying an economy with  quasi-linear  utility function:
   \begin{equation}\label{eqn:UQL}
-U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma}.\end{equation}Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
+U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma},\end{equation}\dge{which sets $U_{c,t}= 1$.}  Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
 	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
 This utility function pins down $q_t=\beta \mathbb{E}_t
 \mathbb{P}(s_{t+1}|s_t)$.  After studying the consequences of quasi-linear utility, we shall Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
@@ -272,7 +278,7 @@ For initial government debt $b_{-1} = b^*$, a Ramsey plan for the incomplete mar
 In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of  $\mathbb{P}$'s for which government debt $b_t$  under a Ramsey plan converges to $b^*$ that solves \eqref{eqn:invPoperator}.
 %	\[\mathbb{P}=\mathbb{P}^*(b^*)\]
  For more general shock processes, we numerically find  an ergodic set of $b_t$'s
- hovering around a debt level $\tilde b$;    The optimal $\mathbb{P}^*$ associated with $\tilde b$ approximates $\mathbb{P}$:
+ hovering around a debt level $\tilde b$;    The optimal $\mathbb{P}^*$ associated with $\tilde b$ approximates $\mathbb{P}$ \dge{(Given how important this is it is probably worth a week trying to nail this down a bit more)}:
 	\[\mathbb{P}\approx \mathbb{P}^*(\tilde b)\]
 %	\textcolor{red}{Anmol and David XXXXXX: the preceding approximate equality needs clarification at least for me. What does it mean?}
 	
@@ -300,7 +306,7 @@ The `disarm-the-measurability-constraints' equation \eqref{eqn:pdisarm} then imp
 \begin{equation}\label{eqn:optPP}
  \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta.
  \end{equation}
-\textcolor{blue}{Anmol and David XXXXXX: let's add some snazzy interpretation of the previous nice equation.}
+\tsj{Anmol and David XXXXXX: let's add some snazzy interpretation of the previous nice equation.}
 
 To appreciate how  initial government debt level influences the optimal asset payoff structure via formula \eqref{eqn:optPP}, call a
  state $s$ ``adverse''  if it implies either ``high'' government expenditures or ``low '' TFP; formally, say that  $s$ is ``adverse'' if
@@ -330,9 +336,9 @@ Then \eqref{eqn:optPP} implies that
 
 We temporarily assume that $s_t$ is i.i.d and  $S=2$.
 In this case, $\mathbb{P}(s\_,s)$ is independent of $s\_$, so that $\mathbb{P}$ can be taken to be  a vector.
- Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$
- and a risk-free bond is a security for which $\bm{p}=1$.
-We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$.
+ Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$\dge{, the payoff in state 1.}
+ \st{and a risk-free bond is a security for which $\bm{p}=1$.}\dge{  A risk free bond is then a security for which $\bm{p} = 1$.}  
+\st{We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$.}  \dge{Without loss of generality we will assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.}
 Define a scalar $b^*$ by %by can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
 \begin{equation}
 \label{eq-ss}
@@ -343,7 +349,7 @@ so that $b^*$ satisfies $p={\mathbb P}^*(b^*)$.
 
 
 \begin{proposition}\label{prop:ssexistence}
-Suppose that $s$ shocks affect either $g$ or $\theta$.  Then there exist $0 \geq \alpha_2\geq\alpha_1\geq1$
+\st{Suppose that $s$ shocks affect either $g$ or $\theta$.  Then there}\footnote{\dge{We don't need to assume either g or $\theta$ shocks as we have allready characterized what an adverse state of the world is}}\dge{There exists} $0 \geq \alpha_2\geq\alpha_1\geq1$
 such that
   \begin{itemize}
    \item[a.] If $\bm{p}\leq \alpha_1$, then $b^* < 0$ % government holds assets in steady state
@@ -352,8 +358,20 @@ such that
   \end{itemize}
 
 \end{proposition}
-\begin{proof}
-\textcolor{red}{David XXXXX: please fill in and refine.}
+\begin{proof}  \dge{Let $g_1$ and $\theta_1$ denote the exogenous government expenditure and TFP in the ``good'' state of the world.  Before starting this proof we should note some facts about the complete markets solution.  As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there will be an upper bound for government debt for which a solution to the complete markets problem extists: $\overline b$.  This space of solutions to the complete markets problem can be indexed by $b\in(-\infty,\overline b]$.  If we let $\tau(b)$ the mapping from inital government debt into optimal tax rate, then $\tau$ is an increasing function of $b$ and $\tau((-\infty,\overline b]) = (-\infty,\frac{\gamma}{1+\gamma}]$.    Substituting $S(s,\tau)$ into equation \eqref{eqn:optPP} we obtain
+\[
+	\bm p(\tau) = (1-\beta)\frac{\theta_1^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g_1}{\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - \EE g} + \beta
+\]  Solving for $(1-\tau)^\frac1\gamma\tau$ we obtain
+\[
+	(1-\tau)^\frac{1}{\gamma}\tau = \frac{(\bm p-\beta)\EE g-(1-\beta)g_1}{(\bm p - \beta)\EE\theta^\frac{\gamma}{1+\gamma}-(1-\beta)\theta_1^\frac{\gamma}{1+\gamma}}
+\]  The space of complete market optimal tax rates is $(-\infty,\frac\gamma{1+\gamma}]$, as $(1-\tau)^\frac1\gamma\tau$ is one to one on this domain and $b(\tau)$ is increasing on this domain we conclude that $\bm p(b)$ is one to one. Differentiating $\bm p(\tau)$with respect to $\tau$ quickly yields
+\[ 
+	\frac{d}{d\tau} \bm p(\tau) = (1-\beta)(1-\tau)^{\frac1\gamma-1}\left[\gamma-(1+\gamma)\tau\right]\frac{g_1\EE\theta^\frac{\gamma}{1+\gamma}-\theta_1^\frac\gamma{1+\gamma}\EE g }{(\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-\EE g)^2} <0
+\] implying that $\bm p(b)$ is decreasing in $b$.  As $b =0$ implies that $\EE S(\tau(b)) =0$ the function function $\bm p(b)$ will have a pole at $b = 0$.  $\bm p$ decreasing in $b$ must therefore imply that $\lim_{b\rightarrow0^{-} } \bm p(b) = -\infty$ and $\lim_{b\rightarrow 0^+} \bm p(b) = \infty$.  We conclude that 
+\[
+	\bm p((-\infty,\overline b]) = \bm p((-\infty,0))\cup \bm p((0,\overline b]) = (-\infty,\alpha_1)\cup[\alpha_2,\infty)
+\]The bounds $\alpha_1$ and $\alpha_2$ are then computed by taking the limits of $\bm p$ as $b$ approaches $-\infty$ and $\overline b$ (upper bound for complete market debt), or equivalently as $\tau$ approaches $-\infty$ and $\frac\gamma{1+\gamma}$ respectively.}
+\end{proof}
  With only government expenditure shocks, we compute
 		\[
 			\alpha_1 = 1 \text{  and }  \alpha_2 = (1-\beta)\frac{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g(s_1)}{\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-\EE g} +\beta>1
@@ -365,7 +383,6 @@ such that
 		\[
 		\alpha_2 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}{\EE\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}+\beta>\alpha_1
 		\]
-	\end{proof}
 
 	
 
