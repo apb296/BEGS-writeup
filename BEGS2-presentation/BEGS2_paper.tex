@@ -590,7 +590,7 @@ and $s_g$ begin the good state.
 \end{proof}
 
 
-	\begin{proposition} \st{ Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions.}  \dge{There exists $\underline x < x^*$ and $\overline x >0$ such that if $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solves the incomplete markets Ramsey problem \ref{prob:RamseyBellman} with bounds $\underline x$ and $\overline x$ then $x_t(s^t)\rightarrow x^*$ as $t\rightarrow\infty$ with probability 1.}
+	\begin{proposition}\label{prop:convergenceU} \st{ Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions.}  \dge{There exists $\underline x < x^*$ and $\overline x >0$ such that if $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solves the incomplete markets Ramsey problem \ref{prob:RamseyBellman} with bounds $\underline x$ and $\overline x$ then $x_t(s^t)\rightarrow x^*$ as $t\rightarrow\infty$ with probability 1.}
 	
 	\end{proposition}
 
@@ -623,6 +623,9 @@ In this economy,  fluctuations in the risk-free  interest rate come from fluctua
 
 
 \end{remark}
+\dge{
+\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} can be thought of as a near converse to Lemma 3. of section 5 in \citet{Aiyagari2002}.  There they provide sufficient conditions for the non-convergence of the economy to a complete markets allocations.  Our propositions provide sufficient conditions for the existence of the complete markets steady state and the long rung convergence to that steady state.  While the results of \citet{Aiyagari2002} do hold, and for more general stochastic processes a steady state will not exist, we find numerically that the results Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} are informative as to the long run dynamics of incomplete markets economys.  There will exist regions of low volatility and the economy will converge to these regions in the long run.
+\end{remark}}
 
 \tjs{Team XXXXXX: let's add some modest self-promotion here telling just how much the results immediately above add in terms of 
 filling in loose ends from AMSS -- things they just weren't able to answer.}
