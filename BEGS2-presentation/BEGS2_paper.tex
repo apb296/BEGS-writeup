@@ -105,7 +105,10 @@ The representative consumer's tax bill
  where $\tau_t(s^t, b_{-1})$ is a flat rate tax on labor income and $T_t$ is a nonnegative transfer.
  Often, we'll set $T_t =0$.
 The government and consumer trade a single  possibly risky  asset whose  time $t$ payoff $p_t$ is described by an $S \times S$ matrix $\mathbb{P}$:
-\[p_t=\mathbb{P}(s_{t}|s_{t-1}).\]
+%\[p_t=\st{\mathbb{P}(s_{t}|s_{t-1})} \]
+\[p_t=\mathbb{P}(s_{t},s_{t-1}) \]
+\apb{I changed the notation for $s_t|s_{t-1}$ to be consistent with what we use later}
+
 Let $B_t$ denote the government's holdings of the asset and $b_t$ be the consumer's holdings.
 Let $q_t= q_t(s^t; b_{-1})$ be the price of the single  asset at time $t$.
  At $t \geq 0$, the household's time budget constraint is
@@ -116,7 +119,7 @@ Feasible allocations satisfy
  \[c_{t}+g_t = \theta _{t} l_{t}, \ \forall t \geq 0 \]
 Clearing in the time $t \geq 0$ market for the single asset requires
 \[b_{t}+B_{t}=0. \]
-Initial assets satisfy $b_{-1}=-B_{-1}$ An initial value of the exogenous state  $s_{-1}$ is given.
+Initial assets satisfy $b_{-1}=-B_{-1}$\footnote{\apb{We assume that $b_{-1}$ are obligations with acrrued interest. This is equivalentl to normalizing $q_{-1}=1$}} An initial value of the exogenous state  $s_{-1}$ is given.
 Equibrium objects including $\{c_t, l_t, \tau_t\}_{t=0}^\infty$ will come in the form of sequences of functions of  initial government debt  $b_{-1}$ and  $s^t = [s_t, s_{t-1}, \ldots, s_0, s_{-1}]$.
 
 
@@ -144,14 +147,17 @@ Following \citet{LucasJr.1983}
 and
 \citet{Aiyagari2002}, we use a
 ``primal approach.''   To encode a  government policy and price system as a restriction on an allocation,
-we  first obtain   the representative household's first order conditions:
+we  first obtain   the representative household's first order conditions\footnote{\apb{We thus focus on interior equilibria. Along with the household's first order necessary conditions, one needs to impose a transversality constraint on asset holdings for sufficiency. This is ensured with market clearing for assets and bounds on the government's debt holdings while characterizing the optimal competitive equilibrium.}}:
 \begin{subequations}
-	\[
-		U_{c,t} q_t = \beta \EE_t p_{t+1}U_{c,t+1}
-	\]
-	\[
-		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t}
-	\]
+	\begin{equation}
+	\label{eqn:Euler}
+		U_{c,t} q_t = \beta \EE_t p_{t+1}U_{c,t+1} 
+	\end{equation}
+	\begin{equation}
+		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t} 
+	\end{equation}
+
+
 \end{subequations}
 We substitute these into the household's budget constraint to get a difference equation that we  solve forward   at every history for every $t \geq 0$.
 That yields \textit{implementability constraints} on a Ramsey allocation that fall into two categories: (1) the time $t=0$ version is identical
@@ -220,6 +226,11 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
  \begin{equation}\label{eqn:AMSSimplement}
  \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
  \end{equation}
+
+ \begin{equation}\label{eqn:AMSSbounds}
+ \underline{M}\leq b_{t-1}\leq \bar{M}\text{  for $t\geq 1$ }
+ \end{equation}
+  
 \end{subequations}
 \end{problem}
 
@@ -233,9 +244,9 @@ that attains % the maximum of
 \end{problem}
 
 \begin{remark} Equation \eqref{eqn:feas} imposes feasibility, while equation  \eqref{eqn:LSimplement} is the single implementability constraint
-present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional implementability constraints that comprise implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
+present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional \st{implementability constraints that comprise} implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
 single asset. The measurability constraints \eqref{eqn:AMSSimplement}  are cast
-in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}.
+in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}. \apb{Inequalities \eqref{eqn:AMSSbounds} are bounds on government's debt holding. For most of the paper we will impose natural debt limits.} 
 \end{remark}
 
 
@@ -252,15 +263,20 @@ To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by
   \begin{equation}\label{eqn:UQL}
 U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma},\end{equation}\dge{which sets $U_{c,t}= 1$.}  Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
 	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
-This utility function pins down $q_t=\beta \mathbb{E}_t
-\mathbb{P}(s_{t+1}|s_t)$.  After studying the consequences of quasi-linear utility, we shall Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
+At an interior solution, \apb{this utility function and \eqref{eqn:Euler} pins down $q_t=\beta \mathbb{E}_t
+\mathbb{P}(s_{t+1}|s_t)$.}  After studying the consequences of quasi-linear utility, we shall Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate fluctuating $q_t$.
 	
 
 
 \section{Quasi-linear preferences}
 
 Throughout this section, we assume that $U$ is quasi-linear and use an indirect three step approach to  characterize  the asymptotic behavior of government  debt and the tax rate.
-(1) Construct  an operator.
+
+
+
+\noindent (1) \textbf{Construct  an operator}
+
+
 We pose the following problem:
 \begin{problem}\label{prob:PPoperator}
  Given arbitrary initial government debt $b_{-1}$, what is an optimal asset payoff matrix?
@@ -268,11 +284,22 @@ We pose the following problem:
 \noindent Problem \ref{prob:PPoperator} induces an operator that maps initial government debt $b_{-1}$ into an optimal payoff matrix $\mathbb{P^*}$ for the single asset:
 \begin{equation}\label{eqn:PPoperator}
 \mathbb{P}^* =\mathbb{P}^*(b_{-1}) .\end{equation}
-\noindent (2) Apply the inverse of the operator $\mathbb{P}^*$.
+
+
+\noindent (2) \textbf{Apply the inverse of the operator $\mathbb{P}^*$.}
+
 For an arbitrary payoff matrix $\mathbb{P}$,  let
-\begin{equation}\label{eqn:invPoperator}\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(\mathbb{P}) .\end{equation}
+\begin{equation}\label{eqn:invPoperator}\mathbb{P}=\mathbb{P}^*(b^*) \ \textrm{or} \ b^* = \mathbb{P}^{* -1}(\mathbb{P}) \footnote{\apb{In cases where this inverse does not exist, we define   $\mathbb{P}^{* -1}(\mathbb{P}) =\min_{b}\|\mathbb{P}-\mathbb{P}^*(b^*)\|$ under XXXX norm}}.\end{equation}
 For initial government debt $b_{-1} = b^*$, a Ramsey plan for the incomplete markets economy has $b_t = b^*$ for all $t \geq 0$.
-(3) Starting from an arbitrary initial government $b_{-1}$ and an arbitrary payoff matrix $\mathbb{P}$,  establish conditions under  which $b_t \to b^*$ under a Ramsey plan.
+
+
+
+
+
+
+\noindent (3) \textbf{Long run assets}
+
+Starting from an arbitrary initial government $b_{-1}$ and an arbitrary payoff matrix $\mathbb{P}$,  establish conditions under  which $b_t \to b^*$ under a Ramsey plan.
 
 
 In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of  $\mathbb{P}$'s for which government debt $b_t$  under a Ramsey plan converges to $b^*$ that solves \eqref{eqn:invPoperator}.
@@ -284,15 +311,19 @@ In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of
 	
 
 Here is how we execute these three steps.
-(1)
-  Given $b_{-1}$, solve problem \ref{prob:RamseyLS} to compute a  Lucas-Stokey Ramsey allocation.
-(2) Note that \citeauthor{Aiyagari2002}-like measurability constraints \eqref{eqn:AMSSimplement} are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$.
-From the equivalence class of $p_t$'s that satisfy \eqref{eqn:AMSSimplement} at the Lucas-Stokey Ramsey allocation, select a  $p_t$ that imposes the normalization  $\mathbb{E}_{t-1}U_{c,t}p_t=1$ and satisfies
+
+\noindent (1) \apb{The optimal payoff matrix is obtained by reverse engineering a complete markets (Lucas-Stokey)  Ramsey allocation.} Given $b_{-1}$, solve problem \ref{prob:RamseyLS} to compute a  Lucas-Stokey Ramsey allocation.
+
+
+(2) \apb{Next we find a sequence $\{p_t\}$ that satisfies the implementability constrsints imposed in \eqref{eqn:AMSSimplement}} Note that these implementability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$. From the equivalence class of $p_t$'s that satisfy \eqref{eqn:AMSSimplement} at the Lucas-Stokey Ramsey allocation, select a  $p_t$ that imposes the normalization  $\mathbb{E}_{t-1}U_{c,t}p_t=1$ and satisfies
 \begin{equation}\label{eqn:pdisarm} p_t =  \frac{\beta}{U_{c,t-1} b_{t-1} U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \end{equation}
 Note that by construction, $p_t$   disarms the time  $t\geq 1$
-measurability constraints.
-(4) Using the fact noted in remark \ref{rem:LSdebt} that the Lucas-Stokey Ramsey allocation is not history-dependent,  construct the optimal payoff matrix as
+measurability constraints\footnote{\apb{The normalization of $p_t$ reduces to a restriction of its conditional mean to unity in the quasi linear setup. Although we are studying the quasi linear preferences in this section, the exercise of obtaining the optimal payoffs sequence $p_t$ is general. }}. 
+
+
+(3) Using the fact noted in remark \ref{rem:LSdebt} that the Lucas-Stokey Ramsey allocation is not history-dependent,  construct the optimal payoff matrix as
 \[\mathbb{P}^*(s_t,s_{t-1}|b_{-1})=p_t.\]
+
 Thus,  given
  initial government debt $b_{-1}$,  let $\mu(b_{-1})$ be the Lagrange multiplier on the Lucas-Stokey implementability constraint \eqref{eqn:LSimplement}
  at the Lucas-Stokey Ramsey allocation.  The tax rate in the Ramsey allocation is
@@ -303,6 +334,7 @@ $
 \[		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g(s)
 	\]
 The `disarm-the-measurability-constraints' equation \eqref{eqn:pdisarm} then implies that the optimal payoff matrix is
+
 \begin{equation}\label{eqn:optPP}
  \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta.
  \end{equation}
