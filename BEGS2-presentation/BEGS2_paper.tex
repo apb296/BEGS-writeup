@@ -449,23 +449,33 @@ such that
   \end{itemize}
 
 \end{proposition}
-\begin{proof}  \dge{Let $g_1$ and $\theta_1$ denote the exogenous government expenditure and TFP in the ``good'' state of the world.  Before starting this proof we should note some facts about the complete markets solution.  As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there will be an upper bound for government debt for which a solution to the complete markets problem exists: $\overline b$.  This space of solutions to the complete markets problem can be indexed by $b\in(-\infty,\overline b]$.  If we let $\tau(b)$ the mapping from initial government debt into optimal tax rate, then $\tau$ is an increasing function of $b$ and $\tau((-\infty,\overline b]) = (-\infty,\frac{\gamma}{1+\gamma}]$.    Substituting $S(s,\tau)$ into equation \eqref{eqn:optPP} we obtain}
-
-\apb{Do we want to define $\overline{b}$. We have an expression for it later in the paper. It can be useful here. Do we want to say why $\tau'(b)>0 ?$. In the rest of the proof shouldn't $\bm{p}$ be $\bm{p}^*$ to be more precise. We are manipulating the formula for the optimal payoff matrix and $\bm{p}$ is an exogenous primitive}
-
-\dge{
+\begin{proof}  \dge{Let $g_1$ and $\theta_1$ denote the exogenous government expenditure and TFP in the ``good'' state of the world.  Before starting this proof we should note some facts about the complete markets solution.}\st{
+As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there will be an upper bound for government debt for which a solution to the complete markets problem exists: $\overline b$.  This space of solutions to the complete markets problem can be indexed by $b\in(-\infty,\overline b]$.  If we let $\tau(b)$ the mapping from initial government debt into optimal tax rate, then $\tau$ is an increasing function of $b$ and $\tau((-\infty,\overline b]) = (-\infty,\frac{\gamma}{1+\gamma}]$.    Substituting $S(s,\tau)$ into equation we obtain}
+\dge{  The government surplus in any state of the world is given by 
 \[
-	\bm p(\tau) = (1-\beta)\frac{\theta_1^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g_1}{\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - \EE g} + \beta
+	S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - g(s)
+\]  This surplus is therefore maximized when $(1-\tau)^\frac1\gamma\tau$ is maximized at $\tau = \frac\gamma{1+\gamma}$, moreover in the region $(-\infty,\frac\gamma{1+\gamma}]$ the function $S(\cdot,\tau)$ is an increasing function of $\tau$.  In an i.i.d. world then government debt with complete markets associated with a constant tax rate $\tau$ is 
+\[
+	\frac1{1-\beta} \sum_s \Pi(s) S(s,\tau)
+\] is an increasing function of tau.  The maximal initial government debt sustainable in incomplete markets is then given by
+\[
+	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s)
+\]Inverting the mapping from tax rates into government debt we obtain the function $\tau(b)$, which is the mapping from initial government debt into the optimal tax rate.  $\tau(b)$ is an increasing function of $b$ on the domain of complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.}
+
+
+\dge{Substituting the formula for $S(s,\tau)$ into equation \eqref{eqn:optPP} we obtain
+\[
+	\bm p^*(\tau) = (1-\beta)\frac{\theta_1^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g_1}{\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - \EE g} + \beta
 \]  Solving for $(1-\tau)^\frac1\gamma\tau$ we obtain
 \[
-	(1-\tau)^\frac{1}{\gamma}\tau = \frac{(\bm p-\beta)\EE g-(1-\beta)g_1}{(\bm p - \beta)\EE\theta^\frac{\gamma}{1+\gamma}-(1-\beta)\theta_1^\frac{\gamma}{1+\gamma}}
-\]  The space of complete market optimal tax rates is $(-\infty,\frac\gamma{1+\gamma}]$, as $(1-\tau)^\frac1\gamma\tau$ is one to one on this domain and $b(\tau)$ is increasing on this domain we conclude that $\bm p(b)$ is one to one. Differentiating $\bm p(\tau)$with respect to $\tau$ quickly yields
+	(1-\tau)^\frac{1}{\gamma}\tau = \frac{(\bm p^*-\beta)\EE g-(1-\beta)g_1}{(\bm p^* - \beta)\EE\theta^\frac{\gamma}{1+\gamma}-(1-\beta)\theta_1^\frac{\gamma}{1+\gamma}}
+\]  The space of complete market optimal tax rates is $(-\infty,\frac\gamma{1+\gamma}]$, as $(1-\tau)^\frac1\gamma\tau$ is one to one on this domain and $b(\tau)$ is increasing on this domain we conclude that $\bm p^*(b)$ is one to one. Differentiating $\bm p^*(\tau)$with respect to $\tau$ quickly yields
 \[ 
-	\frac{d}{d\tau} \bm p(\tau) = (1-\beta)(1-\tau)^{\frac1\gamma-1}\left[\gamma-(1+\gamma)\tau\right]\frac{g_1\EE\theta^\frac{\gamma}{1+\gamma}-\theta_1^\frac\gamma{1+\gamma}\EE g }{(\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-\EE g)^2} <0
-\] implying that $\bm p(b)$ is decreasing in $b$.  As $b =0$ implies that $\EE S(\tau(b)) =0$ the function function $\bm p(b)$ will have a pole at $b = 0$.  $\bm p(b)$ decreasing in $b$ must therefore imply that $\lim_{b\rightarrow0^{-} } \bm p(b) = -\infty$ and $\lim_{b\rightarrow 0^+} \bm p(b) = \infty$.  We conclude that 
+	\frac{d}{d\tau} \bm p^*(\tau) = (1-\beta)(1-\tau)^{\frac1\gamma-1}\left[\gamma-(1+\gamma)\tau\right]\frac{g_1\EE\theta^\frac{\gamma}{1+\gamma}-\theta_1^\frac\gamma{1+\gamma}\EE g }{(\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-\EE g)^2} <0
+\] implying that $\bm p^*(b)$ is decreasing in $b$.  As $b =0$ implies that $\EE S(\tau(b)) =0$ the function function $\bm p^*(b)$ will have a pole at $b = 0$.  $\bm p^*(b)$ decreasing in $b$ must therefore imply that $\lim_{b\rightarrow0^{-} } \bm p^*(b) = -\infty$ and $\lim_{b\rightarrow 0^+} \bm p^*(b) = \infty$.  We conclude that 
 \[
-	\bm p((-\infty,\overline b]) = \bm p((-\infty,0))\cup \bm p((0,\overline b]) = (-\infty,\alpha_1)\cup[\alpha_2,\infty)
-\]The bounds $\alpha_1$ and $\alpha_2$ are then computed by taking the limits of $\bm p$ as $b$ approaches $-\infty$ and $\overline b$ (upper bound for complete market debt), or equivalently as $\tau$ approaches $-\infty$ and $\frac\gamma{1+\gamma}$ respectively.}
+	\bm p^*((-\infty,\overline b]) = \bm p^*((-\infty,0))\cup \bm p^*((0,\overline b]) = (-\infty,\alpha_1)\cup[\alpha_2,\infty)
+\]The bounds $\alpha_1$ and $\alpha_2$ are then computed by taking the limits of $\bm p^*$ as $b$ approaches $-\infty$ and $\overline b$ (upper bound for complete market debt), or equivalently as $\tau$ approaches $-\infty$ and $\frac\gamma{1+\gamma}$ respectively.}
 \end{proof}
  With only government expenditure shocks, we compute
 		\[
@@ -494,12 +504,13 @@ Then % for  same $  \alpha_1 < \alpha_2$
   For $\bm{p}$ in region (c.),
 the government tends to run up debt over time.
 
-\begin{proof}\dge{The first order conditions governing the optimal allocation allow us to treat $\mu_t$ the multiplier on the measurability constraints as the state variable. 
-\apb{The notion of a state variable is confusing here. maybe we want to say a couple of words like. The optimal allocation permits recursive representation as functions $c_t(\mu_t),l_t(\mu_t)$ and $b_t(\mu_t)$ with a law of motion for $\mu_{t}$}
+\begin{proof}\dge{\st{The first order conditions governing the optimal allocation allow us to treat $\mu_t$ the multiplier on the measurability constraints as the state variable. }}
+\apb{The optimal allocation permits recursive representation as functions $c_t(\mu_t),l_t(\mu_t)$ and $b_t(\mu_t)$ with a law of motion for $\mu_{t}$.}
+\dge{
 We will show global stability under the assumption that $\mu'(\mu,s)$ an increasing function of $\mu$\footnote{\dge{ I'm still working on this.  I'm not sure if we'll need to include it as an assumption or not}}  The heart of the proof revolves around the twisted-martingale equation for $\mu$:
 \[
 	\mu_t = \sum_s \Pi(s) p_s \mu'(\mu_t,s) = \EE_t p_{t+1}\mu_{t+1}
-\]  We have shown that there is at most an unique $\mu^*$ such that $\mu'(\mu^*,s) = \mu^*$ for all $s$.  For this sketch we will focus on showing global stability for $\mu < \mu^*$.\apb{??? Is it fair to say taht the other case is analogous ?}  The twisted-martingale equation can be decomposed as follows
+\]  We have shown that there is at most an unique $\mu^*$ such that $\mu'(\mu^*,s) = \mu^*$ for all $s$.  For this sketch we will focus on showing global stability for $\mu < \mu^*$. The twisted-martingale equation can be decomposed as follows
 \[ 
 	\mu_t = \EE_t \mu_{t+1}+Cov_t(p_{t+1},\mu_{t+1})
 \] by signing $Cov_t(p_{t+1},\mu_{t+1})$ we are able to determine if $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above\footnote{\dge{Given that $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$  we know that if $\mu_t < \mu^*$ then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$}}, we can conclude global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem we will split the proof up into three cases, recall $\bm p$ is the payoff in state 1 (the ``good'' state)
@@ -510,11 +521,14 @@ We will show global stability under the assumption that $\mu'(\mu,s)$ an increas
 	\]as the government tax revenue is maximized by setting the proportional tax to $\frac\gamma{1+\gamma}$.  For $\bm p <\alpha_2$ it is possible to show that $\overline b_1 > \overline b_2$ and thus the natural debt limit is obtained by the ``adverse'' state.  This implies that $\lim_{\mu\rightarrow-\infty} b(\mu) = \overline b_2$ and thus $\lim_{\mu\rightarrow-\infty} \mu'(\mu,2) = -\infty$.  In order for the period by period budget constraint
 	\[
 		\frac{p_s}{\beta}b(\mu) = S(\mu'(\mu,s))+b(\mu'(\mu,s))
-	\]to be satisfied for all $s$ it must be $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b_1 > \overline b_2$).  Continuity then implies that $\mu'(\mu,1) > \mu'(\mu,2)$.  \apb{Continuity for some $\mu<m^*$ right ? Do we want to spell out the a bit on how uniqueness of steady state implies that ordering of $\mu'$ at some point in the region guarantees uniform ordering. It can help a reader appreciate the previous argument better? } 
+	\]to be satisfied for all $s$ it must be $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b_1 > \overline b_2$).  Continuity of $\mu$ with the uniqueness of the steady state $\mu^*$ then implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for all $\mu < \mu^*$.
 	$\bm p < 1$ implies that $p_1 < p_2$ allowing us to conclude that $Cov_t(p_{t+1},\mu_{t+1}) < 0$.  We then have that 
 	\[
 		\mu_t < \EE_t\mu_{t+1}
-	\] for $\mu_t < \mu^*$ implying that $\mu^*$ is globally stable.
+	\] for $\mu_t < \mu^*$.  As $\mu'(\mu,s)$ is increasing, continuous and $\mu'(\mu^*,s) = \mu^*$, we can iterate on the policy rules to show that if $\mu_t < \mu^*$ the for all $j> 0$ we must have $\mu_{t+j} <\mu^*$.  Thus, if $\mu_t <\mu^*$ then $\mu_t$ is a supermartingale bounded from below implying that $\mu_t\rightarrow \tilde\mu$ for some constant $\tilde\mu$ with probability 1.  It is then just a matter of using the continuity of $\mu'(\mu,s)$ to show that 
+	\[
+		\mu'(\tilde u,s) = \tilde \mu
+	\] implying that $\tilde \mu =\mu^*$, as $\mu^*$ is the unique steady state.  The steady state is then globally stable as $\mu_t \rightarrow \mu^*$ with probability 1.
 	\item[2. $\bm p \geq \alpha_2$:]  Following a similar method as in the previous case we know for $\bm p > \alpha_2$ that $\overline b_1 < \overline b_2$ implying that the natural debt limit is obtained using the ``good'' state.  As in the previous case by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$ which, along with $p_1 > p_2$, implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As before, we then have global stability of the steady state for $\mu_t < \mu^*$.
 	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for the first case implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{\dge{In the case where there does not exists a steady state take $\mu^*$ to be $\infty$}}  As $\bm p >1$ implies that $p_1 > p_2$, we can therefore conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$ implying that 
 	\[
