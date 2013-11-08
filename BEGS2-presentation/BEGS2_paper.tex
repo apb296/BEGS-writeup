@@ -17,7 +17,7 @@
 
 %command to insert editing comments or track changes
 \newcommand{\dge}[1]{\textcolor{blue}{$^{\textrm{dge}}${#1}}}
-\newcommand{\apb}[1]{\textcolor{green}{$^{\textrm{apb}}${#1}}}
+\newcommand{\apb}[1]{\textcolor{magenta}{$^{\textrm{apb}}${#1}}}
 \newcommand{\tjs}[1]{\textcolor{red}{$^{\textrm{tjs}}${#1}}}
 
 \bibliographystyle{mynat}
@@ -87,31 +87,29 @@
 
 We analyze economies that share the following features.
 Government expenditures at time $t$, $g_t=g(s_t)$, and a productivity shock $\theta_t=\theta(s_t)$ are both functions of
-  a Markov  shock $s_t\in \mathcal{S}$ having  $S \times S$ transition matrix $\Pi$ and initial condition $s_{-1}$. \apb{We will denote time $t$ histories with $s^t$ and $z_t$ will refer to a generic random variable measurable with respect to $s^t$. Sometimes we will denote $z_t(s^t)$ indicate a particular realization of $z_t$}
+  a Markov  shock $s_t\in \mathcal{S}$ having  $S \times S$ transition matrix $\Pi$ and initial condition $s_{-1}$. We will denote time $t$ histories with $s^t$ and $z_t$ will refer to a generic random variable measurable with respect to $s^t$. Sometimes we will denote $z_t(s^t)$ indicate a particular realization of $z_t$.
    %; $g_t=g(s_t);\theta_t=\theta(s_t)$
-An infinitely lived representative consumer has preferences over allocations  $\{c_t, l_t\}_{t=0}^\infty$ of consumption and labor supply that are ordered
+ An infinitely lived representative consumer has preferences over allocations  $\{c_t, l_t\}_{t=0}^\infty$ of consumption and labor supply that are ordered
 by
    \begin{equation}
    \label{eqn:obj}
 \mathbb{E}_{-1}\sum_{t=0}^{\infty } \beta^t  U\left(
-c_t,l_t\right)  \footnote{\apb{I changed the conditioning to -1 and harmonized the $s^t$ notation }}
+c_t,l_t\right)
 \end{equation}%
-\dge{The Concavity of lifetime utility is guaranteed by assuming $U_c >0$, $U_{cc} <0$, $U_{l} <0$, $U_{ll}<0$.  For most of the paper we will assume separable preferences, and thus, $U_{cl} = 0$.  Standard Inada conditions on preferences are imposed: $\lim_{c\rightarrow 0} U_c(c,l) = -\infty$, $\lim_{c\rightarrow\infty} U_c(c,l)  =0$, $\lim_{l\rightarrow 0} U_l(c,l) = 0$, and $\lim_{l\rightarrow\infty} U_l(c,l) = -\infty$.}
-  Labor produces output via the linear technology
+\dge{Where $U$ is the period utility function for consumption and labor.  For most of the paper we will assume $U$ separable in consumption and labor.  Additional assumptions will be made as needed.}  Labor produces output via the linear technology
   \begin{equation*}
   y_t=\theta_{t} l_{t} \end{equation*}
 The representative consumer's tax bill
  at time $t \geq 0$ is
  \[- T_t + \tau_t \theta_{t}l_{t},  \ T_t \geq 0, \]
- where $\tau_t(s^t, b_{-1})$ \footnote{\apb{why do we want the dependence on $b_{-1}$ explicit here ?}}is a flat rate tax on labor income and $T_t$ is a nonnegative transfer.
+ where $\tau_t(s^t,)$ is a flat rate tax on labor income and $T_t$ is a nonnegative transfer.
  Often, we'll set $T_t =0$.
 The government and consumer trade a single  possibly risky  asset whose  time $t$ payoff $p_t$ is described by an $S \times S$ matrix $\mathbb{P}$:
 %\[p_t=\st{\mathbb{P}(s_{t}|s_{t-1})} \]
 \[p_t=\mathbb{P}(s_{t},s_{t-1}) \]
-\apb{I changed the notation for $s_t|s_{t-1}$ to be consistent with what we use later}
 
 Let $B_t$ denote the government's holdings of the asset and $b_t$ be the consumer's holdings.
-Let $q_t= q_t(s^t; b_{-1})$ \footnote{\apb{why do we want the dependence on $b_{-1}$ explicit here ?}} be the price of the single  asset at time $t$.
+Let $q_t= q_t(s^t)$ be the price of the single  asset at time $t$.
  At $t \geq 0$, the household's time budget constraint is
  \begin{equation}
  \label{eqn:HHbudget}
@@ -140,20 +138,20 @@ Feasible allocations satisfy
  b_{t}+B_{t}=0.
  \end{equation}
 
- Initial assets satisfy $b_{-1}=-B_{-1}$\footnote{\apb{We assume that $b_{-1}$ are obligations with acrrued interest. This is equivalentl to normalizing $q_{-1}=1$}} An initial value of the exogenous state  $s_{-1}$ is given.
+ Initial assets satisfy $b_{-1}=-B_{-1}$\footnote{\apb{We assume that $b_{-1}$ are obligations with acrrued interest. This is equivalent to setting $q_{-1}=1$}} An initial value of the exogenous state  $s_{-1}$ is given.
 Equibrium objects including $\{c_t, l_t, \tau_t\}_{t=0}^\infty$ will come in the form of sequences of functions of  initial government debt  $b_{-1}$ and  $s^t = [s_t, s_{t-1}, \ldots, s_0, s_{-1}]$.
 
 
 Borrowing from a standard boilerplate, we use the following:
 
 \begin{definition}
-An \textbf{allocation} is \dge{a sequence $\{c_t,l_t\}_{t=0}^\infty$ for consumption and labor}. A \textbf{price system} is a \dge{sequence of asset prices $\{q_t\}_{t=0}^\infty$}.  A \textbf{budget-feasible government policy} is \dge{a sequence of taxes, transfers and government asset holdings $\left\{ \tau _{t},T_{t},B_t\right\} _{t=0}^{\infty }$}
+An \textbf{allocation} is a sequence $\{c_t,l_t\}_{t=0}^\infty$ for consumption and labor. \dge{An \textbf{asset profile}  is a sequence $\{b_t,B_t\}_{t=0}^\infty$}. A \textbf{price system} is a sequence of asset prices $\{q_t\}_{t=0}^\infty$.  A \textbf{budget-feasible government policy} is a sequence of taxes and transfers $\left\{ \tau _{t},T_{t}\right\} _{t=0}^{\infty }$
 \end{definition}
 
 \begin{definition}
 Given  $\left(b_{-1}=-B_{-1},s_{-1}\right) $ and a government policy,  a \textbf{competitive equilibrium
-with distorting taxes} is a price system, a budget-feasible government policy, and an allocation such that
-the allocation \apb{maximizes \eqref{eqn:obj} subject to \eqref{eqn:HHbudget} given prices} and the bond  market clears.
+with distorting taxes} is a price system, \dge{an asset profile}, a \st{budget-feasible} government policy, and an allocation such that
+the allocation maximizes \eqref{eqn:obj} subject to \eqref{eqn:HHbudget} \dge{and $\{b_{t}\}_{t=0}^\infty$ bounded}  given prices; and \st{the bond  market clears} \dge{equations \eqref{eqn:Govbudget}, \eqref{eqn:ResFeas} and \eqref{eqn:bondmarket} are satisfied}.
 \end{definition}
 
 \begin{definition}
@@ -168,13 +166,13 @@ Following \citet{LucasJr.1983}
 and
 \citet{Aiyagari2002}, we use a
 ``primal approach.''   To encode a  government policy and price system as a restriction on an allocation,
-we  first obtain   the representative household's first order conditions\footnote{\apb{We thus focus on interior equilibria. Along with the household's first order necessary conditions, one needs to impose a transversality constraint on asset holdings for sufficiency. This is ensured with market clearing for assets and bounds on the government's debt holdings while characterizing the optimal competitive equilibrium.}}:
-\begin{subequations}
+we  first obtain   the representative household's first order conditions\footnote{We thus focus on interior equilibria. \dge{Arguments in \cite{Magill1994} and \cite{Constantinides1996} can be used to show that any allocation $c_t$, $l_t$, $b_t$ that satisfy equations \eqref{eqn:HHbudget},\eqref{eqn:HHFOC} and bounded $\{b_t\}$ is a solution to the consumers problem.} }
+\begin{subequations}\label{eqn:HHFOC}
 	\begin{equation}
 	\label{eqn:Euler}
 		U_{c,t} q_t = \beta \EE_t p_{t+1}U_{c,t+1} 
 	\end{equation}
-	\begin{equation}
+	\begin{equation}\label{eqn:lcFOC}
 		(1-\tau_t)\theta_tU_{c,t} = - U_{l,t} 
 	\end{equation}
 
@@ -223,7 +221,7 @@ We first state our Ramsey problem, then Lucas and Stokey's.
 
 
 \begin{problem}\label{prob:RamseyBEGS}
-The  Ramsey problem is to choose an allocation and an \st{appropriately measurable} government debt sequence $\{b_t\}_{t=0}^\infty$ %sequences  functions
+The  Ramsey problem is to choose an allocation and an \st{appropriately measurable}\dge{bounded} government debt sequence $\{b_t\}_{t=0}^\infty$ %sequences  functions
 %$\{c_t(s^t),l_t(s^t), b_t(s^t)\}_{t=0}^\infty$
 that attain:
 \begin{equation}\label{eqn:Ramseyobj}
@@ -247,10 +245,6 @@ b_{-1} = \frac1{U_{c,0}}\EE_0\sum_{t=0}^\infty \beta^t\left(U_{c,t}c_t+U_{l,t}l_
  \begin{equation}\label{eqn:AMSSimplement}
  \frac{b_{t-1}U_{c,t-1}}{\beta} = \frac{\EE_{t-1} p_t U_{c,t}}{p_t U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right)\text{  for $t\geq 1$ }
  \end{equation}
-
- \begin{equation}\label{eqn:AMSSbounds}
- \underline{M}\leq b_{t-1}\leq \bar{M}\text{  for $t\geq 1$ }
- \end{equation}
   
 \end{subequations}
 \end{problem}
@@ -267,29 +261,22 @@ that attains % the maximum of
 \begin{remark} Equation \eqref{eqn:feas} imposes feasibility, while equation  \eqref{eqn:LSimplement} is the single implementability constraint
 present in \citet{LucasJr.1983}.  Equations \eqref{eqn:AMSSimplement} express  additional \st{implementability constraints that comprise} implementability constraints at every node from time $t \geq 1$. These generalize the \citet{Aiyagari2002} measurability constraints on a Ramsey allocation  to our more general payoff structure ${\mathbb P}$ for the
 single asset. The measurability constraints \eqref{eqn:AMSSimplement}  are cast
-in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}. \apb{Inequalities \eqref{eqn:AMSSbounds} are bounds on government's debt holding. For most of the paper we will impose natural debt limits.} 
+in terms of the date, history $(t-1, s^{t-1})$ measurable state variable $b_{t-1}$ that for $t \geq 1$ is absent from Lucas and Stokey's complete markets Ramsey problem.  Evidently, Ramsey allocation for our incomplete markets economy automatically satisfies the single implementability constraint imposed by \citeauthor{LucasJr.1983}.
 \end{remark}
 
 
 \begin{remark}\label{rem:LSdebt}
-State-contingent, but not history-dependent,  values of consumption, labor supply, and continuation government debt $\check b(s)$ \apb{??? Is this right ? Should it be $\check{b}(s|s\_)$ ?} solve the \citet{LucasJr.1983} Ramsey problem \ref{prob:RamseyLS}.  As intermediated by the Lagrange multiplier on the implementability constraint \eqref{eqn:LSimplement},
-consumption, labor supply, and $\check b(s)$ \apb{??? check this } are  functions of initial government debt $b_{-1}$ and the current state $s_t$, \apb{but not past history
- $s^{t-1}$.}
+State-contingent, but not history-dependent,  values of consumption, labor supply, and continuation government debt $\check b(s)$ solve the \citet{LucasJr.1983} Ramsey problem \ref{prob:RamseyLS}.  As intermediated by the Lagrange multiplier on the implementability constraint \eqref{eqn:LSimplement},
+consumption, labor supply, and $\check b(s)$ are  functions of initial government debt $b_{-1}$ and the current state $s_t$, but not past history $s^{t-1}$.
 \end{remark}
 
 \subsection{Motivation for  quasi-linear $U$\label{sec:excusequasilinear}}
-\apb{The first two lines are confusing. Here is an alternative }
-
-
-\st{Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
-	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.}  \dge{This is readily observed in equation \eqref{eqn:AMSSimplement}, where $U_{c,t}$ and $p_t$ enter in the same way.\footnote{\apb{??? Why are we pointing this out?}}} 
-	
-Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns $R_{t,t-1}\equiv \frac{\mathbb{P}(s_{t}|s_{t-1}}{q_{t-1}}$. We see that $\mathbb{P}$ affects these returns directly through the ex-post exogenous payoffs and indirectly through prices $q_{t-1}$. To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by studying an economy with  quasi-linear  utility function:
+Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with asset returns $R_{t-1,t}\equiv \frac{\mathbb{P}(s_{t}|s_{t-1})}{q_{t-1}}$. We see that $\mathbb{P}$ affects these returns directly through the ex-post exogenous payoffs and indirectly through prices $q_{t-1}$. To focus exclusively on the exogenous $\mathbb{P}$ part of returns, we begin  by studying an economy with  quasi-linear  utility function:
   \begin{equation}\label{eqn:UQL}
-U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma},\end{equation}\dge{which sets $U_{c,t}= 1$.}  \st{Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
-	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.}  
-At an interior solution, \apb{quasi-linear preferences and the Euler equation \eqref{eqn:Euler} pins down $q_t=\beta \mathbb{E}_t
-\mathbb{P}(s_{t+1}|s_t)$.}  After studying the consequences of quasi-linear utility, we shall \apb{solve for }Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate \st{fluctuating} \apb{endogenous fluctuations in }$q_t$.
+U(c,l)=c-\frac{l^{1+\gamma}}{1+\gamma},\end{equation} which sets $U_{c,t}= 1$.  Asymptotic properties of a Ramsey plan for our incomplete markets economy vary  with   asset returns that reflect
+	properties of equilibrium prices $\{q_t(s^t|B_{-1},s_{-1})\}_t$ and the exogenous asset payoff matrix $\mathbb{P}$.
+At an interior solution, quasi-linear preferences and the Euler equation \eqref{eqn:Euler} pins down $q_t=\beta \mathbb{E}_t
+\mathbb{P}(s_{t+1}|s_t)$.  After studying the consequences of quasi-linear utility, we shall solve for Ramsey plans for utility functions that express risk aversion with respect to consumption and so activate endogenous fluctuations in $q_t$.
 	
 
 
@@ -299,17 +286,18 @@ Throughout this section, we assume that $U$ is quasi-linear and use an indirect 
 
 
 
-\noindent (1) \textbf{Construct  \st{an operator} \apb{an optimal payoff matrix}}
+\noindent (1) \textbf{Construct  an optimal payoff matrix}
 \apb{Do we want to define what it means to be an optimal payoff matrix (may be within a class of $\mathcal{S}\times\mathcal{S}$ matrices whose rows have conditional means of 1.}
 
 We pose the following problem:
 \begin{problem}\label{prob:PPoperator}
  Given arbitrary initial government debt $b_{-1}$, what is an optimal asset payoff matrix?
 \end{problem}
+\noindent  \dge{Let $\mathcal P$ be the set of all $\mathcal S\times \mathcal S$ real matrixes.  Define the indirect utility function $\mathcal W(\mathbb P;b_{-1})$ as the solution to problem \ref{prob:RamseyBEGS} for all $\mathbb P \in \mathcal P$ and initial debt $b_{-1}$.  This induces an operator $\mathbb P^*$ that maps initial government debt into an optimal payoff matrix 
+\[
+	\mathbb P^*(b_{-1}) \in \arg\max_{\mathbb P\in \mathcal P} W(\mathbb P; b_{-1})
+\] }
 
-\noindent Problem \ref{prob:PPoperator} induces an operator that maps initial government debt $b_{-1}$ into an optimal payoff matrix $\mathbb{P^*}$ for the single asset:
-\begin{equation}\label{eqn:PPoperator}
-\mathbb{P}^* =\mathbb{P}^*(b_{-1}) .\end{equation}
 
 
 \noindent (2) \textbf{Apply the inverse of the operator $\mathbb{P}^*$.}
