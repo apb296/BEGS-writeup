@@ -395,28 +395,12 @@ Then \eqref{eqn:optPP} implies that
 
 
 
-We temporarily assume that $s_t$ is i.i.d and  $S=2$.
-\st{In this case, $\mathbb{P}(s\_,s)$ is independent of $s\_$, so that $\mathbb{P}$ can be taken to be  a vector.
- Under the normalization  $q_t = \beta$,  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1.}
- \st{and a risk-free bond is a security for which $\bm{p}=1$.}
- 
- \apb{XXXX The previous line is confusing since $\mathbb{P}$ is exogenous and $s_t$ being IID has no ``implication'' for $\mathbb{P}$ being a vector. What we are actually doing is restricting our attention to a smaller class of payoff matrices since we know that the optimal one has similar features. I would suggest something as follows}
- 
- \apb{In this case note that \eqref{eqn:optPP} implies that the optimal payoff matrix $\mathbb{P}^*$ has the same rows. Given this we restrict our attention to $\mathbb{P}(s\_,s)$ that have payoffs independent of $s\_$. This reduces $\mathbb{P}$ to be  a vector.
- Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1.}
- \st{and a risk-free bond is a security for which $\bm{p}=1$.}
- 
- 
- 
- \dge{  A risk free bond is then a security for which $\bm{p} = 1$.}  
-\st{We take $\bm{p}$ to be the asset's payoff in the ``good'' state $s$.}  \dge{Without loss of generality we will assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.}\dge{  As the opitmal payoff matrix can be summarized by a signle scalar variable we can reinterperate the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt for an exogeneous restriction on the payoff $\bm p$ is then the scalar, }
-\st{Define a scalar $b^*$ by} %by can obtain a steady state government debt by inverting the optimal payoff mapping $p^*$
-
-
+We temporarily assume that $s_t$ is i.i.d and  $S=2$.  In this case note that \eqref{eqn:optPP} implies that the optimal payoff matrix $\mathbb{P}^*$ has the same rows. Given this we restrict our attention to $\mathbb{P}(s\_,s)$ that have payoffs independent of $s\_$. This reduces $\mathbb{P}$ to be  a vector.
+ Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1. \dge{  A risk free bond is then a security for which $\bm{p} = 1$.  Without loss of generality we will assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.  As the opitmal payoff matrix can be summarized by a signle scalar variable we can reinterperate the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt for an exogeneous restriction on the payoff $\bm p$ is then the scalar, 
 \begin{equation}
 \label{eq-ss}
- b^* =  {\mathbb P}^{* -1}(\bm{p})
-\end{equation}
+ b^* =  {\bm p}^{* -1}(\bm{p})
+\end{equation}}
 \st{so that $b^*$ satisfies $p={\mathbb P}^*(b^*)$.}
 \tjs{Anmol and David XXXXXX: I have changed and slightly abused notation. Let's talk about it.}
 \apb{XXXX It is confusing. A possibility is define it implicitly }
@@ -424,7 +408,7 @@ We temporarily assume that $s_t$ is i.i.d and  $S=2$.
 
 \begin{equation}
 \label{eq-ss}
- \mathbb{P}^*(b^*) =  {\mathbb P}(\bm{p})
+\text{\st{$ \mathbb{P}^*(b^*) =  {\mathbb P}(\bm{p})$}}
 \end{equation}
 
 \begin{proposition}\label{prop:ssexistence}
