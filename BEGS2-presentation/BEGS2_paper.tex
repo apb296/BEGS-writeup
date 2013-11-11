@@ -316,51 +316,37 @@ In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of
 \begin{equation}\label{eqn:pdisarm} 
 p_t =  \frac{\beta}{b_{t-1}}\EE_t\sum_{j=0}^\infty\beta^j\left( c_{t+j}+U_{l,t+j}l_{t+j}\right) 
 \end{equation}\dge{where 
-\begin{equation}
+\begin{equation}\label{eqn:bt-1}
 	b_{t-1} = \beta \EE_{t-1}\sum_{j=0}^\infty \beta^j(c_{t+j}+U_{l,t+j}l_{t+j})
-\end{equation}  The term $c_{t+j} +U_{l,t+j}l_{t+j}$ is equal to $(1-\tau_{t+j})l_{t+j} - g_{t+j}$ the government surplus at time $t+j$.}
+\end{equation}  The term $c_{t+j} +U_{l,t+j}l_{t+j}=(1-\tau_{t+j})l_{t+j} - g_{t+j}$ which is the net-of-interest government surplus at time $t+j$.  Combining equations \eqref{eqn:pdisarm} and \eqref{eqn:bt-1} we note that  $\frac{1}{p_t}-1$ is then the percent innovation in present value government surplus at time $t$.} 
 
 
 Note that by construction, $p_t$   disarms the time  $t\geq 1$
 measurability constraints\footnote{\dge{Although quasi-linear preferences are implicitly assumed during this construction.  Equation \eqref{eqn:pdisarm} can be generalized to preferences with curvature via
 \[
 p_t =  \frac{\beta}{U_{c,t-1}b_{t-1}U_{c,t}}\EE_t\sum_{j=0}^\infty\beta^j\left( U_{c,t+j}c_{t+j}+U_{l,t+j}l_{t+j}\right) \]
-with the normalization $\EE_{t-1}U_{c,t}p_t = 1$}}.
-
-\noindent  (3) Using the fact noted in remark \ref{rem:LSdebt} that the Lucas-Stokey Ramsey allocation is not history-dependent,  construct the optimal payoff matrix as
+with the normalization $\EE_{t-1}U_{c,t}p_t = 1$}}.  Using the fact noted in remark \ref{rem:LSdebt} that the Lucas-Stokey Ramsey allocation is not history-dependent,  construct the optimal payoff matrix as
 \[\mathbb{P}^*(s_t,s_{t-1}|b_{-1})=p_t.\]
 
 Thus,  given
  initial government debt $b_{-1}$,  let $\mu(b_{-1})$ be the Lagrange multiplier on the Lucas-Stokey implementability constraint \eqref{eqn:LSimplement}
- at the Lucas-Stokey Ramsey allocation.  
- 
- \apb{Do we want something in the appendix to fill in the missing steps ?}
- 
- The tax rate in the Ramsey allocation is
+ at the Lucas-Stokey Ramsey allocation.   The tax rate in the Ramsey allocation is
 $
 		\tau(\mu) = \frac{\gamma\mu}{(1+\gamma)\mu-1},
 	$
  which implies a  net-of-interest government surplus $S(s,\tau)$ that satisfies
 \[		S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-g(s)
 	\]
-The `disarm-the-measurability-constraints' equation \eqref{eqn:pdisarm} then implies that the optimal payoff matrix is
+\dge{If the aggregate state process is i.i.d. then the} `disarm-the-measurability-constraints' equation \eqref{eqn:pdisarm} implies that the optimal payoff matrix is
 
 \begin{equation}\label{eqn:optPP}
- \mathbb{P}^*(s, s\_ |b_{-1}) = (1-\beta)\frac{S(s,\tau)}{\EE_{s\_} S(s,\tau)} + \beta.
- \end{equation}
-\tjs{Anmol and David XXXXXX: let's add some snazzy interpretation of the previous nice equation.}
-
-
+ \mathbb{P}^*(s, s\_ |b_{-1}) = \beta\frac{S(s,\tau)}{b_{-1}} + \beta=(1-\beta)\frac{S(s,\tau)}{\EE S(s,\tau)} + \beta.
+ \end{equation}\dge{which is independent of $s\_$.}
 
 To appreciate how  initial government debt level influences the optimal asset payoff structure via formula \eqref{eqn:optPP}, call a
  state $s$ ``adverse''  if it implies either ``high'' government expenditures or ``low '' TFP; formally, say that  $s$ is ``adverse'' if
-\[   g(s)\EE_{s\_}\theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE_{s\_} g >0\]
-A ``good'' state is the opposite of an ``adverse'' state.
-\apb{XXXX We need an expression for \eqref{optPP} interms for $b_{-1}$ to make sense of the statement below. }
-
-Then \eqref{eqn:optPP} implies that
- when initial government assets are positive, $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are
- negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states.  
+\[   g(s)\EE \theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE g >0\]
+A ``good'' state is the opposite of an ``adverse'' state.  \dge{``Adverse'' have the poperty that for  wide range of initial government debt the net-of-interest government surplus is lower than in ``good'' states.}  Then \eqref{eqn:optPP} implies that when initial government assets are positive, $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states. 
 
 %
 %\subsection{Inverting the $\mathbb{P}^*$ mapping}
@@ -379,25 +365,14 @@ Then \eqref{eqn:optPP} implies that
 % 			\end{itemize}
 %	\end{enumerate}
 
-\subsection{Analysis of $S=2$ iid shocks} % $\mathbb{P}^{* -1}$}
+\subsection{\dge{The Inverse of $\mathbb P^*$ Returns}} % $\mathbb{P}^{* -1}$}
 
-
-
-We temporarily assume that $s_t$ is i.i.d and  $S=2$.  In this case note that \eqref{eqn:optPP} implies that the optimal payoff matrix $\mathbb{P}^*$ has the same rows. Given this we restrict our attention to $\mathbb{P}(s\_,s)$ that have payoffs independent of $s\_$. This reduces $\mathbb{P}$ to be  a vector.
- Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1. \dge{  A risk free bond is then a security for which $\bm{p} = 1$.  Without loss of generality we will assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.  As the opitmal payoff matrix can be summarized by a signle scalar variable we can reinterperate the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt for an exogeneous restriction on the payoff $\bm p$ is then the scalar, 
+We temporarily assume that $s_t$ is i.i.d and  $S=2$.  In this case note that \eqref{eqn:optPP} implies that the optimal payoff matrix $\mathbb{P}^*$ has the same rows. Given this we restrict our attention to $\mathbb{P}(s,s\_)$ that have payoffs independent of $s\_$. This reduces $\mathbb{P}$ to be  a vector.
+ Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1. \dge{  A risk free bond is then a security for which $\bm{p} = 1$.  Without loss of generality we will assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.  As the opitmal payoff matrix can be summarized by a single scalar variable we can reinterperate the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt for an exogeneous restriction on the payoff $\bm p$ is then the scalar 
 \begin{equation}
 \label{eq-ss}
- b^* =  {\bm p}^{* -1}(\bm{p})
+ b^* =  {\bm p}^{* -1}(\bm{p}).
 \end{equation}}
-\st{so that $b^*$ satisfies $p={\mathbb P}^*(b^*)$.}
-\tjs{Anmol and David XXXXXX: I have changed and slightly abused notation. Let's talk about it.}
-\apb{XXXX It is confusing. A possibility is define it implicitly }
-
-
-\begin{equation}
-\label{eq-ss}
-\text{\st{$ \mathbb{P}^*(b^*) =  {\mathbb P}(\bm{p})$}}
-\end{equation}
 
 \begin{proposition}\label{prop:ssexistence}
 \st{Suppose that $s$ shocks affect either $g$ or $\theta$.  Then there}\footnote{\dge{We don't need to assume either g or $\theta$ shocks as we have allready characterized what an adverse state of the world is}}\dge{There exists} $0 \geq \alpha_2\geq\alpha_1\geq1$
@@ -416,7 +391,7 @@ As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there wil
 	S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - g(s)
 \]  This surplus is therefore maximized when $(1-\tau)^\frac1\gamma\tau$ is maximized at $\tau = \frac\gamma{1+\gamma}$, moreover in the region $(-\infty,\frac\gamma{1+\gamma}]$ the function $S(\cdot,\tau)$ is an increasing function of $\tau$.  In an i.i.d. world then government debt with complete markets associated with a constant tax rate $\tau$ is 
 \[
-	\frac1{1-\beta} \sum_s \Pi(s) S(s,\tau)
+	\frac\beta{1-\beta} \sum_s \Pi(s) S(s,\tau)
 \] is an increasing function of tau.  The maximal initial government debt sustainable in incomplete markets is then given by
 \[
 	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s)
@@ -447,19 +422,19 @@ As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there wil
 		\]and
 		\[
 		\alpha_2 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}{\EE\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}+\beta>\alpha_1
-		\]
-
-	
-
- 	\begin{theorem}
+		\]\dge{\begin{remark}
+		With only TFP shocks the bond payoff has the special property of being associated with the steady state assets that support the first best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At the first best taxes are zero, and thus the net-of-interest government surplus is constant across states.
+		\end{remark}}
+\subsection{\dge{Long Run Assets}}
+\dge{In the previous section we provided conditions for which there exists $b^*$ such $\bm p^*(b^*) = \bm p$.  By construction, if $b_{-1} = b^*$ then the allocation solving complete markets problem \ref{prob:RamseyLS} for initial condition $b^*$ will automatically satisfy the measurability constraints \eqref{eqn:AMSSimplement}.  That allocation will therefore solve the incomplete markets problem \ref{prob:RamseyBEGS}.  This implies that if $b_{-1} = b^*$ then $b_t = b^*$ for all $t$.  Thus, $p^{*-1}(\bm p)$ corresponds to a ``steady state''.  It remains to be determined if the economy will converge to this ``steady state'' in the long run for arbitrary initial conditions.  Theorem \ref{thm:convergence} provides conditions for which this convergence can be shown.}
+ 	\begin{theorem}\label{thm:convergence}
 Let % $b^*$ denote steady state govt.  debt and
-$b_{fb}$ denote the level of  government  debt \st{that  supports}\dge{associated with} the first-best allocation with complete markets.
-\apb{XXXX We can define this as the right hand side of the time 0 implementability constraint evaluated at the FB allocation right ?}
+$b_{fb}$ denote the level of  government  debt associated with the first-best allocation with complete markets.
 Then % for  same $  \alpha_1 < \alpha_2$
 		\begin{itemize}
 			\item[a.]  If $\bm{p}\leq\min(\alpha_1,1)$, then  $b_{fb}<b^*<0$ and $b_t\rightarrow b^*$ with probability 1.
 			\item[b.] If $\bm{p} \geq \alpha_2$, then   $0<b^*$ and $b_t \rightarrow b^*$ with probability 1.
-            \item[c.] If \st{$\alpha_2 < \bm{p} < \min	(\alpha_1,1)$}\dge{$ \min(\alpha_1,1)<\bm{p}<\alpha_2 $},   $b^*$ either does not exist or is unstable.
+            \item[c.] If $ \min(\alpha_1,1)<\bm{p}<\alpha_2 $,   $b^*$ either does not exist or is unstable.
 									\end{itemize}			\end{theorem}
   For $\bm{p}$ in region (c.),
 the government tends to run up debt over time.
@@ -513,9 +488,7 @@ the tail of the allocation equals  Ramsey allocation for an economy with complet
     {\em changes} in debt levels  help smooth tax distortions across time. 		
 	However, if the  payoff on the debt instrument varies across states, then  by affecting its state-contingent revenues, the {\em level} of government debt can help smooth tax distortions across states.
 	For our two state, iid shock process,  the steady state debt level $b^*$, when it exists, is the unique amount of government debt
-that provides just enough ``state contingency'' completely to fill the void left by  missing assets markets.	
-	\st{Suppose $b_t>b^*$ and  while considering to  accumulate assets} \st{When it is away from $b^*$ and  considers issuing or accumulating debt starting},  the Ramsey planner \st{tells the government to take} takes into account
-the \st{prospective benefits that will eventually accrue from being closer to $b^*$} \dge{additional benefits from tax smoothing as the government debt approaches $b^*$}\footnote{\dge{I changed this since the Ramsey planner receives benefits as it moves towards $b^*$ since it relaxes the wedge between implementability constraints.  Personally I believe that it is local benefits rather than long run benefits driving convergence.}};  that puts a risk-adjustment into the martingale governing $\mu$ and leads the
+that provides just enough ``state contingency'' completely to fill the void left by  missing assets markets.  The Ramsey planner takes into account the additional benefits from tax smoothing as the government debt approaches $b^*$;  that puts a risk-adjustment into the martingale governing $\mu$ and leads the
  government either to accumulate or decumulate debt.	
 	 Although accumulating government assets requires  raising distorting  taxes, locally  the welfare costs of higher taxes are second-order and
 so are  dominated by the welfare gains from approaching  $b^*$, which are first-order.
@@ -524,8 +497,7 @@ so are  dominated by the welfare gains from approaching  $b^*$, which are first-
 
 \section{Turning on risk-aversion}
 
-  We now depart from quasi-linearity of $U(c,l)$ and thus activate an additional source of return fluctuations coming from endogenous fluctuations in prices of the asset $q_t$ \st{namely,
-  fluctuations in the risk-free and other interest rates}.  To obtain a recursive representation of a Ramsey plan,
+  We now depart from quasi-linearity of $U(c,l)$ and thus activate an additional source of return fluctuations coming from endogenous fluctuations in prices of the asset $q_t$.  To obtain a recursive representation of a Ramsey plan,
   we employ the endogenous state variable
   \[x_t=u_{c,t}b_{t} ,\]
   and study how long-run properties of $x_t$ depend on equilibrium returns $R_{t,t+1}=\frac{\mathbb{P}(s_t,s_{t+1})}{q_t(s^t)}$.
@@ -533,14 +505,12 @@ so are  dominated by the welfare gains from approaching  $b^*$, which are first-
 
   Commitment to a Ramsey plan implies that government actions at $t \geq 1$ are constrained by the household's anticipations about them at $s < t$
 	 Following \citet{Kydland1980}, we  use the  marginal utility of consumption that the
-Ramsey planner promises to the household to account for that `forward looking' restriction \apb{For eg., that comes from the fact that the Euler equation restricts allocations such that expected marginal utility in time $t$ is constrained by consumption choices in time $t-1$. }on the Ramsey planner.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
+Ramsey planner promises to the household to account for that `forward looking' restriction on the Ramsey planner. For eg., that comes from the fact that the Euler equation restricts allocations such that expected marginal utility in time $t$ is constrained by consumption choices in time $t-1$.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
  of consumption makes Ramsey problem  recursive in  $x=U_c b$.  In particular, implementability constraints \eqref{eqn:AMSSimplement}
  can be represented as
 		\begin{equation}
 		\frac{x_{t-1} \mathbb{P}(s_t,s_{t-1}) U_{c,t}}{\beta \EE_{t-1} \mathbb{P}U_{c,t}}  = U_{c,t}c_t+U_{l,t} l_t + x_t, \ t \geq 1
 	\end{equation}
-\tjs{Team XXXXX: check the above carefully.}
-
 
 \begin{problem}\label{prob:RamseyBellman}
 Before the realization of the time $t$ Markov shock $s_t$, let   $V(x, s_{-1})$ be the {\em expected} continuation value of the Ramsey plan at $t \geq 1$  given promised marginal utility government debt inherited
@@ -554,7 +524,7 @@ The (\textit{ex ante}) Bellman equation for $t\geq1$  is
 	\end{equation}
 subject to $x'(s)\in [\underline x,\overline x]$ and
 	\begin{align}
-		\frac{x \mathbb{P}(s,s\_) U_c(s)}{\beta\EE_{s\_} \mathbb{P}Uc} =U_c(s)c(s)+U_l(s)l(s) + x'(s) \label{timetBellimplement}\\
+		\frac{x \mathbb{P}(s,s\_) U_c(s)}{\beta\EE_{s\_} \mathbb{P}U_c} =U_c(s)c(s)+U_l(s)l(s) + x'(s) \label{timetBellimplement}\\
 		c(s) + g(s) = \theta(s)l(s) \label{timetfeas}
 	\end{align}
 Equation \eqref{timetBellimplement} is the implementability constraint and \eqref{timetfeas} is feasibility.
@@ -574,8 +544,10 @@ Equation \eqref{timetBellimplement} is the implementability constraint and \eqre
 		x_0 \in [\underline x,\overline x]
 	\]
 \end{problem}
-\apb{XXX We can have a lemma here that says that W and V that solve the recursive problem also solve the sequential problem posed earlier. This could be useful and clear doubts that many people face as to how did we make AMSS work with one state variable. }
-
+\dge{
+\begin{lemma}  Let $V$,$W$ be the solution problem \ref{prob:RamseyBellman}, then the allocation corresponding to the optimal policies solves problem \ref{prob:RamseyBEGS}. 
+\end{lemma}
+}
 \subsection{What we've done}
 
 \tjs{Tom XXXXXX: write a subsection describing what Anmol and David have done so far with this setup, computationally
