@@ -371,7 +371,7 @@ For an arbitrary payoff matrix $\mathbb{P}$,  let
 Starting from an arbitrary initial government $b_{-1}$ and an arbitrary payoff matrix $\mathbb{P}$,  establish conditions under  which $b_t \to b^*$ under a Ramsey plan.
 
 
-In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of  $\mathbb{P}$'s for which government debt $b_t$  under a Ramsey plan converges to $b^*$.  For more general shock processes, we numerically find  an ergodic set of $b_t$'s hovering around the debt level $b^*$.  We execute steps (1), (2) and (3) in sections \ref{sec:David41}, \ref{sec:David42}, and \ref{sec:David43}. %4.1, 4.2 and 4.3. 
+In particular, where $S=2$ and shocks $s_t$ are IID,  we describe a large set of  $\mathbb{P}$'s for which government debt $b_t$  under a Ramsey plan converges to $b^*$.  For more general shock processes, we numerically find  an ergodic set of $b_t$'s hovering around the debt level $b^*$.  We execute steps (1), (2) and (3) in sections \ref{sec:David41}, \ref{sec:David42}, and \ref{sec:David43}. %4.1, 4.2 and 4.3.
 
 \subsection{The Optimal Payoff Matrix\label{sec:David41}} We construct an  optimal payoff matrix by first solving  problem \ref{prob:RamseyLS} for a Lucas-Stokey Ramsey allocation associated with a given $b_{-1}$. Next we construct a sequence $\{p_t\}_t$ that satisfies the implementability constraints imposed in \eqref{eqn:AMSSimplement}.  Note that these implementability constraints are invariant to scaling of $p_t$ by a constant $k_{t-1} $ that can depend on $s^{t-1}$. From this equivalence class of $\{p_t\}_t$'s we select a  $\{p_t\}_t$ that satisfies a normalization  %\st{$\mathbb{E}_{t-1}U_{c,t}p_t=1$}
 $\mathbb{E}_{t-1}p_t=1$ and also satisfies
@@ -431,7 +431,7 @@ A ``good'' state is the opposite of an ``adverse'' state.  ``Adverse'' states ha
 
 Temporarily assume that $s_t$ is i.i.d and  $S=2$.  In this case, note that \eqref{eqn:optPP} implies that the optimal payoff matrix $\mathbb{P}^*$ has identical rows. This lets us restrict our attention to $\mathbb{P}(s,s\_)$ that have payoffs that are independent of $s\_$. This
  in turn lets us summarize  $\mathbb{P}$ with  a vector.
- Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1.   A risk-free bond is then a security for which $\bm{p} = 1$.  Without loss of generality, we shall assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.  Because the optimal payoff matrix can be summarized by a single scalar variable, we can recast the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt associated with an exogenous  payoff $\bm p$ is then 
+ Under the normalization  $\mathbb{E}\mathbb{P}(s)=1$, payoffs on the single asset are  determined by a  scalar $\bm{p}$, the payoff in state 1.   A risk-free bond is then a security for which $\bm{p} = 1$.  Without loss of generality, we shall assume that $ g(1)\EE\theta^\frac{\gamma}{1+\gamma}-\theta(1)^\frac\gamma{1+\gamma} \mathbb{E}g <0$, and thus, $\bm p$ is the payoff in the ``good'' state of the world.  Because the optimal payoff matrix can be summarized by a single scalar variable, we can recast the optimal matrix map $\mathbb P^*(b)$ as a single scalar function $\bm p^*(b)$.  The steady state level of debt associated with an exogenous  payoff $\bm p$ is then
 \begin{equation}
 \label{eq-ss}
  b^* =  {\bm p}^{* -1}(\bm{p}).
@@ -448,18 +448,18 @@ such that
   \end{itemize}
 
 \end{proposition}
-\begin{proof}  Let $g_1$ and $\theta_1$ denote  government expenditures and TFP, respectively in the ``good'' state of the world. 
+\begin{proof}  Let $g_1$ and $\theta_1$ denote  government expenditures and TFP, respectively in the ``good'' state of the world.
 % We begin by noting some facts about the complete markets solutionGGGGG.
 %\st{
 %As $(1-\tau)^\frac1\gamma\tau$ is maximized at $\frac\gamma{1+\gamma}$ there will be an upper bound for government debt for which a solution to the complete markets problem exists: $\overline b$.  This space of solutions to the complete markets problem can be indexed by $b\in(-\infty,\overline b]$.  If we let $\tau(b)$ the mapping from initial government debt into optimal tax rate, then $\tau$ is an increasing function of $b$ and $\tau((-\infty,\overline b]) = (-\infty,\frac{\gamma}{1+\gamma}]$.    Substituting $S(s,\tau)$ into equation we obtain}
- In state $s$, the government surplus is  
+ In state $s$, the government surplus is
 \[
 	S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - g(s),
 \]  which  is  maximized at $\tau = \frac\gamma{1+\gamma}$ when $(1-\tau)^\frac1\gamma\tau$ is also maximized. Furthermore, in the region $(-\infty,\frac\gamma{1+\gamma}]$, $S(\cdot,\tau)$ is an increasing function of $\tau$.  In an i.i.d. world with complete markets, government debt
 at a constant tax rate $\tau$ would be
 \[
 	\frac\beta{1-\beta} \sum_s \Pi(s) S(s,\tau),
-\] which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then 
+\] which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then
 \[
 	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the mapping \tjs{David - let's number and label the mapping, then refer to it here.}  from the tax rate into government debt would give us a  function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
 
@@ -499,7 +499,7 @@ debt under complete markets $\overline b$, or equivalently as $\tau$ approaches 
 In subsection \ref{sec:David42},  we provided conditions under which there exists $b^*$ such $\bm p^*(b^*) = \bm p$.  By construction, if $b_{-1} = b^*$ then the allocation that solves complete markets Ramsey problem \ref{prob:RamseyLS} for initial condition $b^*$  automatically satisfies the measurability constraints \eqref{eqn:AMSSimplement}.  That allocation therefore solve the incomplete markets Ramsey problem \ref{prob:RamseyBEGS}.  This implies that if $b_{-1} = b^*$, then $b_t = b^*$ for all $t$.  Thus, $p^{*-1}(\bm p)$ corresponds to a ``steady state''.  It remains to be determined whether  the incomplete markets Ramsey $b_t$  converges to  $b^*$  for arbitrary $b_{-1}$.  Theorem \ref{thm:convergence} provides sufficient conditions for  convergence.} \tjs{David: please read the preceding carefully -- I edited it.}
 
 
-\tjs{Tom stopped here at 11:30 pm Milan time on November 13}
+%\tjs{Tom stopped here at 11:30 pm Milan time on November 13}
 
  	\begin{theorem}\label{thm:convergence}
 Let % $b^*$ denote steady state govt.  debt and
@@ -513,37 +513,43 @@ Then % for  same $  \alpha_1 < \alpha_2$
   For $\bm{p}$ in region (c.),
 the government tends to run up debt over time.
 
-\begin{proof}\dge{\st{The first order conditions governing the optimal allocation allow us to treat $\mu_t$ the multiplier on the measurability constraints as the state variable. }}
-\apb{The optimal allocation permits recursive representation as functions $c_t(\mu_t),l_t(\mu_t)$ and $b_t(\mu_t)$ with a law of motion for $\mu_{t}$.}
-\dge{
-We will show global stability under the assumption that $\mu'(\mu,s)$ an increasing function of $\mu$\footnote{\dge{ I'm still working on this.  I'm not sure if we'll need to include it as an assumption or not}}  The heart of the proof revolves around the twisted-martingale equation for $\mu$:
+\begin{proof}
+%\dge{\st{The first order conditions governing the optimal allocation allow us to treat $\mu_t$ the multiplier on the measurability constraints as the state variable. }}
+The optimal allocation can be represented recursively in terms of  functions $c_t(\mu_t),l_t(\mu_t), b_t(\mu_t)$ together  with a law of motion for $\mu' = \mu'(\mu,s)$ for $\mu$.
+%\dge{
+We shall establish show global stability under the assumption that $\mu'(\mu,s)$ an increasing function of $\mu$\footnote{\dge{ I'm still working on this.  I'm not sure if we'll need to include it as an assumption or not}}  The heart of the proof revolves around the twisted-martingale equation for $\mu$:
 \[
-	\mu_t = \sum_s \Pi(s) p_s \mu'(\mu_t,s) = \EE_t p_{t+1}\mu_{t+1}
-\]  We have shown that there is at most an unique $\mu^*$ such that $\mu'(\mu^*,s) = \mu^*$ for all $s$.  For this sketch we will focus on showing global stability for $\mu < \mu^*$. The twisted-martingale equation can be decomposed as follows
+	\mu_t = \sum_s \Pi(s) p_s \mu'(\mu_t,s) = \EE_t p_{t+1}\mu_{t+1}.
+\]  We have shown that there is at most one $\mu^*$ such that $\mu'(\mu^*,s) = \mu^*$ for all $s$.  Here we focus on showing global stability for $\mu < \mu^*$. The twisted-martingale equation can be decomposed as follows
 \[
-	\mu_t = \EE_t \mu_{t+1}+Cov_t(p_{t+1},\mu_{t+1})
-\] by signing $Cov_t(p_{t+1},\mu_{t+1})$ we are able to determine if $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above\footnote{\dge{Given that $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$  we know that if $\mu_t < \mu^*$ then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$}}, we can conclude global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem we will split the proof up into three cases, recall $\bm p$ is the payoff in state 1 (the ``good'' state)
+	\mu_t = \EE_t \mu_{t+1}+Cov_t(p_{t+1},\mu_{t+1}).
+\] By signing $Cov_t(p_{t+1},\mu_{t+1})$,  we can determine whether $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above,\footnote{\dge{Given that $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$,  we know that if $\mu_t < \mu^*$, then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$.}}, we can verify global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem, we will split the proof up into three cases. Recall that $\bm p$ is the payoff in the ``good'' state 1.
 \begin{description}
-	\item[1. $\bm p < \min\{1,\alpha_1\}$:]  Let $\overline b_s$ be maximal debt the government \st{good} could enter with and be able to pay off assuming it received shock $s$ from this period onward, then
+	\item[1. $\bm p < \min\{1,\alpha_1\}$:]  Let $\overline b_s$ be maximal debt with which the government %\st{good}
+ could enter a period and be able to pay off, assuming that  it  receives shock $s$ from this period onward. Then
 	\[
 	\overline b_s = \left(\frac{p_s}{\beta}-1\right)^{-1}\left(\theta_s^\frac{\gamma}{1+\gamma}\left(\frac1{1+\gamma}\right)^\frac1\gamma\frac\gamma{1+\gamma}-g_s\right)
-	\]as the government tax revenue is maximized by setting the proportional tax to $\frac\gamma{1+\gamma}$.  For $\bm p <\alpha_2$ it is possible to show that $\overline b_1 > \overline b_2$ and thus the natural debt limit is obtained by the ``adverse'' state.  This implies that $\lim_{\mu\rightarrow-\infty} b(\mu) = \overline b_2$ and thus $\lim_{\mu\rightarrow-\infty} \mu'(\mu,2) = -\infty$.  In order for the period by period budget constraint
+	\] because the government maximizes tax revenue  by setting %the proportional tax
+ $\tau$ to $\frac\gamma{1+\gamma}$. % \tjs{David and Anmol: please read the preceding sentence. It doesn't make sense to me.}
+ For $\bm p <\alpha_2$, it is possible to show that $\overline b_1 > \overline b_2$, and thus the natural debt limit is attained under repetition of the ``adverse'' state.  This implies that $\lim_{\mu\rightarrow-\infty} b(\mu) = \overline b_2$ and  $\lim_{\mu\rightarrow-\infty} \mu'(\mu,2) = -\infty$.  In order for the period-by-period budget constraint
 	\[
 		\frac{p_s}{\beta}b(\mu) = S(\mu'(\mu,s))+b(\mu'(\mu,s))
-	\]to be satisfied for all $s$ it must be $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b_1 > \overline b_2$).  Continuity of $\mu$ with the uniqueness of the steady state $\mu^*$ then implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for all $\mu < \mu^*$.
-	$\bm p < 1$ implies that $p_1 < p_2$ allowing us to conclude that $Cov_t(p_{t+1},\mu_{t+1}) < 0$.  We then have that
+	\] to be satisfied for all $s$, it must be true that $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b_1 > \overline b_2$).  Continuity of $\mu$ together with the uniqueness of the steady state $\mu^*$ then implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for all $\mu < \mu^*$.
+	$\bm p < 1$ implies that $p_1 < p_2$, allowing us to conclude that $Cov_t(p_{t+1},\mu_{t+1}) < 0$.  We then have that
 	\[
 		\mu_t < \EE_t\mu_{t+1}
-	\] for $\mu_t < \mu^*$.  As $\mu'(\mu,s)$ is increasing, continuous and $\mu'(\mu^*,s) = \mu^*$, we can iterate on the policy rules to show that if $\mu_t < \mu^*$ the for all $j> 0$ we must have $\mu_{t+j} <\mu^*$.  Thus, if $\mu_t <\mu^*$ then $\mu_t$ is a supermartingale bounded from below implying that $\mu_t\rightarrow \tilde\mu$ for some constant $\tilde\mu$ with probability 1.  It is then just a matter of using the continuity of $\mu'(\mu,s)$ to show that
+	\] for $\mu_t < \mu^*$.  Since $\mu'(\mu,s)$ is increasing and  continuous, and since $\mu'(\mu^*,s) = \mu^*$, we can iterate on the policy functions to show that if $\mu_t < \mu^*$, then for all $j> 0$, we must have $\mu_{t+j} <\mu^*$.  Thus, if $\mu_t <\mu^*$, then $\mu_t$ is a supermartingale bounded from below. That implies  that $\mu_t\rightarrow \tilde\mu$ for some constant $\tilde\mu$ with probability 1.  Then  we
+can use  the continuity of $\mu'(\mu,s)$ to show that
 	\[
-		\mu'(\tilde u,s) = \tilde \mu
-	\] implying that $\tilde \mu =\mu^*$, as $\mu^*$ is the unique steady state.  The steady state is then globally stable as $\mu_t \rightarrow \mu^*$ with probability 1.
-	\item[2. $\bm p \geq \alpha_2$:]  Following a similar method as in the previous case we know for $\bm p > \alpha_2$ that $\overline b_1 < \overline b_2$ implying that the natural debt limit is obtained using the ``good'' state.  As in the previous case by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$ which, along with $p_1 > p_2$, implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As before, we then have global stability of the steady state for $\mu_t < \mu^*$.
-	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for the first case implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{\dge{In the case where there does not exists a steady state take $\mu^*$ to be $\infty$}}  As $\bm p >1$ implies that $p_1 > p_2$, we can therefore conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$ implying that
+		\mu'(\tilde u,s) = \tilde \mu,
+	\] implying that $\tilde \mu =\mu^*$, as $\mu^*$ is the unique steady state.  The steady state is then globally stable since $\mu_t \rightarrow \mu^*$ with probability 1.
+	\item[2. $\bm p \geq \alpha_2$:]  Following the same approach used  in for case 1, we know for $\bm p > \alpha_2$ that $\overline b_1 < \overline b_2$, implying that the natural debt limit is attained under repetition of  the ``good'' state.  As in case 1,  by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$, which along with $p_1 > p_2$ implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As in case 1, we then have global stability of the steady state for $\mu_t < \mu^*$.
+	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case, either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for case 1 implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{\dge{In the case where there does not exists a steady state, take $\mu^*$ to be $\infty$.}}  Since $\bm p >1$ implies that $p_1 > p_2$, we can  conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$, implying that
 	\[
-		\mu_t > \EE_t \mu_{t+1}
-	\]We thus cannot apply the martingale convergence theorem and the steady state will locally be unstable. \apb{??? We havent defined local stability? }
-\end{description} }
+		\mu_t > \EE_t \mu_{t+1}.
+	\]We thus cannot apply the martingale convergence theorem, leaving open the possibility that the steady state is not stable.
+ %will locally be unstable. \apb{??? We havent defined local stability? }
+\end{description}
 \end{proof}
 
 
@@ -618,10 +624,9 @@ Equation \eqref{timetBellimplement} is the implementability constraint and \eqre
 		x_0 \in [\underline x,\overline x]
 	\]
 \end{problem}
-\dge{
-\begin{lemma}  Let $V$,$W$ be the solution problem \ref{prob:RamseyBellman}, then the allocation corresponding to the optimal policies solves problem \ref{prob:RamseyBEGS}.
+\begin{lemma}  Let $V, W$ be the optimal value functions for  problem \ref{prob:RamseyBellman}.  The allocation given by the  corresponding optimal policy function solves problem \ref{prob:RamseyBEGS}.
 \end{lemma}
-}
+
 \subsection{What we've done}
 
 \tjs{Tom XXXXXX: write a subsection describing what Anmol and David have done so far with this setup, computationally
@@ -643,83 +648,95 @@ Let $x'\left( s;{x},s\_\right) $ be the decision rule for $x'$ that attains the 
 A steady state is a node at which the  continuation allocation and tax rate have no further history dependence.
 
 \begin{proposition}\label{prop:existenceU}
-Assume that $U$ is  separable and iso-elastic:	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.
+Assume that $U$ is  separable and iso-elastic,	 $U(c,l) = \frac{c^{1-\sigma}}{1-\sigma} -\frac{ l^{1+\gamma}}{1+\gamma}$.
 Assume that
 
 \apb{XXXX We are changing notation to represent good states with $s=s_g$ instead of $s=1$ ?}
 
 	 the Markov state $s$ take two values is  i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
 and $s_g$ begin the good state.
-		Let $x_{fb}$ be a value of \st{the state $x$ from which a government can implement first=best with complete markets} \dge{marginal utility weighted debt associated with the first best allocation with complete markets}.
+		Let $x_{fb}$ be a value of  %\st{the state $x$ from which a government can implement first=best with complete markets}
+marginal utility weighted debt associated with the first-best allocation with complete markets.\tjs{David: the phrase
+``first-best allocation with complete markets'' remains imprecise?  What does it mean?}
 	 Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ at the first best allocation.
 	If
 	\begin{equation}\label{eqn:prop52sufficient}
-		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)}\geq 1
+		\frac{1-q_{fb}(s_b)}{1-q_{fb}(s_g)} > \frac{g(s_b)}{g(s_g)}\geq 1 ,
 	\end{equation}
 		then there exists a steady state with $x_{fb}>x^*>0$
 		\end{proposition}
 
-\begin{proof}\dge{As in the quasi-linear case a steady state is associated with the continuation allocation of a complete markets allocation with some initial debt level.  Equivalently, we can index these allocations with their associated multiplier on the implementability constraint: $\mu$.  Letting $S(\mu,s)$ be the marginal utility government surplus in state $s$ with multiplier $\mu$, a steady state will be a multiplier $\mu^*$ where the budget constraint in both states of the world is satisfied
+\begin{proof}As in the quasi-linear case, a steady state is associated with a continuation allocation of a complete markets allocation starting from  some initial debt level.  We can index such continuation allocations by their associated multiplier $\mu$ on the implementability constraint.  Letting $S(\mu,s)$ be the government surplus at state $s$ and multiplier $\mu$, a steady state has  a multiplier $\mu^*$ at which the budget constraint in both states of the world is satisfied:
 \[
-	\frac{S(\mu^*,s_g)}{\frac{c(\mu^*,s_g)^{-\sigma}}{\beta \EE c(\mu^*)^{-\sigma}}-1} =\frac{S(\mu^*,s_b)}{\frac{c(\mu^*,s_b)^{-\sigma}}{\beta \EE c(\mu^*)^{-\sigma}}-1}
-\]  By choosing $\mu_1$ such that $S(\mu_1,s_g) =0$ we conclude that
+	\frac{S(\mu^*,s_g)}{\frac{c(\mu^*,s_g)^{-\sigma}}{\beta \EE c(\mu^*)^{-\sigma}}-1} =\frac{S(\mu^*,s_b)}{\frac{c(\mu^*,s_b)^{-\sigma}}{\beta \EE c(\mu^*)^{-\sigma}}-1}.
+\]  By choosing $\mu_1$ so that $S(\mu_1,s_g) =0$, we conclude that
 \[
-	0 = \frac{S(\mu_1,s_g)}{\frac{c(\mu_1,s_g)^{-\sigma}}{\beta \EE c(\mu_1)^{-\sigma}}-1} > \frac{S(\mu_1,s_b)}{\frac{c(\mu_1,s_b)^{-\sigma}}{\beta \EE c(\mu_1)^{-\sigma}}-1}
-\]  This is derived directly from $S(\mu,s_g) < S(\mu,s_b)$ for all $\mu$ and $c(\mu,s_g) > c(\mu,s_b)$ for all $\mu$. }
+	0 = \frac{S(\mu_1,s_g)}{\frac{c(\mu_1,s_g)^{-\sigma}}{\beta \EE c(\mu_1)^{-\sigma}}-1} > \frac{S(\mu_1,s_b)}{\frac{c(\mu_1,s_b)^{-\sigma}}{\beta \EE c(\mu_1)^{-\sigma}}-1}.
+\]  We derived this equation directly from $S(\mu,s_g) < S(\mu,s_b)$ for all $\mu$ and $c(\mu,s_g) > c(\mu,s_b)$ for all $\mu$.
 
-\dge{Substituting out for $q_{fb}$, equation \eqref{eqn:prop52sufficient} can equivalently be written as
+Eliminating  $q_{fb}$, equation \eqref{eqn:prop52sufficient} can expressed as
 \[
-	\frac{g(s_g)}{1-\frac{\beta\EE c_{fb}^{-\sigma}}{c_{fb}(s_g)^{-\sigma}}} > \frac{g(s_b)}{1-\frac{\beta\EE c_{fb}^{-\sigma}}{c_{fb}(s_b)^{-\sigma}}}
-\]  Multiplying both sides by $-1$ and factoring out a $\beta\EE c_{fb}^{-\sigma}$ this equation simplifies to
+	\frac{g(s_g)}{1-\frac{\beta\EE c_{fb}^{-\sigma}}{c_{fb}(s_g)^{-\sigma}}} > \frac{g(s_b)}{1-\frac{\beta\EE c_{fb}^{-\sigma}}{c_{fb}(s_b)^{-\sigma}}}.
+\]  Multiplying both sides by $-1$ and factoring out  $\beta\EE c_{fb}^{-\sigma}$, this equation simplifies to
 \[
 	\frac{-c_{fb}(s_g)^{-\sigma}g(s_g) }{\frac{c_{fb}(s_g)^{-\sigma}}{\beta \EE c_{fb}^{-\sigma}}-1} < \frac{-c_{fb}(s_b)^{-\sigma}g(s_b) }{\frac{c_{fb}(s_b)^{-\sigma}}{\beta \EE c_{fb}^{-\sigma}}-1}
 \]or
 \[
-	\frac{S(0,s_g)}{\frac{c(0,s_g)^{-\sigma}}{\beta \EE c(0)^{-\sigma}}-1} <\frac{S(0,s_b)}{\frac{c(0,s_b)^{-\sigma}}{\beta \EE c(0)^{-\sigma}}-1}
-\]  The existence of $\mu^*$ then comes directly from the Intermediate Value Theorem.}
+	\frac{S(0,s_g)}{\frac{c(0,s_g)^{-\sigma}}{\beta \EE c(0)^{-\sigma}}-1} <\frac{S(0,s_b)}{\frac{c(0,s_b)^{-\sigma}}{\beta \EE c(0)^{-\sigma}}-1}.
+\]  Existence of $\mu^*$ follows directly from the Intermediate Value Theorem.
 \end{proof}
 
 
-	\begin{proposition}\label{prop:convergenceU} \st{ Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions.}  \dge{There exists $\underline x < x^*$ and $\overline x >0$ such that if $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solves the incomplete markets Ramsey problem \ref{prob:RamseyBellman} with bounds $\underline x$ and $\overline x$ then $x_t(s^t)\rightarrow x^*$ as $t\rightarrow\infty$ with probability 1.}
+	\begin{proposition}\label{prop:convergenceU}
+%\st{ Let $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solve the incomplete markets Ramsey problem with $x_0 > x^*$.  Then  $x_t(s^{t-1})\rightarrow x^*$ as $t\rightarrow \infty$ with probability 1 for all initial conditions.}
+  There exist $\underline x < x^*$ and $\overline x >0$ such that if $\{c_t(s^t), l_t(s^t), x_t(s^{t-1})\}$ solves the incomplete markets Ramsey problem \ref{prob:RamseyBellman} with bounds $\underline x$ and $\overline x$, then $x_t(s^t)\rightarrow x^*$ as $t\rightarrow\infty$ with probability 1.
 	
 	\end{proposition}
 
 
-\begin{proof}  \dge{We can break the proof of this proposition down into two lemmas  describing the structure of the policy functions.  These properties will be intuitive and can be proved in the appendix.  Finally the proof will rely on the assumption of concavity of the value function,
-\begin{lemma}\label{lem:c_order}  Consumption is ordered by the state of the world.  That is there exists $\underline x$ and $\overline x$ such that for all $x\in[\underline x,\overline x]$ the policy functions for consumption satisfy $c(x,s_g) > c(x,s_b)$.
-\end{lemma}  This lemma guarantees that for the same level of marginal utility weighted government debt, consumption will be larger in ``good'' states of the world than ``adverse'' states of the world.
-\begin{lemma}\label{lem:x_order}  There exits $\underline x$ and $\overline x$ such that the optimal government savings policy, $x'(x,s)$ satisfies
+\begin{proof}  {The proof relies on the concavity of the value function $V$ and  two lemmas  that describe the structure of the policy functions.  Proofs of
+ the lemmas appear in the appendix.
+\begin{lemma}\label{lem:c_order}  Consumption is ordered by the state of the world.  In particular, there exist $\underline x$ and $\overline x$ such that for all $x\in[\underline x,\overline x]$, the policy function for consumption satisfies $c(x,s_g) > c(x,s_b)$.
+\end{lemma}  This lemma assures that for the same level of marginal utility weighted government debt, consumption is larger in ``good'' states of the world than in ``adverse'' states of the world.
+\begin{lemma}\label{lem:x_order}  There exist $\underline x$ and $\overline x$ such that the optimal government savings policy $x'(x,s)$ satisfies
 \begin{enumerate}
-	\item For $x\in(x^*,\overline x]$ we have $x'(x,s_g) < x'(x,s_b)$
-	\item  For $x\in[\underline x, x^*)$ we have $x'(x,s_g) > x'(x,s_b)$
+	\item For $x\in(x^*,\overline x]$, $x'(x,s_g) < x'(x,s_b)$
+	\item  For $x\in[\underline x, x^*)$, $x'(x,s_g) > x'(x,s_b)$
 \end{enumerate}  Furthermore, $x'(x,\cdot)$ is increasing in $x$.
-\end{lemma}  Property 1. states that if government debt is larger than the steady state, then the government will issue more debt in bad states of the world than good states of the world.  Property 2. states that if government debt is smaller that the steady state debt then the government has accumulated enough assets\footnote{Remember in the steady state the government will hold assets} such that the lower interest rates in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.   The last part of the lemma gaurantees that if the government enters with more debt it will pass on more debt to future periods.  We can now prove global convergence, we will focus on the case where $x_t \geq x^*$ as the other case is symmetric.  As $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
-implementability constraint and $\overline \lambda_t$ be the multiplier on the constraint $x_t \leq \overline x$ we have
+\end{lemma}  Property 1 states that if government debt exceeds its steady state value, then the government issues more debt in bad states of the world than in good states of the world.  Property 2 states that if government debt is smaller than its  steady state amount, then the government has accumulated enough assets\footnote{Remember that  in the steady state, the government  owns a positive amount of the risk-free asset.} such that the lower interest rate in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.   The last part of the lemma guarantees that if the government enters with more debt, it will pass on more debt to future periods.  We can now prove global convergence. We will focus on the case where $x_t \geq x^*$, since the analysis of the other case is symmetric. Since $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
+implementability constraint and $\overline \lambda_t$ be the multiplier on the constraint $x_t \leq \overline x$, we have
 \[
 	 \mu_t = \frac{1}{\EE_t[c_{t+1}^{-\sigma}]}\EE_t[\mu_{t+1}c_{t+1}^{-\sigma}] -\overline \lambda_t
-\]  Lemma  \ref{lem:x_order}. along with concavity of $V$ allows us to conclude that $\mu_{t+1}(s_g) > \mu_{t+1}(s_b)$.  From Lemma \ref{lem:c_order}. we know that $c_{t+1}(s_g) > c_{t+1}(s_b)$ which implies that $Cov_t(\mu_{t+1},c_{t+1}^{-\sigma} <0$ and thus
+\]  Lemma  \ref{lem:x_order}. along with concavity of $V$ allows us to conclude that $\mu_{t+1}(s_g) > \mu_{t+1}(s_b)$.  From Lemma \ref{lem:c_order}, we know that $c_{t+1}(s_g) > c_{t+1}(s_b)$, which implies that $Cov_t(\mu_{t+1},c_{t+1}^{-\sigma}) <0$, so
 \[
-	 \frac{1}{\EE_t[c_{t+1}^{-\sigma}]}\EE_t[\mu_{t+1}c_{t+1}^{-\sigma}]  < \EE_t[\mu_{t+1}]
-\]  As $\overline \lambda_t \geq 0$, we can conclude that
+	 \frac{1}{\EE_t[c_{t+1}^{-\sigma}]}\EE_t[\mu_{t+1}c_{t+1}^{-\sigma}]  < \EE_t[\mu_{t+1}].
+\] Since $\overline \lambda_t \geq 0$, we  conclude that
 \[
-	\mu_t < \EE_t[\mu_{t+1}]
-\]  Moreover $\mu_t < V'(x^*) = \mu^*$, so $\mu_t$ is a submartingale bounded from above.  Applying the martingale convergence theorem we conclude that $\mu_t \rightarrow \mu^*$ with probability 1.  Continuity of the policy functions and uniqueness of the steady state in the region $[x^*,\overline x]$ implies that $x_t\rightarrow x^*$ with probability 1.}
+	\mu_t < \EE_t[\mu_{t+1}].
+\]  Moreover $\mu_t < V'(x^*) = \mu^*$, so $\mu_t$ is a submartingale that is bounded from above.  Applying the martingale convergence theorem, we conclude that $\mu_t \rightarrow \mu^*$ with probability 1.  Continuity of the policy functions and uniqueness of the steady state in the region $[x^*,\overline x]$ implies that $x_t\rightarrow x^*$ with probability 1.}
 \end{proof}
 
 \begin{remark}
 In this economy,  fluctuations in the risk-free  interest rate come from fluctuations in  marginal utility of consumption. The interest rate
  is low  in ``good'' states (i.e., when  TFP is high or government expenditures are low).
  In a steady state, the government holds claims against the private sector, an outcome that resembles those in economies
- with  quasi-linear utility and  low  $\bm{p}$.  For all admissible  initial  levels of government debt, an incomplete markets Ramsey allocation converges to a particular Lucas-Stokey  Ramsey allocation. \tjs{Team xXXXXX: say a little more about the particular LS allocation and its initial debt level}   	
+ with  quasi-linear utility and  low  $\bm{p}$.  For all admissible  initial  levels of government debt, an incomplete markets Ramsey allocation converges to a particular Lucas-Stokey  Ramsey allocation. 
+%\tjs{Team xXXXXX: say a little more about the particular LS allocation and its initial debt level}   	
 
-
+%\tjs{Stopped here on plane GGGG}
 \end{remark}
-\dge{
-\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} can be thought of as a near converse to Lemma 3. of section 5 in \citet{Aiyagari2002}.  There they provide sufficient conditions for the non-convergence of the economy to a complete markets allocations.  Our propositions provide sufficient conditions for the existence of the complete markets steady state and the long rung convergence to that steady state.  While the results of \citet{Aiyagari2002} do hold, and for more general stochastic processes a steady state will not exist, we find numerically that the results Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} are informative as to the long run dynamics of incomplete markets economys.  There will exist regions of low volatility and the economy will converge to these regions in the long run.
+{
+\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} should be interpreted approximately as supplying  a converse to Lemma 3 from section 5 of \citet{Aiyagari2002}, which  provided sufficient conditions for their incomplete markets Ramsey plan  economy to {\em fail} to converge to  a complete markets continuation allocation.  Our propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} provide sufficient conditions for a complete markets steady state continuation allocation to exist, and for the incomplete market Ramsey allocation to converge to that
+the long rung convergence to that steady state continuation allocation.  %While we don't challenge the \citet{Aiyagari2002} counterexamples to convergence,  do hold, 
+Note that propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} assume a very special stochastic process for $s$.
+  For more general stochastic processes, a steady state does not exist. But in simulations,  we have found that the outcomes described in Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} do a good job of approximating long run  dynamics of incomplete markets Ramsey plans for
+ richer shock stochastic processes, in the sense that they converge to regions of low volatility. 
 \end{remark}}
 
-\tjs{Team XXXXXX: let's add some modest self-promotion here telling just how much the results immediately above add in terms of
-filling in loose ends from AMSS -- things they just weren't able to answer.}
+\tjs{David: I edited your really good remark. Beware that I might have altered your intended meaning. Let's fine tune the last part.  }
+
+%\tjs{Team XXXXXX: let's add some modest self-promotion here telling just how much the results immediately above add in terms of
+%filling in loose ends from AMSS -- things they just weren't able to answer.}
 
 
 \section{To do}
