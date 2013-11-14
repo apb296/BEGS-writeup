@@ -405,10 +405,19 @@ If the aggregate state process $s_t$ is i.i.d. then the `disarm-the-measurabilit
  \mathbb{P}^*(s, s\_ |b_{-1}) = \beta\frac{S(s,\tau)}{b_{-1}} + \beta=(1-\beta)\frac{S(s,\tau)}{\EE S(s,\tau)} + \beta,
  \end{equation} which is independent of $s\_$.
 
+\dge{With equation \eqref{eqn:optPP} we can easily plot the optimal payoff matrix as a function of initial government debt.  In figure \ref{fig:optP} we plot the optimal payoff in both states of the world when either government expenditure or TFP follows a 2 state i.i.d process.}
+\begin{figure}[ht]\label{fig:optP}
+		\begin{center}
+		\includegraphics[scale=.35]{Images/p_graph_tfp.eps}
+		\includegraphics[scale=.35]{Images/p_graph.eps}
+		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process (left) and government expenditure follows a 2 shock i.i.d process (right)}
+	\end{center}	
+\end{figure}\dge{In both cases we see that the ordering of the payoff flips on either side of zero government debt.} 
+
 To appreciate how  the initial government debt level influences the optimal asset payoff structure via formula \eqref{eqn:optPP}, call a
  state $s$ ``adverse''  if it implies either ``high'' government expenditures or ``low '' TFP; formally, say that  $s$ is ``adverse'' if
 \[   g(s)\EE \theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE g >0\]
-A ``good'' state is the opposite of an ``adverse'' state.  ``Adverse'' states have the property that for  wide range of initial government debts, the net-of-interest government surplus is lower than in ``good'' states.  When initial government assets are positive, \eqref{eqn:optPP} implies that  $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states.
+A ``good'' state is the opposite of an ``adverse'' state.  ``Adverse'' states have the property that for  wide range of initial government debts, the net-of-interest government surplus is lower than in ``good'' states.  When initial government assets are positive, \eqref{eqn:optPP} implies that  $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states. 
 
 %
 %\subsection{Inverting the $\mathbb{P}^*$ mapping}
@@ -457,11 +466,11 @@ such that
 	S(s,\tau) = \theta(s)^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau - g(s),
 \]  which  is  maximized at $\tau = \frac\gamma{1+\gamma}$ when $(1-\tau)^\frac1\gamma\tau$ is also maximized. Furthermore, in the region $(-\infty,\frac\gamma{1+\gamma}]$, $S(\cdot,\tau)$ is an increasing function of $\tau$.  In an i.i.d. world with complete markets, government debt
 at a constant tax rate $\tau$ would be
-\[
+\begin{equation}\label{eqn:tax_to_debt}
 	\frac\beta{1-\beta} \sum_s \Pi(s) S(s,\tau),
-\] which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then
+\end{equation}which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then
 \[
-	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the mapping \tjs{David - let's number and label the mapping, then refer to it here.}  from the tax rate into government debt would give us a  function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
+	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the mapping \dge{in equation \eqref{eqn:tax_to_debt}}  from the tax rate into government debt gives us a function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
 
 
 Substituting the formula for $S(s,\tau)$ into equation \eqref{eqn:optPP}, we obtain
@@ -492,11 +501,18 @@ debt under complete markets $\overline b$, or equivalently as $\tau$ approaches 
 		\alpha_2 = (1-\beta)\frac{\theta(s_1)^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}{\EE\theta^\frac{\gamma}{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma}-g}+\beta>\alpha_1
 		\]
 
-{\begin{remark}
-		With only TFP shocks, the bond payoff has the special property that it is associated with a steady state asset level that supports the first-best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At a first-best taxes are zero, so the net-of-interest government surplus is constant across states.
+\begin{remark}
+		With only TFP shocks, the bond payoff has the special property that it is associated with a steady state asset level that supports the first-best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At \st{a}\dge{the} first-best taxes are zero, so the net-of-interest government surplus is constant across states.
 		\end{remark}
+		\dge{We illustrate the results of propostion \ref{prop:ssexistence} in figure \ref{fig:noStable} below.  In blue we have ploted the inverse map $\bm p^{*-1}$.  As in the proof there are two constants $\alpha_1$ and $\alpha_2$ which split the possible payoff structures into three regions: where a steady state exists with government holding assets, where a steady state exists with government holding debt, and where a steady state does not exist.}
+		\begin{figure}[ht]\label{fig:noStable}
+		\begin{center}
+		\includegraphics[width=5.5in]{Images/graph_nostable.pdf}
+\caption{Existence regions in $\bm{p}$ space}
+	\end{center}	
+	\end{figure}
 \subsection{Long Run Assets} \label{sec:David43}
-In subsection \ref{sec:David42},  we provided conditions under which there exists $b^*$ such $\bm p^*(b^*) = \bm p$.  By construction, if $b_{-1} = b^*$ then the allocation that solves complete markets Ramsey problem \ref{prob:RamseyLS} for initial condition $b^*$  automatically satisfies the measurability constraints \eqref{eqn:AMSSimplement}.  That allocation therefore solve the incomplete markets Ramsey problem \ref{prob:RamseyBEGS}.  This implies that if $b_{-1} = b^*$, then $b_t = b^*$ for all $t$.  Thus, $p^{*-1}(\bm p)$ corresponds to a ``steady state''.  It remains to be determined whether  the incomplete markets Ramsey $b_t$  converges to  $b^*$  for arbitrary $b_{-1}$.  Theorem \ref{thm:convergence} provides sufficient conditions for  convergence.} \tjs{David: please read the preceding carefully -- I edited it.}
+In subsection \ref{sec:David42},  we provided conditions under which there exists $b^*$ such $\bm p^*(b^*) = \bm p$.  By construction, if $b_{-1} = b^*$ then the allocation that solves complete markets Ramsey problem \ref{prob:RamseyLS} for initial condition $b^*$  automatically satisfies the measurability constraints \eqref{eqn:AMSSimplement}.  That allocation therefore solves the incomplete markets Ramsey problem \ref{prob:RamseyBEGS}.  This implies that if $b_{-1} = b^*$, then $b_t = b^*$ for all $t$.  Thus, $p^{*-1}(\bm p)$ corresponds to a ``steady state''.  It remains to be determined whether  the incomplete markets Ramsey $b_t$  converges to  $b^*$  for arbitrary $b_{-1}$.  Theorem \ref{thm:convergence} provides sufficient conditions for  convergence.
 
 
 %\tjs{Tom stopped here at 11:30 pm Milan time on November 13}
@@ -551,9 +567,21 @@ can use  the continuity of $\mu'(\mu,s)$ to show that
  %will locally be unstable. \apb{??? We havent defined local stability? }
 \end{description}
 \end{proof}
-
-
-
+\dge{\begin{remark}  The results of Theorem \ref{thm:convergence} are illustrated in Figure \ref{fig:stable}.  In addition to denoting the values of $\bm p$ for which a steady state exists we also highlight the regions where this steady state is stable.  One feature of this theorem is that there exists $\bm p$ where a steady state exists but economy will not converge to the steady state allocation in the long run.
+\end{remark}}
+\begin{figure}[ht]\label{fig:stable}
+		\begin{center}
+		\includegraphics[width = 5in]{Images/graph_stable.pdf}
+\caption{Stability regions in $\bm p$ space.}
+	\end{center}	
+\end{figure}  An important aspect of this model is that small changes in primitives (specifically $\bm p$) can lead to major differences in long run allocations.  To illustrate this, in Figure \ref{fig:2ps_figure} we plot two sample paths where the only difference is the asset restriction $\bm p$.  
+\begin{figure}\label{fig:2ps_figure}
+	\begin{center}
+	\includegraphics[width=3in]{Images/port1.eps}
+	\includegraphics[width=3in]{Images/port2.eps}
+\caption{A sample path with $\bm p > 1$ (left)  $\bm{p} <1$ (right)}
+	\end{center}	
+\end{figure}
 
 \subsection{Economic forces driving convergence}
 In summary, when the aggregate state follows a 2-state i.i.d. process, government debt  $b_t$ often converges to $b^*$, while
@@ -655,8 +683,8 @@ Assume that
 
 	 the Markov state $s$ take two values is  i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
 and $s_g$ begin the good state.
-		Let $x_{fb}$ be a value of  %\st{the state $x$ from which a government can implement first=best with complete markets}
-marginal utility weighted debt associated with the first-best allocation with complete markets.\tjs{David: the phrase
+		\dge{Let $x_{fb}$ be the discounted present value of marginal utility weighted government surpluses associated with the first best allocation.} \st{ be a value of  %\st{the state $x$ from which a government can implement first=best with complete markets}
+marginal utility weighted debt associated with the first-best allocation with complete markets.}\tjs{David: the phrase
 ``first-best allocation with complete markets'' remains imprecise?  What does it mean?}
 	 Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ at the first best allocation.
 	If
@@ -726,14 +754,19 @@ In this economy,  fluctuations in the risk-free  interest rate come from fluctua
 %\tjs{Stopped here on plane GGGG}
 \end{remark}
 {
-\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} should be interpreted approximately as supplying  a converse to Lemma 3 from section 5 of \citet{Aiyagari2002}, which  provided sufficient conditions for their incomplete markets Ramsey plan  economy to {\em fail} to converge to  a complete markets continuation allocation.  Our propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} provide sufficient conditions for a complete markets steady state continuation allocation to exist, and for the incomplete market Ramsey allocation to converge to that
-the long rung convergence to that steady state continuation allocation.  %While we don't challenge the \citet{Aiyagari2002} counterexamples to convergence,  do hold, 
+\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} should be interpreted approximately as supplying  a converse to Lemma 3 from section 5 of \citet{Aiyagari2002}, which  provided sufficient conditions for their incomplete markets Ramsey plan  economy to {\em fail} to converge to  a complete markets continuation allocation.  Our propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} provide sufficient conditions for a complete markets steady state continuation allocation to exist, and for the incomplete market Ramsey allocation to converge \st{to that
+the long rung convergence}\dge{, in the long run,} to that steady state continuation allocation.  %While we don't challenge the \citet{Aiyagari2002} counterexamples to convergence,  do hold, 
 Note that propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} assume a very special stochastic process for $s$.
   For more general stochastic processes, a steady state does not exist. But in simulations,  we have found that the outcomes described in Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} do a good job of approximating long run  dynamics of incomplete markets Ramsey plans for
  richer shock stochastic processes, in the sense that they converge to regions of low volatility. 
 \end{remark}}
-
-\tjs{David: I edited your really good remark. Beware that I might have altered your intended meaning. Let's fine tune the last part.  }
+\dge{In Figure \ref{fig:conv_RA} we plot a simulation of the optimal policy.  We note that the path of marginal utility weighted government debt is very similar to the path of government debt for a quasilinear economy with low $\bm p$ plotted in Figure \ref{fig:2ps_figure} }
+\begin{figure}[ht]\label{fig:conv_RA}
+	\begin{center}
+	\includegraphics[width=4in]{Images/2stateiid.eps}
+\caption{A sample path for 2 state i.i.d. process with risk aversion}
+	\end{center}
+\end{figure}
 
 %\tjs{Team XXXXXX: let's add some modest self-promotion here telling just how much the results immediately above add in terms of
 %filling in loose ends from AMSS -- things they just weren't able to answer.}
@@ -755,6 +788,12 @@ some policy functions -- think of one or two things to do with those policy func
 
 
 \subsection{Allowing nonnegative transfers}
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=4in]{Images/transfer_example2.eps}
+\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers}
+	\end{center}
+\end{figure}
 \tjs{Team XXXXX: Beware -- please wear hard hat in this construction area.  Add BS about AMSS and what transfers did for them. Write front end of this section -- good low-skill job for Tom.}
 	 Access to nonnegative transfers makes first-best level of assets trivially a ``steady state.''  	
 With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level,  the economy  converges with probability 1 to the steady state. Thus, counterpart to previous  results continue to hold  when
@@ -780,86 +819,16 @@ concluding section).}
 \end{itemize}
 
 \item BEGS1 studies a related problem with heterogeneous agents
+ \end{enumerate}
+\section{figures}
 
 
-\section{Figures}
-
-\begin{figure}
-		\begin{center}
-		\includegraphics[scale=.4]{Images/p_graph_tfp.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process}
-	\end{center}	
-	\end{figure}
-
-
-\begin{figure}
-		\begin{center}
-		\includegraphics[scale=.4]{Images/p_graph.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when government expenditures follow 2 shock i.i.d process}
-	\end{center}	
-	\end{figure}
-
-
-\begin{figure}
-		\begin{center}
-		\includegraphics[width=4.2in]{Images/graph_nostable.pdf}
-\caption{Existence regions in $\bm{p}$ space}
-	\end{center}	
-	\end{figure}
-
-
-
-	\begin{figure}
-		\begin{center}
-		\includegraphics[width = 4.2in]{Images/graph_stable.pdf}
-\caption{Stability regions}
-	\end{center}	
-	\end{figure}	
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/port1.eps}
-    \caption{A sample path with  $\bm{p} > 1$}
-	\end{center}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/port2.eps}
-\caption{A sample path with   $\bm{p} <1$}
-	\end{center}	
-\end{figure}
-
-
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/2stateiid.eps}
-\caption{A sample path for 2 state i.i.d. process with risk aversion}
-	\end{center}
-\end{figure}
-
-
-	\begin{figure}
+	\begin{figure}[ht]
 	\begin{center}
 	\includegraphics[width=4in]{Images/5stateiid.eps}
 \caption{A sample path  for economy with $S>2$ states}
 	\end{center}
 \end{figure}
-
-
-
-\begin{figure}
-	\begin{center}
-	\includegraphics[width=4in]{Images/transfer_example2.eps}
-\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers}
-	\end{center}
-\end{figure}
-
-
-
- \end{enumerate}
-
 \bibliography{BEGS}
 
 \end{document}
