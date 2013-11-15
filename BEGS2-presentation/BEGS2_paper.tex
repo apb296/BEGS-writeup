@@ -82,6 +82,13 @@
 ``$\ldots$ the option to issue state-contingent debt is important: tax policies that
 are optimal under uncertainty have an essential `insurance' aspect to them.'' \quad \citet[p.~88]{LucasJr.1983}
 \end{quote}
+
+\tjs{David and Anmol XXXXX: some housekeeping things to do.
+\begin{itemize}
+\item The automatic figure numbering isn't working.  Someone please look into it.
+\item The proofs of the lemmas should be included in the promised appendix.
+\item I have to write a concluding section and also polish and finish the introduction.
+x\end{itemize}}
 \section{Introduction}
 
 
@@ -90,8 +97,6 @@ are optimal under uncertainty have an essential `insurance' aspect to them.'' \q
 
 Controversial responses to  \citet{Reinhart2010} motivated us to reassess what we know and don't know about two elementary questions.
 What is an optimal  government debt? And  is government debt  a pertinent state variable? % in a recursive formulation of a Ramsey problem?
-
-
 \citet{LucasJr.1983} and \citet{Aiyagari2002} offer  different answers to these
 questions in the context of  economic environments that are identical in all respects but one: \citet{LucasJr.1983} allow the government to issue
 a complete set of Arrow securities, while   \citet{Aiyagari2002} allow the government to issue only a one-period risk-free government bond.  For
@@ -405,19 +410,20 @@ If the aggregate state process $s_t$ is i.i.d. then the `disarm-the-measurabilit
  \mathbb{P}^*(s, s\_ |b_{-1}) = \beta\frac{S(s,\tau)}{b_{-1}} + \beta=(1-\beta)\frac{S(s,\tau)}{\EE S(s,\tau)} + \beta,
  \end{equation} which is independent of $s\_$.
 
-\dge{With equation \eqref{eqn:optPP} we can easily plot the optimal payoff matrix as a function of initial government debt.  In figure \ref{fig:optP} we plot the optimal payoff in both states of the world when either government expenditure or TFP follows a 2 state i.i.d process.}
+ Equation \eqref{eqn:optPP} lets us depict an optimal payoff matrix as a function of initial government debt.  Figure \ref{fig:optP} plots the optimal payoff in both states of the world when either government expenditures or TFP follows a 2 state i.i.d. process. In both cases, we see that the ordering of the payoff flips on either side of zero government debt.
 \begin{figure}[ht]\label{fig:optP}
 		\begin{center}
 		\includegraphics[scale=.35]{Images/p_graph_tfp.eps}
 		\includegraphics[scale=.35]{Images/p_graph.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d process (left) and government expenditure follows a 2 shock i.i.d process (right)}
+		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d. process (left) and when government expenditures follow a 2 shock i.i.d process (right).}
 	\end{center}	
-\end{figure}\dge{In both cases we see that the ordering of the payoff flips on either side of zero government debt.} 
+\end{figure}
+
 
 To appreciate how  the initial government debt level influences the optimal asset payoff structure via formula \eqref{eqn:optPP}, call a
  state $s$ ``adverse''  if it implies either ``high'' government expenditures or ``low '' TFP; formally, say that  $s$ is ``adverse'' if
 \[   g(s)\EE \theta^\frac{\gamma}{1+\gamma}-\theta(s)^\frac\gamma{1+\gamma}\EE g >0\]
-A ``good'' state is the opposite of an ``adverse'' state.  ``Adverse'' states have the property that for  wide range of initial government debts, the net-of-interest government surplus is lower than in ``good'' states.  When initial government assets are positive, \eqref{eqn:optPP} implies that  $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states. 
+A ``good'' state is the opposite of an ``adverse'' state.  ``Adverse'' states have the property that for  wide range of initial government debts, the net-of-interest government surplus is lower than in ``good'' states.  When initial government assets are positive, \eqref{eqn:optPP} implies that  $\mathbb{P}^*$   pays {\em more} in ``adverse'' states, while when initial government assets are negative, $\mathbb{P}^*$  pays {\em less} in ``adverse'' states.
 
 %
 %\subsection{Inverting the $\mathbb{P}^*$ mapping}
@@ -470,7 +476,7 @@ at a constant tax rate $\tau$ would be
 	\frac\beta{1-\beta} \sum_s \Pi(s) S(s,\tau),
 \end{equation}which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then
 \[
-	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the mapping \dge{in equation \eqref{eqn:tax_to_debt}}  from the tax rate into government debt gives us a function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
+	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the equation \eqref{eqn:tax_to_debt} mapping   from the tax rate into government debt gives us a function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
 
 
 Substituting the formula for $S(s,\tau)$ into equation \eqref{eqn:optPP}, we obtain
@@ -502,13 +508,14 @@ debt under complete markets $\overline b$, or equivalently as $\tau$ approaches 
 		\]
 
 \begin{remark}
-		With only TFP shocks, the bond payoff has the special property that it is associated with a steady state asset level that supports the first-best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At \st{a}\dge{the} first-best taxes are zero, so the net-of-interest government surplus is constant across states.
+		With only TFP shocks, the bond payoff has the special property that it is associated with a steady state asset level that supports the first-best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At the first-best taxes are zero, so the net-of-interest government surplus is constant across states.
 		\end{remark}
-		\dge{We illustrate the results of propostion \ref{prop:ssexistence} in figure \ref{fig:noStable} below.  In blue we have ploted the inverse map $\bm p^{*-1}$.  As in the proof there are two constants $\alpha_1$ and $\alpha_2$ which split the possible payoff structures into three regions: where a steady state exists with government holding assets, where a steady state exists with government holding debt, and where a steady state does not exist.}
+		We illustrate Propostion \ref{prop:ssexistence} in figure \ref{fig:noStable}.  The  blue curve is the inverse map $\bm p^{*-1}$.  Two constants $\alpha_1$ and $\alpha_2$ divide  possible payoff structures into three regions: one in which a steady state exists with the government holding assets,
+another in which  a steady state exists with the government owing debt, and yet another in which  where a steady state does not exist.
 		\begin{figure}[ht]\label{fig:noStable}
 		\begin{center}
 		\includegraphics[width=5.5in]{Images/graph_nostable.pdf}
-\caption{Existence regions in $\bm{p}$ space}
+\caption{Three regions in $\bm{p}$ space.}
 	\end{center}	
 	\end{figure}
 \subsection{Long Run Assets} \label{sec:David43}
@@ -533,13 +540,15 @@ the government tends to run up debt over time.
 %\dge{\st{The first order conditions governing the optimal allocation allow us to treat $\mu_t$ the multiplier on the measurability constraints as the state variable. }}
 The optimal allocation can be represented recursively in terms of  functions $c_t(\mu_t),l_t(\mu_t), b_t(\mu_t)$ together  with a law of motion for $\mu' = \mu'(\mu,s)$ for $\mu$.
 %\dge{
-We shall establish show global stability under the assumption that $\mu'(\mu,s)$ an increasing function of $\mu$\footnote{\dge{ I'm still working on this.  I'm not sure if we'll need to include it as an assumption or not}}  The heart of the proof revolves around the twisted-martingale equation for $\mu$:
+We shall establish show global stability under the assumption that $\mu'(\mu,s)$ an increasing function of $\mu$
+% YYYYYYYY \footnote{\dge{ I'm still working on this.  I'm not sure if we'll need to include it as an assumption or not}}  
+The heart of the proof revolves around the twisted-martingale equation for $\mu$:
 \[
 	\mu_t = \sum_s \Pi(s) p_s \mu'(\mu_t,s) = \EE_t p_{t+1}\mu_{t+1}.
 \]  We have shown that there is at most one $\mu^*$ such that $\mu'(\mu^*,s) = \mu^*$ for all $s$.  Here we focus on showing global stability for $\mu < \mu^*$. The twisted-martingale equation can be decomposed as follows
 \[
 	\mu_t = \EE_t \mu_{t+1}+Cov_t(p_{t+1},\mu_{t+1}).
-\] By signing $Cov_t(p_{t+1},\mu_{t+1})$,  we can determine whether $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above,\footnote{\dge{Given that $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$,  we know that if $\mu_t < \mu^*$, then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$.}}, we can verify global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem, we will split the proof up into three cases. Recall that $\bm p$ is the payoff in the ``good'' state 1.
+\] By signing $Cov_t(p_{t+1},\mu_{t+1})$,  we can determine whether $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above,\footnote{Since  $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$,  we know that if $\mu_t < \mu^*$, then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$.} we can verify global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem, we will split the proof up into three cases. Recall that $\bm p$ is the payoff in the ``good'' state 1.
 \begin{description}
 	\item[1. $\bm p < \min\{1,\alpha_1\}$:]  Let $\overline b_s$ be maximal debt with which the government %\st{good}
  could enter a period and be able to pay off, assuming that  it  receives shock $s$ from this period onward. Then
@@ -560,21 +569,23 @@ can use  the continuity of $\mu'(\mu,s)$ to show that
 		\mu'(\tilde u,s) = \tilde \mu,
 	\] implying that $\tilde \mu =\mu^*$, as $\mu^*$ is the unique steady state.  The steady state is then globally stable since $\mu_t \rightarrow \mu^*$ with probability 1.
 	\item[2. $\bm p \geq \alpha_2$:]  Following the same approach used  in for case 1, we know for $\bm p > \alpha_2$ that $\overline b_1 < \overline b_2$, implying that the natural debt limit is attained under repetition of  the ``good'' state.  As in case 1,  by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$, which along with $p_1 > p_2$ implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As in case 1, we then have global stability of the steady state for $\mu_t < \mu^*$.
-	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case, either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for case 1 implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{\dge{In the case where there does not exists a steady state, take $\mu^*$ to be $\infty$.}}  Since $\bm p >1$ implies that $p_1 > p_2$, we can  conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$, implying that
+	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case, either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for case 1 implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{When
+ a steady state does not exist, take $\mu^*$ to be $\infty$.}  Since $\bm p >1$ implies that $p_1 > p_2$, we can  conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$, implying that
 	\[
 		\mu_t > \EE_t \mu_{t+1}.
 	\]We thus cannot apply the martingale convergence theorem, leaving open the possibility that the steady state is not stable.
  %will locally be unstable. \apb{??? We havent defined local stability? }
 \end{description}
 \end{proof}
-\dge{\begin{remark}  The results of Theorem \ref{thm:convergence} are illustrated in Figure \ref{fig:stable}.  In addition to denoting the values of $\bm p$ for which a steady state exists we also highlight the regions where this steady state is stable.  One feature of this theorem is that there exists $\bm p$ where a steady state exists but economy will not converge to the steady state allocation in the long run.
-\end{remark}}
+\begin{remark}  Figure \ref{fig:stable} illustrates  Theorem \ref{thm:convergence}.  In addition to depicting values of $\bm p$ for which a steady state exists, it  also highlights  regions where a steady state is stable. The theorem asserts  that there exist $\bm p$ for which a steady state exists
+but is unstable. % but economy will not converge to the steady state allocation in the long run.
+\end{remark}
 \begin{figure}[ht]\label{fig:stable}
 		\begin{center}
 		\includegraphics[width = 5in]{Images/graph_stable.pdf}
 \caption{Stability regions in $\bm p$ space.}
 	\end{center}	
-\end{figure}  An important aspect of this model is that small changes in primitives (specifically $\bm p$) can lead to major differences in long run allocations.  To illustrate this, in Figure \ref{fig:2ps_figure} we plot two sample paths where the only difference is the asset restriction $\bm p$.  
+\end{figure}  An important aspect of this model is that small changes in primitives (specifically $\bm p$) can lead to major differences in long run allocations.  To illustrate this, in Figure \ref{fig:2ps_figure} we plot two sample paths where the only difference is the asset restriction $\bm p$.
 \begin{figure}\label{fig:2ps_figure}
 	\begin{center}
 	\includegraphics[width=3in]{Images/port1.eps}
@@ -683,9 +694,10 @@ Assume that
 
 	 the Markov state $s$ take two values is  i.i.d with $s_b$  being the ``adverse'' state (either low TFP or high govt. expenditures)
 and $s_g$ begin the good state.
-		\dge{Let $x_{fb}$ be the discounted present value of marginal utility weighted government surpluses associated with the first best allocation.} \st{ be a value of  %\st{the state $x$ from which a government can implement first=best with complete markets}
-marginal utility weighted debt associated with the first-best allocation with complete markets.}\tjs{David: the phrase
-``first-best allocation with complete markets'' remains imprecise?  What does it mean?}
+		Let $x_{fb}$ be the discounted present value of marginal utility weighted government surpluses associated with the first best allocation. 
+%\st{ be a value of  %\st{the state $x$ from which a government can implement first=best with complete markets}
+%marginal utility weighted debt associated with the first-best allocation with complete markets.}\tjs{David: the phrase
+%``first-best allocation with complete markets'' remains imprecise?  What does it mean?}
 	 Let $q_{fb}(s)$ be the shadow price of government debt in state $s$ at the first best allocation.
 	If
 	\begin{equation}\label{eqn:prop52sufficient}
@@ -748,23 +760,25 @@ implementability constraint and $\overline \lambda_t$ be the multiplier on the c
 In this economy,  fluctuations in the risk-free  interest rate come from fluctuations in  marginal utility of consumption. The interest rate
  is low  in ``good'' states (i.e., when  TFP is high or government expenditures are low).
  In a steady state, the government holds claims against the private sector, an outcome that resembles those in economies
- with  quasi-linear utility and  low  $\bm{p}$.  For all admissible  initial  levels of government debt, an incomplete markets Ramsey allocation converges to a particular Lucas-Stokey  Ramsey allocation. 
+ with  quasi-linear utility and  low  $\bm{p}$.  For all admissible  initial  levels of government debt, an incomplete markets Ramsey allocation converges to a particular Lucas-Stokey  Ramsey allocation.
 %\tjs{Team xXXXXX: say a little more about the particular LS allocation and its initial debt level}   	
 
 %\tjs{Stopped here on plane GGGG}
 \end{remark}
 {
-\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} should be interpreted approximately as supplying  a converse to Lemma 3 from section 5 of \citet{Aiyagari2002}, which  provided sufficient conditions for their incomplete markets Ramsey plan  economy to {\em fail} to converge to  a complete markets continuation allocation.  Our propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} provide sufficient conditions for a complete markets steady state continuation allocation to exist, and for the incomplete market Ramsey allocation to converge \st{to that
-the long rung convergence}\dge{, in the long run,} to that steady state continuation allocation.  %While we don't challenge the \citet{Aiyagari2002} counterexamples to convergence,  do hold, 
+\begin{remark}  Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} should be interpreted approximately as supplying  a converse to Lemma 3 from section 5 of \citet{Aiyagari2002}, which  provided sufficient conditions for their incomplete markets Ramsey plan  economy to {\em fail} to converge to  a complete markets continuation allocation.  Our propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} provide sufficient conditions for a complete markets steady state continuation allocation to exist, and for the incomplete market Ramsey allocation to converge 
+%\st{to that
+%the long rung convergence}\dge{, in the long run,} 
+to that steady state continuation allocation.  %While we don't challenge the \citet{Aiyagari2002} counterexamples to convergence,  do hold,
 Note that propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} assume a very special stochastic process for $s$.
   For more general stochastic processes, a steady state does not exist. But in simulations,  we have found that the outcomes described in Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} do a good job of approximating long run  dynamics of incomplete markets Ramsey plans for
- richer shock stochastic processes, in the sense that they converge to regions of low volatility. 
+ richer shock stochastic processes, in the sense that they converge to regions of low volatility.
 \end{remark}}
-\dge{In Figure \ref{fig:conv_RA} we plot a simulation of the optimal policy.  We note that the path of marginal utility weighted government debt is very similar to the path of government debt for a quasilinear economy with low $\bm p$ plotted in Figure \ref{fig:2ps_figure} }
+Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of marginal utility weighted government debt resembles the path of government debt for tje quasilinear economy with low $\bm p$ plotted earlier in Figure \ref{fig:2ps_figure}.
 \begin{figure}[ht]\label{fig:conv_RA}
 	\begin{center}
 	\includegraphics[width=4in]{Images/2stateiid.eps}
-\caption{A sample path for 2 state i.i.d. process with risk aversion}
+\caption{Sample path of $x_t$  for an economy with risk aversion and a 2 state i.i.d. process for \tjs{David: please say more about this economy -- is $g$ random or TFP?}}
 	\end{center}
 \end{figure}
 
