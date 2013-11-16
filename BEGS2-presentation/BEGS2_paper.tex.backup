@@ -75,18 +75,16 @@
 
 \begin{abstract}  This paper characterizes tax and debt dynamics in Ramsey plans for an incomplete markets economies that generalize
 a \citet{Aiyagari2002} economy by allowing the single asset traded by the government possibly to be risky rather than risk-free.  
-Long run debt and tax dynamics can be attracted  not only to the first-best continuation allocations discovered by \citeauthor{Aiyagari2002} but instead often
- to an allocation that is associated with a particular level or range of  levels of (marginal utility scaled) government debt prevailing in a Lucas-Stokey
-economy that starts from a particular initial level of government debt.  The paper formulates, analyzes, and numerically solves two Bellman equations
-that encode a recursive formulation of a Ramsey plan.
+Debt and tax dynamics are always linked not only to the first-best continuation allocations discovered by \citeauthor{Aiyagari2002} but often
+instead to an allocation associated with a particular level or range of (marginal utility scaled) government debt for a Lucas-Stokey
+economy starting from a particular initial level of government debt.  
 
 
 
 \end{abstract}
 
 
-\noindent\textsc{Keywords:} Complete markets, incomplete markets, Ramsey plan, taxes, debt, competitive equilibrium, implementability constraints,
-dynamic programming squared
+\noindent\textsc{Keywords:} Complete markets, incomplete markets, Ramsey plan, taxes, debt, competitive equlibrium, implementability constraints
 
 \begin{quote}
 ``$\ldots$ the option to issue state-contingent debt is important: tax policies that
@@ -110,7 +108,7 @@ a complete set of Arrow securities, while   \citet{Aiyagari2002} allow the gover
  government debt.  By way of contrast, for \citet{Aiyagari2002} government debt is an independent state variable with a limiting value or distribution
  of values that does not depend on the initial government debt.  The quote by \citeauthor{LucasJr.1983} pinpoints the source of these differences:
  the government's purchase of {\em insurance} from the private sector  through explicit state-contingent securities underlies \citeauthor{LucasJr.1983}'s
- answers to our two questions; while a government's {\em self-insurance} achieved through its past accumulation of
+ answers to our two questions; while a government's {\em self-insurance} achieved through its past accumulaton of
  a risk-free asset underlies \citeauthor{Aiyagari2002}'s answers.
 
 This paper revisits  our two questions in the context of a generalization of the \citet{Aiyagari2002} environment that continues to restrict
@@ -526,7 +524,7 @@ debt under complete markets $\overline b$, or equivalently as $\tau$ approaches 
 \begin{remark}
 		With only TFP shocks, the bond payoff has the special property that it is associated with a steady state asset level that supports the first-best allocation, $\bm p^{* -1}(1) = b_{fb}$.  At the first-best taxes are zero, so the net-of-interest government surplus is constant across states.
 		\end{remark}
-		We illustrate Proposition \ref{prop:ssexistence} in figure \ref{fig:noStable}.  The  blue curve is the inverse map $\bm p^{*-1}$.  Two constants $\alpha_1$ and $\alpha_2$ divide  possible payoff structures into three regions: one in which a steady state exists with the government holding assets,
+		We illustrate Propostion \ref{prop:ssexistence} in figure \ref{fig:noStable}.  The  blue curve is the inverse map $\bm p^{*-1}$.  Two constants $\alpha_1$ and $\alpha_2$ divide  possible payoff structures into three regions: one in which a steady state exists with the government holding assets,
 another in which  a steady state exists with the government owing debt, and yet another in which  where a steady state does not exist.
 		\begin{figure}[ht]\label{fig:noStable}
 		\begin{center}
@@ -640,9 +638,7 @@ so are  dominated by the welfare gains from approaching  $b^*$, which are first-
 
   Commitment to a Ramsey plan implies that government actions at $t \geq 1$ are constrained by the household's anticipations about them at $s < t$
 	 Following \citet{Kydland1980}, we  use the  marginal utility of consumption that the
-Ramsey planner promises to the household to account for that `forward looking' restriction on the Ramsey planner. That
-comes from the fact that the Euler equation restricts allocations such that expected marginal utility in time $t$ is constrained by consumption choices
-in time $t-1$.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
+Ramsey planner promises to the household to account for that `forward looking' restriction on the Ramsey planner. For eg., that comes from the fact that the Euler equation restricts allocations such that expected marginal utility in time $t$ is constrained by consumption choices in time $t-1$.  It is convenient for us that scaling the household's  budget constraint by the  marginal utility
  of consumption makes Ramsey problem  recursive in  $x=U_c b$.  In particular, implementability constraints \eqref{eqn:AMSSimplement}
  can be represented as
 		\begin{equation}
@@ -799,7 +795,7 @@ Note that propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} assume
   For more general stochastic processes, a steady state does not exist. But in simulations,  we have found that the outcomes described in Propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} do a good job of approximating long run  dynamics of incomplete markets Ramsey plans for
  richer shock stochastic processes, in the sense that they converge to regions of low volatility.
 \end{remark}}
-Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of marginal utility weighted government debt resembles the path of government debt for the quasilinear economy with low $\bm p$ plotted earlier in Figure \ref{fig:2ps_figure}.
+Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of marginal utility weighted government debt resembles the path of government debt for tje quasilinear economy with low $\bm p$ plotted earlier in Figure \ref{fig:2ps_figure}.
 \begin{figure}[ht]\label{fig:conv_RA}
 	\begin{center}
 	\includegraphics[width=4in]{Images/2stateiid.eps}
@@ -842,7 +838,7 @@ initial government debt exceeds its steady state value.  When initial government
 \section{Concluding remarks}
 
 In the quotation  with which we began this paper, \citet{LucasJr.1983} emphasize that the government's optimal administration of a flat rate
-tax on labor depends on its ability to trade a complete set of securities securities with the public whose payoffs are contingent on 
+tax on labor depends on its ability to trade a complete set of securities securites with the public whose payoffs are contingent on 
 possible realizations of random variables that drive
 government expenditures.  That he apparently prohibited the government from trading such securities helps account for quite different
 assertions about debt dynamics made by \citet{Barro1979}: government debt is a key state variable for Barro, one that that should be governed by
@@ -860,7 +856,7 @@ toward explaining  the striking differences between the debt dynamics  in \citea
   
   In this paper, we have gotten much further and evidently  drawn at least the {\em limiting} aspects of optimal debt dynamics in an  incomplete markets
   markets economy closer to outcomes prevailing in a Lucas-Stokey complete markets economy.  
-  There exist levels of government debt that let fluctuating returns on government debt -- delivered either through fluctuating interest rates (when
+  There exist levels of government debt that let fluctuating returns on government debt -- delivered either through flucutating interest rates (when
   preferences show risk-aversion in consumption) and also possibly through fluctuations generated by random payoffs in the single risky security
   that we allow the government to trade -- that give the government sufficient access to most of the risk-sharing that Lucas and Stokey stress as an important
   aspect of optimal taxation.  For a wide range of economies, government debt is drawn toward that level of government debt (or assets), albeit at
@@ -879,7 +875,7 @@ of private agents one to another.
 \item The automatic figure numbering isn't working.  Someone please look into it.
 \item The proofs of the lemmas should be included in the promised appendix.
 \item I have to write a concluding section and also polish and finish the introduction.
-%\item Please add references to Marcet, Scott and their coauthor(s); to Yeltekin, Sleet, Lustig, to BEGS1.
+\item Please add references to Marcet, Scott and their coauthor(s); to Yeltekin, Sleet, Lustig, to BEGS1.
 \item Add a short appendix on how Bellman equations were solved numerically. Pat selves on back for doing so and display
 some policy functions -- think of one or two things to do with those policy functions.
 \item Think of a couple of experiments that show off the policy function calculations.
