@@ -427,11 +427,11 @@ If the aggregate state process $s_t$ is i.i.d. then the `disarm-the-measurabilit
  \end{equation} which is independent of $s\_$.
 
  Equation \eqref{eqn:optPP} lets us depict an optimal payoff matrix as a function of initial government debt.  Figure \ref{fig:optP} plots the optimal payoff in both states of the world when either government expenditures or TFP follows a 2 state i.i.d. process. In both cases, we see that the ordering of the payoff flips on either side of zero government debt.
-\begin{figure}[ht]\label{fig:optP}
+\begin{figure}[ht]
 		\begin{center}
 		\includegraphics[scale=.35]{Images/p_graph_tfp.eps}
 		\includegraphics[scale=.35]{Images/p_graph.eps}
-		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d. process (left) and when government expenditures follow a 2 shock i.i.d process (right).}
+		\caption{Optimal asset payoff structure as a function of initial government debt when TFP follows a 2 shock i.i.d. process (left) and when government expenditures follow a 2 shock i.i.d process (right).\label{fig:optP}}
 	\end{center}	
 \end{figure}
 
@@ -528,10 +528,10 @@ debt under complete markets $\overline b$, or equivalently as $\tau$ approaches 
 		\end{remark}
 		We illustrate Proposition \ref{prop:ssexistence} in figure \ref{fig:noStable}.  The  blue curve is the inverse map $\bm p^{*-1}$.  Two constants $\alpha_1$ and $\alpha_2$ divide  possible payoff structures into three regions: one in which a steady state exists with the government holding assets,
 another in which  a steady state exists with the government owing debt, and yet another in which  where a steady state does not exist.
-		\begin{figure}[ht]\label{fig:noStable}
+		\begin{figure}[ht]
 		\begin{center}
 		\includegraphics[width=5.5in]{Images/graph_nostable.pdf}
-\caption{Three regions in $\bm{p}$ space.}
+\caption{Three regions in $\bm{p}$ space.\label{fig:noStable}}
 	\end{center}	
 	\end{figure}
 \subsection{Long Run Assets} \label{sec:David43}
@@ -596,17 +596,17 @@ can use  the continuity of $\mu'(\mu,s)$ to show that
 \begin{remark}  Figure \ref{fig:stable} illustrates  Theorem \ref{thm:convergence}.  In addition to depicting values of $\bm p$ for which a steady state exists, it  also highlights  regions where a steady state is stable. The theorem asserts  that there exist $\bm p$ for which a steady state exists
 but is unstable. % but economy will not converge to the steady state allocation in the long run.
 \end{remark}
-\begin{figure}[ht]\label{fig:stable}
+\begin{figure}[ht]
 		\begin{center}
 		\includegraphics[width = 5in]{Images/graph_stable.pdf}
-\caption{Stability regions in $\bm p$ space.}
+\caption{Stability regions in $\bm p$ space.\label{fig:stable}}
 	\end{center}	
 \end{figure}  An important aspect of this model is that small changes in primitives (specifically $\bm p$) can lead to major differences in long run allocations.  To illustrate this, in Figure \ref{fig:2ps_figure} we plot two sample paths where the only difference is the asset restriction $\bm p$.
-\begin{figure}\label{fig:2ps_figure}
+\begin{figure}
 	\begin{center}
 	\includegraphics[width=3in]{Images/port1.eps}
 	\includegraphics[width=3in]{Images/port2.eps}
-\caption{A sample path with $\bm p > 1$ (left)  $\bm{p} <1$ (right)}
+\caption{A sample path with $\bm p > 1$ (left)  $\bm{p} <1$ (right).\label{fig:2ps_figure}}
 	\end{center}	
 \end{figure}
 
@@ -695,6 +695,7 @@ the  optimal policy function that attain the right sides of these Bellman equati
 As for pillar 1, we approximate the value function $U, V$ by XXXXX and the policy rules by XXXXX.
 \tjs{David and Anmol XXXXX: please complete the above sentence and paragraph. Please add a remark or two foretelling some of the analysis to come. You can be brief.}
 
+\dge{We approached our analysis of Problem \ref{prob:RamseyBellman} from two directions: (1) a suite of \texttt{python} computer programs that solves Bellman equations \eqref{eqn:Bellman1} and \eqref{eqn:Bellman0}; and (2) mathematical analysis of the first order conditions satisfied by policy functions that solve these bellman equations.  For our computational approach we chose to solve the bellman equation via policy iteration on the first order conditions.  Appendix XXXXX details how we solve the problem by taking $V_x(x,s\_) = \tilde{\mu}$ as our state variable and approximating the the policy rule $x(\tilde \mu,s\_)$ with quadratic splines.\footnote{We have also solved the problem numerically using value function iteration.  We have found in our numerical expriments that policy function iteration provided more accurate and stable solution methods.}  As with the quasilinear section our analytical approach is limited to environments with a two state i.i.d. data generating process for the aggregate state.  Our numerical approach complements this by demonstrating that the intuition built up in the analytical section will apply to more general stochastic processes.}
 
 \subsection{Motivation to focus on risk-free bond economy\label{sec:riskfreeonly}}
 
@@ -800,10 +801,10 @@ Note that propositions \ref{prop:existenceU}  and \ref{prop:convergenceU} assume
  richer shock stochastic processes, in the sense that they converge to regions of low volatility.
 \end{remark}}
 Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of marginal utility weighted government debt resembles the path of government debt for the quasilinear economy with low $\bm p$ plotted earlier in Figure \ref{fig:2ps_figure}.
-\begin{figure}[ht]\label{fig:conv_RA}
+\begin{figure}[ht]
 	\begin{center}
 	\includegraphics[width=4in]{Images/2stateiid.eps}
-\caption{Sample path of $x_t$  for an economy with risk aversion and a 2 state i.i.d. process for \tjs{David: please say more about this economy -- is $g$ random or TFP?}}
+\caption{Sample path of $x_t$  for an economy with risk aversion and a 2 state i.i.d. process for TFP.\label{fig:conv_RA}}
 	\end{center}
 \end{figure}
 
@@ -865,7 +866,7 @@ toward explaining  the striking differences between the debt dynamics  in \citea
   that we allow the government to trade -- that give the government sufficient access to most of the risk-sharing that Lucas and Stokey stress as an important
   aspect of optimal taxation.  For a wide range of economies, government debt is drawn toward that level of government debt (or assets), albeit at
   a rate that can be very slow.  That slow rate of convergence that is possibly inherited from Barro's unit-root intuition.  
-  \tjs{Anmol and David XXXXX: this needs qualification and refinement}
+  \tjs{Anmol and David XXXXX: this needs qualification and refinement}\dge{  We should talk about this, speed of convergence (at least locally) we can show depends depends on the variation (both exogeneous and endogeneous)}
   
   That interest rate fluctuations are a mechanism allowing a fiscal authority to hedge risks is a theme that plays an important role in
    contributions by \citet{Faraglia2011}, \citet{BerndtLustigYeltekin}.  That avenue also is active in 
@@ -876,7 +877,7 @@ of private agents one to another.
 
 \tjs{David and Anmol XXXXX: some housekeeping things to do.
 \begin{itemize}
-\item The automatic figure numbering isn't working.  Someone please look into it.
+\item \st{The automatic figure numbering isn't working.  Someone please look into it.}\dge{We just needed to put the labels inside the captions}
 \item The proofs of the lemmas should be included in the promised appendix.
 \item I have to write a concluding section and also polish and finish the introduction.
 %\item Please add references to Marcet, Scott and their coauthor(s); to Yeltekin, Sleet, Lustig, to BEGS1.
