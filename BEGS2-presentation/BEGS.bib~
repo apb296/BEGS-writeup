@@ -1,6 +1,6 @@
 
 @Article{BerndtLustigYeltekin,
-  author={Antje Berndt and Hanno Lustig and andScedil;evin Yeltekin},
+  author={Antje Berndt and Hanno Lustig and and Sevnin Yeltekin},
   title={How Does the US Government Finance Fiscal Shocks?},
   journal={American Economic Journal: Macroeconomics},
   year=2012,
@@ -68,6 +68,7 @@
   title={Optimal fiscal policies in some economies with incomplete asset markets},
   author={Bhandari, Anmol  and Evans, David and Golosov, Mikhail and Sargent,Thomas},
   year={2013},
+  note={New York University and Princeton University}
   institution={New York University and Princeton University}
 }
 

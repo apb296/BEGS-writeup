@@ -9,6 +9,7 @@
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{epstopdf}
+\usepackage{hyperref}
 \usepackage{bm}
 \usepackage{soul}
 \usepackage{graphicx}
@@ -74,11 +75,11 @@
 
 
 \begin{abstract}  This paper characterizes tax and debt dynamics in Ramsey plans for incomplete markets economies that generalize
-an \citet{Aiyagari2002} economy by allowing the single asset traded by the government possibly to be risky rather than risk-free.  
-Long run debt and tax dynamics can be attracted  not only to the first-best continuation allocations discovered by \citeauthor{Aiyagari2002} but instead often
- to an allocation that is associated with a particular level or range of  levels of (marginal utility scaled) government debt prevailing in a Lucas-Stokey
-economy that starts from a particular initial level of government debt.  The paper formulates, analyzes, and numerically solves two Bellman equations
-that encode a recursive formulation of a Ramsey plan.
+an \citet{Aiyagari2002} economy by allowing a single asset traded by the government  to be risky.  
+Long run debt and tax dynamics can be attracted  not only to the first-best continuation allocations discovered by \citeauthor{Aiyagari2002} for quasi-linear preferences, but instead 
+ to a continuation allocation  associated with a level of (marginal-utility-scaled) government debt that would prevail in a Lucas-Stokey
+economy that starts from a particular initial level of government debt.  The paper formulates, analyzes, and numerically solves  Bellman equations
+for two value functions for a Ramsey planner, one for $t \geq 1$, the other for $t=0$.  
 
 
 
@@ -101,13 +102,13 @@ are optimal under uncertainty have an essential `insurance' aspect to them.'' \q
 
 
 Controversies sparked by  \citet{Reinhart2010} motivate us to reassess what we know and don't know about two elementary questions.
-What is an optimal  government debt? And  is government debt  even a pertinent state variable? % in a recursive formulation of a Ramsey problem?
+How much government debt is optimal? And  is government debt  even a pertinent state variable? % in a recursive formulation of a Ramsey problem?
 \citet{LucasJr.1983} and \citet{Aiyagari2002} offer  different answers to these two
-questions in the context of  economic environments that are identical in all respects but one: \citet{LucasJr.1983} allow the government to issue
-a complete set of Arrow securities, while   \citet{Aiyagari2002} allow the government to issue only a one-period risk-free government bond.  For
+questions in the context of  economic environments that are identical in all respects but one: \citet{LucasJr.1983} let the government to issue
+a complete set of Arrow securities, while   \citet{Aiyagari2002} restrict the government to issue only a one-period risk-free government bond.  For
 \citeauthor{LucasJr.1983}, under an optimal tax and debt policy,  government debt is not an independent state variable but instead is an exact function of
  the Markov state variable that  drives government expenditures.  In \citeauthor{LucasJr.1983}'s model, the optimal state-by-state levels 
- of government debt  depend on the initial
+ of government debt  depend on the initial level of
  government debt.  By way of contrast, for \citet{Aiyagari2002} government debt is an independent state variable with a limiting distribution
  that does not depend on the initial government debt.  The quote by \citeauthor{LucasJr.1983} pinpoints the source of these differences:
  the government's purchase of {\em insurance} from the private sector  through explicit state-contingent securities underlies \citeauthor{LucasJr.1983}'s
@@ -120,13 +121,13 @@ manages purchases and sales of that single security as best it can.  We study ho
 We use this generalization of \citeauthor{Aiyagari2002}'s setup to attack questions left unanswered by \citeauthor{Aiyagari2002}
 and also to say some new things about alternative ways that  the government purchases  insurance in an equilibrium of the original    \citet{LucasJr.1983}
 model. %For example, we provide an example in which  \citeauthor{LucasJr.1983} government chooses to issue only  a risk-free bond.  
-Our analysis exploits  new, or at least previously unstated, connections between the  and \citeauthor{Aiyagari2002} economies.
+Our analysis exploits  new, or at least previously unstated, connections between the   \citet{LucasJr.1983}  and \citeauthor{Aiyagari2002} economies.
 
 \citeauthor{Aiyagari2002} obtained their sharpest results for an economy with a quasi-linear one-period household  utility function.
  Linearity of utility in consumption tied down the risk-free one-period interest rate and enabled them to show  that in the long run 
  the government accumulates a big enough stock of the risk-free asset  to finance its expenditures entirely from interest earnings; 
  so the tail of that \citeauthor{Aiyagari2002}  Ramsey plan features a zero distorting tax on labor and a first-best allocation.
-\citeauthor{Aiyagari2002} were able to say much less about outcomes for  preferences that exhibit risk-aversion in consumption because then the Lagrange multiplier
+\citeauthor{Aiyagari2002} are able to say much less about outcomes for  preferences that exhibit risk-aversion in consumption because then the Lagrange multiplier
 on the key incomplete markets implementability constraint becomes a risk-adjusted martingale rather than the pure martingale that it is under quasi-linearity. 
 Here we are able to say much more  than \citeauthor{Aiyagari2002}. We accomplish this by recognizing connections to limits of (our generalization of)
 their economy and the allocation associated with a \citeauthor{LucasJr.1983} economy for a particular initial level of government debt.
@@ -142,22 +143,23 @@ fluctuations in
  equilibrium interest rates do part of the job.  We can construct examples in which the Lucas-Stokey Ramsey planner chooses to issue risk-free debt and to
  achieve the required state-contingencies entirely through equilibrium fluctuations in the risk-free  interest rate.
 
+ It is enlightening to compare our work  with related but conceptually distinct  inquiries of \citet{Angeletos}, \citet{Buera_Nicolini}, and \citet{Shin2007},
+ who, like us,   want to understand  links among the design of  government securities, interest rate fluctuations,  and an optimal tax and 
+debt management plan.  
 Our basic strategy is first to find the tail of an   incomplete markets Ramsey allocation, 
 then to ask whether that continuation allocation coincides with a Lucas-Stokey complete markets Ramsey allocation for {\em some} initial government debt. 
 We describe conditions under which the
 answer is `yes' or `almost yes'.
 
-The structure of our analysis is related to but differs from conceptually distinct  inquiries of \citet{Angeletos}, \citet{Buera_Nicolini}, and \citet{Shin2007}.
-Like us, they  want to understand the link among the design of  government securities, interest rate fluctuations,  and an optimal tax and 
-debt management plan. Unlike us, they  {\em start} with a Lucas-Stokey complete market  
+ Unlike us, \citet{Angeletos}, \citet{Buera_Nicolini}, and \citet{Shin2007} all  {\em start} with a Lucas-Stokey complete market  
 Ramsey allocation
 and then construct conditions under which it  can be supported by  a limited  collection of non-contingent debts of different maturities.\footnote{In contrast,
 we {\em start} with an incomplete markets Ramsey allocation.}
 Equilibrium interest rate fluctuations
-let state-contingent returns help.
+play a big role in their settings, as they do in some of ours.  
 
 In addition to the intrinsic interest adhering to the two questions with which we began, this paper can be viewed as
-a prolegomenon to an analysis of debt dynamics in the richer   economic environment featured in \citet{BEGS1}.  There
+a prolegomenon to an analysis of debt dynamics in the richer   economic environment featured in \citet{BEGS1}.  There,
 a Ramsey planner levies a distorting tax on labor partly to finance exogenous government  and partly to redistribute goods among heterogeneously skilled households.
 Forces similar to those present in the simpler environment of this paper drive debt dynamics there,  but those forces are obscured by the presence of
 additional ones.  We find it enlightening to isolate underlying forces by studying them in the  simpler setting of this paper.
@@ -710,7 +712,7 @@ we solved the Bellman equations via policy iteration on  first-order conditions.
 and approximate the optimal policy  $x(\tilde \mu,s\_)$ with quadratic splines.\footnote{We also solved the
 problem numerically using value function iteration.  Numerical expriments showed that policy function iteration provided more accurate and stable solutions.} 
 As with the quasilinear section, our analytical approach is confined to environments with a two state i.i.d. process for  the aggregate state $s_t$. 
-We use our numerically computed optimal policy functions to confirm that  intuition  acquired from our formal mathematical analysis of the two-state, i.i.d.\ process 
+We use our numerically computed optimal policy functions to confirm that much  of the  intuition  acquired from our formal mathematical analysis of the two-state, i.i.d.\ process 
 extends to  general stochastic processes for $s_t$.
 
 \subsection{Motivation to focus on risk-free bond economy\label{sec:riskfreeonly}}
@@ -785,7 +787,9 @@ Eliminating  $q_{fb}$, equation \eqref{eqn:prop52sufficient} can expressed as
 	\item For $x\in(x^*,\overline x]$, $x'(x,s_g) < x'(x,s_b)$
 	\item  For $x\in[\underline x, x^*)$, $x'(x,s_g) > x'(x,s_b)$
 \end{enumerate}  Furthermore, $x'(x,\cdot)$ is increasing in $x$.
-\end{lemma}  Property 1 states that if government debt exceeds its steady state value, then the government issues more debt in bad states of the world than in good states of the world.  Property 2 states that if government debt is smaller than its  steady state amount, then the government has accumulated enough assets\footnote{Remember that  in the steady state, the government  owns a positive amount of the risk-free asset.} such that the lower interest rate in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.   The last part of the lemma guarantees that if the government enters with more debt, it will pass on more debt to future periods.  We can now prove global convergence. We will focus on the case where $x_t \geq x^*$, since the analysis of the other case is symmetric. Since $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
+\end{lemma}  Property 1 states that if government debt exceeds its steady state value, then the government issues more debt in bad states of the world than in good states of the world.  Property 2 states that if government debt is smaller than its  steady state amount, then the government 
+has accumulated enough assets that 
+the lower interest rate in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.\footnote{Remember that  in the steady state, the government  owns a positive amount of the risk-free asset.}     The last part of the lemma guarantees that if the government enters with more debt, it will pass on more debt to future periods.  We can now prove global convergence. We will focus on the case where $x_t \geq x^*$, since the analysis of the other case is symmetric. Since $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
 implementability constraint and $\overline \lambda_t$ be the multiplier on the constraint $x_t \leq \overline x$, we have
 \[
 	 \mu_t = \frac{1}{\EE_t[c_{t+1}^{-\sigma}]}\EE_t[\mu_{t+1}c_{t+1}^{-\sigma}] -\overline \lambda_t
@@ -845,20 +849,23 @@ Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of mar
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=4in]{Images/transfer_example2.eps}
-\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers\label{fig:nonnegative_transfers}}
+\caption{Government  debt for two otherwise identical economies with quasilinear preferences and a risk-free bond, one economy   with nonnegative transfers, the other with zero transfers.\label{fig:nonnegative_transfers}}
 	\end{center}
 \end{figure}
 % \tjs{David: let's write a tentative version of this section together. We can coordinate by phone or skype or in person.
 % Add BS about AMSS and what transfers did for them. Write front end of this section -- good low-skill job for Tom.}
-	Figure \ref{fig:nonnegative_transfers} compares simulatons for two economies identical in all respects except that one allows the government to award nonnegative lump-sum 
-	transfers, while the other doesn't. \tjs{David XXXXX: please tell the details of the economy here -- i.e., preferences and the $s_t$ process.}
+	Figure \ref{fig:nonnegative_transfers} compares simulatons of Ramsey plans for two economies identical in all respects except that one allows the government to award nonnegative lump-sum 
+	transfers, while the other doesn't.  
+	In both economies, a 2 state i.i.d. shock impinges on  government expenditures, but not on TFP and the one-period utility function is  quasilinear.
 	With government access to nonnegative lump-sum transfers, it is easy to very that  there exists  
 	a fixed level  level of positive government assets constituting a  ``steady state'' that is associated with a first-best continuation allocation.
 	With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level, 
-	outcomes   converge with probability 1 to the steady state. Thus, counterparts to our earlier prevail  when
-initial government debt exceeds its steady state value.  When initial government debt is less than a steady-state value, then
-\tjs{David: let's have a brief in-person or skype conversation in which we can say something about what is known or what is unknown. Also, point to and interpret the two paths in 
-the figure.}
+	outcomes   converge with probability 1 to the steady state. Thus, counterparts to our earlier results prevail  when
+initial government debt exceeds its steady state value.  When initial government debt is less than a steady-state value, then we know  much less.
+\footnote{In this case, the multiplier on the measureability constraint is a sub martingale, a property that we hope will eventually tell us more if we listen
+carefully enough.}  Some simulated sample
+paths converge to continuation allocations that are first-best, while others seem to converge to continuation allocations associated with Lucas-Stokey Ramsey allocations
+for some initial government debt level.  
 
 
 
@@ -890,7 +897,7 @@ toward explaining  the striking differences between the debt dynamics  in \citea
   aspect of optimal taxation.  For a wide range of economies,  equilibrium dynamics draw government debt  (or assets)  toward that level, albeit at
   a rate that can be very slow.  That slow rate of convergence that is possibly a descendant of  Barro's unit-root intuition.  
  In appendix \ref{sec:app_convergence}, we present an analysis of the rate of convergence that reveals how it depends on the amounts of endogenous and exogenous variability
- in equilibrium outcomes of \tjs{XXXXX David -- say variability in {\em what}.}
+ in equilibrium outcomes of \dge{government bonds.\footnote{Given were the paper is now I believe this is the best choice.}}
  % analyze that rate of convergence in appendix GGGGG.  
 %   \tjs{Anmol and David XXXXX: this needs qualification and refinement}\dge{  We should talk about this, speed of convergence (at least locally
 %   ) we can show depends depends on the variation (both exogeneous and endogeneous)}

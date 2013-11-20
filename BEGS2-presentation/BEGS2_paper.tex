@@ -1,3 +1,7 @@
+% DAVID AND ANMOL: IMPORTANT THING TO ADD.  DAVID'S REFINEMENT OF LOCAL VERSUS GLOBAL OF STEADY STATES.  PUT THIS IN AS A REFINEMENT OF THE ``PHILLIPON'' INTUITION SECTION AND 
+% LINK TO ALBENESI AND ARMENTER.
+
+
 \documentclass[12pt]{article}
 
 
@@ -712,7 +716,7 @@ we solved the Bellman equations via policy iteration on  first-order conditions.
 and approximate the optimal policy  $x(\tilde \mu,s\_)$ with quadratic splines.\footnote{We also solved the
 problem numerically using value function iteration.  Numerical expriments showed that policy function iteration provided more accurate and stable solutions.} 
 As with the quasilinear section, our analytical approach is confined to environments with a two state i.i.d. process for  the aggregate state $s_t$. 
-We use our numerically computed optimal policy functions to confirm that  intuition  acquired from our formal mathematical analysis of the two-state, i.i.d.\ process 
+We use our numerically computed optimal policy functions to confirm that much  of the  intuition  acquired from our formal mathematical analysis of the two-state, i.i.d.\ process 
 extends to  general stochastic processes for $s_t$.
 
 \subsection{Motivation to focus on risk-free bond economy\label{sec:riskfreeonly}}
@@ -787,7 +791,9 @@ Eliminating  $q_{fb}$, equation \eqref{eqn:prop52sufficient} can expressed as
 	\item For $x\in(x^*,\overline x]$, $x'(x,s_g) < x'(x,s_b)$
 	\item  For $x\in[\underline x, x^*)$, $x'(x,s_g) > x'(x,s_b)$
 \end{enumerate}  Furthermore, $x'(x,\cdot)$ is increasing in $x$.
-\end{lemma}  Property 1 states that if government debt exceeds its steady state value, then the government issues more debt in bad states of the world than in good states of the world.  Property 2 states that if government debt is smaller than its  steady state amount, then the government has accumulated enough assets\footnote{Remember that  in the steady state, the government  owns a positive amount of the risk-free asset.} such that the lower interest rate in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.   The last part of the lemma guarantees that if the government enters with more debt, it will pass on more debt to future periods.  We can now prove global convergence. We will focus on the case where $x_t \geq x^*$, since the analysis of the other case is symmetric. Since $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
+\end{lemma}  Property 1 states that if government debt exceeds its steady state value, then the government issues more debt in bad states of the world than in good states of the world.  Property 2 states that if government debt is smaller than its  steady state amount, then the government 
+has accumulated enough assets that 
+the lower interest rate in the ``adverse'' state of the world allow it to purchase more assets (issue less debt) than in the ``good'' states of the world.\footnote{Remember that  in the steady state, the government  owns a positive amount of the risk-free asset.}     The last part of the lemma guarantees that if the government enters with more debt, it will pass on more debt to future periods.  We can now prove global convergence. We will focus on the case where $x_t \geq x^*$, since the analysis of the other case is symmetric. Since $x'(x,\cdot)$ is increasing in $x$, we can iterate the policy functions forward to conclude that $x_{t+j} > x^*$ for all $j$ as long as $x_t >x ^*$.  Letting $\mu_t = V'(x_t)$ be the multiplier on the
 implementability constraint and $\overline \lambda_t$ be the multiplier on the constraint $x_t \leq \overline x$, we have
 \[
 	 \mu_t = \frac{1}{\EE_t[c_{t+1}^{-\sigma}]}\EE_t[\mu_{t+1}c_{t+1}^{-\sigma}] -\overline \lambda_t
@@ -847,20 +853,26 @@ Figure \ref{fig:conv_RA} plots a simulation of the Ramsey plan.  The path of mar
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=4in]{Images/transfer_example2.eps}
-\caption{Quasilinear preferences and risk-free bond  with and without nonnegative transfers\label{fig:nonnegative_transfers}}
+\caption{Government  debt for two otherwise identical economies with quasilinear preferences and a risk-free bond, one economy   with nonnegative transfers, the other with zero transfers.\label{fig:nonnegative_transfers}}
 	\end{center}
 \end{figure}
 % \tjs{David: let's write a tentative version of this section together. We can coordinate by phone or skype or in person.
 % Add BS about AMSS and what transfers did for them. Write front end of this section -- good low-skill job for Tom.}
-	Figure \ref{fig:nonnegative_transfers} compares simulatons for two economies identical in all respects except that one allows the government to award nonnegative lump-sum 
-	transfers, while the other doesn't.  \dge{The paths in Figure \ref{fig:nonnegative_transfers} were generated via solutions to a Ramsey problem with 2 state i.i.d government expenditure shocks and quasilinear preferences over consumption and leisure.}
+	Figure \ref{fig:nonnegative_transfers} compares simulatons of Ramsey plans for two economies identical in all respects except that one allows the government to award nonnegative lump-sum 
+	transfers, while the other doesn't.  
+	In both economies, a 2 state i.i.d. shock impinges on  government expenditures, but not on TFP and the one-period utility function is  quasilinear.
 	With government access to nonnegative lump-sum transfers, it is easy to very that  there exists  
 	a fixed level  level of positive government assets constituting a  ``steady state'' that is associated with a first-best continuation allocation.
 	With nonnegative lump sum transfers,  in cases where a steady state exists and is stable,  if the initial debt of the government exceeds its steady state level, 
-	outcomes   converge with probability 1 to the steady state. Thus, counterparts to our earlier prevail  when
-initial government debt exceeds its steady state value.  When initial government debt is less than a steady-state value, then
-\tjs{David: let's have a brief in-person or skype conversation in which we can say something about what is known or what is unknown. Also, point to and interpret the two paths in 
-the figure.}
+	outcomes   converge with probability 1 to the steady state. Thus, counterparts to our earlier results prevail  when
+initial government debt exceeds its steady state value.  When initial government debt is less than a steady-state value, then we know  somewhat  less, but still something useful
+In this case, the multiplier on the measureability constraint is a bounded sub martingale that therefore converges with probability one.  
+A limit point is associated with a continuation allocation that is either (1) a first-best allocation, or (2) a
+ continuation allocation associated with Lucas-Stokey Ramsey allocations
+for some initial government debt level. We have constructed simulations  of Ramsey plans, all of which display one or the other of these types of limiting behavior.
+We hope eventually  to figure out more about the features of an economy that determine how much of 
+an erogdic distribution is concentrated on those two types of continuation allocations. 
+\tjs{David XXXXX: please check the preceding paragraph.}
 
 
 
@@ -891,8 +903,8 @@ toward explaining  the striking differences between the debt dynamics  in \citea
   that we allow the government to trade -- that give the government sufficient access to most of the risk-sharing that Lucas and Stokey stress as an important
   aspect of optimal taxation.  For a wide range of economies,  equilibrium dynamics draw government debt  (or assets)  toward that level, albeit at
   a rate that can be very slow.  That slow rate of convergence that is possibly a descendant of  Barro's unit-root intuition.  
- In appendix \ref{sec:app_convergence}, we present an analysis of the rate of convergence that reveals how it depends on the amounts of endogenous and exogenous variability
- in equilibrium outcomes of \dge{government bonds.\footnote{Given were the paper is now I believe this is the best choice.}}
+ In appendix \ref{sec:app_convergence}, we present an analysis of the rate of convergence that reveals how it depends on the variability
+ of equilibrium returns on government bonds.\footnote{Given were the paper is now I believe this is the best choice.}}
  % analyze that rate of convergence in appendix GGGGG.  
 %   \tjs{Anmol and David XXXXX: this needs qualification and refinement}\dge{  We should talk about this, speed of convergence (at least locally
 %   ) we can show depends depends on the variation (both exogeneous and endogeneous)}
@@ -901,9 +913,9 @@ toward explaining  the striking differences between the debt dynamics  in \citea
    contributions by \citet{Faraglia2011}, \citet{BerndtLustigYeltekin}.  A related  avenue  is also active in 
 \citet{BEGS1}, though what matters there are not government debt dynamics themselves but rather the dynamics of the debt positions
 of private agents relative  one to another.  
-
-\tjs{David and Tom XXXXX: let's brainstorm about how to compose some provocative speculative remarks about how we can interpret some of our findings in terms of foreseen
-`sovereign defaults'}
+% 
+% \tjs{David and Tom XXXXX: let's brainstorm about how to compose some provocative speculative remarks about how we can interpret some of our findings in terms of foreseen
+% `sovereign defaults'}
 
 % 
 % \tjs{David and Anmol XXXXX: some housekeeping things to do.
@@ -928,9 +940,9 @@ of private agents relative  one to another.
  
 \end{appendix}
 
-
-\tjs{David and Anmol XXXXX: please fiddle with the mynat.bst file to show more information for unpublished manuscripts -- e.g., the institution, or
-else add a \note{ } in the bibliography items so that they will display.  Thanks. }
+% 
+% \tjs{David and Anmol XXXXX: please fiddle with the mynat.bst file to show more information for unpublished manuscripts -- e.g., the institution, or
+% else add a \note{ } in the bibliography items so that they will display.  Thanks. }
 
 
 \bibliography{BEGS}
