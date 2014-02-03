@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{fullpage}
+\newcommand{\dd}{\displaystyle}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\LL}{\mathbb L}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\MM}{\mathbb M}
+\newcommand{\KK}{\mathbb K}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\Pin}{P_{\text{in}}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\cP}{{\cal P}}
+\newcommand{\bB}{\mathbf B}
+\newcommand{\bM}{\mathbf M}
+\newcommand{\bS}{\mathbf S}
+\newcommand{\phis}{\varphi}
+\newcommand{\barphis}{\overline\phis}
+\newcommand{\bmat}{\begin{matrix}}
+\newcommand{\emat}{\end{matrix}}
+\newcommand{\se}{\text{se}}
+\newcommand{\daga}{a^\dagger}
+\newcommand{\devides}{\bigl |}
+\newcommand{\eval}{\biggl |}
+\newcommand{\ybar}{\overline y}
+\newcommand{\bWhat}{\hat{\mathbf W}}
+\newcommand{\bW}{\mathbf W}
+\newcommand{\bz}{\mathbf z}
+\newcommand{\bs}{\mathbf s}
+\newcommand{\rightas}{\stackrel{a.s.}{\rightarrow}}
+\newcommand{\rightp}{\stackrel{p}{\rightarrow}}
+\newcommand{\rightd}{\stackrel{d}{\rightarrow}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\bI}{\mathbf I}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Characterizing the Ergodic Distribution with Risky Debt}
+\date{}
+
+\begin{document}
+\maketitle
+\section{The Problem}
+We wish to solve the following optimal planning problem with risky debt.  We assume that there are $s = 1,\ldots,S$ aggregate states of the world with Markov transition matrix $\Pi$.  For now we assume that the Markov transition matrix is i.i.d.  Each state of the words $s$ is associated with the exogenous government expenditure $g_s$ and a payoff for government debt $p_s$.  With the normalization $\EE p = 1$.  The planning problem can then be written recursively as 
+\[
+	V(b) = \max_{c(s),l(s),b'(s)}\sum_s \Pi(s)\left[ c(s) - \frac{l(s)^{1+\gamma}}{1+\gamma}+ \beta V(b'(s)) \right]
+\]subject to the constraints
+\begin{subequations}
+\begin{align}\label{eq.imp}
+	c(s) - l(s)^{1+\gamma}  + b'(s)  = \frac{p_s b}{\beta}\\
+	c(s) + g_s  \leq l(s)\label{eq.res}
+\end{align}
+\end{subequations} Note that equation \eqref{eq.imp} being an equality constraint implies that we are ruling out transfers for now.  We will also assume that if $s'\neq s''$ then $p_{s'}\neq p_{s''}$.
+\subsection{Debt Limits}
+In addition to constraints in equations (\ref{eq.imp}-\ref{eq.res}) we place upper and lower bounds on the level of government debt.  The lower limit to government debt is chosen to be the natural debt limit.  As noted before the largest tax rate the government will implement is $\tau = \frac{\gamma}{1+\gamma}$ (as any higher tax rate will reduce government revenue).  This leads to the natural debt limit being 
+\begin{equation}
+	\overline b = \min_{s}\left(\frac{p_s}{\beta}-1\right)^{-1}\left(\left(\frac1{1+\gamma}\right)^\frac1\gamma\frac\gamma{1+\gamma} - g_s\right)
+\end{equation}
+
+For now we will choose an arbitrary lower limit on government debt $\underline b$
+\subsection{First Order Conditions}
+We have already shown that under an appropriate change of variables the problem is concave so $V(b)$ is a concave function.  Letting $\underline \lambda$ being the Lagrange multiplier on the constraint $\underline b \leq b'(s)$ the first order conditions associated with our problem are
+\begin{align}
+	1-\mu(s)-\xi(s) = 0\label{eq.foc1}\\
+	\xi(s) +((1+\gamma)\mu(s)-1)l(s)^\gamma  = 0\label{eq.foc2}\\
+	\beta V'(b(s)) - \mu(s) +\underline \lambda(s) = 0\label{eq.foc3}
+\end{align}Combining with the envelope condition 
+\[
+	V'(b) = \sum_s\Pi(s)p_s\mu(s)/\beta
+\] we have the martingale condition
+\begin{equation}\label{eq.mart}
+	\mu_t = \EE_t p_{t+1}\mu_{t+1}+\underline{\lambda}_t
+\end{equation}  The inequality in the resource constraint implies that $\xi(s)\geq 0$ implying that $\mu(s) \leq 1$.  With some minor algebra algebra we obtain
+\[
+	l(s)^\gamma = \frac{\mu(s)-1}{(1+\gamma)\mu(s) - 1} = 1-\tau(\mu(s))
+\]implying the relationship between tax rate $\tau$ and multiplier $\mu$ given by
+\begin{equation}\label{eq.tau}
+	\tau(\mu) = \frac{\gamma\mu}{(1+\gamma)\mu-1}
+\end{equation}  We quickly see that $\lim_{\mu\rightarrow \frac{1}{1+\gamma}} \tau(\mu) = -\infty$ and $\lim_{\mu\rightarrow-\infty} \tau(\mu) = \frac{\gamma}{1+\gamma}$ implying that $\mu(s)\in (-\infty,\frac1{1+\gamma}]$ so $\xi(s) > 0$ for all $b$ and the resource constraint, equation \eqref{eq.res}, can be assumed to hold with strict equality.
+
+We should also note that the labor choice is entirely determined by the multiplier on the implementability constraint
+\begin{equation}\label{eq.l_mu}
+	l(\mu) = \left(\frac{\mu-1}{(1+\gamma)\mu - 1}\right)^\frac1\gamma
+\end{equation} and consumption is then
+\[
+	c_s(\mu) = l(\mu) - g_s
+\]  The government surplus 
+\begin{equation}\label{eq.S}
+	S_s(\mu) = c(\mu) -l(\mu)^{1+\gamma}= l(\mu)-l(\mu)^{1+\gamma} - g_s
+\end{equation} can be shown to be decreasing in $\mu$ for $\mu\in(-\infty,\frac1{1+\gamma}]$
+\subsection{Drift Away from Bonds}
+From Mike's notes we know that under the correct change of variables the problem can be written as maximizing a linear objective function over a convex set.  He is then able to show that the value function $V(b)$ is concave and the policy functions are continuous.  In this first section we will show that there exists $b_1$, and if $p$ is sufficiently volatile a $b_2$, such that if $b_t\leq b_1$ then 
+\[
+	\mu_t \geq \EE_t \mu_{t+1}
+\] and if $b_t \geq b_2$ then
+\[
+	\mu_t \leq \EE_t \mu_{t+1}.
+\]  Recall that $b$ is decreasing in $\mu$, so this implies that if $b_t$ is low (large) enough then there will exist a drift away from the lower (upper) limit of government debt.
+\begin{lemma}  Let $\mu(b,s)$ be the optimal policy function for the Lagrange multiplier $\mu(s)$.  If $p_{s'} > p_{s''}$ then there exists a $b^*_{s',s''}$ such that for all $b < (>) \; b_{1,s',s''}$ we have $\mu(b,s') > (<) \;\mu(b,s'')$.  If $\underline b < b^*_{s',s''} < \overline b$ then $\mu(b^*_{s',s''},s') = \mu(b^*_{s',s''},s'')$.
+\label{lem.order}
+\end{lemma}
+\begin{proof} 
+Suppose that $\mu(b,s')\leq \mu(b,s'')$.  Subtracting the implementability for $s''$ from the implementability constraint for $s'$ we have 
+\begin{align*}
+	\frac{p_{s'}-p_{s''}}{\beta}b &= S_{s'}(\mu(b,s'))-S_{s''}(\mu(b,s'')) + b'(b,s')-b'(b,s'')\\
+						&\geq S_{s'}(\mu(b,s')) -S_{s''}(\mu(b,s')) + b'(b,s')-b'(b,s'')\\
+						&\geq  S_{s'}(\mu(b,s')) -S_{s''}(\mu(b,s')) = g_{s''}-g_{s'}
+\end{align*}  We get the first inequality from noting that $S_s(\mu')\geq S_s(\mu'')$ if $\mu' \leq \mu''$.  We obtain the second inequality by noting that $\mu(b,s')\leq \mu(b,s'')$ implies $b'(b,s')\leq b'(b,s'')$ (which comes directly from equation \eqref{eq.foc3} and concavity of $V$).  Thus, $\mu(b,s')\leq \mu(b,s'')$ implies that 
+\[
+	b \geq \frac{\beta(g_{s''}-g_{s'})}{p_{s'}-p_{s''}} = b^*_{s',s''}
+\]The converse of this statement is that if $b<b^*_{s',s''}$ then $\mu(b,s') > \mu(b,s'')$.  The reverse statement that $\mu(b,s') \geq \mu(b,s'')$ implies $b \leq b^*_{s,s'}$ follows by symmetry.   Again, the converse implies that if $b > b^*_{s',s''}$ then $\mu(b,s') < \mu(b,s'')$.    Finally, if $\underline b < b^*_{s',s''} <\overline b$ then continuity of the policy functions implies that there must exist a root of $\mu(b,s')-\mu(b,s'')$ and that root can only be at $b^*_{s',s''}$.
+\end{proof}
+
+With Lemma \ref{lem.order} we can order the policy functions $\mu(b,\cdot)$ for particular regions of the state space.  Take $b_1$ to be
+\[
+	b_1 = \min\left\{b^*_{s',s''}\right\}
+\] and WLOG choose $\underline b < b_1$.  For all $b < b_1$ we have shown that $p_s > p_{s'}$ implies that $\mu(b,s) > \mu(b,s')$.  By decomposing $\EE \mu_{t+1}p_{t+1}$ in equation \eqref{eq.mart}, we obtain (using $\EE_t p_{t+1} = 1$)
+\begin{equation}
+	\mu_t = \EE\mu_{t+1} +\cov_t(\mu_{t+1},p_{t+1}) + \underline \lambda_t
+\end{equation}Our analysis has just shown that for $b_t < b_1$ we have $\cov_t (\mu_{t+1},p_{t+1})  >0$ so 
+\[
+	\mu_t > \EE_t\mu_{t+1}.
+\]  If $p$ is sufficiently volatile:
+\[
+	p_{s'} - p_{s''} > \frac{\beta(g_{s''}-g_{s'})}{\overline b}
+\] then 
+\[
+	b_2 = \max\left\{b^*_{s',s''}\right\} <\overline b
+\] and through a similar argument  we can conclude that $\cov_t(\mu_{t+1},p_{t+1}) < 0$ 
+\[
+	\mu_t < \EE_t \mu_{t+1}
+\] for $b_t > b_2$ (note $b_t >\underline b$ implies $\underline \lambda_t =0$) which gives us a drift away from the upper-bound. 
+\subsection{Steady States}  Generically there do not exist steady state for arbitrary $p$ if there are more than 2 government expenditure states.  There do exist payoff structures where a steady state does exist.  Specifically let
+\[
+	p^\alpha_s = 1 + \alpha(g_s - \EE g)
+\]It is straightforward to show that $b^*_{s',s} = \frac\beta\alpha$, which implies all policy rules cross at the same level of government debt
+\subsection{Drift Away from Lower bound on Debt}
+Our first goal is to prove that the economy will drift away from the lower bound on government debt.  That is we want to show that there exists $b_1 > \underline b$  such that if $b_t\leq b_1$ then 
+\[
+\mu_t \geq \EE_t \mu_{t+1}
+\]
+\begin{lemma}
+Let $\mu(b,s)$ be the optimal policy function for $\mu$ as a function of the debt level.  Suppose $\mu(b,s') = 0$ for some $b < 0$ and $p_{s''}  > p_{s'}$ for some $s''$ then $\mu(b,s'') = 0$
+\end{lemma}
+\begin{proof}
+Suppose that $\mu(b,s') = 0$ then, as $V'(b) > 0$, we conclude that $\underline \lambda(b,s') >0$ and thus $b'(b,s') = \underline b$.  This combined with the implementability constraint implies
+\[
+	-g +\underline b \geq \frac{b p_{s'}}{\beta} > \frac{b p_{s''}}{\beta}
+\]The last part of the above equation implies that the implementability constraint must be slack in state $s''$ and thus $\mu(b,s'') = 0$.
+\end{proof}  The idea here is that if implementability constraint is slack for some $p_{s'}$ then it will be slack for all $p_{s''} > p_{s'}$.  For the purpose of clarity we will assume that there is an $s'$ such that $p_{s'} < p_{s''}$ for all $s''$.
+\begin{proposition}  Suppose there exists an $s'$ such that $p_{s'} < p_{s''}$ for all $s''$.  Then there exists $b^* < 0$ such that $\mu(b,s'') = 0$ for all $s'' \neq s'$ and $\mu(b, s') >0$ for all $b  < b^*$ 
+\end{proposition}
+\begin{proof}  Choose $b^*$ to satisfy the following equation
+\[
+	b^* = \min\left\{\beta\frac{\underline b-g}{p_{s''}}\biggl|s'' \neq s'\right\}
+\] Note that $b^* > b^{fb}$  thus we can choose $\epsilon >0$ such that $b^{fb} < \underline b < b^*$.  For $b \leq b^*$ and $s''\neq s'$ we have
+\[
+	-g + \underline b \geq \frac{b p_{s''}}{\beta}
+\] implying that the implementability constraint is slack, and thus, $\mu(b,s'') = 0$ for $b \leq b^*$.
+\end{proof}  From proposition 1, we have that for $b \leq b^*$ $\mu(b,s'') = 0$ for $s'' \neq s'$ and $\mu(b,s') < 0$.  When combined with $p_{s'} < p_{s''}$ for all $s''$ we can conclude that $\cov_t(\mu_{t+1},p_{t+1}) > 0$ for all $b_t < b^*$.  Expanding the martingale equation, equation \eqref{eq.mart}, we have
+\[
+	\mu_t = \EE_t\mu_{t+1} +\cov_t(\mu_{t+1},p_{t+1}) +\underline \lambda_t
+\]This implies that 
+\[
+	\mu_t \geq \EE_t\mu_{t+1}
+\]for all $\underline b\leq b\leq b^*$ as $\cov_t(\mu_{t+1},p_{t+1})$ and $\underline \lambda_t$ are both positive. 
+
+The intuition for what is going on here is that as we approach the lower bound for $b$ taxes approach zero.  This implies that government surplus minus taxation revenue will be equalized across states.  The tightness of the implementability constraint will then entirely determined by the payments on the debt $\frac{p_s b}{\beta}$.  Since the government is holding claims to consumption this implies that states with higher payoffs will be less tight (higher $\mu$) than states with lower payoffs.  This induces a positive covariance between the multiplier on the implementability constraint and the payoffs on government debt.
+
+
+\end{document}  
