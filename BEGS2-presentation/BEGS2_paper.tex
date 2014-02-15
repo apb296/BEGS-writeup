@@ -58,6 +58,8 @@
 %\newtheorem{solution}[theorem]{Solution}
 %\newtheorem{summary}[theorem]{Summary}
 \newtheorem{thm}[theorem]{Theorem}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
 
 
 
@@ -505,9 +507,9 @@ such that
 at a constant tax rate $\tau$ would be
 \begin{equation}\label{eqn:tax_to_debt}
 	\frac\beta{1-\beta} \sum_s \Pi(s) S(s,\tau),
-\end{equation}which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em incomplete} markets is then
+\end{equation}which is an increasing function of $\tau$.  The maximal initial government debt sustainable with {\em complete} markets is then
 \[
-	\overline b = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the equation \eqref{eqn:tax_to_debt} mapping   from the tax rate into government debt gives us a function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b]$, with $\tau((-\infty,\overline{b}]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
+	\overline b^n = \frac1{1-\beta} \sum_s \Pi(s)\theta(s)^\frac\gamma{1+\gamma}\left(\frac{1}{1+\gamma}\right)^\frac1\gamma\frac{\gamma}{1+\gamma} - g(s) .\] Inverting the equation \eqref{eqn:tax_to_debt} mapping   from the tax rate into government debt gives us a function $\tau(b)$ that maps initial government debt into an optimal tax rate. The function $\tau(b)$ is an increasing function of $b$ on the domain of possible complete markets initial debts $(-\infty,\overline b^n]$, with $\tau((-\infty,\overline{b}^n]) = \left(-\infty,\frac\gamma{1+\gamma}\right]$.
 
 
 Substituting the formula for $S(s,\tau)$ into equation \eqref{eqn:optPP}, we obtain
@@ -522,7 +524,7 @@ Substituting the formula for $S(s,\tau)$ into equation \eqref{eqn:optPP}, we obt
 	\frac{d}{d\tau} \bm p^*(\tau) = (1-\beta)(1-\tau)^{\frac1\gamma-1}\left[\gamma-(1+\gamma)\tau\right]\frac{g_1\EE\theta^\frac{\gamma}{1+\gamma}-\theta_1^\frac\gamma{1+\gamma}\EE g }{(\EE\theta^\frac\gamma{1+\gamma}(1-\tau)^\frac1\gamma\tau-\EE g)^2} <0,
 \] implying that $\bm p^*(b)$ is decreasing in $b$. Since  $b =0$ implies that $\EE S(\tau(b)) =0$, the function function $\bm p^*(b)$ has a pole at $b = 0$.  That $\bm p^*(b)$ decreasing in $b$ must therefore imply that $\lim_{b\rightarrow0^{-} } \bm p^*(b) = -\infty$ and $\lim_{b\rightarrow 0^+} \bm p^*(b) = \infty$.  We conclude that
 \[
-	\bm p^*((-\infty,\overline b]) = \bm p^*((-\infty,0))\cup \bm p^*((0,\overline b]) = (-\infty,\alpha_1)\cup[\alpha_2,\infty).
+	\bm p^*((-\infty,\overline b^n]) = \bm p^*((-\infty,0))\cup \bm p^*((0,\overline b]) = (-\infty,\alpha_1)\cup[\alpha_2,\infty).
 \] We compute the bounds $\alpha_1$ and $\alpha_2$ by taking the limits of $\bm p^*$ as $b$ approaches $-\infty$ and the upper bound for government
 debt under complete markets $\overline b$, or equivalently as $\tau$ approaches $-\infty$ and $\frac\gamma{1+\gamma}$, respectively.
 \end{proof}
@@ -581,16 +583,16 @@ The heart of the proof revolves around the twisted-martingale equation for $\mu$
 	\mu_t = \EE_t \mu_{t+1}+Cov_t(p_{t+1},\mu_{t+1}).
 \] By signing $Cov_t(p_{t+1},\mu_{t+1})$,  we can determine whether $\mu_t$ follows a sub or super-martingale.  Given that $\mu_t$ is bounded from above,\footnote{Since  $\mu'(\mu^*,s) = \mu^*$ and $\mu'(\mu,s)$ is increasing in $\mu$,  we know that if $\mu_t < \mu^*$, then $\mu_{t+j} < \mu^*$ for all histories $s^{t+j}$.} we can verify global convergence to the steady state if $\mu_t$ is a supermartingale.  As in the statement of the theorem, we will split the proof up into three cases. Recall that $\bm p$ is the payoff in the ``good'' state 1.
 \begin{description}
-	\item[1. $\bm p < \min\{1,\alpha_1\}$:]  Let $\overline b_s$ be maximal debt with which the government %\st{good}
+	\item[1. $\bm p < \min\{1,\alpha_1\}$:]  Let $\overline b^n_s$ be maximal debt with which the government %\st{good}
  could enter a period and be able to pay off, assuming that  it  receives shock $s$ from this period onward. Then
 	\[
-	\overline b_s = \left(\frac{p_s}{\beta}-1\right)^{-1}\left(\theta_s^\frac{\gamma}{1+\gamma}\left(\frac1{1+\gamma}\right)^\frac1\gamma\frac\gamma{1+\gamma}-g_s\right)
+	\overline b^n_s = \left(\frac{p_s}{\beta}-1\right)^{-1}\left(\theta_s^\frac{\gamma}{1+\gamma}\left(\frac1{1+\gamma}\right)^\frac1\gamma\frac\gamma{1+\gamma}-g_s\right)
 	\] because the government maximizes tax revenue  by setting %the proportional tax
  $\tau$ to $\frac\gamma{1+\gamma}$. % \tjs{David and Anmol: please read the preceding sentence. It doesn't make sense to me.}
- For $\bm p <\alpha_2$, it is possible to show that $\overline b_1 > \overline b_2$, and thus the natural debt limit is attained under repetition of the ``adverse'' state.  This implies that $\lim_{\mu\rightarrow-\infty} b(\mu) = \overline b_2$ and  $\lim_{\mu\rightarrow-\infty} \mu'(\mu,2) = -\infty$.  In order for the period-by-period budget constraint
+ For $\bm p <\alpha_2$, it is possible to show that $\overline b^n_1 > \overline b^n_2$, and thus the natural debt limit is attained under repetition of the ``adverse'' state.  This implies that $\lim_{\mu\rightarrow-\infty} b(\mu) = \overline b^n_2$ and  $\lim_{\mu\rightarrow-\infty} \mu'(\mu,2) = -\infty$.  In order for the period-by-period budget constraint
 	\[
 		\frac{p_s}{\beta}b(\mu) = S(\mu'(\mu,s))+b(\mu'(\mu,s))
-	\] to be satisfied for all $s$, it must be true that $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b_1 > \overline b_2$).  Continuity of $\mu$ together with the uniqueness of the steady state $\mu^*$ then implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for all $\mu < \mu^*$.
+	\] to be satisfied for all $s$, it must be true that $\lim_{\mu\rightarrow -\infty} \mu'(\mu,1) >-\infty$ (as $\overline b^n_1 > \overline b^n_2$).  Continuity of $\mu$ together with the uniqueness of the steady state $\mu^*$ then implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for all $\mu < \mu^*$.
 	$\bm p < 1$ implies that $p_1 < p_2$, allowing us to conclude that $Cov_t(p_{t+1},\mu_{t+1}) < 0$.  We then have that
 	\[
 		\mu_t < \EE_t\mu_{t+1}
@@ -599,7 +601,7 @@ can use  the continuity of $\mu'(\mu,s)$ to show that
 	\[
 		\mu'(\tilde u,s) = \tilde \mu,
 	\] implying that $\tilde \mu =\mu^*$, as $\mu^*$ is the unique steady state.  The steady state is then globally stable since $\mu_t \rightarrow \mu^*$ with probability 1.
-	\item[2. $\bm p \geq \alpha_2$:]  Following the same approach used  in for case 1, we know for $\bm p > \alpha_2$ that $\overline b_1 < \overline b_2$, implying that the natural debt limit is attained under repetition of  the ``good'' state.  As in case 1,  by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$, which along with $p_1 > p_2$ implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As in case 1, we then have global stability of the steady state for $\mu_t < \mu^*$.
+	\item[2. $\bm p \geq \alpha_2$:]  Following the same approach used  in for case 1, we know for $\bm p > \alpha_2$ that $\overline b^n_1 < \overline b^n_2$, implying that the natural debt limit is attained under repetition of  the ``good'' state.  As in case 1,  by taking limits we obtain $\lim_{\mu\rightarrow-\infty} \mu'(\mu,1) = -\infty$ and $\lim_{\mu\rightarrow-\infty}\mu'(\mu,2) > -\infty$.  This implies that $\mu'(\mu,1) < \mu'(\mu,2)$, which along with $p_1 > p_2$ implies $Cov_t(p_{t+1},\mu_{t+1}) <0$.  As in case 1, we then have global stability of the steady state for $\mu_t < \mu^*$.
 	\item[3. $\min(\alpha_1,1) < \bm p < \alpha_2$:]   In this case, either there exists a steady state if $1 < \bm p \leq \alpha_1$ or there does not exist a steady state.  In either case the analysis for case 1 implies that $\mu'(\mu,1) > \mu'(\mu,2)$ for $\mu < \mu ^*$.\footnote{When
  a steady state does not exist, take $\mu^*$ to be $\infty$.}  Since $\bm p >1$ implies that $p_1 > p_2$, we can  conclude that $Cov_t(p_{t+1},\mu_{t+1}) > 0$, implying that
 	\[
@@ -643,8 +645,50 @@ that provides just enough ``state contingency'' completely to fill the void left
 	 Although accumulating government assets requires  raising distorting  taxes, locally  the welfare costs of higher taxes are second-order and
 so are  dominated by the welfare gains from approaching  $b^*$, which are first-order.
 
+\section{More than Two Shocks}
+Our analysis thus far has been limited to environments where there are two aggregate states of the world which are independently and identically distributed over time.  While we cannot solve analytically for the optimal policies for more general stochastic processes, we will show in this section how it is possible to obtain first order approximations to the optimal policy rules and compute the mean and variance of the ergodic distribution of the linearize system.  For this section we will restrict our attention to government expenditure shocks.   We set aggregate productivity, $\theta$, to be constant and normalize to one.  We allow exogenous government expenditure to take $S$ possible values which are i.i.d. over time with probability of government expenditure $g_s$  being $\mathbb P_s$. 
 
+In order to approximate the optimal policies we need to linearize around a steady state.  The standard approach is to linearize around the non-stochastic steady state as the size of the shocks approaches zero {\color{red}(CITATION NEEDED: Woodford?)}.  We have found for this planning problem this approach does not accurately characterize the decision rules of the non-linear system\footnote{When linearizing around the steady state as the size of the shocks approaches zero, we find that the marginal value of debt $\mu_t$ is a martingale.  A key property of the policy rules for $\mu_t$ that produces the degenerate distribution of debt is that $\mu_t$ is a sub-martingale for sufficiently small $\mu_t$ and super-martingale for sufficiently large $\mu_t$.}.  Instead, we propose an alternative method utilizing the complete market steady states of the previous section.
 
+We will show that if the payoff vector $\overline{\bm p}$ is perfectly correlated with government debt then there exists a complete markets Ramsey allocation that is a solution to the incomplete markets planning problem with payoff vector $\overline{\bm p}$.  The sign and magnitude of the covariance of $\overline {\bm p}$ with the government expenditure shock will determine the sign and magnitude of government debt in this allocation.  Given that the state variable $\overline b$, government debt, is constant under this allocation we can linearize the policy rules with respect to both government debt and payoff vector, allowing us to approximate the incomplete market policy rules at some pair $(b,\bm p)$ near $(\overline b,\overline {\bm p})$.  In fact, we will show that the best choice of $(\overline b,\overline{\bm p})$ is to minimize the distance
+\begin{equation}\label{eq.p_norm}
+	\| \bm p -\overline{\bm p}\|^2 = \sum_s \mathbb P_s (p_s -\overline p_s)^2
+\end{equation} as then ergodic distribution of the linearized system will be centered around $\overline b$.
+
+\subsection{Steady State Payoff Vectors}
+
+Our first task is to find the set of payoff vectors, $\overline {\bm p}$ for which a complete markets allocation is a solution to the incomplete markets planning problem.  In Lemma \ref{lem.cm_payoff} we show that these payoff vectors must be perfectly correlated with $g$:
+\begin{lemma}\label{lem.cm_payoff}
+	 The payoff vector $\overline{\bm p}$, normalized so that $\EE\overline{\bm p} = 1$, associated with complete markets Ramsey allocation with government debt $\overline b \leq \overline b^n$ ($\overline b^n$ is the natural debt limit) must satisfy
+	\begin{equation}\label{eq.pbar}
+		\overline p_s = 1- \frac{\beta}{\overline b}(g_s - \EE g).
+	\end{equation}Moreover, the steady state $\overline b$ is globally stable: $b_t\rightarrow \overline b$ with probability 1.
+\end{lemma}  The proof of this Lemma is included in the Appendix, but the intuition is straightforward.  The complete markets allocation must have a constant tax rate $\overline \tau$.  The government surplus in state $s$, $S(\overline \tau,s)$, is then made up of two components: tax income $I(\overline \tau)$, which is independent of $s$, and government expenditure $-g_s$.  Income from government debt $\frac{\overline b}{\beta} \overline p_s$, must perfectly account for fluctuations in government surplus: $-g_s$.  Thus, $\overline{\bm p}$ must be perfectly correlated with the exogenous government expenditure process $g_s$.
+
+Rearranging equation \eqref{eq.pbar}, and taking the covariance with respect to $g$ we see that if $\overline{\bm p}$ is perfectly correlated with government expenditures the associated level of steady state debt is
+\[
+	\overline b = -\beta \frac{\var(\bm g)}{\cov(\overline{\bm p},\bm g)}
+\]The covariance of $\overline{\bm p}$ with $\bm g$ relative to the variance of government expenditure determines the level of steady state government debt, and the sign of the covariance determines if the government holds debt or assets in the steady state.  As before, the government is using fluctuating payments on debt to smooth tax rates.  If payoffs are perfectly correlated with good fiscal times (low $g$) then the government will hold debt in long run.  If payoffs are correlated with hard fiscal (high $g$) times then the government will hold assets.
+\subsection{Ergodic Distribution of Linearized Policy Rules}
+With the previous section we are able to complete characterize the ergodic distribution of global policy rules for a one-dimensional subspace of the space of all payoff vectors $\mathbb R^{S-1}$ (dimension $S-1$ after normalizing $\EE\bm p = 1$).  For $\bm p$ which are not perfectly correlated with $\bm g$ we can compute the mean and variance of the ergodic distribution of the linearized policy rules.  Any payoff vector $\bm p$, with $\EE\bm p =1$, can be uniquely decomposed into two components:
+\[
+	\bm p = \hat{\bm p} +\overline{\bm p}
+\] where $\overline{\bm p}$ is perfectly correlated to $\bm g$ and $\hat{\bm p}$ is orthogonal to $\bm g$.  This is equivalent to finding $\overline{\bm p}$, perfectly correlated with $\bm g$, that minimizes  $\|\bm p-\overline{\bm p}\|^2$ in equation \eqref{eq.p_norm}.  Proposition \ref{prop.erg_lin} below then tells us that the ergodic distribution of government debt of the linearized policy rules will be centered around the steady state level of debt, $\overline b$, associated with $\overline{\bm p}$
+\begin{proposition}\label{prop.erg_lin}
+Suppose $\bm p$ admits a decomposition $\bm p = \hat{\bm p} +\overline{\bm p}$ with $\hat{\bm p}$ orthogonal to $\bm g$ and
+\[
+	\overline{\bm p} = 1- \frac{\beta}{\overline b}(\bm g - \EE g).
+\] with $\overline b \leq \overline b^n$.  Then the ergodic distribution of debt of the policy rules linearized around $(\overline b, \overline{\bm p})$ will have mean $\overline b$ and variance
+\begin{equation}\label{eq.var_lin}
+	\frac{\overline b^2 \var(\hat{\bm p})}{\EE[\overline{\bm p}^2]\var(\overline{\bm p})}.
+\end{equation}
+\end{proposition}  The proof of this proposition is included in the appendix.  From Proposition \ref{prop.erg_lin}  we see that the location of the ergodic distribution of debt for the incomplete markets Ramsey allocation will be determined by the covariance of $\bm p$ and $\bm g$.  Specifically, since $\cov(\bm p,\bm g) = \cov(\overline{\bm p},\bm g)$, the ergodic distribution of the linearized policy rules will be centered around
+\[
+	 -\beta \frac{\var(\bm g)}{\cov(\overline{\bm p},\bm g)} =  -\beta \frac{\var(\bm g)}{\cov(\bm p,\bm g)}.
+\]  We can also use equation \eqref{eq.var_lin} to quickly bound the variation of linearized system.  Rearranging terms and noting that $\EE[\overline{\bm p}^2] \geq 1$ we can bound the coefficient of variation of the ergodic distribution of the linearized policy rules
+\begin{equation}
+	\frac{\sigma_b}{\overline b} \leq \sqrt\frac{\var(\hat{\bm p})}{\var(\overline{\bm p})}
+\end{equation}  The spread of the ergodic distribution relative to its mean is bounded by the loading of the payoff vector $\bm p$ on the component orthogonal to $\bm g$ relative to the loading on the component parallel to $\bm g$.
 \section{Turning on risk-aversion}
 
   We now depart from quasi-linearity of $U(c,l)$ and thus activate an additional source of return fluctuations coming from endogenous fluctuations in prices of the asset $q_t$.  To obtain a recursive representation of a Ramsey plan,
