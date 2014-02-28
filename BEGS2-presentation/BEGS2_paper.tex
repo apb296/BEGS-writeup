@@ -53,14 +53,20 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}{Lemma}
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{proposition*}{Proposition}
 %\newtheorem{solution}[theorem]{Solution}
 %\newtheorem{summary}[theorem]{Summary}
 \newtheorem{thm}[theorem]{Theorem}
 \newcommand{\var}{\text{var}}
 \newcommand{\cov}{\text{cov}}
-
+\newcommand{\barB}{{\overline B}}
+\newcommand{\barC}{{\overline C}}
+\newcommand{\pbar}{{\overline p}}
+\newcommand{\bbar}{{\overline b}}
+\newcommand{\mubar}{{\overline \mu}}
 
 
 \setlength{\oddsidemargin}{.05in} \setlength{\topmargin}{-.45in}
@@ -648,7 +654,7 @@ so are  dominated by the welfare gains from approaching  $b^*$, which are first-
 \section{More than Two Shocks}
 Our analysis thus far has been limited to environments where there are two aggregate states of the world which are independently and identically distributed over time.  While we cannot solve analytically for the optimal policies for more general stochastic processes, we will show in this section how it is possible to obtain first order approximations to the optimal policy rules and compute the mean and variance of the ergodic distribution of the linearize system.  For this section we will restrict our attention to government expenditure shocks.   We set aggregate productivity, $\theta$, to be constant and normalize to one.  We allow exogenous government expenditure to take $S$ possible values which are i.i.d. over time with probability of government expenditure $g_s$  being $\mathbb P_s$. 
 
-In order to approximate the optimal policies we need to linearize around a steady state.  The standard approach is to linearize around the non-stochastic steady state as the size of the shocks approaches zero {\color{red}(CITATION NEEDED: Woodford?)}.  We have found for this planning problem this approach does not accurately characterize the decision rules of the non-linear system\footnote{When linearizing around the steady state as the size of the shocks approaches zero, we find that the marginal value of debt $\mu_t$ is a martingale.  A key property of the policy rules for $\mu_t$ that produces the degenerate distribution of debt is that $\mu_t$ is a sub-martingale for sufficiently small $\mu_t$ and super-martingale for sufficiently large $\mu_t$.}.  Instead, we propose an alternative method utilizing the complete market steady states of the previous section.
+In order to approximate the optimal policies we need to linearize around a steady state.  The standard approach is to linearize around the non-stochastic steady state as the size of the shocks approaches zero.  We have found for this planning problem this approach does not accurately characterize the decision rules of the non-linear system\footnote{When linearizing around the steady state as the size of the shocks approaches zero, we find that the marginal value of debt $\mu_t$ is a martingale.  A key property of the policy rules for $\mu_t$ that produces the degenerate distribution of debt is that $\mu_t$ is a sub-martingale for sufficiently small $\mu_t$ and super-martingale for sufficiently large $\mu_t$.}.  Instead, we propose an alternative method utilizing the complete market steady states of the previous section.
 
 We will show that if the payoff vector $\overline{\bm p}$ is perfectly correlated with government debt then there exists a complete markets Ramsey allocation that is a solution to the incomplete markets planning problem with payoff vector $\overline{\bm p}$.  The sign and magnitude of the covariance of $\overline {\bm p}$ with the government expenditure shock will determine the sign and magnitude of government debt in this allocation.  Given that the state variable $\overline b$, government debt, is constant under this allocation we can linearize the policy rules with respect to both government debt and payoff vector, allowing us to approximate the incomplete market policy rules at some pair $(b,\bm p)$ near $(\overline b,\overline {\bm p})$.  In fact, we will show that the best choice of $(\overline b,\overline{\bm p})$ is to minimize the distance
 \begin{equation}\label{eq.p_norm}
@@ -977,7 +983,183 @@ of private agents relative  one to another.
 
 
 \begin{appendix}
- \section{Numerical Approximations of Bellman Equations\label{sec:app_numerical}}
+\section{Linearization Methods}\label{sec:lin_methods}
+In this appendix we go into more detail on the methods surrounding linearizing the product rules.  With a little effort the first order conditions for the planning problem can be written as 
+\begin{align}
+	\frac{b_{t-1} p_t}{\beta} = I(\mu_t) - g_t + b_{t+1}\label{eq.imp}\\
+	\mu_t = \EE_t p_{t+1}\mu_{t+1}\label{eq.mart}
+\end{align}where 
+\begin{equation}
+	 I(\mu) = (1-\tau(\mu))^\frac1\gamma \tau(\mu)
+\end{equation}and
+\begin{equation}
+	\tau(\mu) =\frac{\gamma\mu}{(1+\gamma)\mu-1}
+\end{equation}  It is possible to treat $\mu_t$ as the state variable, rather than $b_t$.  When this is done the first order conditions can be re-written a searching for a function $b(\mu)$ such that the following equations 
+\begin{align}
+	\frac{b(\mu)p_s}{\beta} = I(\mu'(s)) - g(s) + b(\mu'(s))\\
+	\mu = \sum_{s}\Pi_s p_s\mu'(s)
+\end{align}can be solved for all $\mu$.   We will proceed from here on by treating $\mu$ as our state variable and linearizing with respect to it.
+We begin with a proof of Lemma \ref{lem.cm_payoff}.
+\begin{lemma*}The payoff vector $\overline{\bm p}$, normalized so that $\EE\overline{\bm p} = 1$, associated with complete markets Ramsey allocation with government debt $\overline b \leq \overline b^n$ ($\overline b^n$ is the natural debt limit) must satisfy
+	\begin{equation}\label{eq.pbar}
+		\overline p_s = 1- \frac{\beta}{\overline b}(g_s - \EE g).
+	\end{equation}Moreover, the steady state $\overline b$ is globally stable: $b_t\rightarrow \overline b$ with probability 1.
+\end{lemma*}
+\begin{proof}  There is a multiplier $\overline \mu$ associated with each solution to the complete markets Ramsey problem.  The level of debt associated with that multiplier is 
+\[
+	\bbar(\overline\mu) = \frac{\beta}{1-\beta}(I(\mubar)-\overline g).
+\]  In order for $\bm \pbar(\mubar)$ to be the portfolio associated with the complete markets Ramsey allocation the following equations must hold for all $s$
+\[
+	\frac{\pbar_s(\mubar)\bbar(\mubar)}{\beta} = I(\mubar) - g_s + \bbar(\mubar). 
+\]Subtracting equation $s'$ from $s$ we see
+\[
+	(\overline p_s(\mubar)-\pbar_{s'}(\mubar))\frac{\bbar(\mubar)}{\beta} = g_{s'}-g_s 
+\]or
+\[
+	\pbar_s(\mubar)-\pbar_{s'}(\mubar) = -\frac{\beta}{\overline b(\mubar)}(g_s-g_{s'})
+\]This combined with $\EE\bm\pbar = \sum_{s}\pbar_s\mathbb P_s = 1$ immediately gives the desired
+\begin{equation}
+	\bm\pbar(\mubar) = 1-\frac{\beta}{\bbar(\mubar)}\left(\bm g-\EE\bm g\right)
+\end{equation}  That this steady state is globally stable can be shown using the linearization below.  We show that 
+\[
+	\frac{\partial \mu'(s)}{\partial \mu}(\mubar) = \frac{\pbar_s}{\EE[\bm\pbar^2]}
+\]  This, along with the single crossing of the $\mu'(\mu,s)$ policy functions, implies that $\mu'(\mu,s)$ is positively correlated with $\pbar_s$ when $\mu >\mubar$ and negatively correlated when $\mu <\mubar$.  We then have that $\mu_t \leq (\geq)\EE_t\mu_{t+1}$ for $\mu_t \leq (\geq)\mubar$.  The uniqueness of the steady state implies that if $\mu_t \leq (\geq) \mubar$ then $\mu_{t+j} \leq (\geq) \mubar$ for all $j >0$.  An application of the Martingale Convergence Theorem then proves $\mu_t \rightarrow\mubar$ with probability 1.
+\end{proof}  We can expand our policy functions to be functions of $\mu$ and $\bm p$ then the first order conditions can be written as 
+\begin{align*}
+	\frac{b(\mu;\bm p)p_s}{\beta} = I(\mu'(s)) - g(s) + b(\mu'(s);\bm p)\\
+	\mu = \sum_{s}\Pi_s p_s\mu'(s)
+\end{align*}  We have shown that these first order conditions are satisfied at all pairs $(\mubar,\bm \pbar(\mubar))$ by the policy functions $b(\mubar,\pbar) = \bbar(\mubar)$ and $\mu'(\mubar;\bm \pbar,s) = \mubar$.  We want to approximate the policy function $b(\mu;\bm p)$ and $\mu'(\mu;\bm p,s)$ by taking the first order approximation around some steady state $(\mubar,\bm p(\mubar))$.
+
+Given a payoff vector $\bm p$, satisfying $\sum_s\mathbb P_sp_s =1$, we want to choose a steady state $(\mubar,\bm\pbar(\mubar))$ to approximate around.  A natural choice is to choose $(\mubar,\bm\pbar(\mubar))$ so as to minimize
+\begin{equation}
+	\|\bm p-\bm\pbar(\mubar)\|^2 = \sum_s \mathbb P_s(p_s-\pbar(\mubar)_s)^2\label{eq.norm_def}
+\end{equation}The first order condition for minimizing equation \eqref{eq.norm_def} is
+\[
+	2\sum_{s'}\mathbb P_s'( p_{s'}-\pbar(\mubar)_{s'}) \pbar'(\mubar)_{s'} = 0
+\]as noted before 
+\[
+	\pbar(\mubar)_s =  1 -\frac{\beta}{\bbar(\mubar)}\left(g_s - \EE g\right)
+\]thus
+\[
+	\bm \pbar'(\mubar) \propto \bm\pbar(\mubar)-1
+\]Thus we can see the the optimal choice of $\mubar$ is equivalent to choosing $\mubar$ such that 
+\begin{equation}
+	\begin{split}
+		0 &= \sum_{s'}\mathbb P_{s'}( p_{s'} - \pbar(\mubar)_{s'})(\pbar(\mubar)_{s'}-1)\\
+		&= -\sum_{s'}\mathbb P_{s'}( p_{s'}-\pbar(\mubar)_{s'}) + \sum_{s'}\mathbb P_{s'}( p_{s'}-\pbar(\mubar)_{s'})\pbar(\mubar)_{s'}\\
+		&= \sum_{s'}\mathbb P_{s'}( p_{s'}-\pbar(\mubar)_{s'})\pbar(\mubar)_{s'}\\
+		&=\EE\left[( p-\pbar(\mubar))\pbar(\mubar)\right]
+	\end{split}
+\end{equation}  Thus, for a given $\bm p$ we have chosen $\bm \pbar$ such that 
+\[
+	\hat{ \bm p} = p - \pbar
+\] is orthogonal to $\pbar$ or 
+\[
+	\EE[\hat{\bm p}\pbar] = \sum_s\mathbb P_s\hat p_s\pbar_s = 0
+\]  with this choice of $\pbar$ we can proceed with proving Proposition \ref{prop.erg_lin}
+\begin{proposition*}
+Suppose $\bm p$ admits a decomposition $\bm p = \hat{\bm p} +\overline{\bm p}$ with $\hat{\bm p}$ orthogonal to $\bm g$ and
+\[
+	\overline{\bm p} = 1- \frac{\beta}{\overline b}(\bm g - \EE g).
+\] with $\overline b \leq \overline b^n$.  Then the ergodic distribution of debt of the policy rules linearized around $(\overline b, \overline{\bm p})$ will have mean $\overline b$ and variance
+\begin{equation}\label{eq.var_lin}
+	\frac{\overline b^2 \var(\hat{\bm p})}{\EE[\overline{\bm p}^2]\var(\overline{\bm p})}.
+\end{equation}
+\end{proposition*}
+\begin{proof}
+	Differentiating the first order conditions with respect to $\mu$ we 
+\begin{align*}
+	\frac{\pbar_s}{\beta}\frac{\partial b}{\partial \mu} = \left[I'(\mubar)+\frac{\partial b}{\partial \mu}\right]\frac{\partial \mu'(s)}{\partial \mu}\\
+	1 = \sum_{s'} \mathbb P_s \overline p_s \frac{\partial \mu'(s)}{\partial \mu}
+\end{align*}  Applying $\sum_s\mathbb P_s \pbar_s\cdot$ to the first equation we get
+\[
+	\frac{\EE[\bm \pbar^2]}{\beta}\frac{\partial b}{\partial \mu} = \left[I'(\mubar)+\frac{\partial b}{\partial \mu}\right]
+\]or 
+\begin{equation}
+	\frac{\partial b}{\partial \mu} = \frac{\beta I'(\mubar)}{\EE[\bm\pbar^2]-\beta}
+\end{equation}where $\EE\pbar^2 = \sum_s\mathbb P_s\pbar_s^2$ which then quickly gives
+\begin{equation}
+	\frac{\partial \mu'(s)}{\partial \mu}  = \frac{\pbar_s}{\EE[\bm \pbar^2]}
+\end{equation}  We can then differentiate with respect to $\bm p$ using the shorthand $\frac{\partial b}{\partial \bm p} = \sum_s \frac{\partial b}{\partial p_s}\hat p_s$ and similarly for $\frac{\partial \mu(s)}{\partial \bm p}$ to get
+\begin{align*}
+	\frac1\beta\left(\frac{\partial b}{\partial\bm p}\pbar_s + \bbar\hat p_s\right) = \left[I'(\mubar) + \frac{\partial b}{\partial\mu}\right]\frac{\partial \mu'(s)}{\partial \bm p} + \frac{\partial b}{\partial\bm p}\\
+	0 = \sum_s\mathbb P_s\pbar_s \frac{\partial\mu'(s)}{\partial \bm p}
+\end{align*} Applying $\sum_s \mathbb P_s\pbar_s\cdot$ to the first equation and noting that $\sum_s \hat p_s \pbar_s = 0$ we quickly see that 
+\begin{equation}
+	\frac{\partial b}{\partial\bm p} = 0
+\end{equation}and hence
+\begin{equation}
+	\frac{\partial \mu'(s)}{\partial\bm p} = \frac{\hat p_s\bbar}{\beta\left[I'(\mubar)+\frac{\partial b}{\partial\mu}\right]}
+\end{equation}
+
+The linearized system for $\mu$ now follows
+\[
+	\hat \mu_{t+1} = B_{s_{t+1}} \hat\mu_t + C_{s_{t+1}}
+\]  where $\hat\mu = \mu -\mubar$.  Here $B$ and $C$ are both random with means $\barB$ and $\barC$, and variances $\sigma_B^2$ and $\sigma_C^2$.  Note we obtained expressions for $B$ and $C$ being
+\begin{equation}
+	B_s = \frac{\partial \mu'(s)}{\partial \mu} = \frac{\pbar_s}{\EE[\bm\pbar^2]}\label{eq.B_s}
+\end{equation}and
+\begin{equation}
+	C_s = \frac{\partial \mu'(s)}{\partial \bm p} = \frac{\hat p_s\bbar}{\beta\left[I'(\mubar)+\frac{\partial b}{\partial\mu}\right]}\label{eq.C_s}
+\end{equation}    Suppose that $\hat\mu$ is distributed according to the ergodic distribution of this linear system with mean $\EE\hat\mu$ and variance $\sigma^2_\mu$.  Since 
+\[
+	B\hat\mu +C
+\]has the same distribution we can compute the mean of this distribution as
+\[
+\begin{split}
+	\EE\hat\mu &= \EE\left[ B\hat\mu+C\right]\\
+			  &= \EE\left[\EE_{\hat\mu}\left[B\hat\mu+C\right]\right]\\
+			  &= \EE\left[\barB\hat\mu +\barC\right]\\
+			  &=\barB\EE\hat\mu+\barC
+\end{split}
+\]solving for $\EE\hat\mu$ we get
+\begin{equation}
+	\EE\hat\mu = \frac{\barC}{1-\barB}
+\end{equation}For the variance $\sigma^2_{\hat\mu}$ we know that 
+\[
+	\sigma^2_{\hat\mu} = \var(B\hat\mu+C) = \var(B\hat\mu) + \sigma_C^2 + 2\cov(B\hat\mu,C)
+\]Computing the variance of $B\hat \mu$ we have
+\[
+\begin{split}
+	\var(B\hat\mu) &=\EE\left[(B\hat\mu - \barB\EE\hat\mu)^2\right]\\
+			       &=\EE\left[(B\hat\mu-\barB\hat\mu +\barB\hat\mu -\barB\EE\hat\mu)^2\right]\\
+			      &=\EE\left[\EE_{\hat\mu}\left[(B-\barB)^2\hat\mu^2 +2(B-\barB)(\hat\mu-\EE\hat\mu)\barB\EE\hat\mu + (\hat\mu-\EE\hat\mu)^2\bar B^2\right]\right]\\
+			&=\EE\left[\sigma_B^2\hat\mu^2 +(\hat\mu-\EE\hat\mu)^2\barB\right]\\
+			& = \sigma_B^2(\sigma_{\hat\mu}^2+(\EE\hat\mu)^2) + \sigma_{\hat\mu}^2\barB^2
+\end{split}
+\]while for the covariance of $B\hat\mu$ and $C$
+\[
+	\cov(B\hat\mu,C) = \sigma_{BC}\EE\hat\mu
+\]Putting this all together we have
+\begin{equation}
+	\sigma_{\hat\mu}^2 = \frac{\sigma_B^2(\EE\hat\mu)^2 + \sigma_{BC}\EE\hat\mu + \sigma_C^2}{1-\barB^2-\sigma_B^2}
+\end{equation}  From equation \eqref{eq.C_s} we have that 
+\begin{equation}
+	\barC = 0 \text{  and  } \sigma^2_C = \frac{\var(\hat p)\overline b}{\beta^2\left[I'(\mubar)+\frac{\partial b}{\partial \mu}\right]^2}
+\end{equation} and from equation \eqref{eq.B_s}  we have
+\begin{equation}
+	\barB  = \frac{1}{\EE[\bm \pbar^2]}\text{  and  }\sigma_B^2 = \frac{\var(\bm\pbar)}{(\EE[\bm\pbar^2])^2}
+\end{equation}  Which we can use to see that $\EE\hat\mu = 0$, so the ergodic distribution of the linearized $\mu$ is centered around $\mubar$ with variance
+\begin{equation}
+\sigma_{\mu}^2 = \frac{\bbar^2\var(\hat {\bm p})}{\beta^2\left[I'(\mubar)+\frac{\partial b}{\partial\mu}\right]^2\left(1-\barB^2-\sigma_B^2\right)}\var(\bm{\hat p})
+\end{equation}  For a given $\hat \mu$ the associated deviation in $b$: $\hat b$ is given by
+\[
+	\hat b = \frac{\partial b}{\partial \mu}\hat \mu + \frac{\partial b}{\partial\bm p} = \frac{\partial b}{\partial \mu}\hat \mu 
+\]  The ergodic distribution of the linearized system for $b$ is therefore centered around $\bbar$ with variance
+\[
+	\sigma_b^2 = \frac{\bbar^2\left(\frac{\partial b}{\partial\mu}\right)^2\var(\hat {\bm p})}{\beta^2\left[I'(\mubar)+\frac{\partial b}{\partial\mu}\right]^2\left(1-\barB^2-\sigma_B^2\right)}
+\] Noting that $\EE\pbar^2 = 1+\var(\bm\pbar)$ and 
+\[
+	I'(\mubar)+\frac{\partial b}{\partial \mu} = \frac{\EE[\bm \pbar^2]}{\beta}\frac{\partial b}{\partial\mu},
+\]this can be simplified to 
+\begin{equation}
+	\sigma^2_b = \frac{\bbar^2\var(\hat {\bm p})}{\EE[\bm \pbar^2]\var(\bm\pbar)}
+\end{equation} which quickly gives us the bound
+\begin{equation}
+	\frac{\sigma_b}{\bbar} \leq \sqrt\frac{\var(\hat {\bm p})}{\var(\bm\pbar)}
+\end{equation}
+\end{proof}
+\section{Numerical Approximations of Bellman Equations\label{sec:app_numerical}}
 
  \section{Rate of Convergence\label{sec:app_convergence}}
 

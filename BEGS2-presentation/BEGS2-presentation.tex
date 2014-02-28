@@ -21,6 +21,8 @@
 %\newcommand{at}{\begin{matrix}}
 %\newcommand{\emat}{\end{matrix}}
 \newcommand{\EE}{\mathbb E}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
 
 \newtheorem{acknowledgement}[theorem]{Acknowledgement}
 \newtheorem{algorithm}[theorem]{Algorithm}
@@ -42,7 +44,7 @@
 \title {Optimal Taxation with Incomplete Markets}
 \author{Anmol Bhandari, David Evans, Mikhail Golosov, Thomas J. Sargent}
 
-\date{October 2013}
+\date{February 2014}
 % \today will show current date.
 % Alternatively, you can specify a date.
 %
@@ -525,7 +527,6 @@ Properties of  optimal payoff matrix $\mathbb{P}$
 \end{itemize}
 
 \item A steady state is obtained by inverting the optimal payoff mapping $p^*$
-\textcolor{red}{Anmol and David XXXXX: we should fix this slide -- we have used new notation to define the operator}
 \begin{equation*}
 \label{eq-ss}
 b^* \ \textrm{satisfies} \  \bm{p}=\bm{p}^*(b^*) \ \textrm{or} \ p^{* -1}(p) = b^*
@@ -699,10 +700,92 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
 \end{frame}
 
 \begin{frame}
+	\frametitle{More than $2$ states}
+	\begin{itemize}
+		\item  In an i.i.d. economy with $S$ states of the world, the range of the mapping $b_{-1}\mapsto \mathbb P$ is a one dimensional subspace of the $S-1$ dimensional space of possible payoffs.
+		\item  While is not possible to solve analytically for the optimal policy rules, we can construct linear approximations to the policy rules.
+		\item  We can the characterize the ergodic distribution and convergence rates of the linearized system.
+		\item  For simplicity we focus on an i.i.d. process for government expenditure shocks $g_s$, we normalize $\theta_s = 1$.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Method}
+	\begin{itemize}
+		\item  The standard approach constructing linear approximations to policy rules  is take the limit as the size of the shocks approaches zero.
+		\item  This approach misses key features  features of the policy rules, specifically the regions where $\mu_t$ is a sub- and super- martingale.
+		\item  Our alternative is to treat the policy rules $c(b;s,\mathbb P)$, $l(b,s;\mathbb P)$, and $b'(b,s;\mathbb P)$ as functions of both the state variable $b$ and the payoff structure $\mathbb P$.
+		\item  We can then linearize a steady state $\overline b, \overline {\mathbb P}$ associated with complete markets Ramsey allocation.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Steady States}
+	\begin{lemma}\label{lem.cm_payoff}
+	 The payoff vector $\overline{\mathbb P}$, normalized so that $\EE\overline{\mathbb P} = 1$, associated with complete markets Ramsey allocation with government debt $\overline b \leq \overline b^n$ ($\overline b^n$ is the natural debt limit) must satisfy
+	\begin{equation}\label{eq.pbar}
+		\overline {\mathbb P}_s = 1- \frac{\beta}{\overline b}(g_s - \EE g).
+	\end{equation}Moreover, the steady state $\overline b$ is globally stable: $b_t\rightarrow \overline b$ with probability 1 for the incomplete markets Ramsey allocation.
+\end{lemma}
+\pause
+\begin{description}
+	\item[Intuition: ]  All fluctuations in government surplus must come from $g_s -\EE g$.  The payoff structure $\mathbb P$ is chosen so that the income from debt
+	\[
+		\overline b\frac{\mathbb P_s -1}{\beta}
+	\]perfectly accounts for those fluctuations.
+	\end{description}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ergodic Distribution}
+	\begin{itemize}
+		\item  For a given $\mathbb P$ choose $(\overline b,\overline{\mathbb P})$ so as to minimize
+		\[
+			\|\mathbb P-\overline{\mathbb P}\|^2 = \sum_s \Pi_s (\mathbb P_s-\overline{\mathbb P}_s)^2
+		\]
+		\item  Note $\hat{\mathbb P} = \mathbb P-\overline{\mathbb P}$ is orthogonal to $g$. 
+	\end{itemize}
+	\pause
+\begin{proposition}\label{prop.erg_lin}
+Suppose $\mathbb P$ admits a decomposition $\mathbb P = \hat{\mathbb P} +\overline{\mathbb P}$ with $\hat{\mathbb P}$ orthogonal to $g$ and
+\[
+	\overline{\mathbb P} = 1- \frac{\beta}{\overline b}( g - \EE g).
+\] with $\overline b \leq \overline b^n$.  Then the ergodic distribution of debt of the policy rules linearized around $(\overline b, \overline{\mathbb P})$ will have mean $\overline b$ and variance
+\begin{equation}\label{eq.var_lin}
+	\frac{\overline b^2 \var(\hat{\mathbb P})}{(1+\var(\overline{\mathbb P}))\var(\overline{\mathbb P})}.
+\end{equation}
+\end{proposition}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Notes}
+	\begin{itemize}
+	\item  The ergodic distribution of government debt for the linearized system will have mean
+	\[
+		-\beta\frac{\var(g)}{\cov(\mathbb P,g)}
+	\] and coefficient of variation
+	\[
+		\frac{\sigma_b}{\overline b} = \sqrt\frac{\var(\mathbb P) - |\cov(g,\mathbb P)|}{(1+|\cov(g,\mathbb P)|)|\cov(g,\mathbb P)|}\leq\sqrt\frac{\var(\mathbb P) - |\cov(g,\mathbb P)|}{|\cov(g,\mathbb P)|}
+	\]
+	\item The speed of convergence to the ergodic distribution given by
+	\[
+		\frac{\EE_{t-1}(b_t-\overline b)}{(b_{t-1} - \overline b)} = \frac1{1+|\cov(\mathbb P,g)|}
+	\]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Comparisons of Ergodic Distribution}
+	\begin{center}
+		\includegraphics[width =4in]{Images/erg1.eps}
+	\end{center}
+\end{frame}
+\begin{frame}
  \frametitle{Outcomes with quasi-linear preferences}
  \textbf{Outcomes:}
  \begin{enumerate}
-  \item  Often $b_t\to b^*$ when the aggregate state follows a 2-state i.i.d. process
+  \item  Often $b_t\to b^*$ when the aggregate state follows a 2-state i.i.d. process.
+  \item  With more than 2-states the linearized system has an ergodic distribution with mean and variance depend on the variance decomposition of $\mathbb P$ with respect to  $g$.
   \item The level  and sign of $b^*$ depend on the \textbf{exogenous payoff structure} $\mathbb{P}$
   \item The limiting allocation corresponds to a complete market Ramsey allocation for initial govt. debt $b^*$
  \end{enumerate}
