@@ -700,6 +700,30 @@ Let $b^*$ denote steady state govt.  debt and $b_{fb}$ be  govt.  debt that  sup
 \end{frame}
 
 \begin{frame}
+	\frametitle{Intuition for Convergence Alternate}
+	\begin{itemize}
+		\item  The actions of the government can be understood by breaking the first order condition of the planner into two components
+		\[
+			\mu_t = \EE_t\mu_{t+1} + \EE_t\left[(p_{t+1}-1)\mu_{t+1}\right]
+		\]
+		\item  On the left-hand side we have the marginal benefit of issuing and additional unit of debt.
+		\item  The first term on the right-hand side is the cost of issuing that debt if the payoff structure were a bond, the second term is the additional cost/benefit from the correlation of the payoffs with tightness of the government budget constraint.
+		\item  If the additional debt pays off more (less) when the government budget constraint is tight (low $\mu$) the planner will issue less (more) debt relative to if had access to a risk free bond.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Intuition for Convergence Alternate Continued}
+	\begin{itemize}
+		\item  As the policy for a risk-free bond is a martingale in $\mu_t$ this introduces a drift.
+		\item  There are two sources of variation in the governments budget constraint: variation in exogenous factors such as TFP or $g$, and variation in payments on debt.
+		\item  At the steady state these are in perfect balance, as government debt level is moved away from the steady state the change in payments on debt term dominates.
+		\item  Causes drift toward steady state, except when variation in $\mathbb P$ is small relative to the TFP shocks.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
 	\frametitle{More than $2$ states}
 	\begin{itemize}
 		\item  In an i.i.d. economy with $S$ states of the world, the range of the mapping $b_{-1}\mapsto \mathbb P$ is a one dimensional subspace of the $S-1$ dimensional space of possible payoffs.
